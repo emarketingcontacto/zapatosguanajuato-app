@@ -68,6 +68,7 @@
             <li class="nav-item">
                 <form action="/User/logout" method="post" class="inline">
                     @csrf
+                    @method('POST')
                     <button class="btn btn-sm btn-logout d-flex" type="submit">
                         <span class="material-symbols-outlined m-n3">logout</span> Logout
                     </button>
