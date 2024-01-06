@@ -66,7 +66,7 @@
                 Welcome {{auth()->user()->name}}
             </span>
             <li class="nav-item">
-                <form action="/User/logout" method="post" class="inline">
+                <form action="{{route('User.logout')}}" method="post" class="inline">
                     @csrf
                     @method('POST')
                     <button class="btn btn-sm btn-logout d-flex" type="submit">
