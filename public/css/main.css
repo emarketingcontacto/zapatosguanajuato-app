@@ -1,0 +1,377 @@
+
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDMincho&family=Jost&family=Manjari&family=Poiret+One&family=Yuji+Syuku&display=swap');
+
+/* Color Palette 2 */
+:root {
+    --primary:  #AAD4A3;
+    --quarterly:#AED4BE;
+    --cinqterly:#CBD498;
+    --secondary:#D4948E;
+    --ternary:  #C9B8D4;
+
+    --font-strong: #6b6b6b;
+    --font-normal: #bdbdbd;
+    --font-silent: #e0e0e0;
+    --font-light:  #f0f0f0;
+
+    --bg-noir: rgba(0,0,0,0.7);
+    --bg-grey:      rgba(0 , 0 , 0, .5);
+    --background:   rgba(201, 184, 212, 0.3);
+    --bg-primary:   rgba(170, 212, 163, 0.3);
+    --bg-secondary: rgba(212, 148, 142, 0.3);
+    --ternary-bg:   #f5e7ff;
+
+    --stg-ternary: #bd93d8;
+
+    --headers: 'Poiret One';
+    --transactionals : 'BIZ UDMincho';
+    --paragraph: 'Manjari';
+}
+
+/* Font Family */
+
+
+@font-face {
+    font-family:'Manjari', sans-serif ;
+    src: url('https://fonts.googleapis.com/css2?family=BIZ+UDMincho&family=Jost&family=Manjari&family=Poiret+One&family=Yuji+Syuku&display=swap');
+}
+
+@font-face {
+    font-family: 'Poiret One', cursive ;
+    src: url('https://fonts.googleapis.com/css2?family=BIZ+UDMincho&family=Jost&family=Manjari&family=Poiret+One&family=Yuji+Syuku&display=swap');
+}
+
+@font-face {
+    font-family: 'BIZ UDMincho', serif ;
+    src: url('https://fonts.googleapis.com/css2?family=BIZ+UDMincho&family=Jost&family=Manjari&family=Poiret+One&family=Yuji+Syuku&display=swap');
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.hero{
+    background-color: #000;
+    height: 50vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../images/img_index.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.secondary-text{
+    color:var(--secondary)
+}
+
+.hero-text {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 18vh;
+    width: 100%;
+
+    background: var(--bg-grey);
+    color: var(--primary);
+    font-family:'Poiret One', cursive;
+}
+.hero-text h1{
+    font-size: 5vw;
+}
+.hero-text h2{
+    font-size: 2.5vw;
+    color: var(--ternary);
+}
+
+.attention{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    width: 100%;
+    font-family: var(--paragraph);
+  }
+  .attention h2 {
+    font-size: 3vw;
+    color: var(--font-normal);
+    text-align: center;
+    width: 90%;
+  }
+
+  .attention h4 {
+    font-size: 2vw;
+    color: var(--secondary);
+  }
+
+  .interest{
+    display: flex;
+    flex-wrap: wrap;
+    height: 40vh;
+    width: 100%;
+   color: var(--secondary);
+  }
+
+  .interest-left{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .interest-left span{
+    font-size: 2vw;
+    width: 90%;
+  }
+
+.interest-left-img{
+    width: 12rem;
+    height: 12rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.interest-left-img span{
+    font-size: 5vw;
+}
+
+
+  .interest-right{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 2vw;
+  }
+
+  .interest-right span {
+  width: 90%;
+  }
+
+
+  .interest-right-img{
+    width: 12rem;
+    height: 12rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .interest-right-img span{
+    font-size: 6vw;
+  }
+
+
+  .Buttons{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 2rem 1rem 2rem ;
+    background-color: var(--stg-ternary);
+    padding-bottom: 10vh;
+
+  }
+
+  .buttonA-image{
+    width: 20%;
+    height: 10vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border-bottom: 1px solid var(--font-silent);
+    justify-content: center;
+    color:var(--font-light);
+  }
+
+  .buttonA-image span{
+    font-size: 4vw;
+  }
+
+  .buttonA-text{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 10vh;
+    align-items: center;
+    border-bottom: 1px solid var(--font-silent);
+    color:var(--font-light);
+    font-size: 2vw;
+  }
+
+.desire{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--font-normal);
+}
+
+.desire span{
+    width: 75%;
+}
+.navbar{
+    z-index: 1;
+}
+
+.header-Category{
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-Category p{
+    background-color: var(--bg-noir);
+    padding: 5vh;
+    width: 100%;
+    text-align: center;
+    color: var(--primary);
+    font-size: 3vw;
+    letter-spacing: 2.2vh;
+    font-family: 'Poiret One' ;
+    margin-bottom: 25px;
+}
+
+
+.card-title{
+    margin-top: -50%;
+    text-align: center;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    background-color: var(--bg-noir);
+    color: var(--stg-ternary);
+}
+
+.card-body{
+    margin-top: 30%;
+}
+
+.card-body-modelo{
+    margin-top: 50%;
+}
+
+.card-text{
+    color:var(--font-normal);
+    text-align: center;
+}
+
+.card-title-modelo{
+    margin-top: -50%;
+    background-color: var(--bg-noir);
+    color: var(--primary);
+}
+
+
+
+.card-text-modelo{
+    background-color: var(--primary);
+    color:var(--font-light);
+}
+
+.btn-show{
+    background-color: var(--primary);
+}
+.biz-col-field{
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-color: var(--bg-primary);
+}
+.biz-hr{
+    background-color: var(--stg-ternary);
+    height: 6px;
+}
+
+.biz-col-value{
+    padding: 4px;
+    background-color: var(--bg-primary);
+    color:var(--stg-ternary);
+    text-align: center;
+}
+
+.biz-col-value a{
+    color: var(--stg-ternary);
+}
+
+.show-banner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+    width:100%;
+    height:75vh;
+}
+
+.show-banner p{
+    background-color: var(--bg-noir);
+    padding: 5vh;
+    width: 100%;
+    text-align: center;
+    color: var(--primary);
+    font-size: 3vw;
+    letter-spacing: 2.2vh;
+    font-family: 'Poiret One';
+    margin-bottom: 25px;
+}
+
+.btn-logout{
+    border:none;
+}
+
+.paypal{
+    width: 100%;
+    height: 30vh;
+    background-color: var(--stg-ternary);
+    color:var(--font-light);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.paypal span{
+    width: 75%;
+    font-size: 2vw;
+    text-align: justify;
+}
+
+.paypalButtons{
+    width: 100%;
+    height: 45vh;
+    background-color: var(--stg-ternary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+footer{
+    position:fixed;
+    padding-top: 2vh;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+}
