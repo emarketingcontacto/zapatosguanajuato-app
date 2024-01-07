@@ -65,6 +65,7 @@ class BizController extends Controller
         ]);
 
         if($request->hasFile('bizImage')){
+
             $validData['bizImage'] = $request->file('bizImage')->store('biz', 'public');
         }
         Biz::create($validData);
