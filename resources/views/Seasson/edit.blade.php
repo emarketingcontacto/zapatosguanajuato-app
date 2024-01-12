@@ -5,7 +5,7 @@
 <h1>Edit Seasson</h1>
 
 <div class="container">
-    <form method="POST" action="{{route('Seasson.update',['seasson' => $Seasson])}}")}}">
+    <form method="POST" action="{{route('Seasson.update',['seasson' => $Seasson])}}">
         @csrf
         @method('put')
         <div class="mb-3">
