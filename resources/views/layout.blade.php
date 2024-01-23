@@ -60,7 +60,7 @@
             </ul>
           </div>
           <ul class="navbar-nav">
-          @auth
+        @auth
         {{-- login --}}
             <span class="m-2 text-small">
                 Welcome {{auth()->user()->name}}
@@ -92,7 +92,7 @@
                     </span>
                     Login</a>
             </li>
-            @endauth
+        @endauth
         </ul>
         </div>
       </nav>
