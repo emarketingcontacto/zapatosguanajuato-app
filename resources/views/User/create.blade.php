@@ -1,9 +1,9 @@
 @extends('layout')
 
 @section('main-content')
-<h1>Create user</h1>
-<div class="container m-5">
-    <form method="POST" action="{{route('User.store')}}">
+<h1 class="text-center"> Create user</h1>
+<div class="container d-flex justify-content-center align-items-center m-5">
+    <form method="POST" class="w-75" action="{{route('User.store')}}">
         @csrf
         @method('POST')
         <div class="mb-3">

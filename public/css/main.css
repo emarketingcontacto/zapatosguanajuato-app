@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=BIZ+UDMincho&family=Jost&family=Manjari&family=Poiret+One&family=Yuji+Syuku&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
 /* Color Palette 2 */
 :root {
@@ -269,12 +270,8 @@ body{
     margin-top: 30%;
 }
 
-.card-body-modelo{
-    margin-top: 50%;
-}
-
 .card-text{
-    color:var(--font-normal);
+    color:var(--font-strong);
     text-align: center;
 }
 
@@ -282,7 +279,22 @@ body{
     margin-top: -50%;
     background-color: var(--bg-noir);
     color: var(--primary);
+    text-align: center;
+    z-index: 8;
+    position: absolute;
+    width: 100%;
 }
+
+.card-title-modelo p{
+    padding: .5vh;
+    width: 100%;
+    text-align: center;
+    color: var(--primary);
+    font-size: 1.5rem;
+    letter-spacing: 1.2vh;
+    font-family: 'Poiret One';
+}
+
 
 
 
@@ -294,25 +306,41 @@ body{
 .btn-show{
     background-color: var(--primary);
 }
-.biz-col-field{
+.biz-row-field{
     padding-top: 4px;
     padding-bottom: 4px;
-    background-color: var(--bg-primary);
+    text-align: center;
+    color:var(--stg-ternary);
+    border-top: 1px var(--ternary) solid;
+    border-left: 1px var(--ternary) solid;
+    border-right: 1px var(--ternary) solid;
 }
+
+.biz-row-field p{
+font-size: .7rem;
+}
+
+.biz-row-field span{
+    font-size: 2rem;
+}
+
+.biz-row-value{
+    padding: 4px;
+    background-color: var(--bg-primary);
+    text-align: center;
+}
+
+
+
 .biz-hr{
     background-color: var(--stg-ternary);
     height: 6px;
 }
 
-.biz-col-value{
-    padding: 4px;
-    background-color: var(--bg-primary);
-    color:var(--stg-ternary);
-    text-align: center;
-}
 
-.biz-col-value a{
-    color: var(--stg-ternary);
+
+.biz-row-value a{
+    color: var(--font-strong);
 }
 
 .show-banner{
@@ -374,5 +402,5 @@ footer{
     padding-top: 2vh;
     bottom: 0;
     width: 100%;
-    height: 2.5rem;
+    height: 10vh;
 }

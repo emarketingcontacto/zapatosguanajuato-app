@@ -6,21 +6,61 @@
     <p>Minoristas</p>
 </div>
 
-<div class="container m-4 d-flex gap-3">
+
+<div class="container m-4 d-flex gap-3 pb-5">
     @foreach ($business as $biz)
-    <div class="card" style="width: 18rem;">
-        <img src="{{asset('storage/'.$biz->bizImage)}}" class="card-img-top">
-        <h5 class="card-title">{{$biz->bizName}}</h5>
-        <div class="card-body">
-        <p class="card-text">{{$biz->bizStreetNum}}</p>
-        <p class="card-text">{{$biz->bizCity}},{{$biz->bizState}}</p>
-        <p class="card-text"></p>
-        <p class="card-text">{{$biz->bizTel}}</p>
-        {{-- Details --}}
-        <a href="{{route('Biz.show', ['biz'=>$biz->bizId])}}" class="btn btn-sm btn-show form-control">Details</a>
-    </div>
-</div>
+
+        <div class="card" style="width: 18rem; background-color:#F5F5F5">
+            <img src="{{asset('storage/'.$biz->bizImage)}}" class="card-img-top">
+            <h5 class="card-title">{{$biz->bizName}}</h5>
+            <div class="card-body card-text">
+                <div class="row">
+                    <div class="col col-3">
+                        <span class="material-symbols-outlined">trolley</span>
+                    </div>
+                    <div class="col">
+                        <span>{{$biz->saletypeName}}</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-3">
+                        <span class="material-symbols-outlined">support_agent</span>
+                    </div>
+                    <div class="col">
+                        <span>{{$biz->bizContact}}</span>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col col-3">
+                        <span class="material-symbols-outlined">send_to_mobile</span>
+                    </div>
+                    <div class="col">
+                        <span>{{$biz->bizTel}}</span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col col-3">
+                        <span class="material-symbols-outlined">map</span>
+                    </div>
+                    <div class="col">
+                        <span>{{$biz->bizCity}}</span>
+                    </div>
+                </div>
+
+
+                <hr>
+                <a href="{{route('Biz.show', ['biz'=>$biz->bizId])}}" class="btn btn-sm btn-show form-control">
+                    <span class="material-symbols-outlined">info</span>
+                    <span class="pb-1">Detalles...</span>
+                </a>
+            </div>
+        </div>
 
     @endforeach
 </div>
+
+
 @endsection

@@ -101,8 +101,44 @@
       </div>
 
       <footer class="bg-light">
-        <div class="container">
-          <span class="text-muted">Place sticky footer content here.</span>
+        <div class="container d-flex justify-content-center align-items-center w-100 text-center">
+            <div class="col">
+                <a href="{{route('privacy-policy')}}">
+                  <span class="text-muted">Politíca de Privacidad</span>
+                </a>
+            </div>
+            <div class="col">
+              <a class="text-muted" href="{{route('about-us')}}">
+                <span>Quiénes somos?</span>
+              </a>
+
+            </div>
+            <div class="col d-flex" style="align-items:center; justify-content:space-evenly">
+                <div>
+                    <a class="text-muted" href="https://solucion-e.com.mx/">
+                      <span class="material-symbols-outlined fs-3">language</span>
+                    </a>
+                </div>
+                <div>
+                  <a class="text-muted" href="https://www.facebook.com/DesarrolloDigital">
+                    <span class="bi bi-facebook fs-4"></span>
+                  </a>
+                </div>
+                <div>
+                  <a class="text-muted" href=" https://wa.me/4771598183">
+                    <span class="bi bi-whatsapp fs-4"></span>
+                  </a>
+                </div>
+                <div>
+                  <a class="text-muted" href="https://twitter.com/MDigiti">
+                  <span class="bi bi-twitter-x fs-5"></span>
+                  </a>
+                </div>
+                <div>
+                  <a class="text-muted" href="mailto:contacto@solucion-e.com.mx">
+                    <span class="material-symbols-outlined fs-4">contact_mail</span>
+                  </a>
+                </div>
         </div>
       </footer>
 

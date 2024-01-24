@@ -27,6 +27,11 @@ use App\Http\Controllers\ModelSubcategoryController;
 */
 //Home
 Route::get('/', function () { return view('welcome');})->name('welcome');
+//AboutUs
+Route::get('/About', function (){ return view('about-us'); })->name('about-us');
+//PrivacyPolicy
+Route::get('/Privacy-policy', function (){ return view('Privacy-policy'); })->name('privacy-policy');
+
 //BizCategories
 Route::get('/BizCategory', [BizCategoryController::class,'index'])->name('BizCategory.index');
 // Create
