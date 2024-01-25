@@ -5,7 +5,7 @@
 <h1>Materials</h1>
 
 <div class="container">
-        <a href="/Material/create" class="btn btn-sm btn-primary">Create</a>
+        <a href="{{route('Material.create')}}" class="btn btn-sm btn-primary">Create</a>
         <hr class="w-50">
 
         @if (session()->has('success'))

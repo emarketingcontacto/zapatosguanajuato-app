@@ -5,7 +5,7 @@
 <h1>ModelCategories</h1>
 
 <div class="container">
-    <a href="/ModelCategory/create" class="btn btn-sm btn-primary">Create</a>
+    <a href="{{route('ModelCategory.create')}}" class="btn btn-sm btn-primary">Create</a>
     <hr class="w-50">
 
     @if (session()->has('success'))

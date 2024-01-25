@@ -3,7 +3,7 @@
 @section('main-content')
 <h1>Biz</h1>
 <div class="container-fluid w-100">
-    <a href="/Biz/create" class="btn-btn-sm btn-primary p-2">Create</a>
+    <a href="{{route('Biz.create')}}" class="btn-btn-sm btn-primary p-2">Create</a>
 
     <hr class="w-100">
 

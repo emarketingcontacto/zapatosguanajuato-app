@@ -4,7 +4,7 @@
 <h1>Subcategories </h1>
 
 <div class="container">
-    <a href="/ModelSubcategory/create" class="btn btn-sm btn-primary">Create</a>
+    <a href="{{route('ModelSubcategory.create')}}" class="btn btn-sm btn-primary">Create</a>
 
     <hr class="w-50">
 

@@ -5,7 +5,7 @@
 <div class="container">
 <h1>Sale Type</h1>
 
-<a href="SaleType/create" class="btn btn-sm btn-primary">Create</a>
+<a href="{{route('SaleType.create')}}" class="btn btn-sm btn-primary">Create</a>
 
 <hr class="w-100">
 

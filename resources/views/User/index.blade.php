@@ -3,7 +3,7 @@
 @section('main-content')
 <h1>Users</h1>
 <div class="container">
-        <a href="/User/create" class="btn btn-sm btn-primary">Create</a>
+        <a href="{{route('User.create')}}" class="btn btn-sm btn-primary">Create</a>
         <hr class="w-50">
         @if (session()->has('success'))
             <div id="success" class="alert alert-success">
