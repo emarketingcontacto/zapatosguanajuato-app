@@ -9,8 +9,8 @@
     </div>
 
         <div class="row">
-            <div class="col text-end">Distribuido por:</div>
-            <div class="col text-start biz-col-value">
+            <div class="col text-end text-secondary model-field">Distribuido por:</div>
+            <div class="col text-start model-value">
                 <a href="{{route('Biz.show', ['biz'=>$biz->bizId])}}">
                     {{$biz->bizName}}
                 </a>
@@ -18,34 +18,30 @@
         </div>
 
         <div class="row">
-            <div class="col text-end text-secondary">Precio</div>
-            <div class="col text-start biz-col-value">{{$modelo->modelPrice}}</div>
+            <div class="col text-end text-secondary model-field">Precio</div>
+            <div class="col text-start model-value">{{$modelo->modelPrice}}</div>
         </div>
 
         <div class="row">
-            <div class="col text-end text-secondary">Material</div>
-            <div class="col text-start biz-col-value">{{$material->materialName}}</div>
+            <div class="col text-end text-secondary model-field">Material</div>
+            <div class="col text-start model-value">{{$material->materialName}}</div>
         </div>
 
         <div class="row">
-            <div class="col text-end text-secondary">Temporada</div>
-            <div class="col text-start biz-col-value">{{$seasson->seassonName}}</div>
+            <div class="col text-end text-secondary model-field">Temporada</div>
+            <div class="col text-start model-value">{{$seasson->seassonName}}</div>
         </div>
 
         <div class="row">
-            <div class="col text-end text-secondary">Disponible desde:</div>
-            <div class="col text-start biz-col-value">{{$seasson->seassonStart}}</div>
+            <div class="col text-end text-secondary model-field">Disponible desde:</div>
+            <div class="col text-start model-value">{{$seasson->seassonStart}}</div>
 
         </div>
 
         <div class="row">
-            <div class="col text-end text-secondary">Hasta</div>
-            <div class="col text-start biz-col-value">{{$seasson->seassonEnd}} </div>
+            <div class="col text-end text-secondary model-field">Hasta</div>
+            <div class="col text-start model-value">{{$seasson->seassonEnd}} </div>
         </div>
-
-
-
-
     </div>
 </div>
 @endsection

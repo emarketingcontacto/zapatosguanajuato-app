@@ -62,6 +62,7 @@ class BizController extends Controller
             'bizImage' => 'required',
             'bizcatId' => 'required',
             'saletypeId' => 'required',
+            'bizLastvisit' => 'nullable | date'
         ]);
 
         if($request->hasFile('bizImage')){
@@ -83,8 +84,17 @@ class BizController extends Controller
         ->select('model.*', 'material.materialName','seasson.seassonName')
         ->where('bizId', $biz->bizId)->get();
 
-        return view('Biz.show',['biz'=>$biz, 'bizcat'=>$bizcat, 'saletype'=>$saletype, 'modelos'=>$modelos]);
+        // $likesCount = DB::table('likes')
+        // ->select(DB::raw('count(*) as countlikes'))
+        // ->where('bizId','=',$biz->bizId)
+        // ->get();
+
+       //return view('Biz.show',['biz'=>$biz, 'bizcat'=>$bizcat, 'saletype'=>$saletype, 'modelos'=>$modelos , 'likesCount'=>$likesCount]);
+       return view('Biz.show',['biz'=>$biz, 'bizcat'=>$bizcat, 'saletype'=>$saletype, 'modelos'=>$modelos]);
+
     }
+
+
     /**
      * Show the form for editing the specified resource.
      */
@@ -123,6 +133,8 @@ class BizController extends Controller
                 'bizEmail' => 'required',
                 'bizcatId' => 'required',
                 'saletypeId' => 'required',
+                'bizLastvisit' => 'nullable | date',
+                'bizImage' => 'nullable'
             ]);
 
             //Remove from public

@@ -170,12 +170,10 @@ Route::get('/Modelo/create', [ModeloController::class,'create'])->name('Modelo.c
 Route::post('/Modelo', [ModeloController::class,'store'])->name('Modelo.store');
 //Edit
 Route::get('/Modelo/{modelo}/edit', [ModeloController::class,'edit'])->name('Modelo.edit');
-
 // Show
 Route::get('/Modelo/{modelo}/show', [ModeloController::class,'show'])->name('Modelo.show');
-
-
 //update
 Route::put('/Modelo/{modelo}/update', [ModeloController::class,'update'])->name('Modelo.update');
 //Delete
 Route::delete('/Modelo/{modelo}/destroy', [ModeloController::class,'destroy'])->name('Modelo.destroy');
+

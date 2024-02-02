@@ -1,11 +1,23 @@
 @extends('layout')
 
 @section('main-content')
-<div class="container">
+<div class="container mb-5 pb-5">
     <div class="row show-banner" style="background-image: url('{{asset('storage/'.$biz->bizImage)}}')">
         <p class="fw-strong fs-2">{{$biz->bizName}} </p>
     </div>
     <hr class="biz-hr">
+
+
+    {{-- likes --}}
+    <div class="row d-flex justify-content-end">
+        <div class="col">
+            <span class="material-symbols-outlined fs-3 mt-2" style="color:#bd93d8" >verified</span>
+            <span class="fs-6" style="color:#bd93d8">Ultima Verificación:</span>
+            <span>{{$biz->bizLastvisit}}</span>
+        </div>
+    <x-likes :bizID="$biz->bizId"></x-likes>
+    </div>
+    {{-- end likes --}}
 
     <div class="row biz-row-field">
         <div class="col col-2">
@@ -97,7 +109,7 @@
     <hr class="biz-hr">
     {{-- row --}}
 
-<div class="container m-5 d-flex flex-wrap gap-3">
+<div class="container m-5 d-flex flex-wrap gap-3 mb-3 pb-3">
     @foreach ($modelos as $modelo)
         <div class="card" style="width: 18rem;">
             <div class="card-head">

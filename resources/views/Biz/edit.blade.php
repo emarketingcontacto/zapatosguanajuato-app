@@ -4,10 +4,10 @@
 
 <h1>Create Biz</h1>
 
-<div class="container p-4">
-    <form action="{{route('Biz.store')}}" method="post" enctype="multipart/form-data">
+<div class="container p-4 mb-5">
+    <form action="{{route('Biz.update',[$biz])}}" method="post" enctype="multipart/form-data">
         @csrf
-        @method('POST')
+        @method('PUT')
 
         <div class="row">
             <label for="bizId" class="form-control bg-light">ID</label>
@@ -164,7 +164,14 @@
             @enderror
         </div>
 
-        <div class="d-flex flex-row p-3 justify-content-end" >
+              {{-- last visit --}}
+              <div class="row">
+                <label for="bizLastvisit" class="form-control">Last Visit</label>
+                <input type="date" name="bizLastvisit" class="form-control" value="{{$biz->bizLastvisit}}">
+            </div>
+
+
+        <div class="d-flex flex-row p-3 justify-content-end gap-3" >
             <input type="submit" value="Update" class="btn btn-sm btn-primary">
             <a href="/Biz" class="btn btn-sm btn-danger">Cancel</a>
         </div>

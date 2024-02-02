@@ -13,6 +13,18 @@
             <img src="{{asset('storage/'.$biz->bizImage)}}" class="card-img-top">
             <h5 class="card-title">{{$biz->bizName}}</h5>
             <div class="card-body card-text">
+
+            {{-- likes --}}
+            <div class="row d-flex justify-content-end">
+                <div class="col d-flex align-items-center gap-1">
+                    <span class="material-symbols-outlined fs-3 mt-2" style="color:#bd93d8" >verified</span>
+                    <span style="color:#bd93d8; font-size:.9rem">{{$biz->bizLastvisit}}</span>
+                </div>
+                <x-likes :bizID="$biz->bizId"></x-likes>
+            </div>
+            {{-- end likes --}}
+
+
                 <div class="row">
                     <div class="col col-3">
                         <span class="material-symbols-outlined">trolley</span>

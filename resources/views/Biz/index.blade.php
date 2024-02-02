@@ -12,19 +12,13 @@
         <tr>
             <th>Id</th>
             <th>Name</th>
-            <th>Street-Number</th>
-            <th>Neighborhood</th>
-            <th>Sate</th>
             <th>City</th>
             <th>Telephone</th>
             <th>Contact</th>
-            <th>WhatsApp</th>
-            <th>Facebook</th>
-            <th>Website</th>
-            <th>Email</th>
             <th>Image</th>
             <th>BizCat</th>
             <th>SaleType</th>
+            <th>Last Visit</th>
             <th>Management</th>
         </tr>
     </thead>
@@ -33,20 +27,18 @@
             <tr>
                 <td>{{$biz->bizId}}</td>
                 <td>{{$biz->bizName}}</td>
-                <td>{{$biz->bizStreetNum}}</td>
-                <td>{{$biz->bizNeigborhood}}</td>
-                <td>{{$biz->bizState}}</td>
                 <td>{{$biz->bizCity}}</td>
                 <td>{{$biz->bizTel}}</td>
                 <td>{{$biz->bizContact}}</td>
-                <td>{{$biz->bizWhatsApp}}</td>
-                <td>{{$biz->bizFacebook}}</td>
-                <td>{{$biz->bizWeb}}</td>
-                <td>{{$biz->bizEmail}}</td>
                 <td>{{$biz->bizImage}}</td>
                 <td>{{$biz->bizcatName}}</td>
                 <td>{{$biz->saletypeName}}</td>
-                <td class="d-flex">
+                <td>{{$biz->bizLastvisit}}</td>
+
+                <td class="d-flex justify-content-around gap-1">
+
+                {{-- show --}}
+                <a href="{{route('Biz.show', ['biz'=>$biz->bizId])}}" class="btn btn-sm btn-primary">Ver</a>
 
                 {{-- edit --}}
                 <a href="{{route('Biz.edit', ['biz'=>$biz->bizId])}}" class="btn btn-sm btn-primary">Edit</a>
@@ -55,7 +47,7 @@
                 <form action="{{route('Biz.destroy', ['biz'=>$biz->bizId])}}" method="post">
                     @csrf
                     @method('delete')
-                    <input type="submit" value="Delete" class="btn btn-sm btn-danger mx-2">
+                    <input type="submit" value="Delete" class="btn btn-sm btn-danger">
                 </form>
 
                 </td>

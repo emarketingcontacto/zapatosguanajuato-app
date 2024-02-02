@@ -27,7 +27,8 @@ class Biz extends Model
         'bizEmail',
         'bizImage',
         'bizcatId',
-        'saletypeId'
+        'saletypeId',
+        'bizLastvisit'
     ];
 
       public function bizcategory(){
