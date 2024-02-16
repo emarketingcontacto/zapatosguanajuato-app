@@ -66,9 +66,8 @@
 {{-- end Search --}}
 
 {{-- Biz Items --}}
-<div class="container m-4 d-flex gap-3 pb-5 flex-wrap">
+<div class="container m-4 d-flex gap-3 pb-5 flex-wrap justify-content-center">
     @foreach ($business as $biz)
-
         <div class="card" style="width: 18rem; background-color:#F5F5F5">
             <img src="{{asset('storage/'.$biz->bizImage)}}" class="card-img-top">
             <h5 class="card-title">{{$biz->bizName}}</h5>

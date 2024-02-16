@@ -67,15 +67,15 @@
           <ul class="navbar-nav">
         @auth
         {{-- login --}}
-            <span class="m-2 text-small">
+            <span class="m-2" style="font-size: .7rem">
                 Welcome {{auth()->user()->name}}
             </span>
             <li class="nav-item">
                 <form action="{{route('User.logout')}}" method="post" class="inline">
                     @csrf
                     @method('POST')
-                    <button class="btn btn-sm btn-logout d-flex" type="submit">
-                        <span class="material-symbols-outlined m-n3">logout</span> Logout
+                    <button class="btn btn-sm btn-logout d-flex" style="font-size: .7rem" type="submit">
+                        <span class="material-symbols-outlined m-n3" style="font-size: .7rem">logout</span> Logout
                     </button>
                 </form>
                 </a>
