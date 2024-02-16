@@ -20,6 +20,43 @@
     {{-- end likes --}}
 
     <div class="row biz-row-field">
+            @foreach ($modelcategories as $modelcategory)
+
+                    @switch($modelcategory->modelcatName)
+                        @case("Damas")
+                            <div class="col"><i class="bi bi-gender-female" style="font-size: 2rem"></i></div>
+                        @break
+
+                        @case("Hombres")
+                            <div class="col"><i class="bi bi-gender-male" style="font-size: 2rem"></i></div>
+                        @break
+
+                        @case("Niñas")
+                            <div class="col"><i class="bi bi-balloon-heart-fill" style="font-size: 2rem"></i></div>
+                        @break
+
+                        @case("Niños")
+                            <div class="col"><i class="bi bi-balloon-fill" style="font-size: 2rem"></i></div>
+                        @break
+
+                        @default
+
+                    @endswitch
+
+            @endforeach
+    </div>
+    <div class="row biz-row-value">
+        @foreach ($modelcategories as $modelcategory)
+            <div class="col">
+                {{$modelcategory->modelcatName}}
+            </div>
+
+        @endforeach
+    </div>
+
+
+    {{--row--}}
+    <div class="row biz-row-field">
         <div class="col col-2">
             <span class="material-symbols-outlined">category</span>
             <p>Categoria:</p>
@@ -109,21 +146,37 @@
     <hr class="biz-hr">
     {{-- row --}}
 
-<div class="container m-5 d-flex flex-wrap gap-3 mb-3 pb-3">
+    {{--See models--}}
+    <div class="w-100 d-flex justify-content-start seemodelos">
+        <i id="iopen" class="bi bi-chevron-double-down fs-6" onclick=openModelos() style="display:none"></i>
+        <i id="iclose" class="bi bi-chevron-double-up fs-6" onclick=closeModelos()></i>
+        <span id="textmodelos">Ocultar Modelos</span>
+    </div>
+    {{--end See models--}}
+
+
+    {{--subcategorySearch--}}
+    <x-subcategorysearch :bizID="$biz->bizId"></x-subcategorysearch>
+    {{--subcategorySearch--}}
+
+<div class="container m-5 d-flex flex-wrap gap-3 mb-3 pb-3"  id="divmodelos">
     @foreach ($modelos as $modelo)
         <div class="card" style="width: 18rem;">
             <div class="card-head">
                 {{-- image --}}
                 <a href="{{route('Modelo.show', ['modelo'=>$modelo->modelId])}}">
                     <img src="{{asset('storage/'.$modelo->modelImage)}}" class="card-img-top-modelo" width="100%" height="300">
+                    <div class="card-title-modelo">
+                        <p>{{$modelo->modelName}}</p>
+                    </div>
                 </a>
-                <div class="card-title-modelo">
-                    <p>{{$modelo->modelName}}</p>
-                </div>
+
             </div>
 
             {{-- body --}}
             <div class="card-body-modelo">
+                <p class="text-sm-center card-text-modelo">Sub Categoria</p>
+                <p class="card-text text-center text-muted">{{$modelo->modelsubcatName}}</p>
                 <p class="text-sm-center card-text-modelo">Material</p>
                 <p class="card-text text-center text-muted">{{$modelo->materialName}}</p>
                 <p class="text-sm-center card-text-modelo">Precio</p>

@@ -21,7 +21,7 @@ class Modelo extends Model
         'modelImage',
         'bizId',
         'materialId',
-        'seassonId'
+        'seassonId',
+        'modelsubcatId'
       ];
-
 }

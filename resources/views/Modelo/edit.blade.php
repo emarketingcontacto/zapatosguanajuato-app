@@ -2,7 +2,7 @@
 
 @section('main-content')
 
-<div  class="container m-4">
+<div  class="container mb-5">
     <h1>Edit Modelo</h1>
 
     <form action="{{route('Modelo.store')}}" method="post" enctype="multipart/form-data">
@@ -38,13 +38,17 @@
 
         {{-- modelImage --}}
         <div class="mb-3">
-            <label for="modelImage" class="form-label">Model Image</label>
+            <label for="modelImage">Model Image</label>
+            <img src="{{asset('storage/'.$modelo->modelImage)}}" alt="{{$modelo->modelImage}}" width="500vw">
             <input type="file" name="modelImage" class="form-control w-25" value="{{$modelo->modelImage}}">
+        </div>
+        <div class="mb-3">
             {{-- Error --}}
             @error('modelImage')
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror
         </div>
+        {{-- modelImage --}}
 
         {{-- modelMaterial --}}
         <div class="mb-3">
@@ -83,6 +87,17 @@
             @enderror
         </div>
 
+        {{--modelSubcategories--}}
+        <div class="mb-3">
+            <label for="modelsubcategory" class="form-control bg-light">Modelo Sub Category</label>
+            <select name="modelsubcatId" class="form-control drop-down w-100">
+                <option value="">--Please choose an option--</option>
+                @foreach ($modelsubcategories as $modelsubcategory)
+                    <option value="{{$modelsubcategory->modelsubcatId}}" @php echo ($modelsubcategory->modelsubcatId === $modelo->modelsubcatId) ? 'selected' : '';@endphp>{{$modelsubcategory->modelsubcatName}}</option>
+                @endforeach
+            </select>
+        </div>
+        {{--modelSubcategories--}}
 
          {{-- Biz --}}
          <div class="mb-3">

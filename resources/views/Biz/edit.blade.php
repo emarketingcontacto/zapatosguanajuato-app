@@ -146,6 +146,33 @@
             @enderror
         </div>
 
+
+
+
+        <div class="row">
+            <label for="modelcategories" class="form-control bg-light">Model Categories</label>
+            <fieldset>
+                @foreach ($modelcategoriesall as $modelcategoryall)
+                    <input type="checkbox" name="modelcatid[]" id="{{$modelcategoryall->modelcatName}}" value="{{$modelcategoryall->modelcatId}}">
+                    <label for="modelcat">{{$modelcategoryall->modelcatName}}</label>
+                @endforeach
+            </fieldset>
+        </div>
+
+        @foreach ($modelcategories as $modelcategory )
+            @php
+                echo '<script>
+                        var itemId ='@endphp {{$modelcategory->modelcatName}}
+            @php echo 'getChekedItems(itemId)
+                    </script>'
+            @endphp
+        @endforeach
+
+
+
+
+
+
         <div class="row">
             <label for="saletypeId" class="form-control bg-light">Sale Type</label>
 
@@ -177,5 +204,4 @@
         </div>
     </form>
 </div>
-
 @endsection

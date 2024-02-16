@@ -16,7 +16,7 @@ class ModelSubcategory extends Model
 
     protected $fillable = [
         'modelsubcatName',
-        'modelcatId'
+        'modelcatId',
     ];
 
 

@@ -11,6 +11,8 @@
     {{-- <script src="script.js"></script> --}}
     <script src="{{URL::asset('/scripts/script.js')}}"></script>
     <script src="{{URL::asset('/scripts/likes.js')}}"></script>
+    <script src="{{URL::asset('/scripts/modelcatbiz.js')}}"></script>
+
 
     <link rel="icon" href="{{asset('/favicon.ico')}}" type="image/x-icon">
 

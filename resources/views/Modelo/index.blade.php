@@ -25,6 +25,7 @@
                 <th>Image</th>
                 <th>Biz</th>
                 <th>Seasson</th>
+                <th>SubCategory</th>
                 <th>Management</th>
 
             </tr>
@@ -39,6 +40,8 @@
                 <td>{{$modelo->modelImage}}</td>
                 <td>{{$modelo->bizName}}</td>
                 <td>{{$modelo->seassonName}}</td>
+                <td>{{$modelo->modelsubcatName}}</td>
+
                 <td class="d-flex">
                     {{-- edit --}}
                         <a href="{{route('Modelo.edit',['modelo'=>$modelo->modelId])}}" class="btn btn-sm btn-primary">Edit</a>

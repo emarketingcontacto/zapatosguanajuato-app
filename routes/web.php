@@ -133,11 +133,11 @@ Route::put('/Biz/{biz}/update', [BizController::class,'update'])->name('Biz.upda
 Route::delete('/Biz/{biz}/destroy', [BizController::class,'destroy'])->name('Biz.destroy');
 
 /*Factories */
-route::get('/Factories', Factories::class)->middleware('auth');
+route::get('/Factories', Factories::class)->middleware('auth')->name('Factories');
 /*Wholesalers */
-route::get('/Wholesalers', Wholesalers::class)->middleware('auth');;
+route::get('/Wholesalers', Wholesalers::class)->middleware('auth')->name('Wholesalers');
 /*Retails */
-route::get('/Retails', Retails::class)->middleware('auth');;
+route::get('/Retails', Retails::class)->middleware('auth')->name('Retails');
 
 /*Registration */
 //Logout

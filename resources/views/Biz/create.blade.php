@@ -157,6 +157,28 @@
             @enderror
         </div>
 
+        {{--Model Cat --}}
+        <div class="row">
+            <label for="modelcat" class="form-control bg-light">ModelCategory</label>
+            <select name="modelcat" class="form-control dropdown w-100">
+                <option> --Please choose an option-- </option>
+                @foreach ($modelcategories as $modelcategory)
+                    <option value="{{$modelcategory->modelcatId}}">{{$modelcategory->modelcatName}}</option>
+                @endforeach
+            </select>
+        </div>
+
+        {{--ModelCat II --}}
+        <div class="row">
+            <fieldset>
+                @foreach ($modelcategories as $modelcategory)
+                    <input type="checkbox" name="modelcatid[]" value="{{$modelcategory->modelcatId}}">
+                    <label for="modelcat">{{$modelcategory->modelcatName}}</label>
+                @endforeach
+            </fieldset>
+        </div>
+
+
         {{-- last visit --}}
         <div class="row">
             <label for="bizLastvisit" class="form-control">Last Visit</label>

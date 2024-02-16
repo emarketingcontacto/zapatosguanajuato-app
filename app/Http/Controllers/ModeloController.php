@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Modelo;
+use App\Models\ModelSubcategory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Model;
@@ -19,11 +20,13 @@ class ModeloController extends Controller
         ->join('material', 'material.materialId', '=', 'model.materialId')
         ->join('biz', 'biz.bizId','=', 'model.bizId')
         ->join('seasson', 'seasson.seassonId', '=','model.materialId')
+        ->join('modelsubcategory', 'modelsubcategory.modelsubcatId', '=', 'model.modelsubcatId')
         ->select(
             'model.*',
             'material.materialName',
             'biz.bizName',
             'seasson.seassonName',
+            'modelsubcategory.modelsubcatName',
         )->get();
         return view('Modelo.index', ['modelos'=>$modelo]);
     }
@@ -39,8 +42,10 @@ class ModeloController extends Controller
         $business=DB::table('biz')->orderBy('bizName')->get();
         //seassons
         $seassons=DB::table('seasson')->get();
+        //modelsubcategory
+        $modelsubcategories = ModelSubcategory::all();
 
-        return view('Modelo.create',['materials'=>$materials, 'business'=>$business, 'seassons'=>$seassons ]);
+        return view('Modelo.create',['materials'=>$materials, 'business'=>$business, 'seassons'=>$seassons, 'modelsubcategories'=> $modelsubcategories ]);
     }
 
     /**
@@ -51,12 +56,13 @@ class ModeloController extends Controller
        // dd($request);
         $validData=$request->validate(
             [
-                'modelName'=>'required',
+                'modelName'=>'nullable',
                 'modelImage'=>'required',
                 'modelPrice'=>'required|decimal:2',
                 'seassonId'=> 'required',
                 'bizId'=> 'required',
-                'materialId'=>'required'
+                'materialId'=>'required',
+                'modelsubcatId'=>'required'
             ]);
 
             if($request->hasFile('modelImage')){
@@ -91,8 +97,9 @@ class ModeloController extends Controller
          $business=DB::table('biz')->orderBy('bizName')->get();
          //seassons
          $seassons=DB::table('seasson')->get();
-
-         return view('Modelo.edit', ['modelo'=> $modelo, 'materials'=>$materials, 'business'=>$business, 'seassons'=>$seassons] );
+         //modelsubcategories
+         $modelsubcategories = ModelSubcategory::all();
+         return view('Modelo.edit', ['modelo'=> $modelo, 'materials'=>$materials, 'business'=>$business, 'seassons'=>$seassons , 'modelsubcategories'=>$modelsubcategories] );
     }
 
     /**
@@ -103,11 +110,12 @@ class ModeloController extends Controller
         $validData=$request->validate(
             [
                 'modelName'=>'required',
-                'modelImage'=>'required',
+                'modelImage'=>'nullable',
                 'modelPrice'=>'required|decimal:2',
                 'seassonId'=> 'required',
                 'bizId'=> 'required',
-                'materialId'=>'required'
+                'materialId'=>'required',
+                'modelsubcatId' => 'required'
             ]);
         if($request->hasFile('modelImage')){
             Storage::disk('public')->delete('/public/storage/modelos', $modelo->modelImage);

@@ -1,12 +1,72 @@
 @extends('layout')
 
 @section('main-content')
-
+{{--Header--}}
 <div class="header-Category" style="background-image: url('{{asset('storage/'.$bizcat->bizcatImage)}}');">
     <p>Mayoristas</p>
 </div>
 
-<div class="container m-4 d-flex gap-3 pb-5">
+{{-- Search --}}
+<div class="d-flex w-100 justify-content-center ">
+    <div class="d-flex gap-3 w-50 modelcategories justify-content-around" style="height:7vh">
+        @foreach ($modelcategories as $modelcategory)
+            @switch($modelcategory->modelcatName)
+                @case("Damas")
+                    <form name="damas" action="{{route('Wholesalers')}}" method="get">
+                        @csrf
+                        @method('GET')
+                        <div class="damas"  style="cursor:pointer" onclick="document.forms['damas'].submit()">
+                            <input type="hidden" name="modelcat" value="Damas">
+                            <i class="bi bi-gender-female"></i>
+                            <p>Damas</p>
+                        </div>
+                    </form>
+                @break
+
+                @case("Hombres")
+                    <form name="hombre" action="{{route('Wholesalers')}}" method="get">
+                        @csrf
+                        @method('GET')
+                        <div class="Hombres" style="cursor:pointer" onclick="document.forms['hombre'].submit()" >
+                            <input type="hidden" name="modelcat" value="Hombres">
+                            <i class="bi bi-gender-male"></i>
+                            <p>Hombres</p>
+                        </div>
+                    </form>
+                @break
+
+                @case("Niñas")
+                    <form name="ninas" action="{{route('Wholesalers')}}" method="get">
+                        @csrf
+                        @method('GET')
+                        <div class="Ninas" style="cursor:pointer" onclick="document.forms['ninas'].submit()">
+                            <input type="hidden" name="modelcat" value="Niñas">
+                            <i class="bi bi-balloon-heart-fill"></i>
+                            <P>Niñas</P>
+                        </div>
+                    </form>
+                @break
+
+                @case("Niños")
+                    <form name="ninos" action="{{route('Wholesalers')}}" method="get">
+                        @csrf
+                        @method('GET')
+                        <div class="Ninos" style="cursor:pointer" onclick="document.forms['ninos'].submit()">
+                            <input type="hidden" name="modelcat" value="Niños">
+                            <i class="bi bi-balloon-fill"></i>
+                            <p>Niños</p>
+                        </div>
+                    </form>
+                @break
+                @default
+            @endswitch
+        @endforeach
+    </div>
+</div>
+{{-- end Search --}}
+
+{{--Biz items--}}
+<div class="container m-4 d-flex gap-3 pb-5 flex-wrap">
     @foreach ($business as $biz)
 
         <div class="card" style="width: 18rem; background-color:#F5F5F5">
@@ -24,6 +84,9 @@
             </div>
             {{-- end likes --}}
 
+              {{-- modelCategoriesList--}}
+              <x-ModelCategoriesList :bizID="$biz->bizId"></x-ModelCategoriesList>
+              {{-- end modelCategoriesList--}}
 
                 <div class="row">
                     <div class="col col-3">
@@ -63,13 +126,17 @@
 
 
                 <hr>
-                <a href="{{route('Biz.show', ['biz'=>$biz->bizId])}}" class="btn btn-sm btn-show form-control">
-                    <span class="material-symbols-outlined">info</span>
-                    <span class="pb-1">Detalles...</span>
-                </a>
+                <div class="btn-show">
+                    <a href="{{route('Biz.show', ['biz'=>$biz->bizId])}}" class="btn btn-sm  btn-show form-control">
+                        <span class="material-symbols-outlined">info</span>
+                        <span class="pb-1" style="color:var(--font-strong)">Detalles...</span>
+                    </a>
+                </div>
             </div>
         </div>
 
     @endforeach
 </div>
+{{-- end Biz Items --}}
+
 @endsection

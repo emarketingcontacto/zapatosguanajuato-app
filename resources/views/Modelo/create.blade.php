@@ -76,8 +76,21 @@
             @enderror
         </div>
 
+        {{--modelSubcategories--}}
 
-         {{-- Biz --}}
+        <div class="mb-3">
+            <label for="modelsubcategory" class="form-control bg-light">Modelo Sub Category</label>
+            <select name="modelsubcatId" class="form-control drop-down w-100">
+                <option value="">--Please choose an option--</option>
+                @foreach ($modelsubcategories as $modelsubcategory)
+                    <option value="{{$modelsubcategory->modelsubcatId}}">{{$modelsubcategory->modelsubcatName}}</option>
+                @endforeach
+            </select>
+        </div>
+
+        {{--modelSubcategories--}}
+
+        {{-- Biz --}}
          <div class="mb-3">
             <label for="bizId" class="form-control bg-light">Biz</label>
             <select name="bizId" class="form-control dropdown w-100">

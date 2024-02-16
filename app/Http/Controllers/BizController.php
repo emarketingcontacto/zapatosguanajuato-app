@@ -3,13 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Models\Biz;
-use App\Models\Bizcategory;
-use App\Models\SaleType;
 use App\Models\Modelo;
+use App\Models\SaleType;
+use App\Models\Bizcategory;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
+use App\Models\ModelCategory;
+use App\Models\ModelCategoryBiz;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
+use PhpParser\Node\Stmt\Foreach_;
 
+use function Laravel\Prompts\table;
 
 class BizController extends Controller
 {
@@ -37,7 +41,8 @@ class BizController extends Controller
     {
         $bizcategories = Bizcategory::all();
         $saletypes = SaleType::all();
-        return view('Biz.create', ['bizcategories'=>$bizcategories, 'saletypes'=>$saletypes]);
+        $modelcategories = ModelCategory::all();
+        return view('Biz.create', ['bizcategories'=>$bizcategories, 'saletypes'=>$saletypes, 'modelcategories'=>$modelcategories]);
     }
 
     /**
@@ -45,7 +50,7 @@ class BizController extends Controller
      */
     public function store(Request $request)
     {
-       // dd($request);
+      // dd($request->modelcatid);
        $validData = $request->validate(
         [
             'bizName'=>'required',
@@ -66,34 +71,59 @@ class BizController extends Controller
         ]);
 
         if($request->hasFile('bizImage')){
-
             $validData['bizImage'] = $request->file('bizImage')->store('biz', 'public');
         }
+
         Biz::create($validData);
+       $lastbiz = DB::table('biz')->orderBy('bizId', 'desc')->first();
+
+       foreach ($request->modelcatid as $key => $value) {
+            DB::table('modelcategory_biz')
+            ->insert([
+                'bizId'=>$lastbiz->bizId,
+                'modelcatId' => $value
+            ]);
+       }
+
         return redirect('Biz')->with('success', 'Created Successfully');
     }
 
-    public function show(Biz $biz){
-        //dd($biz);
+    public function show(Biz $biz, Request $request){
+
         $bizcat = Bizcategory::where('bizcatId', $biz->bizcatId)->first();
         $saletype = SaleType::where('saletypeId', $biz->saletypeId)->first();
 
+
+
+        $modelcategories = DB::table('modelcategory')
+        ->join('modelcategory_biz', 'modelcategory.modelcatId', '=', 'modelcategory_biz.modelcatId' )
+        ->select('modelcategory_biz.*', 'modelcategory.modelcatName')
+        ->where('modelcategory_biz.bizId', '=', $biz->bizId)->get();
+
+       if($request->modelsubcatname === null)
+       {
         $modelos = DB::table('model')
         ->join('material', 'model.materialId','=','material.materialId')
         ->join('seasson', 'model.seassonId','=','seasson.seassonId')
-        ->select('model.*', 'material.materialName','seasson.seassonName')
+        ->join('modelsubcategory', 'modelsubcategory.modelsubcatId', '=', 'model.modelsubcatId')
+        ->select('model.*', 'material.materialName','seasson.seassonName', 'modelsubcategory.modelsubcatName')
         ->where('bizId', $biz->bizId)->get();
 
-        // $likesCount = DB::table('likes')
-        // ->select(DB::raw('count(*) as countlikes'))
-        // ->where('bizId','=',$biz->bizId)
-        // ->get();
+        }else{
 
-       //return view('Biz.show',['biz'=>$biz, 'bizcat'=>$bizcat, 'saletype'=>$saletype, 'modelos'=>$modelos , 'likesCount'=>$likesCount]);
-       return view('Biz.show',['biz'=>$biz, 'bizcat'=>$bizcat, 'saletype'=>$saletype, 'modelos'=>$modelos]);
+            $modelos = DB::table('model')
+            ->join('material', 'model.materialId','=','material.materialId')
+            ->join('seasson', 'model.seassonId','=','seasson.seassonId')
+            ->join('modelsubcategory', 'modelsubcategory.modelsubcatId', '=', 'model.modelsubcatId')
+            ->select('model.*', 'material.materialName','seasson.seassonName', 'modelsubcategory.modelsubcatName')
+            ->where('modelsubcategory.modelsubcatName', '=', $request->modelsubcatname)
+            ->where('bizId', $biz->bizId)->get();
 
+
+        }
+        //return view('Biz.show',['biz'=>$biz, 'bizcat'=>$bizcat, 'saletype'=>$saletype, 'modelos'=>$modelos , 'likesCount'=>$likesCount]);
+        return view('Biz.show',['biz'=>$biz, 'bizcat'=>$bizcat, 'saletype'=>$saletype, 'modelos'=>$modelos, 'modelcategories'=>$modelcategories]);
     }
-
 
     /**
      * Show the form for editing the specified resource.
@@ -102,13 +132,14 @@ class BizController extends Controller
     {
         $bizcategories = Bizcategory::all();
         $saletypes = SaleType::all();
+        $modelcategoriesall = ModelCategory::all();
 
-        return view('Biz.edit',
-        [
-            'biz' => $biz,
-            'bizcategories' => $bizcategories,
-            'saletypes' => $saletypes
-        ]);
+        $modelcategories = DB::table('modelcategory')
+            ->join('modelcategory_biz', 'modelcategory.modelcatId', '=', 'modelcategory_biz.modelcatId' )
+            ->select('modelcategory_biz.*', 'modelcategory.modelcatName')
+            ->where('modelcategory_biz.bizId', '=', $biz->bizId)->get();
+
+        return view('Biz.edit',['biz' => $biz,'bizcategories' => $bizcategories,'saletypes' => $saletypes,'modelcategoriesall'=>$modelcategoriesall ,'modelcategories'=>$modelcategories]);
     }
 
     /**
@@ -143,6 +174,21 @@ class BizController extends Controller
                 $validData['bizImage'] = $request->file('bizImage')->store('biz', 'public');
             }
 
+            DB::table('modelcategory_biz')
+            ->select('*')
+            ->where("bizId", "=", $biz->bizId)
+            ->delete();
+
+
+            foreach ($request->modelcatid as $key => $value) {
+                DB::table('modelcategory_biz')
+                ->insert([
+                    'bizId'=>$biz->bizId,
+                    'modelcatId' => $value
+                ]);
+
+            };
+
             $biz->update($validData);
             return redirect('Biz')->with('success', 'Updated Successfully');
     }
@@ -153,6 +199,11 @@ class BizController extends Controller
     public function destroy(Biz $biz)
     {
         $biz->delete();
+
+        DB::tabla('modelcategory_biz')
+        ->where('bizId', '=', $biz->bizId)
+        ->delete();
+
         return redirect('Biz')->with('success', 'Deleted Succesfully');
     }
 }
