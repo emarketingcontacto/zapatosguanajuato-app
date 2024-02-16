@@ -76,17 +76,15 @@
 
          {{-- DESIRE --}}
 
-         <div class="desire">
+         <div class="desire d-flex flex-column">
             <span>
-                <h3>
-                    <span class="fw-bolder fst-italic fs-3">"</span>
+                    <span class="fw-bolder ft-italic">"</span>
                      Imagina tener acceso a una lista completa de los mejores proveedores de
                     zapatos, contando con las medidas de seguridad física y en linea que te
-                    brinden la tranquilidad que necesitas para hacer transacciones seguras<span class="text-bold fs-1">"</span>
+                    brinden la tranquilidad que necesitas para hacer transacciones seguras<span class="text-bold">"</span>
                     <br/>
-                   <p class="mt-5 text-center secondary-text fs-3"> Con nuestro sitio de membresía, puedes hacer realidad ese sueño ! .</p>
-                </h3>
             </span>
+            <p class="mt-5 text-center secondary-text"> Con nuestro sitio de membresía, puedes hacer realidad ese sueño ! .</p>
          </div>
          {{-- END DESIRES --}}
 

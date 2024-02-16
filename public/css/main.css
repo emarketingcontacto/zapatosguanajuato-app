@@ -106,14 +106,14 @@ body{
     width: 100%;
   }
   .attention h2 {
-    font-size: 3vw;
+    font-size: 4vw;
     color: var(--font-normal);
     text-align: center;
     width: 90%;
   }
 
   .attention h4 {
-    font-size: 2vw;
+    font-size: 2.8vw;
     color: var(--secondary);
   }
 
@@ -134,7 +134,7 @@ body{
   }
 
   .interest-left span{
-    font-size: 2vw;
+    font-size: 3vw;
     width: 90%;
   }
 
@@ -162,7 +162,7 @@ body{
 
   .interest-right span {
   width: 90%;
-  font-size: 2vw;
+  font-size: 3vw;
   }
 
 
@@ -182,7 +182,7 @@ body{
 
   .Buttons{
     width: 100%;
-    height: 50vh;
+    height: auto;
     display: flex;
     flex-wrap: wrap;
     padding: 1rem 2rem 1rem 2rem ;
@@ -214,7 +214,7 @@ body{
     align-items: center;
     border-bottom: 1px solid var(--font-silent);
     color:var(--font-light);
-    font-size: 2.1vw;
+    font-size: 3vw;
   }
 
 .desire{
@@ -228,6 +228,11 @@ body{
 
 .desire span{
     width: 75%;
+    font-size: 3vw;
+}
+
+.desire p{
+    font-size: 3vw;
 }
 .navbar{
     z-index: 1;
@@ -358,7 +363,7 @@ font-size: .7rem;
     justify-content: center;
     background-position: center;
     background-size: cover;
-    width:100%;
+    width:auto;
     height:75vh;
 }
 
