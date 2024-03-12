@@ -120,7 +120,7 @@
     </div>
     <div class="row biz-row-value">
         <div class="col"><a href="mailto:{{$biz->bizEmail}}">{{$biz->bizEmail}}</a></div>
-        <div class="col"><a href="{{$biz->bizWeb}}">{{$biz->bizWeb}}</a></div>
+        <div class="col"><a href="{{$biz->bizWeb}}" target="_blank">{{$biz->bizWeb}}</a></div>
     </div>
     <hr class="biz-hr">
     {{-- row --}}

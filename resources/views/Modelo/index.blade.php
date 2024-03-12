@@ -6,7 +6,7 @@
 
     <h1>Modelos</h1>
     {{-- create --}}
-    <a href="/Modelo/create" class="btn btn-sm btn-primary">Create</a>
+    <a href="{{route('Modelo.create')}}" class="btn btn-sm btn-primary">Create</a>
     <hr>
     {{-- succes Message --}}
     @if (session()->has('success'))

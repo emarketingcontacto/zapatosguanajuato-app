@@ -16,7 +16,7 @@
 
     <link rel="icon" href="{{asset('/favicon.ico')}}" type="image/x-icon">
 
-    <title>CalzadoGuanajuato.mx</title>
+    <title>ZapatosGuanajuato.mx</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light position-fixed w-100">
