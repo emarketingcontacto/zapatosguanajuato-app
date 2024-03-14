@@ -451,6 +451,12 @@ footer{
     border-radius: 10px;
     font-size: 1.3rem;
     border:1px solid var(--cinqterly);
+    display: flex;
+    width: 50vw;
+    justify-content: space-around;
+    align-items:center;
+    height: auto;
+    padding-top: 3vh;
 }
 
 .modelcategories p{
@@ -483,4 +489,8 @@ footer{
 
 .subcategorysearch :hover{
     background-color: var(--stg-ternary);
+}
+
+svg{
+    width: 1rem;
 }

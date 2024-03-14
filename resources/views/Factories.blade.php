@@ -8,7 +8,7 @@
 
 {{-- Search --}}
 <div class="d-flex w-100 justify-content-center ">
-    <div class="d-flex gap-3 w-50 modelcategories justify-content-around" style="height:7vh">
+    <div class="modelcategories">
         @foreach ($modelcategories as $modelcategory)
             @switch($modelcategory->modelcatName)
                 @case("Damas")

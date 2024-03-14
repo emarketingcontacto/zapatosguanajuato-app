@@ -27,7 +27,7 @@ class ModeloController extends Controller
             'biz.bizName',
             'seasson.seassonName',
             'modelsubcategory.modelsubcatName',
-        )->get();
+        )->paginate(20);
         return view('Modelo.index', ['modelos'=>$modelo]);
     }
 

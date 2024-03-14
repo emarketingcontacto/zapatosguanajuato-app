@@ -5,9 +5,9 @@
 <div  class="container mb-5">
     <h1>Edit Modelo</h1>
 
-    <form action="{{route('Modelo.store')}}" method="post" enctype="multipart/form-data">
+    <form action="{{route('Modelo.update',['modelo'=>$modelo])}}" method="post" enctype="multipart/form-data">
         @csrf
-        @method('POST')
+        @method('PUT')
 
         {{-- Id --}}
         <div class="mb-3">

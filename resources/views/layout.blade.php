@@ -8,6 +8,16 @@
     <link rel="stylesheet" href="{{ URL::asset('css/main.css') }}" />
     {{-- <link rel="stylesheet" href="/css/main.css"> --}}
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LEV2309FWD"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-LEV2309FWD');
+    </script>
+
     {{-- <script src="script.js"></script> --}}
     <script src="{{URL::asset('/scripts/script.js')}}"></script>
     <script src="{{URL::asset('/scripts/likes.js')}}"></script>
@@ -36,6 +46,8 @@
               <li class="nav-item">
                 <a class="nav-link" href="/Retails">Minoristas</a>
               </li>
+
+              <x-Subcategories></x-Subcategories>
 
               @auth
               {{-- admin --}}

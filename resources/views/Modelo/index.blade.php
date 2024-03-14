@@ -62,6 +62,11 @@
     </table>
 
 
+
+</div>
+
+<div class="mb-4 pb-4">
+    {{$modelos->links()}}
 </div>
 
 @endsection

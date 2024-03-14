@@ -14,6 +14,7 @@ use App\Http\Controllers\SaleTypeController;
 use App\Http\Controllers\BizCategoryController;
 use App\Http\Controllers\ModelCategoryController;
 use App\Http\Controllers\ModelSubcategoryController;
+use App\Http\Controllers\SubcategoriesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -139,6 +140,10 @@ route::get('/Wholesalers', Wholesalers::class)->middleware('auth')->name('Wholes
 /*Retails */
 route::get('/Retails', Retails::class)->middleware('auth')->name('Retails');
 
+/*Subcategories*/
+Route::get('/Subcategories', SubcategoriesController::class)->name('Subcategories');
+
+
 /*Registration */
 //Logout
 Route::post('/User/logout', [UserController::class,'logout'])->name('User.logout');
@@ -176,4 +181,3 @@ Route::get('/Modelo/{modelo}/show', [ModeloController::class,'show'])->name('Mod
 Route::put('/Modelo/{modelo}/update', [ModeloController::class,'update'])->name('Modelo.update');
 //Delete
 Route::delete('/Modelo/{modelo}/destroy', [ModeloController::class,'destroy'])->name('Modelo.destroy');
-
