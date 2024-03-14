@@ -70,7 +70,8 @@
     @foreach ($business as $biz)
 
         <div class="card" style="width: 18rem; background-color:#F5F5F5">
-            <img src="{{asset('storage/'.$biz->bizImage)}}" class="card-img-top">
+            {{-- <img src="{{asset('storage/'.$biz->bizImage)}}" class="card-img-top" style="height: 380px"> --}}
+            <img src="{{asset('/'.$biz->bizImage)}}" class="card-img-top" style="height: 380px">
             <h5 class="card-title">{{$biz->bizName}}</h5>
             <div class="card-body card-text">
 
