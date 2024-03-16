@@ -16,6 +16,10 @@
     </div>
        {{-- END ATTENTION --}}
 
+        {{-- Galery --}}
+        <x-GalleryFront></x-GalleryFront>
+        {{-- End Galery --}}
+
        {{--  INTEREST --}}
         <div class="interest">
             <div class="interest-left">
@@ -37,9 +41,7 @@
         </div>
        {{-- END INTEREST --}}
 
-       {{-- Galery --}}
-      <x-GalleryFront></x-GalleryFront>
-       {{-- End Galery --}}
+
 
 
          {{--  INTEREST A --}}
