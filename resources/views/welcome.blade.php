@@ -8,14 +8,12 @@
     {{-- AIDA --}}
 
     {{-- ATTENTION --}}
-
     <div class="attention bg-light">
         <h2>
             ¿Estás buscando una forma segura y confiable de llevar tu negocio de zapatos al siguiente nivel?
         </h2>
         <h4>Tenemos la solución perfecta para ti.</h4>
     </div>
-
        {{-- END ATTENTION --}}
 
        {{--  INTEREST --}}
@@ -37,11 +35,14 @@
                 <span>Basamos nuestras medidas de seguridad con estrategias físicas y digítales</span>
             </div>
         </div>
-
        {{-- END INTEREST --}}
 
-         {{--  INTEREST A --}}
+       {{-- Galery --}}
+      <x-GalleryFront></x-GalleryFront>
+       {{-- End Galery --}}
 
+
+         {{--  INTEREST A --}}
          <div class="Buttons">
             <div class="buttonA-image">
                 <span class="material-symbols-outlined">visibility</span>
@@ -75,8 +76,7 @@
          {{-- END INTEREST A --}}
 
          {{-- DESIRE --}}
-
-         <div class="desire d-flex flex-column">
+         <div class="desire d-flex flex-column" style="padding-bottom: 3rem">
             <span>
                     <span class="fw-bolder ft-italic">"</span>
                      Imagina tener acceso a una lista completa de los mejores proveedores de
@@ -89,7 +89,7 @@
          {{-- END DESIRES --}}
 
             {{-- PAYPAL TEXT --}}
-            <div class="paypal pt-5">
+            {{-- <div class="paypal pt-5">
                 <span class="pt-5">
                     Regístrate hoy mismo en nuestro sitio de membresía y descubre cómo podemos ayudarte a llevar tu
                     negocio de zapatos al siguiente nivel de forma segura y confiable.
@@ -101,17 +101,14 @@
                     <h1 class="text-center"> $499.00 MXN</h1>
                 </span>
 
-            </div>
+            </div> --}}
             {{-- END PAYPAL TEXT --}}
 
-            <div class="paypalButtons">
-
+            {{-- <div class="paypalButtons">
                 <div id="paypal-button-container-P-2N5747318J1225455MREGMDY"></div>
-
             </div>
-
-
-                <script src="https://www.paypal.com/sdk/js?client-id=AbIQh2FbR_tDfsZYfD72KzDN10u-ol5aXjhnx5WoNG1tEWjYDZFvrYWBv-E2IpLzYU4qWO7ZWTD-GBFL&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+                <script src="https://www.paypal.com/sdk/js?client-id=AbIQh2FbR_tDfsZYfD72KzDN10u-ol5aXjhnx5WoNG1tEWjYDZFvrYWBv-E2IpLzYU4qWO7ZWTD-GBFL&vault=true&intent=subscription" data-sdk-integration-source="button-factory">
+                </script>
                 <script>
                   paypal.Buttons({
                       style: {
@@ -130,7 +127,7 @@
                         alert(data.subscriptionID); // You can add optional success message for the subscriber here
                       }
                   }).render('#paypal-button-container-P-2N5747318J1225455MREGMDY'); // Renders the PayPal button
-                </script>
+                </script> --}}
 
 
 

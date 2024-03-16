@@ -1,5 +1,11 @@
 {{-- likes Count --}}
 @php
+      if(!Auth::check()){
+        return redirect()->route('welcome');
+   }
+@endphp
+
+@php
      $likesCount = DB::table('likes')
         ->select(DB::raw('count(*) as countlikes'))
         ->where('bizId','=',$bizID)

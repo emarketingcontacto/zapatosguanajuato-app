@@ -102,8 +102,9 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 30vh;
+    height: auto;
     width: 100%;
+    padding-top: 2rem;
   }
   .attention h2 {
     font-size: 4vw;
@@ -260,6 +261,14 @@ body{
     margin-bottom: 25px;
 }
 
+.card a{
+    text-decoration: none;
+}
+
+.card h5:hover{
+    background-color: var(--stg-ternary);
+    color: var(--quarterly);
+}
 
 .card-title{
     margin-top: -50%;
@@ -487,10 +496,57 @@ footer{
     color: var(--font-strong);
 }
 
-.subcategorysearch :hover{
+
+
+.subcategorysearch input{
     background-color: var(--stg-ternary);
+    color: var(--cinqterly);
+    border: none;
+    border-radius: 5%;
+    margin-left: 3px;
+}
+
+.subcategorysearch input:hover{
+    background-color:var(--cinqterly);
+    color:var(--stg-ternary);
 }
 
 svg{
     width: 1rem;
+}
+
+.galleryDiv{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #CBD498;
+    height:auto;
+    padding-top: 1rem;
+    padding-bottom:10rem;
+}
+
+.galleryItem{
+    margin-top: 0;
+    padding-top: 0;
+    height: auto;
+}
+.galleryItem p{
+    position:relative;
+    text-align: center;
+    background-color: rgba(0 , 0 , 0, .5);
+    margin-top: -10rem;
+    color:var(--primary)
+}
+
+.galleryItem img{
+    position:static;
+    margin-top: 8rem;
+}
+
+.galleryItem a{
+    text-decoration: none;
+}
+
+.galleryItem p:hover{
+    background-color: var(--stg-ternary);
 }

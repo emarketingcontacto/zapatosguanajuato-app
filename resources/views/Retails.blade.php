@@ -127,12 +127,12 @@
 
 
                 <hr>
-                <div class="btn-show">
+                {{-- <div class="btn-show">
                     <a href="{{route('Biz.show', ['biz'=>$biz->bizId])}}" class="btn btn-sm  btn-show form-control">
                         <span class="material-symbols-outlined">info</span>
                         <span class="pb-1" style="color:var(--font-strong)">Detalles...</span>
                     </a>
-                </div>
+                </div> --}}
             </div>
         </div>
 
