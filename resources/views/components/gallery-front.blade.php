@@ -5,6 +5,7 @@
     ->select('model.modelId', 'model.modelImage','model.modelName','biz.bizId', 'biz.bizName')
     ->orderBy('model.modelId', 'desc')
     ->limit(10)
+    ->distinct('biz.bizId')
     ->get()
 @endphp
 
