@@ -72,9 +72,10 @@
         <div class="card" style="width: 18rem; background-color:#F5F5F5">
             {{-- <img src="{{asset('storage/'.$biz->bizImage)}}" class="card-img-top" style="height: 380px"> --}}
             <img src="{{asset('/'.$biz->bizImage)}}" class="card-img-top" style="height: 380px">
-            <h5 class="card-title">{{$biz->bizName}}</h5>
+            <a href="{{route('Biz.show', ['biz'=>$biz->bizId])}}">
+                <h5 class="card-title">{{$biz->bizName}}</h5>
+            </a>
             <div class="card-body card-text">
-
             {{-- likes --}}
             <div class="row d-flex justify-content-end">
                 <div class="col d-flex align-items-center gap-1">

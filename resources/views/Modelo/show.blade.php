@@ -4,7 +4,7 @@
 
 <div class="container mb-5 text-center">
     <div class="row d-flex flex-column justify-center align-content-center">
-            <img src="{{asset('storage/'.$modelo->modelImage)}}" height="600vh" width="100vw">
+            <img src="{{asset('storage/'.$modelo->modelImage)}}" height="100%" width="100%">
             <p class="fw-strong fs-2 hero-text m-n15">{{$modelo->modelName}}</p>
     </div>
 

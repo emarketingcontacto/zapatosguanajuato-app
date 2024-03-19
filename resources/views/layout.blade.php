@@ -100,7 +100,7 @@
                     <span class="material-symbols-outlined">
                         how_to_reg
                     </span>
-                    Register
+                    Registro
                 </a>
             </li>
             <li class="nav-item">
@@ -108,7 +108,8 @@
                     <span class="material-symbols-outlined">
                         login
                     </span>
-                    Login</a>
+                    Iniciar Sesion
+                    </a>
             </li>
         @endauth
         </ul>
