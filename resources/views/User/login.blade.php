@@ -26,9 +26,9 @@
           </div>
 
         <button type="submit" class="btn btn-sm btn-primary">Login</button>
-        <a href="/User/create" class="btn btn-sm btn-success">Register</a>
+        {{-- <a href="/User/create" class="btn btn-sm btn-success">Register</a> --}}
+        <a href="/Register" class="btn btn-sm btn-success">Register</a>
         <a href="/User" class="btn btn-sm btn-danger">Cancel</a>
     </form>
 </div>
-
 @endsection

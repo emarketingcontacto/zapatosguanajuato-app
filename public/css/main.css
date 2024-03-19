@@ -420,6 +420,24 @@ font-size: .7rem;
     margin-bottom: 5px;
 }
 
+.paypalbuttons{
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5vh;
+    padding-bottom: 15vh;
+}
+
+#paypal-button-container-P-70396561M81280630MX4NJZY{
+    width: 50vw;
+    height: 25vh;
+    padding-top: 5vh;
+    padding-bottom: 15vh;
+    margin-bottom: 15vh;
+}
+
+
 .likes{
     width:fit-content;
     border: 1px #860404 solid;

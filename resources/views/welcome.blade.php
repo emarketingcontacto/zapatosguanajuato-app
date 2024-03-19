@@ -90,49 +90,5 @@
          </div>
          {{-- END DESIRES --}}
 
-            {{-- PAYPAL TEXT --}}
-            {{-- <div class="paypal pt-5">
-                <span class="pt-5">
-                    Regístrate hoy mismo en nuestro sitio de membresía y descubre cómo podemos ayudarte a llevar tu
-                    negocio de zapatos al siguiente nivel de forma segura y confiable.
-                    <p>
-                        ¡No pierdas la oportunidad de unirte a nuestra comunidad de expertos de la industria del calzado y tener
-                        acceso a los recursos más valiosos para tu negocio!
-                    </p>
-                    <h2 class="text-center"> Acceso ilimitado por todo un año</h2>
-                    <h1 class="text-center"> $499.00 MXN</h1>
-                </span>
-
-            </div> --}}
-            {{-- END PAYPAL TEXT --}}
-
-            {{-- <div class="paypalButtons">
-                <div id="paypal-button-container-P-2N5747318J1225455MREGMDY"></div>
-            </div>
-                <script src="https://www.paypal.com/sdk/js?client-id=AbIQh2FbR_tDfsZYfD72KzDN10u-ol5aXjhnx5WoNG1tEWjYDZFvrYWBv-E2IpLzYU4qWO7ZWTD-GBFL&vault=true&intent=subscription" data-sdk-integration-source="button-factory">
-                </script>
-                <script>
-                  paypal.Buttons({
-                      style: {
-                          shape: 'rect',
-                          color: 'gold',
-                          layout: 'vertical',
-                          label: 'subscribe'
-                      },
-                      createSubscription: function(data, actions) {
-                        return actions.subscription.create({
-                          /* Creates the subscription */
-                          plan_id: 'P-2N5747318J1225455MREGMDY'
-                        });
-                      },
-                      onApprove: function(data, actions) {
-                        alert(data.subscriptionID); // You can add optional success message for the subscriber here
-                      }
-                  }).render('#paypal-button-container-P-2N5747318J1225455MREGMDY'); // Renders the PayPal button
-                </script> --}}
-
-
-
 </div>
 @endsection
-

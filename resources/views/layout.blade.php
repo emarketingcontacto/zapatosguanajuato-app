@@ -95,7 +95,8 @@
         @else
         {{-- logout --}}
             <li class="nav-item">
-                <a class="nav-link" href="/User/create">
+                {{-- <a class="nav-link" href="/User/create"> --}}
+                <a class="nav-link" href="{{route('Register')}}">
                     <span class="material-symbols-outlined">
                         how_to_reg
                     </span>

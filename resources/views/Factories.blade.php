@@ -74,7 +74,7 @@
             <a href="{{route('Biz.show', ['biz'=>$biz->bizId])}}">
                 <h5 class="card-title">{{$biz->bizName}}</h5>
             </a>
-            <div class="card-body card-text">
+            <div class="card-body card-text" style="margin-top:0 ">
                 {{-- likes --}}
                     <div class="row d-flex justify-content-end">
                         <div class="col d-flex align-items-center gap-1">

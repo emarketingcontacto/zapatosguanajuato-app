@@ -13,8 +13,9 @@ use App\Http\Controllers\MaterialController;
 use App\Http\Controllers\SaleTypeController;
 use App\Http\Controllers\BizCategoryController;
 use App\Http\Controllers\ModelCategoryController;
-use App\Http\Controllers\ModelSubcategoryController;
 use App\Http\Controllers\SubcategoriesController;
+use App\Http\Controllers\ModelSubcategoryController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -124,12 +125,9 @@ Route::get('/Biz', [BizController::class,'index'])->name('Biz.index');
 Route::get('/Biz/create', [BizController::class,'create'])->name('Biz.create');
 //Store
 Route::post('/Biz', [BizController::class,'store'])->name('Biz.store');
-
 //Show
 // Route::get('/Biz/{biz}/show', [BizController::class,'show'])->middleware('auth')->name('Biz.show');
 Route::get('/Biz/{biz}/show', [BizController::class,'show'])->name('Biz.show');
-
-
 //Edit
 Route::get('/Biz/{biz}/edit', [BizController::class,'edit'])->name('Biz.edit');
 //update
@@ -140,19 +138,17 @@ Route::delete('/Biz/{biz}/destroy', [BizController::class,'destroy'])->name('Biz
 /*Factories */
 // route::get('/Factories', Factories::class)->middleware('auth')->name('Factories');
 route::get('/Factories', Factories::class)->name('Factories');
-
 /*Wholesalers */
 // route::get('/Wholesalers', Wholesalers::class)->middleware('auth')->name('Wholesalers');
 route::get('/Wholesalers', Wholesalers::class)->name('Wholesalers');
-
 /*Retails */
 // route::get('/Retails', Retails::class)->middleware('auth')->name('Retails');
 route::get('/Retails', Retails::class)->name('Retails');
-
-
 /*Subcategories*/
 Route::get('/Subcategories', SubcategoriesController::class)->name('Subcategories');
 
+/*Register */
+Route::get('/Register', RegisterController::class)->name('Register');
 
 /*Registration */
 //Logout
