@@ -136,16 +136,19 @@ Route::put('/Biz/{biz}/update', [BizController::class,'update'])->name('Biz.upda
 Route::delete('/Biz/{biz}/destroy', [BizController::class,'destroy'])->name('Biz.destroy');
 
 /*Factories */
-// route::get('/Factories', Factories::class)->middleware('auth')->name('Factories');
-route::get('/Factories', Factories::class)->name('Factories');
+route::get('/Factories', Factories::class)->middleware('auth')->name('Factories');
+//route::get('/Factories', Factories::class)->name('Factories');
 /*Wholesalers */
-// route::get('/Wholesalers', Wholesalers::class)->middleware('auth')->name('Wholesalers');
-route::get('/Wholesalers', Wholesalers::class)->name('Wholesalers');
+route::get('/Wholesalers', Wholesalers::class)->middleware('auth')->name('Wholesalers');
+//route::get('/Wholesalers', Wholesalers::class)->name('Wholesalers');
 /*Retails */
-// route::get('/Retails', Retails::class)->middleware('auth')->name('Retails');
-route::get('/Retails', Retails::class)->name('Retails');
+route::get('/Retails', Retails::class)->middleware('auth')->name('Retails');
+//route::get('/Retails', Retails::class)->name('Retails');
+
 /*Subcategories*/
-Route::get('/Subcategories', SubcategoriesController::class)->name('Subcategories');
+route::get('/Subcategories', SubcategoriesController::class)->middleware('auth')->name('Subcategories');
+//Route::get('/Subcategories', SubcategoriesController::class)->name('Subcategories');
+
 
 /*Register */
 Route::get('/Register', RegisterController::class)->name('Register');
