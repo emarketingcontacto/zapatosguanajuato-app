@@ -1,8 +1,9 @@
-@extends('layout')
-
+{{-- @extends('layout') --}}
+<x-layout pageTitle="Home">
 @section('main-content')
 
 @include('/partials/_hero')
+
 
 <div class="main-content">
     {{-- AIDA --}}
@@ -26,23 +27,20 @@
                <div class="interest-left-img">
                 <span class="material-symbols-outlined">loyalty </span>
                </div>
-                <span>
+                <h3>
                     Te brindamos acceso a los mejores fabricantes,
-                    tiendas mayoristas y minoristas del mercado de zapatos
-                </span>
+                    tiendas mayoristas y tiendas minoristas del mercado de zapatos
+                </h3>
             </div>
 
             <div class="interest-right">
                 <div class="interest-right-img">
                     <span class="material-symbols-outlined">detection_and_zone</span>
                 </div>
-                <span>Basamos nuestras medidas de seguridad con estrategias físicas y digítales</span>
+                <h3>Basamos nuestras medidas de seguridad con estrategias físicas y digítales</h3>
             </div>
         </div>
        {{-- END INTEREST --}}
-
-
-
 
          {{--  INTEREST A --}}
          <div class="Buttons">
@@ -60,7 +58,7 @@
             </div>
             <div class="buttonA-text">
                 <span>
-                    Veríficamos físicamente cada negocio para asegurarnos que estén activos y listos para hacer negocios.
+                    Veríficamos físicamente cada fabricante, mayorista y minorista para asegurarnos que estén activos y listos para hacer negocios.
                 </span>
             </div>
 
@@ -81,8 +79,8 @@
          <div class="desire d-flex flex-column" style="padding-bottom: 3rem">
             <span>
                     <span class="fw-bolder ft-italic">"</span>
-                     Imagina tener acceso a una lista completa de los mejores proveedores de
-                    zapatos, contando con las medidas de seguridad física y en linea que te
+                     Imagina tener acceso a una lista completa de los mejores proveedores, fabricantes y mayoristas de
+                    zapatos, contamos con medidas de seguridad físicas y en linea que te
                     brinden la tranquilidad que necesitas para hacer transacciones seguras<span class="text-bold">"</span>
                     <br/>
             </span>
@@ -92,3 +90,6 @@
 
 </div>
 @endsection
+
+</x-layout>
+

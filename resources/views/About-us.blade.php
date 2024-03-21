@@ -1,4 +1,5 @@
-@extends('layout')
+{{-- @extends('layout') --}}
+<x-layout pageTitle="Acerca de Nosotros">
 
 @section('main-content')
 
@@ -44,3 +45,5 @@
 </div>
 
 @endsection
+
+</x-layout>

@@ -1,4 +1,9 @@
-@extends('layout')
+{{-- @extends('layout') --}}
+
+<x-layout pageTitle={{$subcategory}}>
+
+
+
 
     @section('main-content')
     <div class="d-flex mt-5 mb-5 pb-5 gap-3 flex-wrap justify-content-center">
@@ -6,7 +11,10 @@
             <div class="card" style="width: 18rem;">
                 <img src="{{asset('storage/'.$model->modelImage)}}" class="card-img-top" height="350px" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">{{$model->modelName}}</h5>
+                    <a href="{{route('Modelo.show', ['modelo'=>$model->modelId])}}" class="btn btn-sm btn-show form-control">
+                        <h5 class="card-title">{{$model->modelName}}</h5>
+                    </a>
+
                   <p class="card-text">{{$model->saletypeConditions}}</p>
                 </div>
                 <ul class="list-group list-group-flush text-center">
@@ -22,6 +30,5 @@
               </div>
             @endforeach
     </div>
-
-
 @endsection
+</x-layout>

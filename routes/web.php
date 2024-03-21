@@ -30,7 +30,7 @@ use App\Http\Controllers\RegisterController;
 //Home
 Route::get('/', function () { return view('welcome');})->name('welcome');
 //AboutUs
-Route::get('/About', function (){ return view('about-us'); })->name('about-us');
+Route::get('/About', function (){ return view('About-us'); })->name('about-us');
 //PrivacyPolicy
 Route::get('/Privacy-policy', function (){ return view('Privacy-policy'); })->name('privacy-policy');
 
@@ -136,13 +136,13 @@ Route::put('/Biz/{biz}/update', [BizController::class,'update'])->name('Biz.upda
 Route::delete('/Biz/{biz}/destroy', [BizController::class,'destroy'])->name('Biz.destroy');
 
 /*Factories */
-route::get('/Factories', Factories::class)->middleware('auth')->name('Factories');
+route::get('/Fabricantes', Factories::class)->middleware('auth')->name('Factories');
 //route::get('/Factories', Factories::class)->name('Factories');
 /*Wholesalers */
-route::get('/Wholesalers', Wholesalers::class)->middleware('auth')->name('Wholesalers');
+route::get('/Mayoristas', Wholesalers::class)->middleware('auth')->name('Wholesalers');
 //route::get('/Wholesalers', Wholesalers::class)->name('Wholesalers');
 /*Retails */
-route::get('/Retails', Retails::class)->middleware('auth')->name('Retails');
+route::get('/Minoristas', Retails::class)->middleware('auth')->name('Retails');
 //route::get('/Retails', Retails::class)->name('Retails');
 
 /*Subcategories*/

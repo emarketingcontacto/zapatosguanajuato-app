@@ -79,8 +79,6 @@ class ModelSubcategoryController extends Controller
     {
        // dd($modelsubcategory);
        // dd($request);
-
-
         $validData = $request->validate(
             [
                 'modelsubcatName' => 'required',

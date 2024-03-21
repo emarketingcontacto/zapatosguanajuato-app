@@ -1,4 +1,5 @@
-@extends('layout')
+{{-- @extends('layout') --}}
+<x-layout pageTitle="Politica de Privacidad">
 
 @section('main-content')
 
@@ -95,3 +96,4 @@
 
 </div>
 @endsection
+</x-layout>

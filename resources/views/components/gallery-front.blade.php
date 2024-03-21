@@ -12,7 +12,7 @@
 <div class="galleryDiv">
     @foreach ($galleries as $gallery)
         <div class="galleryItem">
-            <img src="{{asset('storage/'.$gallery->modelImage)}}" alt="{{$gallery->modelImage}}" width="255vw" height="255vh">
+            <img src="{{asset('storage/'.$gallery->modelImage)}}" alt="{{$gallery->bizName}}" width="255vw" height="255vh">
             <a href="{{route('Biz.show', ['biz'=>$gallery->bizId])}}">
                 <p>{{$gallery->bizName}}</p>
             </a>

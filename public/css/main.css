@@ -249,7 +249,7 @@ body{
     justify-content: center;
 }
 
-.header-Category p{
+.header-Category h1{
     background-color: var(--bg-noir);
     padding: 5vh;
     width: 100%;

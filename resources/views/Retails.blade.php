@@ -1,9 +1,11 @@
-@extends('layout')
+{{-- @extends('layout') --}}
+<x-layout pageTitle="Minoristas">
+
 
 @section('main-content')
 
 <div class="header-Category" style="background-image: url('{{asset('storage/'.$bizcat->bizcatImage)}}');">
-    <p>Minoristas</p>
+    <h1>Minoristas</h1>
 </div>
 
 {{-- Search --}}
@@ -144,3 +146,4 @@
 
 
 @endsection
+</x-layout>

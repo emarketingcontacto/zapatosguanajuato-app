@@ -25,6 +25,6 @@ class SubcategoriesController extends Controller
         ->where('modelsubcatName', '=', $request->subcategory)
         ->get();
 
-        return view('Subcategories',['models'=>$models]);
+        return view('Subcategories',['models'=>$models, 'subcategory'=>$request->subcategory]);
     }
 }

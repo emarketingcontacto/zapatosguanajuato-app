@@ -1,9 +1,10 @@
-@extends('layout')
+{{-- @extends('layout') --}}
+<x-layout pageTitle="Fabricantes">
 
 @section('main-content')
 
-<div class="header-Category" style="background-image: url('{{asset('storage/'.$bizcat->bizcatImage)}}');">
-    <p>Fabricantes</p>
+<div class="header-Category" style="background-image: url('{{asset('storage/'.$bizcat->bizcatImage)}}');" alt="Catalogo Fabricantes">
+    <h1>Fabricantes</h1>
 </div>
 
 {{-- Search --}}
@@ -128,12 +129,7 @@
 
 
                 <hr>
-                {{-- <div class="btn-show">
-                    <a href="{{route('Biz.show', ['biz'=>$biz->bizId])}}" class="btn btn-sm btn-show form-control">
-                        <span class="material-symbols-outlined">info</span>
-                        <span class="pb-1" style="color:var(--font-strong)">Detalles...</span>
-                    </a>
-                </div> --}}
+
             </div>
         </div>
 
@@ -142,3 +138,5 @@
 {{-- end Biz Items --}}
 
 @endsection
+
+</x-layout>
