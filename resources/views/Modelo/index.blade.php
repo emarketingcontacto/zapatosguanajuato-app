@@ -1,9 +1,8 @@
-@extends('layout')
+{{-- @extends('layout') --}}
+<x-layout pageTitle="Management">
 
 @section('main-content')
-
 <div class="container m-4">
-
     <h1>Modelos</h1>
     {{-- create --}}
     <a href="{{route('Modelo.create')}}" class="btn btn-sm btn-primary">Create</a>
@@ -13,7 +12,6 @@
     <div id="success" class="alert alert-success">
         {{session('success')}}
     </div>
-
     @endif
     <table class="table-striped w-100" >
         <thead>
@@ -27,7 +25,6 @@
                 <th>Seasson</th>
                 <th>SubCategory</th>
                 <th>Management</th>
-
             </tr>
         </thead>
         <tbody>
@@ -41,7 +38,6 @@
                 <td>{{$modelo->bizName}}</td>
                 <td>{{$modelo->seassonName}}</td>
                 <td>{{$modelo->modelsubcatName}}</td>
-
                 <td class="d-flex">
                     {{-- edit --}}
                         <a href="{{route('Modelo.edit',['modelo'=>$modelo->modelId])}}" class="btn btn-sm btn-primary">Edit</a>
@@ -53,20 +49,14 @@
                         </form>
                 </td>
             </tr>
-
-
-
-
             @endforeach
         </tbody>
     </table>
-
-
-
 </div>
-
 <div class="mb-4 pb-4">
     {{$modelos->links()}}
 </div>
 
 @endsection
+
+</x-layout>

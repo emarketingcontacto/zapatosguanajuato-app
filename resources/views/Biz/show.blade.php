@@ -1,5 +1,5 @@
 {{-- @extends('layout') --}}
-<x-layout pageTitle="Fabricantes">
+<x-layout pageTitle="Management">
 
     @section('main-content')
     <div class="container mb-5 pb-5">

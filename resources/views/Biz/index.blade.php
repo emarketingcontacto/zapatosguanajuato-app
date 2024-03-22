@@ -1,5 +1,5 @@
 {{-- @extends('layout') --}}
-<x-layout pageTitle="Manager">
+<x-layout pageTitle="Management">
 
     @section('main-content')
     <h1>Biz</h1>
