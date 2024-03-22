@@ -61,14 +61,14 @@
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   <li><a class="dropdown-item" href="{{route('BizCategory.index')}}">Buissness Categories</a></li>
-                  <li><a class="dropdown-item" href="/ModelCategory">Model Category</a></li>
-                  <li><a class="dropdown-item" href="/ModelSubcategory">Model SubCategory</a></li>
-                  <li><a class="dropdown-item" href="/Seasson">Seassons</a></li>
-                  <li><a class="dropdown-item" href="/Material">Materials</a></li>
-                  <li><a class="dropdown-item" href="/SaleType">SaleType</a></li>
-                  <li><a class="dropdown-item" href="/Biz">Business</a></li>
-                  <li><a class="dropdown-item" href="/Modelo">Modelos</a></li>
-                  <li><a class="dropdown-item" href="/User">Users</a></li>
+                  <li><a class="dropdown-item" href="{{route('ModelCategory.index')}}">Model Category</a></li>
+                  <li><a class="dropdown-item" href="{{route('ModelSubcategory.index')}}">Model SubCategory</a></li>
+                  <li><a class="dropdown-item" href="{{route('Seasson.index')}}">Seassons</a></li>
+                  <li><a class="dropdown-item" href="{{route('Material.index')}}">Materials</a></li>
+                  <li><a class="dropdown-item" href="{{route('SaleType.index')}}">SaleType</a></li>
+                  <li><a class="dropdown-item" href="{{route('Biz.index')}}">Business</a></li>
+                  <li><a class="dropdown-item" href="{{route('Modelo.index')}}">Modelos</a></li>
+                  <li><a class="dropdown-item" href="{{route('User.index')}}">Users</a></li>
                 </ul>
               </li>
 
