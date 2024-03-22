@@ -140,7 +140,7 @@
                     </a>
                 </div>
                 <div>
-                  <a class="text-muted" href="https://www.facebook.com/DesarrolloDigital">
+                  <a class="text-muted" href="https://www.facebook.com/zapatosguanajuatomx/">
                     <span class="bi bi-facebook fs-4"></span>
                   </a>
                 </div>
@@ -150,12 +150,12 @@
                   </a>
                 </div>
                 <div>
-                  <a class="text-muted" href="https://twitter.com/MDigiti">
+                  <a class="text-muted" href="https://twitter.com/zapatosenleon">
                   <span class="bi bi-twitter-x fs-5"></span>
                   </a>
                 </div>
                 <div>
-                  <a class="text-muted" href="mailto:contacto@solucion-e.com.mx">
+                  <a class="text-muted" href="mailto:admin@zapatosguanajuato.mx">
                     <span class="material-symbols-outlined fs-4">contact_mail</span>
                   </a>
                 </div>
