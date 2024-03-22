@@ -1,5 +1,5 @@
 {{-- @extends('layout') --}}
-<x-layout pageTitle="Minoristas">
+<x-layout pageTitle="Tiendas de Zapatos">
 
 
 @section('main-content')

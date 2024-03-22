@@ -1,5 +1,5 @@
 {{-- @extends('layout') --}}
-<x-layout pageTitle="Home">
+<x-layout pageTitle="Catalogo de Calzado">
 @section('main-content')
 
 @include('/partials/_hero')

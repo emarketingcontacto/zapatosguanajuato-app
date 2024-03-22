@@ -1,5 +1,5 @@
 {{-- @extends('layout') --}}
-<x-layout pageTitle="Mayoristas">
+<x-layout pageTitle="Catalogo Mayoristas">
 
 @section('main-content')
 {{--Header--}}

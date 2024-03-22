@@ -1,5 +1,5 @@
 {{-- @extends('layout') --}}
-<x-layout pageTitle="Fabricantes">
+<x-layout pageTitle="Catalogo Fabricantes">
 
 @section('main-content')
 
