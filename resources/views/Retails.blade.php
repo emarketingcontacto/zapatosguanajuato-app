@@ -1,5 +1,5 @@
 {{-- @extends('layout') --}}
-<x-layout pageTitle="Tiendas de Zapatos">
+<x-layout pageTitle="Tiendas de Zapatos"  pageDescription="Tiendas de zapatos en Guanajuato">
 
 
 @section('main-content')

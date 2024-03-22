@@ -1,5 +1,5 @@
 {{-- @extends('layout') --}}
-<x-layout pageTitle="Catalogo Fabricantes">
+<x-layout pageTitle="Catalogo Fabricantes" pageDescription="Catalogo de Fabricantes de zapatos en Guanajuato">
 
 @section('main-content')
 

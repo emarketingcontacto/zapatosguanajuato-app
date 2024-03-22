@@ -1,5 +1,5 @@
 {{-- @extends('layout') --}}
-<x-layout pageTitle="Catalogo Mayoristas">
+<x-layout pageTitle="Catalogo Mayoristas"  pageDescription="Catalogo de Mayoristas de zapatos en Guanajuato">
 
 @section('main-content')
 {{--Header--}}

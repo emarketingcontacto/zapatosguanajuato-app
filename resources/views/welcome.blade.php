@@ -1,5 +1,5 @@
 {{-- @extends('layout') --}}
-<x-layout pageTitle="Catalogo de Calzado">
+<x-layout pageTitle="Catalogo de Calzado" pageDescription="Catalogo de Fabricantes de Zapatos, Catalogo de Mayoristas de Zapatos y Tiendas de Zapatos en Guanajuato">
 @section('main-content')
 
 @include('/partials/_hero')

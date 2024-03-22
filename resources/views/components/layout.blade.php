@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Catalogo de Fabricantes y Tiendas Mayoristas de Zapatos en Guanajuato"/>
-    <meta name="keywords" content="Catalogo de Fabricantes, Tiendas Mayoristas, Zapaterias , León, Guanajuato "/>
+    <meta name="description" content="{{$pageDescription}}"/>
+    <meta name="keywords" content="Catalogo de Fabricantes, Catalogo Mayoristas, Tiendas y Zapaterias , León, Guanajuato "/>
 
     {{-- <title>Catalogo de Calzado | ZapatosGuanajuato.mx</title> --}}
     <title> {{$pageTitle}} | ZapatosGuanajuato.mx</title>
