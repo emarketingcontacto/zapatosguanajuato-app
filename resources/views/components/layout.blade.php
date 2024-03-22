@@ -39,13 +39,13 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="/Fabricantes">Fabricantes</a>
+                <a class="nav-link" href="{{route('Factories')}}">Fabricantes</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/Mayoristas">Mayoristas</a>
+                <a class="nav-link" href="{{route('Wholesalers')}}">Mayoristas</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/Minoristas">Minoristas</a>
+                <a class="nav-link" href="{{route('Retails')}}">Minoristas</a>
               </li>
 
               <x-Subcategories></x-Subcategories>
@@ -60,7 +60,7 @@
                  Management
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item" href="/BizCategory">Buissness Categories</a></li>
+                  <li><a class="dropdown-item" href="{{route('BizCategory.index')}}">Buissness Categories</a></li>
                   <li><a class="dropdown-item" href="/ModelCategory">Model Category</a></li>
                   <li><a class="dropdown-item" href="/ModelSubcategory">Model SubCategory</a></li>
                   <li><a class="dropdown-item" href="/Seasson">Seassons</a></li>
