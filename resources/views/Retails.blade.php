@@ -1,6 +1,7 @@
-{{-- @extends('layout') --}}
-<x-layout pageTitle="Tiendas de Zapatos"  pageDescription="Tiendas de zapatos en Guanajuato">
-
+@php
+    $description = str_replace(" ", "_", "¿Buscas dónde comprar zapatos en Guanajuato? Explora nuestro catálogo de tiendas minoristas. ¡Encuentra variedad y las mejores marcas!");
+@endphp
+<x-layout pageTitle="Tiendas de Zapatos"  pageDescription={{$description}}>
 
 @section('main-content')
 

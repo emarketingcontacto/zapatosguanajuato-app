@@ -1,4 +1,6 @@
-@extends('layout')
+{{-- @extends('layout') --}}
+<x-layout pageTitle='Register' pageDescription="RegistrationPage" >
+
 
 @section('main-content')
   {{-- PAYPAL TEXT --}}
@@ -46,3 +48,5 @@
 {{-- EndPaypal Buttons--}}
 
 @endsection
+
+</x-layout>

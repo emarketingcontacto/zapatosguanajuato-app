@@ -1,9 +1,7 @@
-{{-- @extends('layout') --}}
-
-<x-layout pageTitle={{$subcategory}}>
-
-
-
+@php
+    $description = str_replace(" ", "_", "Conecta con mayoristas de zapato {$subcategory} en Guanajuato! Catálogo completo con precios y contactos Haz negocio ahora.");
+@endphp
+<x-layout pageTitle="Venta de zapato {{$subcategory}}"  pageDescription={{$description}}>
 
     @section('main-content')
     <div class="d-flex mt-5 mb-5 pb-5 gap-3 flex-wrap justify-content-center">

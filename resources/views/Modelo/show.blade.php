@@ -1,5 +1,8 @@
-{{-- @extends('layout') --}}
-<x-layout pageTitle="Management">
+@php
+   $description = str_replace(" ", "_", "Venta_de_zapatos_al_mayoreo_para_tu_negocio_-Encuentra_el_catálogo_completo_de_{$biz->bizName}_y_solicita_una_cotización_hoy_mismo.");
+@endphp
+<x-layout pageTitle="Catalogo de {{$biz->bizName}}" pageDescription={{$description}}>
+
 
     @section('main-content')
 

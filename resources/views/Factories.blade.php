@@ -1,5 +1,7 @@
-{{-- @extends('layout') --}}
-<x-layout pageTitle="Catalogo Fabricantes" pageDescription="Catalogo de Fabricantes de zapatos en Guanajuato">
+@php
+    $description = str_replace(" ", "_", "Fabricantes de zapatos en Guanajuato para hacer negocio? Encuentra un amplio catálogo de proveedores en León Guanajuato ¡Emprende tu negocio hoy!");
+@endphp
+<x-layout pageTitle="Catalogo Fabricantes" pageDescription={{$description}}>
 
 @section('main-content')
 
