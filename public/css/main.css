@@ -568,3 +568,13 @@ svg{
 .galleryItem p:hover{
     background-color: var(--stg-ternary);
 }
+
+.subcatTitle{
+    background-color: var(--stg-ternary);
+}
+
+.subcatTitle h1{
+    color:var(--primary);
+    font-size: 4rem;
+}
+
