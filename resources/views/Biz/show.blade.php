@@ -6,7 +6,7 @@
     @section('main-content')
     <div class="container mb-5 pb-5">
         <div class="row show-banner" style="background-image: url('{{asset('storage/'.$biz->bizImage)}}')">
-            <p class="fw-strong fs-2">{{$biz->bizName}} </p>
+            <h1 class="fw-strong fs-2">{{$biz->bizName}} </h1>
         </div>
         <hr class="biz-hr">
 

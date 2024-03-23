@@ -376,7 +376,7 @@ font-size: .7rem;
     height:75vh;
 }
 
-.show-banner p{
+.show-banner h1{
     background-color: var(--bg-noir);
     padding: 5vh;
     width: 100%;
