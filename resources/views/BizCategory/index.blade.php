@@ -1,4 +1,3 @@
-{{-- @extends('layout') --}}
 <x-layout pageTitle="Management" pageDescription="BizCategory">
 
     @section('main-content')

@@ -1,6 +1,4 @@
-{{-- @extends('layout') --}}
-
-<x-layout pageTitle="Management">
+<x-layout pageTitle="Management" pageDescription="SaleType">
 
     @section('main-content')
 

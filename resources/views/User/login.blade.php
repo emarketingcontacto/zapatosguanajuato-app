@@ -1,5 +1,5 @@
-{{-- @extends('layout') --}}
 <x-layout pageTitle="Management" pageDescription="Login">
+
     @section('main-content')
 
     <h1>Login</h1>

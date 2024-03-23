@@ -1,5 +1,4 @@
-{{-- @extends('layout') --}}
-<x-layout pageTitle="Management">
+<x-layout pageTitle="Management" pageDescription="Seassons">
 
     @section('main-content')
         <h1>Create Seasson</h1>

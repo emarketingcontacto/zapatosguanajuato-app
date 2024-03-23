@@ -1,5 +1,7 @@
-{{-- @extends('layout') --}}
-<x-layout pageTitle="Acerca de Nosotros">
+@php
+    $description = str_replace(" ", "_", "El catálogo más completo de zapatos en Guanajuato Compra al mayoreo de los mejores fabricantes y surte tu negocio. ¡Aprovecha nuestras ofertas!");
+@endphp
+<x-layout pageTitle="Catalogo de Calzado" pageDescription={{$description}}>
 
 @section('main-content')
 

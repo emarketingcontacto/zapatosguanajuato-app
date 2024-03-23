@@ -1,5 +1,4 @@
-{{-- @extends('layout') --}}
-<x-layout pageTitle="Management">
+<x-layout pageTitle="Management" pageDescription="Users">
 
     @section('main-content')
     <h1 class="text-center"> Create user</h1>
