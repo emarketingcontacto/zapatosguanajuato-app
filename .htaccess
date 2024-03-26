@@ -5,41 +5,18 @@ RewriteCond %{HTTP_HOST} ^www\.zapatosguanajuato\.mx$
 RewriteRule ^/?$ "https\:\/\/zapatosguanajuato\.mx\/public" [R=301,L]
 RewriteCond %{HTTP_HOST} ^zapatosguanajuato\.mx$ [OR]
 RewriteCond %{HTTP_HOST} ^www\.zapatosguanajuato\.mx$
-RewriteRule ^Retails\/?(.*)$ "https\:\/\/zapatosguanajuato\.mx\/public\/Retails$1" [R=301,L]
-RewriteCond %{HTTP_HOST} ^zapatosguanajuato\.mx$ [OR]
-RewriteCond %{HTTP_HOST} ^www\.zapatosguanajuato\.mx$
-RewriteRule ^Factories\/?(.*)$ "http\:\/\/zapatosguanajuato\.mx\/public\/Factories$1" [R=301,L]
-RewriteCond %{HTTP_HOST} ^zapatosguanajuato\.mx$ [OR]
-RewriteCond %{HTTP_HOST} ^www\.zapatosguanajuato\.mx$
-RewriteRule ^Wholesalers$ "http\:\/\/zapatosguanajuato\.mx\/public\/Wholesalers" [R=301,L]
-RewriteCond %{HTTP_HOST} ^zapatosguanajuato\.mx$ [OR]
-RewriteCond %{HTTP_HOST} ^www\.zapatosguanajuato\.mx$
-RewriteRule ^User\/?(.*)$ "https\:\/\/zapatosguanajuato\.mx\/public\/User\/$1" [R=301,L]
-RewriteCond %{HTTP_HOST} ^zapatosguanajuato\.mx$ [OR]
-RewriteCond %{HTTP_HOST} ^www\.zapatosguanajuato\.mx$
-RewriteRule ^BizCategory\/?(.*)$ "https\:\/\/zapatosguanajuato\.mx\/public\/BizCategory$1" [R=301,L]
-RewriteCond %{HTTP_HOST} ^zapatosguanajuato\.mx$ [OR]
-RewriteCond %{HTTP_HOST} ^www\.zapatosguanajuato\.mx$
-RewriteRule ^ModelCategory\/?(.*)$ "https\:\/\/zapatosguanajuato\.mx\/public\/ModelCategory$1" [R=301,L]
-RewriteCond %{HTTP_HOST} ^zapatosguanajuato\.mx$ [OR]
-RewriteCond %{HTTP_HOST} ^www\.zapatosguanajuato\.mx$
-RewriteRule ^ModelSubcategory\/?(.*)$ "https\:\/\/zapatosguanajuato\.mx\/public\/ModelSubcategory$1" [R=301,L]
-RewriteCond %{HTTP_HOST} ^zapatosguanajuato\.mx$ [OR]
-RewriteCond %{HTTP_HOST} ^www\.zapatosguanajuato\.mx$
-RewriteRule ^Seasson\/?(.*)$ "https\:\/\/zapatosguanajuato\.mx\/public\/Seasson$1" [R=301,L]
-RewriteCond %{HTTP_HOST} ^zapatosguanajuato\.mx$ [OR]
-RewriteCond %{HTTP_HOST} ^www\.zapatosguanajuato\.mx$
-RewriteRule ^Material\/?(.*)$ "https\:\/\/zapatosguanajuato\.mx\/public\/Material$1" [R=301,L]
-RewriteCond %{HTTP_HOST} ^zapatosguanajuato\.mx$ [OR]
-RewriteCond %{HTTP_HOST} ^www\.zapatosguanajuato\.mx$
-RewriteRule ^SaleType\/?(.*)$ "https\:\/\/zapatosguanajuato\.mx\/public\/SaleType$1" [R=301,L]
-RewriteCond %{HTTP_HOST} ^zapatosguanajuato\.mx$ [OR]
-RewriteCond %{HTTP_HOST} ^www\.zapatosguanajuato\.mx$
-RewriteRule ^Modelo\/?(.*)$ "https\:\/\/zapatosguanajuato\.mx\/public\/Modelo$1" [R=301,L]
-RewriteCond %{HTTP_HOST} ^zapatosguanajuato\.mx$ [OR]
-RewriteCond %{HTTP_HOST} ^www\.zapatosguanajuato\.mx$
-RewriteRule ^Biz\/?(.*)$ "https\:\/\/zapatosguanajuato\.mx\/public\/Biz\/$1" [R=301,L]
-RewriteCond %{HTTP_HOST} ^zapatosguanajuato\.mx$ [OR]
-RewriteCond %{HTTP_HOST} ^www\.zapatosguanajuato\.mx$
-RewriteRule ^Subcategories$ "http\:\/\/zapatosguanajuato\.mx\/public\/Subcategories" [R=301,L]
 
+  ## EXPIRES CACHING ##
+  <IfModule mod\_expires.c>|||||
+  ExpiresActive On
+  ExpiresByType image/jpg "access 1 year"
+  ExpiresByType image/jpeg "access 1 year"
+  ExpiresByType image/gif "access 1 year"
+  ExpiresByType image/png "access 1 year"
+  ExpiresByType text/css "access 1 month"
+  ExpiresByType application/javascript "access 1 month"
+  ExpiresByType application/x-javascript "access 1 month"
+  ExpiresByType image/x-icon "access 1 year"
+  ExpiresDefault "access 2 days"
+  </IfModule>
+  ## EXPIRES CACHING ##

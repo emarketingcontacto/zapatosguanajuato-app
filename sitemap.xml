@@ -13,53 +13,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://zapatosguanajuato.mx/Subcategories?subcategory=Sandalias</loc>
-    <lastmod>2024-03-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://zapatosguanajuato.mx/User/login</loc>
-    <lastmod>2024-03-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://zapatosguanajuato.mx/public/Privacy-policy</loc>
     <lastmod>2024-03-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://zapatosguanajuato.mx/Subcategories?subcategory=Tacones</loc>
-    <lastmod>2024-03-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://zapatosguanajuato.mx/Subcategories?subcategory=Botas</loc>
-    <lastmod>2024-03-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://zapatosguanajuato.mx/Subcategories?subcategory=Formal</loc>
-    <lastmod>2024-03-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://zapatosguanajuato.mx/Subcategories?subcategory=Trabajo</loc>
-    <lastmod>2024-03-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://zapatosguanajuato.mx/Subcategories?subcategory=Ortop%C3%A9dico</loc>
-    <lastmod>2024-03-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
+
+
   <url>
     <loc>https://zapatosguanajuato.mx/public/Mayoristas</loc>
     <lastmod>2024-03-25</lastmod>
@@ -80,57 +40,29 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://zapatosguanajuato.mx/Subcategories?subcategory=Deportivos</loc>
-    <lastmod>2024-03-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
     <loc>https://zapatosguanajuato.mx/public/Fabricantes</loc>
     <lastmod>2024-03-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://zapatosguanajuato.mx/public/Biz/41/show</loc>
-    <lastmod>2024-03-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://zapatosguanajuato.mx/public/Subcategories?subcategory=Botas</loc>
+    <loc>https://zapatosguanajuato.mx/public/Subcategories?subcategory=Botas</loc>
     <lastmod>2024-03-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>http://zapatosguanajuato.mx/public/Subcategories?subcategory=Sandalias</loc>
-    <lastmod>2024-03-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://zapatosguanajuato.mx/public/Modelo/126/show</loc>
-    <lastmod>2024-03-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://zapatosguanajuato.mx/public/Modelo/121/show</loc>
+    <loc>https://zapatosguanajuato.mx/public/Subcategories?subcategory=Sandalias</loc>
     <lastmod>2024-03-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>http://zapatosguanajuato.mx/public/Subcategories?subcategory=Formal</loc>
+    <loc>https://zapatosguanajuato.mx/public/Subcategories?subcategory=Formal</loc>
     <lastmod>2024-03-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
-
   <url>
     <loc>https://zapatosguanajuato.mx/public/User/login</loc>
     <lastmod>2024-03-25</lastmod>
@@ -138,7 +70,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>http://zapatosguanajuato.mx/public/Subcategories?subcategory=Deportivos</loc>
+    <loc>https://zapatosguanajuato.mx/public/Subcategories?subcategory=Deportivos</loc>
     <lastmod>2024-03-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -146,41 +78,25 @@
 
 
   <url>
-    <loc>http://zapatosguanajuato.mx/public/Subcategories?subcategory=Trabajo</loc>
+    <loc>https://zapatosguanajuato.mx/public/Subcategories?subcategory=Trabajo</loc>
     <lastmod>2024-03-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>http://zapatosguanajuato.mx/public/Subcategories?subcategory=Ortop%C3%A9dico</loc>
+    <loc>https://zapatosguanajuato.mx/public/Subcategories?subcategory=Ortop%C3%A9dico</loc>
     <lastmod>2024-03-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>http://zapatosguanajuato.mx/public/Subcategories?subcategory=Tacones</loc>
+    <loc>https://zapatosguanajuato.mx/public/Subcategories?subcategory=Tacones</loc>
     <lastmod>2024-03-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://zapatosguanajuato.mx/Register</loc>
-    <lastmod>2024-03-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://zapatosguanajuato.mx/User</loc>
-    <lastmod>2024-03-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://zapatosguanajuato.mx/public/Register</loc>
-    <lastmod>2024-03-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
+
+
   <url>
     <loc>https://zapatosguanajuato.mx/public/User/</loc>
     <lastmod>2024-03-25</lastmod>
@@ -188,85 +104,37 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://zapatosguanajuato.mx/Subcategories?subcategory=Ortop%C3%A9dico</loc>
+    <loc>https://zapatosguanajuato.mx/User/login</loc>
     <lastmod>2024-03-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://zapatosguanajuato.mx/Subcategories?subcategory=Deportivos</loc>
+    <loc>https://zapatosguanajuato.mx/public/About</loc>
     <lastmod>2024-03-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://zapatosguanajuato.mx/Subcategories?subcategory=Formal</loc>
+    <loc>https://zapatosguanajuato.mx/</loc>
     <lastmod>2024-03-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://zapatosguanajuato.mx/public/Fabricantes</loc>
+    <loc>https://zapatosguanajuato.mx/public/Mayoristas</loc>
     <lastmod>2024-03-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://zapatosguanajuato.mx/User/login</loc>
+    <loc>https://zapatosguanajuato.mx/public/Minoristas</loc>
     <lastmod>2024-03-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://zapatosguanajuato.mx/public/About</loc>
-    <lastmod>2024-03-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://zapatosguanajuato.mx/Subcategories?subcategory=Sandalias</loc>
-    <lastmod>2024-03-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://zapatosguanajuato.mx/</loc>
-    <lastmod>2024-03-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://zapatosguanajuato.mx/Subcategories?subcategory=Trabajo</loc>
-    <lastmod>2024-03-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://zapatosguanajuato.mx/public/Mayoristas</loc>
-    <lastmod>2024-03-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://zapatosguanajuato.mx/public/Minoristas</loc>
-    <lastmod>2024-03-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://zapatosguanajuato.mx/Subcategories?subcategory=Tacones</loc>
-    <lastmod>2024-03-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://zapatosguanajuato.mx/public/Privacy-policy</loc>
-    <lastmod>2024-03-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://zapatosguanajuato.mx/Subcategories?subcategory=Botas</loc>
+    <loc>https://zapatosguanajuato.mx/public/Privacy-policy</loc>
     <lastmod>2024-03-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>

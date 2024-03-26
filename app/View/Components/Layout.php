@@ -11,7 +11,9 @@ class Layout extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct( public string $pageTitle, public string $pageDescription ) { }
+    public function __construct( public string $pageTitle,
+                                 public string $pageDescription)
+                            { }
 
     /**
      * Get the view / contents that represent the component.

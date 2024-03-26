@@ -4,13 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {{-- seo --}}
     <meta name="description" content={{$pageDescription}}/>
     <meta name="keywords" content="Catalogo,Fabricantes,Zapatos,Mayoristas,Calzado,Negocio,Leon,Guanajuato"/>
+    <link rel="canonical" href="https://zapatosguanajuato.mx/public/">
     <title> {{$pageTitle}} | ZapatosGuanajuato.mx</title>
+    {{-- end seo --}}
+
+    {{-- style --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ URL::asset('css/main.css') }}" />
-    {{-- <link rel="stylesheet" href="/css/main.css"> --}}
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    {{-- style --}}
+
+    {{-- sripts --}}
+    <script src="{{URL::asset('/scripts/script.js')}}"></script>
+    <script src="{{URL::asset('/scripts/likes.js')}}"></script>
+    <script src="{{URL::asset('/scripts/modelcatbiz.js')}}"></script>
+    <link rel="icon" href="{{asset('/favicon.ico')}}" type="image/x-icon">
+    {{-- endsripts --}}
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LEV2309FWD"></script>
     <script>
@@ -19,11 +32,41 @@
     gtag('js', new Date());
     gtag('config', 'G-LEV2309FWD');
     </script>
-    {{-- <script src="script.js"></script> --}}
-    <script src="{{URL::asset('/scripts/script.js')}}"></script>
-    <script src="{{URL::asset('/scripts/likes.js')}}"></script>
-    <script src="{{URL::asset('/scripts/modelcatbiz.js')}}"></script>
-    <link rel="icon" href="{{asset('/favicon.ico')}}" type="image/x-icon">
+
+    {{-- schema --}}
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "OnlineStore",
+          "name": "Zapatos Guanajuato MX",
+          "description": "Catalogo,Fabricantes,Zapatos,Mayoristas,Calzado,Negocio,Leon,Guanajuato",
+          "image": "	https://zapatosguanajuato.mx/public/images/img_index.jpg",
+          "logo": "",
+          "parentOrganization": {
+            "@type": "OnlineBusiness",
+            "name": "Zapatos Guanajuato MX",
+            "url": "https://zapatosguanajuato.mx/public/"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "Mexico",
+            "addressLocality": "Guanajuato"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingCount": 20,
+            "ratingValue": 4.7
+          },
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "userInteractionCount": 75,
+            "interactionType": "https://schema.org/TradeAction"
+          },
+          "foundingDate": "2019-10-24"
+        }
+        </script>
+    {{-- end schema --}}
+
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light position-fixed w-100">
@@ -111,7 +154,8 @@
         @endauth
         </ul>
         </div>
-      </nav>
+    </nav>
+
       <div class="main-container pt-5">
             @yield('main-content')
       </div>
