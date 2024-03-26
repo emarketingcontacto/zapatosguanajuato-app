@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /Modelo/
+Disallow: /Privacy-policy/
+Disallow: /Register/
+Disallow: /User/
