@@ -495,9 +495,9 @@ footer{
     padding-top: 3vh;
 }
 
-/* .modelcategories p{
+.modelcategories p{
     font-size: .7rem;
-} */
+}
 
 .modelcategorieslist{
     color:var(--stg-ternary);
@@ -550,7 +550,6 @@ svg{
     height:auto;
     padding-top: 1rem;
     padding-bottom:10rem;
-    gap: 3vw;
 }
 
 .galleryItem{
