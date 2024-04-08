@@ -163,7 +163,6 @@ body{
 
   .interest-right span {
   width: 90%;
-  font-size: 3vw;
   }
 
 
@@ -239,6 +238,17 @@ body{
     z-index: 1;
 }
 
+.nav-link{
+    font-size: 2rem;
+}
+
+.navbar-brand{
+    font-size: 2rem;
+}
+
+.dropdown-item{
+    font-size: 2rem;
+}
 .header-Category{
     background-size: cover;
     background-position: center;
@@ -485,9 +495,9 @@ footer{
     padding-top: 3vh;
 }
 
-.modelcategories p{
+/* .modelcategories p{
     font-size: .7rem;
-}
+} */
 
 .modelcategorieslist{
     color:var(--stg-ternary);
