@@ -144,7 +144,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/User/login">
+                <a class="nav-link" href="{{route('User.login')}}">
                     <span class="material-symbols-outlined">
                         login
                     </span>
