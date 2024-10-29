@@ -7,7 +7,7 @@
     {{-- seo --}}
     <meta name="description" content={{$pageDescription}}/>
     <meta name="keywords" content="Catalogo,Fabricantes,Zapatos,Mayoristas,Calzado,Negocio,Leon,Guanajuato"/>
-    <link rel="canonical" href="https://zapatosguanajuato.mx/public/">
+    <link rel="canonical" href="https://zapatosguanajuato.com">
     <title> {{$pageTitle}} | ZapatosGuanajuato.mx</title>
     {{-- end seo --}}
 
