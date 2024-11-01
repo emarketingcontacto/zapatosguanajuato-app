@@ -7,8 +7,16 @@
     {{-- seo --}}
     <meta name="description" content={{$pageDescription}}/>
     <meta name="keywords" content="Catalogo,Fabricantes,Zapatos,Mayoristas,Calzado,Negocio,Leon,Guanajuato"/>
-    <link rel="canonical" href="https://zapatosguanajuato.com">
-    <title> {{$pageTitle}} | ZapatosGuanajuato.mx</title>
+    <title> {{$pageTitle}} | ZapatosGuanajuato.com</title>
+    {{-- canonical --}}
+    <script>
+        const canonicalUrl = window.location.href;
+        const link = document.createElement('link');
+        link.rel = 'canonical';
+        link.href = canonicalUrl;
+        document.head.appendChild(link);
+    </script>
+
     {{-- end seo --}}
 
     {{-- style --}}

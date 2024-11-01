@@ -2,7 +2,7 @@
 @php
     $description = str_replace(" ", "_", "Encuentra el catálogo más completo de zapatos en Guanajuato Compra al mayoreo de los mejores fabricantes y surte tu negocio. ¡Aprovecha nuestras ofertas!");
 @endphp
-<x-layout pageTitle="Directorio de Calzado" pageDescription={{$description}}>
+<x-layout pageTitle="Directorio de Zapatos Guanajuato" pageDescription={{$description}}>
 @section('main-content')
 
 @include('/partials/_hero')
