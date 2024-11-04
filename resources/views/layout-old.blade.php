@@ -117,6 +117,10 @@
         </div>
       </nav>
       <div class="main-container pt-5">
+        @php
+            echo url()->full();
+            echo 'here is url';
+        @endphp
             @yield('main-content')
       </div>
 
