@@ -164,50 +164,51 @@
         </div>
     </nav>
 
-      <div class="main-container pt-5">
+      <div class="main-container pt-5 pb-5">
             @yield('main-content')
       </div>
 
-      <footer class="bg-light">
+      <footer>
         <div class="container d-flex justify-content-center align-items-center w-100 text-center">
             <div class="col">
                 <a href="{{route('privacy-policy')}}">
-                  <span class="text-muted">Politíca de Privacidad</span>
+                  <span>Politíca de Privacidad</span>
                 </a>
             </div>
             <div class="col">
-              <a class="text-muted" href="{{route('about-us')}}">
+              <a href="{{route('about-us')}}">
                 <span>Quiénes somos?</span>
               </a>
-
             </div>
             <div class="col d-flex" style="align-items:center; justify-content:space-evenly">
                 <div>
-                    <a class="text-muted" href="https://solucion-e.com.mx/">
+                    <a href="https://solucion-e.com.mx/">
                       <span class="material-symbols-outlined fs-3">language</span>
                     </a>
                 </div>
                 <div>
-                  <a class="text-muted" href="https://www.facebook.com/zapatosguanajuatomx/">
+                  <a href="https://www.facebook.com/zapatosguanajuatomx/">
                     <span class="bi bi-facebook fs-4"></span>
                   </a>
                 </div>
                 <div>
-                  <a class="text-muted" href=" https://wa.me/4771598183">
+                  <a href=" https://wa.me/4771598183">
                     <span class="bi bi-whatsapp fs-4"></span>
                   </a>
                 </div>
                 <div>
-                  <a class="text-muted" href="https://twitter.com/zapatosenleon">
+                  <a href="https://twitter.com/zapatosenleon">
                   <span class="bi bi-twitter-x fs-5"></span>
                   </a>
                 </div>
                 <div>
-                  <a class="text-muted" href="mailto:admin@zapatosguanajuato.mx">
+                  <a href="mailto:admin@zapatosguanajuato.mx">
                     <span class="material-symbols-outlined fs-4">contact_mail</span>
                   </a>
                 </div>
+            </div>
         </div>
+            <div class="copy-right">Directorio Zapatos Guanajuato @2024</div>
       </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

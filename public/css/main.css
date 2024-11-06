@@ -49,12 +49,23 @@
 @media (max-width: 900px) {
 
    .interest-left {
-    width: 90% !important;
+    width: 100vw !important;
+
   }
   .interest-right {
-    width: 90% !important;
+    width: 100vw !important;
+
   }
+
+  .interest-text h3{
+    text-align: center !important;
 }
+}
+
+
+
+
+
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 1,
@@ -116,15 +127,16 @@ body{
     padding-top: 2rem;
   }
   .attention h2 {
-    font-size: 4vw;
-    color: var(--font-normal);
+    font-size: 2.3rem;
+    color: var(--secondary);
     text-align: center;
     width: 90%;
   }
 
   .attention h4 {
-    font-size: 2.8vw;
-    color: var(--secondary);
+    font-size: 2rem;
+    color: var(--font-normal);
+    text-align: center;
   }
 
   .interest{
@@ -156,9 +168,16 @@ body{
     font-size: 6rem;
 }
 
-.interest-left h3{
-    text-align: center;
-  }
+.interest-text{
+    display: flex;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    align-items: center;
+}
+
+.interest-text h3{
+    text-align: justify;
+}
 
   .interest-right{
     width: 50%;
@@ -182,10 +201,6 @@ body{
     font-size: 6rem;
   }
 
-  .interest-right h3{
-    text-align: center;
-  }
-
   .Buttons{
     width: 100%;
     height: auto;
@@ -193,8 +208,8 @@ body{
     flex-wrap: wrap;
     padding: 1rem 2rem 1rem 2rem ;
     background-color: var(--stg-ternary);
-    padding-bottom: 10vh;
-
+    padding-bottom: 5vh;
+    padding-top: 5vh;
   }
 
   .buttonA-image{
@@ -206,10 +221,11 @@ body{
     border-bottom: 1px solid var(--font-silent);
     justify-content: center;
     color:var(--font-light);
+    padding: 2vh;
   }
 
   .buttonA-image span{
-    font-size: 4vw;
+    font-size: 4rem;
   }
 
   .buttonA-text{
@@ -220,7 +236,7 @@ body{
     align-items: center;
     border-bottom: 1px solid var(--font-silent);
     color:var(--font-light);
-    font-size: 3vw;
+    font-size: 1.55rem;
   }
 
 .desire{
@@ -230,15 +246,16 @@ body{
     align-items: center;
     justify-content: center;
     color: var(--font-normal);
+    padding-top: 4vh;
 }
 
 .desire span{
     width: 75%;
-    font-size: 3vw;
+    font-size: 1.55rem;
 }
 
 .desire p{
-    font-size: 3vw;
+    font-size: 2rem;
 }
 .navbar{
     z-index: 1;
@@ -480,6 +497,24 @@ footer{
     padding-top: 2vh;
     bottom: 0;
     width: 100%;
+    background-color: var(--cinqterly);
+    font-size: 1.1rem;
+}
+footer a{
+    /* color: var(--ternary-bg); */
+    color:  var(--secondary);
+}
+
+footer a:hover{
+    color:var(--font-light);
+}
+
+.copy-right{
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    font-size: .9rem;
+    color: var(--ternary-bg);
 }
 
 .likes{
