@@ -691,4 +691,5 @@ svg{
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: start;
+    padding-bottom: 5vh;
 }

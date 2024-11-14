@@ -14,8 +14,8 @@
     @foreach ($galleries as $gallery)
         @if ($bizID != $gallery->bizId )
             <div class="galleryItem">
-                 <img src="{{asset('/'.$gallery->modelImage)}}" alt="{{$gallery->bizName}}" width="255vw" height="255vh">
-                {{-- <img src="{{asset('storage/'.$gallery->modelImage)}}" alt="{{$gallery->bizName}}" width="255vw" height="255vh"> --}}
+                {{-- <img src="{{asset('/'.$gallery->modelImage)}}" alt="{{$gallery->bizName}}" width="255vw" height="255vh"> --}}
+                <img src="{{asset('storage/'.$gallery->modelImage)}}" alt="{{$gallery->bizName}}" width="255vw" height="255vh">
                 <a href="{{route('Biz.show', ['biz'=>$gallery->bizId])}}">
                     <p>{{$gallery->bizName}}</p>
                 </a>
