@@ -352,6 +352,14 @@ body{
     color:var(--font-light);
 }
 
+.card-ref{
+    display: flex;
+    width: 100wv;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+
 .btn-show{
     background-color: var(--primary);
     color: var(--stg-ternary);
@@ -629,3 +637,58 @@ svg{
     font-size: 4rem;
 }
 
+.container-busqueda{
+    display: flex;
+    height: auto;
+    width: auto;
+}
+
+.container-busqueda li{
+    list-style: none;
+}
+.navbar-collapse {
+    flex-grow: 0 !important;
+}
+
+.busqueda-div{
+    display: flex;
+    align-items: flex-end;
+}
+
+.text-busqueda{
+    width: 30vw;
+    border: 1px solid var(--bg-grey);
+    border-radius: 25px;
+    padding-left: .5vw;
+}
+
+.text-busqueda:focus{
+    border: 1px solid #860404 !important;
+    border-radius: 25px;
+}
+
+.btn-buscar{
+    margin-left: -29px;
+    width: 23px;
+    height: 23px;
+    background-color:var(--cinqterly);
+    color: var(--secondary);
+    border-radius: 25px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .8rem;
+    padding-top: 5px;
+    margin-bottom: 3px;
+    border: 0px solid var(--cinqterly);
+}
+
+.container-busquedas{
+    display: flex;
+    height: auto;
+    width: 100vw;
+    gap: 1vw;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: start;
+}

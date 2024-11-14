@@ -12,6 +12,7 @@ use App\Http\Controllers\SeassonController;
 use App\Http\Controllers\MaterialController;
 use App\Http\Controllers\SaleTypeController;
 use App\Http\Controllers\BizCategoryController;
+use App\Http\Controllers\Busqueda;
 use App\Http\Controllers\ModelCategoryController;
 use App\Http\Controllers\SubcategoriesController;
 use App\Http\Controllers\ModelSubcategoryController;
@@ -144,6 +145,11 @@ route::get('/Wholesalers', Wholesalers::class)->name('Wholesalers');
 /*Retails */
 //route::get('/Minoristas', Retails::class)->middleware('auth')->name('Retails');
 route::get('/Retails', Retails::class)->name('Retails');
+
+
+/*Busqueda */
+route::get('Busqueda', Busqueda::class)->name('Busqueda');
+
 
 /*Subcategories*/
 //route::get('/Subcategories', SubcategoriesController::class)->middleware('auth')->name('Subcategories');

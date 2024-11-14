@@ -95,35 +95,40 @@
                 <a class="nav-link" href="{{route('Retails')}}">Minoristas</a>
               </li>
 
-              <x-Subcategories></x-Subcategories>
+            <x-Subcategories></x-Subcategories>
+
+
 
               @auth
               {{-- admin --}}
-
-              @if (auth()->user()->name === 'Marketo')
-
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                 Management
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item" href="{{route('BizCategory.index')}}">Buissness Categories</a></li>
-                  <li><a class="dropdown-item" href="{{route('ModelCategory.index')}}">Model Category</a></li>
-                  <li><a class="dropdown-item" href="{{route('ModelSubcategory.index')}}">Model SubCategory</a></li>
-                  <li><a class="dropdown-item" href="{{route('Seasson.index')}}">Seassons</a></li>
-                  <li><a class="dropdown-item" href="{{route('Material.index')}}">Materials</a></li>
-                  <li><a class="dropdown-item" href="{{route('SaleType.index')}}">SaleType</a></li>
-                  <li><a class="dropdown-item" href="{{route('Biz.index')}}">Business</a></li>
-                  <li><a class="dropdown-item" href="{{route('Modelo.index')}}">Modelos</a></li>
-                  <li><a class="dropdown-item" href="{{route('User.index')}}">Users</a></li>
-                </ul>
-              </li>
-
-              @endif
+                @if (auth()->user()->name === 'Marketo')
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Management
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="{{route('BizCategory.index')}}">Buissness Categories</a></li>
+                        <li><a class="dropdown-item" href="{{route('ModelCategory.index')}}">Model Category</a></li>
+                        <li><a class="dropdown-item" href="{{route('ModelSubcategory.index')}}">Model SubCategory</a></li>
+                        <li><a class="dropdown-item" href="{{route('Seasson.index')}}">Seassons</a></li>
+                        <li><a class="dropdown-item" href="{{route('Material.index')}}">Materials</a></li>
+                        <li><a class="dropdown-item" href="{{route('SaleType.index')}}">SaleType</a></li>
+                        <li><a class="dropdown-item" href="{{route('Biz.index')}}">Business</a></li>
+                        <li><a class="dropdown-item" href="{{route('Modelo.index')}}">Modelos</a></li>
+                        <li><a class="dropdown-item" href="{{route('User.index')}}">Users</a></li>
+                        </ul>
+                    </li>
+                @endif
               @endauth
-
             </ul>
           </div>
+
+
+                 {{-- busqueda --}}
+                 <x-form-busqueda></x-form-busqueda>
+
+
+
           <ul class="navbar-nav">
         @auth
         {{-- login --}}
@@ -141,6 +146,7 @@
                 </a>
             </li>
         @else
+
         {{-- logout --}}
             <li class="nav-item">
                 {{-- <a class="nav-link" href="/User/create"> --}}
