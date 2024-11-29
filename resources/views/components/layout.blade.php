@@ -41,19 +41,23 @@
     gtag('config', 'G-LEV2309FWD');
     </script>
 
+    {{-- Pinterest Tag --}}
+    <meta name="p:domain_verify" content="59864595446c9bd25ed7b86d881293d4"/>
+    {{-- End Pinterest Tag --}}
+
     {{-- schema --}}
     <script type="application/ld+json">
         {
           "@context": "https://schema.org",
           "@type": "OnlineStore",
-          "name": "Zapatos Guanajuato MX",
+          "name": "Zapatos Guanajuato",
           "description": "Catalogo,Fabricantes,Zapatos,Mayoristas,Calzado,Negocio,Leon,Guanajuato",
-          "image": "	https://zapatosguanajuato.mx/public/images/img_index.jpg",
+          "image": "	https://zapatosguanajuato.com/public/images/img_index.jpg",
           "logo": "",
           "parentOrganization": {
             "@type": "OnlineBusiness",
-            "name": "Zapatos Guanajuato MX",
-            "url": "https://zapatosguanajuato.mx/public/"
+            "name": "Zapatos Guanajuato",
+            "url": "https://zapatosguanajuato.com"
           },
           "address": {
             "@type": "PostalAddress",

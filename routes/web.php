@@ -137,8 +137,8 @@ Route::put('/Biz/{biz}/update', [BizController::class,'update'])->name('Biz.upda
 Route::delete('/Biz/{biz}/destroy', [BizController::class,'destroy'])->name('Biz.destroy');
 
 /*Factories */
-route::get('/Fabricantes', Factories::class)->middleware('auth')->name('Factories');
-//route::get('/Factories', Factories::class)->name('Factories');
+//route::get('/Fabricantes', Factories::class)->middleware('auth')->name('Factories');
+route::get('/Factories', Factories::class)->name('Factories');
 /*Wholesalers */
 //route::get('/Mayoristas', Wholesalers::class)->middleware('auth')->name('Wholesalers');
 route::get('/Wholesalers', Wholesalers::class)->name('Wholesalers');
