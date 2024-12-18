@@ -13,7 +13,8 @@ return [
     |
     */
 
-    'default' => env('MAIL_MAILER', 'smtp'),
+        'default' => env('MAIL_MAILER', 'smtp'),
+        // 'default'=>'sendmail',
 
     /*
     |--------------------------------------------------------------------------
@@ -44,6 +45,9 @@ return [
             'password' => env('MAIL_PASSWORD'),
             'timeout' => null,
             'local_domain' => env('MAIL_EHLO_DOMAIN'),
+            //Gmail
+            'auth_mode'=>null,
+            'verify_peer'=>false
         ],
 
         'ses' => [

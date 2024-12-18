@@ -98,8 +98,11 @@
               <li class="nav-item">
                 <a class="nav-link" href="{{route('Retails')}}">Minoristas</a>
               </li>
-
             <x-Subcategories></x-Subcategories>
+
+            <li class="nav-item">
+                <a href="{{route('Contacto')}}" class="nav-link">Contacto</a>
+            </li>
 
 
 

@@ -13,6 +13,7 @@ use App\Http\Controllers\MaterialController;
 use App\Http\Controllers\SaleTypeController;
 use App\Http\Controllers\BizCategoryController;
 use App\Http\Controllers\Busqueda;
+use App\Http\Controllers\ContactoController;
 use App\Http\Controllers\ModelCategoryController;
 use App\Http\Controllers\SubcategoriesController;
 use App\Http\Controllers\ModelSubcategoryController;
@@ -196,3 +197,8 @@ Route::get('/Modelo/{modelo}/show', [ModeloController::class,'show'])->name('Mod
 Route::put('/Modelo/{modelo}/update', [ModeloController::class,'update'])->name('Modelo.update');
 //Delete
 Route::delete('/Modelo/{modelo}/destroy', [ModeloController::class,'destroy'])->name('Modelo.destroy');
+
+/**Contact */
+Route::get('Contacto', [ContactoController::class, 'show'])->name('Contacto');
+//Send Mail
+Route::post('Mensaje', [ContactoController::class, 'envio'])->name('Mensaje');
