@@ -17,6 +17,7 @@ use App\Http\Controllers\ContactoController;
 use App\Http\Controllers\ModelCategoryController;
 use App\Http\Controllers\SubcategoriesController;
 use App\Http\Controllers\ModelSubcategoryController;
+use App\Http\Controllers\PasswordController;
 use App\Http\Controllers\RegisterController;
 
 /*
@@ -167,6 +168,17 @@ Route::post('/User/logout', [UserController::class,'logout'])->name('User.logout
 Route::get('/User/login', [UserController::class,'login'])->name('User.login');
 //Authenticate
 Route::post('/User/authenticate', [UserController::class,'authenticate'])->name('User.authenticate');
+
+/**Forgot Password  */
+//password forgot
+Route::get('password-forgot', [PasswordController::class, 'password_forgot'])->name('recuperar-contrasena');
+//password request
+Route::post('password-request', [PasswordController::class, 'password_request'])->name('requerir-contraseña');
+//password reset
+Route::get('/reset-password/{token}', [PasswordController::class, 'password_reset'])->middleware('guest')->name('resetear-contraseña');
+//password update
+Route::post('password-upate', [PasswordController::class, 'password_update'])->middleware('guest')->name('password-update');
+
 
 /*User*/
 //index

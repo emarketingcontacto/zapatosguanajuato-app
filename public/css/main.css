@@ -693,3 +693,13 @@ svg{
     align-items: start;
     padding-bottom: 5vh;
 }
+
+.btn-main{
+    background-color: var(--stg-ternary);
+    color: var(--primary);
+}
+
+.btn-main:hover{
+    background-color: var(--primary);
+    color: var(--stg-ternary);
+}
