@@ -89,8 +89,9 @@ class ModeloController extends Controller
         $material = DB::table('material')->where('materialId', '=', $modelo->materialId)->first();
         $seasson = DB::table('seasson')->where('seassonId', '=', $modelo->seassonId)->first();
         $biz = DB::table('biz')->where('bizId', '=', $modelo->bizId)->first();
+        $modelcategory = DB::table('modelcategory')->where('modelcatId', '=', $modelo->modelcatId)->first();
 
-       return view('Modelo.show', ['modelo'=>$modelo, 'material'=>$material, 'seasson'=>$seasson, 'biz'=>$biz]);
+       return view('Modelo.show', ['modelo'=>$modelo, 'material'=>$material, 'seasson'=>$seasson, 'biz'=>$biz, 'modelcategory'=>$modelcategory]);
     }
 
     /**

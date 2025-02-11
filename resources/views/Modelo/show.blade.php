@@ -1,7 +1,7 @@
 @php
-   $description = str_replace(" ", "_", "Venta_de_zapatos_al_mayoreo_para_tu_negocio_-Encuentra_el_catálogo_completo_de_{$biz->bizName}_y_solicita_una_cotización_hoy_mismo.");
+   $description = "Modelo {$modelo->modelName} para {$modelcategory->modelcatName} de {$biz->bizName} solicita una cotización hoy mismo."
 @endphp
-<x-layout pageTitle="Catalogo de {{$biz->bizName}}" pageDescription={{$description}}>
+<x-layout pageTitle="Modelo {{$modelo->modelName}} de {{$biz->bizName}}" pageDescription={{$description}}>
 
 
     @section('main-content')
@@ -51,8 +51,8 @@
                     <div class="col model-value">{{$seasson->seassonEnd}} </div>
                 </div>
                 <div class="row">
-                    <div class="col text-end model-field">Modelo Category</div>
-                    <div class="col model-value"></div>
+                    <div class="col text-end model-field">Categoria</div>
+                    <div class="col model-value">{{$modelcategory->modelcatName}}</div>
                 </div>
             </div>
         </div>

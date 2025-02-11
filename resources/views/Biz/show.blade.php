@@ -1,4 +1,4 @@
-<x-layout pageTitle="{{$bizcat->bizcatName}}-{{$biz->bizName}}" pageDescription="Informacion de {{$bizcat->bizcatName}} - {{$biz->bizName}}, encuentra sus mejores modelos y sus datos de contacto para comenzar a hacer negocios">
+<x-layout pageTitle="{{$bizcat->bizcatName}} de calzado -{{$biz->bizName}}" pageDescription="Informacion de {{$bizcat->bizcatName}} - {{$biz->bizName}}, encuentra sus mejores modelos y sus datos de contacto para comenzar a hacer negocios">
     @section('main-content')
         <div class="container mb-5 pb-5">
             {{-- row image --}}
