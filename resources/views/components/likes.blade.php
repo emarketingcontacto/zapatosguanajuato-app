@@ -39,7 +39,7 @@
 {{-- user like this biz --}}
 
 {{-- component Likes  --}}
-<div class="likes bg-light d-flex gap-2 m-3 align-items-center pointer"
+<div class="likes d-flex gap-2 m-3 align-items-center pointer"
     id="likesDiv"
     data-userid="{{auth()->user()->id}}"
     data-bizid="{{$bizID}}"

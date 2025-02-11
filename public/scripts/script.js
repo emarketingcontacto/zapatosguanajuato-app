@@ -9,7 +9,6 @@ function getSuccess() {
         } }, 5000)
 }
 
-
 function openModelos() {
     console.log('open');
     document.getElementById('divmodelos').style.visibility = 'visible';
@@ -24,4 +23,3 @@ function closeModelos() {
     document.getElementById('iopen').style.display = 'block';
     document.getElementById('textmodelos').innerText = 'Ver Modelos';
 }
-

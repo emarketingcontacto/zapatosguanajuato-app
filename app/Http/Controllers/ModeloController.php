@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Modelo;
+use App\Models\ModelCategory;
 use App\Models\ModelSubcategory;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Model;
@@ -21,12 +23,14 @@ class ModeloController extends Controller
         ->join('biz', 'biz.bizId','=', 'model.bizId')
         ->join('seasson', 'seasson.seassonId', '=','model.materialId')
         ->join('modelsubcategory', 'modelsubcategory.modelsubcatId', '=', 'model.modelsubcatId')
+        ->join('modelcategory', 'modelcategory.modelcatId', '=', 'model.modelcatId')
         ->select(
             'model.*',
             'material.materialName',
             'biz.bizName',
             'seasson.seassonName',
             'modelsubcategory.modelsubcatName',
+            'modelcategory.modelcatName'
         )->paginate(20);
         return view('Modelo.index', ['modelos'=>$modelo]);
     }
@@ -44,8 +48,10 @@ class ModeloController extends Controller
         $seassons=DB::table('seasson')->get();
         //modelsubcategory
         $modelsubcategories = ModelSubcategory::all();
+        //modelcategory
+        $modelcategories = ModelCategory::all();
 
-        return view('Modelo.create',['materials'=>$materials, 'business'=>$business, 'seassons'=>$seassons, 'modelsubcategories'=> $modelsubcategories ]);
+        return view('Modelo.create',['materials'=>$materials, 'business'=>$business, 'seassons'=>$seassons, 'modelsubcategories'=> $modelsubcategories, 'modelcategories'=>$modelcategories ]);
     }
 
     /**
@@ -62,7 +68,8 @@ class ModeloController extends Controller
                 'seassonId'=> 'required',
                 'bizId'=> 'required',
                 'materialId'=>'required',
-                'modelsubcatId'=>'required'
+                'modelsubcatId'=>'required',
+                'modelcatId'=>'required'
             ]);
 
             if($request->hasFile('modelImage')){
@@ -99,7 +106,9 @@ class ModeloController extends Controller
          $seassons=DB::table('seasson')->get();
          //modelsubcategories
          $modelsubcategories = ModelSubcategory::all();
-         return view('Modelo.edit', ['modelo'=> $modelo, 'materials'=>$materials, 'business'=>$business, 'seassons'=>$seassons , 'modelsubcategories'=>$modelsubcategories] );
+         //modelcategories
+         $modelcategories = ModelCategory::all();
+         return view('Modelo.edit', ['modelo'=> $modelo, 'materials'=>$materials, 'business'=>$business, 'seassons'=>$seassons , 'modelsubcategories'=>$modelsubcategories, 'modelcategories'=>$modelcategories] );
     }
 
     /**
@@ -115,7 +124,8 @@ class ModeloController extends Controller
                 'seassonId'=> 'required',
                 'bizId'=> 'required',
                 'materialId'=>'required',
-                'modelsubcatId' => 'required'
+                'modelsubcatId' => 'required',
+                'modelcatId'=>'required'
             ]);
         if($request->hasFile('modelImage')){
             Storage::disk('public')->delete('/public/storage/modelos', $modelo->modelImage);

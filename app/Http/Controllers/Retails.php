@@ -40,8 +40,7 @@ class Retails extends Controller
         }
 
         $bizcat = Bizcategory::where('bizcatName', 'Minorista')->first();
-        $modelcategories = ModelCategory::all();
 
-       return view('Retails', ['business'=>$business, 'bizcat' => $bizcat, 'modelcategories'=>$modelcategories]);
+       return view('Retails', ['business'=>$business, 'bizcat' => $bizcat]);
     }
 }

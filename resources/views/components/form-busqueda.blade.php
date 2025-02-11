@@ -4,7 +4,7 @@
             @method('GET')
             @csrf
             <div class="busqueda-div">
-                <input type="text" name="buscar" class="text-busqueda">
+                <input type="text" name="buscar" class="text-busqueda" placeholder="Buscar Negocios">
                 <button type="submit" class="btn-buscar">
                     <span class="bi bi-search"></span>
                 </button>

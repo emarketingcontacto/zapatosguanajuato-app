@@ -5,7 +5,7 @@
 
 @section('main-content')
 
-<div class="container d-flex flex-column">
+<div class="container d-flex flex-column mt-5 mb-5">
 
     <h1 class="text-center">Quiénes somos?</h1>
 

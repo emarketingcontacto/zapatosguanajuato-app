@@ -46,6 +46,6 @@ class Wholesalers extends Controller
 
         $bizcat = Bizcategory::where('bizcatName', $biztyperequest)->first();
         $modelcategories = ModelCategory::all();
-        return view('Wholesalers', ['business'=>$business,'bizcat' => $bizcat,'modelcategories'=>$modelcategories]);
+        return view('Wholesalers', ['business'=>$business,'bizcat' => $bizcat]);
     }
 }

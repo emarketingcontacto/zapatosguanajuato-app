@@ -1,154 +1,95 @@
 @php
-    $description = str_replace(" ", "_", "¿Buscas dónde comprar zapatos en Guanajuato? Explora nuestro catálogo de tiendas minoristas. ¡Encuentra variedad y las mejores marcas!");
+    // $description = str_replace(" ", "_", "¿Buscas dónde comprar zapatos en Guanajuato? Explora nuestro catálogo de tiendas minoristas. ¡Encuentra variedad y las mejores marcas!");
+    $description = "Directorio de Minoristas de Zapatos en Guanajuato Encuentra los mejores mayoristas y haz crecer tu negocio. ¡Catálogo completo con precios y contactos";
+
 @endphp
 <x-layout pageTitle="Tiendas de Zapatos"  pageDescription={{$description}}>
 
 @section('main-content')
 
 <div class="header-Category" style="background-image: url('{{asset('storage/'.$bizcat->bizcatImage)}}');">
-    <h1>Minoristas</h1>
+    <h1>Directorio de Minoristas de Calzado </h1>
 </div>
 
-{{-- Search --}}
-<div class="d-flex w-100 justify-content-center ">
-    <div class="d-flex gap-3 w-50 modelcategories justify-content-around" style="height:7vh">
-        @foreach ($modelcategories as $modelcategory)
-            @switch($modelcategory->modelcatName)
-                @case("Damas")
-                    <form name="damas" action="{{route('Retails')}}" method="get">
-                        @csrf
-                        @method('GET')
-                        <div class="damas"  style="cursor:pointer" onclick="document.forms['damas'].submit()">
-                            <input type="hidden" name="modelcat" value="Damas">
-                            <i class="bi bi-gender-female"></i>
-                            <p>Damas</p>
-                        </div>
-                    </form>
-                @break
+{{-- Search Model Categories --}}
+<x-search-model-category bizcategory="Retails"></x-search-model-category>
+{{-- End Search Model Categories --}}
 
-                @case("Hombres")
-                    <form name="hombre" action="{{route('Retails')}}" method="get">
-                        @csrf
-                        @method('GET')
-                        <div class="Hombres" style="cursor:pointer" onclick="document.forms['hombre'].submit()" >
-                            <input type="hidden" name="modelcat" value="Hombres">
-                            <i class="bi bi-gender-male"></i>
-                            <p>Hombres</p>
-                        </div>
-                    </form>
-                @break
+   {{-- Biz Items --}}
+    <div class="container m-4 d-flex gap-3 pb-5 flex-wrap justify-content-center" style="max-width: 100vw">
+        @foreach ($business as $biz)
 
-                @case("Niñas")
-                    <form name="ninas" action="{{route('Retails')}}" method="get">
-                        @csrf
-                        @method('GET')
-                        <div class="Ninas" style="cursor:pointer" onclick="document.forms['ninas'].submit()">
-                            <input type="hidden" name="modelcat" value="Niñas">
-                            <i class="bi bi-balloon-heart-fill"></i>
-                            <P>Niñas</P>
+            <div class="card" style="width: 18rem; background-color:#F5F5F5">
+                {{-- local --}}
+                {{-- <img src="{{asset('storage/'.$biz->bizImage)}}" class="card-img-top" style="height: 380px"> --}}
+                {{-- online --}}
+                <img src="{{asset('/'.$biz->bizImage)}}" class="card-img-top" style="height: 380px">
+                <h2 class="card-title">{{$biz->bizName}}</h2>
+                <div class="card-body card-text">
+                    {{-- likes --}}
+                        <div class="row d-flex justify-content-end">
+                            <div class="col d-flex align-items-center gap-1">
+                                <span class="material-symbols-outlined fs-3 mt-2" style="color:#bd93d8" >verified</span>
+                                <span style="color:#bd93d8; font-size:.7rem">{{$biz->bizLastvisit}}</span>
+                            </div>
+                            <x-likes :bizID="$biz->bizId"></x-likes>
                         </div>
-                    </form>
-                @break
+                    {{-- end likes --}}
 
-                @case("Niños")
-                    <form name="ninos" action="{{route('Retails')}}" method="get">
-                        @csrf
-                        @method('GET')
-                        <div class="Ninos" style="cursor:pointer" onclick="document.forms['ninos'].submit()">
-                            <input type="hidden" name="modelcat" value="Niños">
-                            <i class="bi bi-balloon-fill"></i>
-                            <p>Niños</p>
+                    {{-- modelCategoriesList--}}
+                        <x-ModelCategoriesList :bizID="$biz->bizId"></x-ModelCategoriesList>
+                    {{-- end modelCategoriesList--}}
+                    <div class="row">
+                        <div class="col col-3">
+                            <span class="material-symbols-outlined">trolley</span>
                         </div>
-                    </form>
-                @break
-                @default
-            @endswitch
+                        <div class="col">
+                            <span>{{$biz->saletypeName}}</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-3">
+                            <span class="material-symbols-outlined">contact_mail</span>
+                        </div>
+                        <div class="col">
+                            <span class="card-email-sm">
+                                <a class="card-link" href="mailto:{{$biz->bizEmail}}">{{$biz->bizEmail}}</a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-3">
+                            <span class="material-symbols-outlined">send_to_mobile</span>
+                        </div>
+                        <div class="col">
+                            <span>
+                                <a class="card-link" href="tel:{{$biz->bizTel}}">{{$biz->bizTel}}</a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-3">
+                            <span class="bi bi-whatsapp"></span>
+                        </div>
+                        <div class="col">
+                            <span>
+                                <a class="card-link" href="https://wa.me/{{$biz->bizWhatsApp}}" target="_blank">{{$biz->bizWhatsApp}}</a>
+                            </span>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="btn-show">
+                        <a href="{{route('Biz.show', ['biz'=>$biz->bizId])}}" class="btn btn-sm  btn-show form-control">
+                            Ver Detalles...
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
         @endforeach
     </div>
-</div>
-{{-- end Search --}}
-
-{{-- Biz Items --}}
-<div class="container m-4 d-flex gap-3 pb-5 flex-wrap justify-content-center" style="max-width: 100vw">
-    @foreach ($business as $biz)
-
-        <div class="card" style="width: 18rem; background-color:#F5F5F5">
-            {{-- local --}}
-            <img src="{{asset('storage/'.$biz->bizImage)}}" class="card-img-top" style="height: 380px">
-
-            {{-- online --}}
-            {{-- <img src="{{asset('/'.$biz->bizImage)}}" class="card-img-top" style="height: 380px"> --}}
-
-
-            <a href="{{route('Biz.show', ['biz'=>$biz->bizId])}}">
-                <h5 class="card-title">{{$biz->bizName}}</h5>
-            </a>
-            <div class="card-body card-text">
-
-                 {{-- likes --}}
-                 <div class="row d-flex justify-content-end">
-                    <div class="col d-flex align-items-center gap-1">
-                        <span class="material-symbols-outlined fs-3 mt-2" style="color:#bd93d8" >verified</span>
-                        <span style="color:#bd93d8; font-size:.9rem">{{$biz->bizLastvisit}}</span>
-                    </div>
-                    <x-likes :bizID="$biz->bizId"></x-likes>
-                </div>
-            {{-- end likes --}}
-
-               {{-- modelCategoriesList--}}
-               <x-ModelCategoriesList :bizID="$biz->bizId"></x-ModelCategoriesList>
-               {{-- end modelCategoriesList--}}
-
-                <div class="row">
-                    <div class="col col-3">
-                        <span class="material-symbols-outlined">trolley</span>
-                    </div>
-                    <div class="col">
-                        <span>{{$biz->saletypeName}}</span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col col-3">
-                        <span class="material-symbols-outlined">support_agent</span>
-                    </div>
-                    <div class="col">
-                        <span>{{$biz->bizContact}}</span>
-                    </div>
-                </div>
-
-
-                <div class="row">
-                    <div class="col col-3">
-                        <span class="material-symbols-outlined">send_to_mobile</span>
-                    </div>
-                    <div class="col">
-                        <span>{{$biz->bizTel}}</span>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col col-3">
-                        <span class="material-symbols-outlined">map</span>
-                    </div>
-                    <div class="col">
-                        <span>{{$biz->bizCity}}</span>
-                    </div>
-                </div>
-
-
-                <hr>
-                {{-- <div class="btn-show">
-                    <a href="{{route('Biz.show', ['biz'=>$biz->bizId])}}" class="btn btn-sm  btn-show form-control">
-                        <span class="material-symbols-outlined">info</span>
-                        <span class="pb-1" style="color:var(--font-strong)">Detalles...</span>
-                    </a>
-                </div> --}}
-            </div>
-        </div>
-
-    @endforeach
-</div>
-{{-- end Biz Items --}}
+    {{-- end Biz Items --}}
 
 
 @endsection

@@ -1,7 +1,12 @@
 <?php
 
+use App\Http\Controllers\Men;
 use App\Models\ModelCategory;
+use App\Http\Controllers\Kids;
+use App\Http\Controllers\Girls;
+use App\Http\Controllers\Ladies;
 use App\Http\Controllers\Retails;
+use App\Http\Controllers\Busqueda;
 use App\Http\Controllers\Factories;
 use App\Http\Controllers\Wholesalers;
 use Illuminate\Support\Facades\Route;
@@ -9,16 +14,15 @@ use App\Http\Controllers\BizController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ModeloController;
 use App\Http\Controllers\SeassonController;
+use App\Http\Controllers\ContactoController;
 use App\Http\Controllers\MaterialController;
+use App\Http\Controllers\PasswordController;
+use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SaleTypeController;
 use App\Http\Controllers\BizCategoryController;
-use App\Http\Controllers\Busqueda;
-use App\Http\Controllers\ContactoController;
 use App\Http\Controllers\ModelCategoryController;
 use App\Http\Controllers\SubcategoriesController;
 use App\Http\Controllers\ModelSubcategoryController;
-use App\Http\Controllers\PasswordController;
-use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,10 +37,11 @@ use App\Http\Controllers\RegisterController;
 //Home
 Route::get('/', function () { return view('welcome');})->name('welcome');
 //AboutUs
-Route::get('/About', function (){ return view('About-us'); })->name('about-us');
+Route::get('/Acerca-de-nosotros', function (){ return view('About-us'); })->name('acerca_de_nosotros');
 //PrivacyPolicy
-Route::get('/Privacy-policy', function (){ return view('Privacy-policy'); })->name('privacy-policy');
-
+Route::get('/Politica-de-privacidad', function (){ return view('Privacy-policy'); })->name('politica_privacidad');
+//Como funciona
+Route::get('/Como_funciona', function (){ return view('Como_funciona'); })->name('como_funciona');
 //BizCategories
 Route::get('/BizCategory', [BizCategoryController::class,'index'])->name('BizCategory.index');
 // Create
@@ -140,13 +145,24 @@ Route::delete('/Biz/{biz}/destroy', [BizController::class,'destroy'])->name('Biz
 
 /*Factories */
 //route::get('/Fabricantes', Factories::class)->middleware('auth')->name('Factories');
-route::get('/Factories', Factories::class)->name('Factories');
+route::get('/Fabricantes_de_calzado', Factories::class)->name('Fabricantes');
+
 /*Wholesalers */
 //route::get('/Mayoristas', Wholesalers::class)->middleware('auth')->name('Wholesalers');
-route::get('/Wholesalers', Wholesalers::class)->name('Wholesalers');
+route::get('/Mayoristas_de_calzado', Wholesalers::class)->name('Wholesalers');
+
 /*Retails */
 //route::get('/Minoristas', Retails::class)->middleware('auth')->name('Retails');
-route::get('/Retails', Retails::class)->name('Retails');
+route::get('/Minoristas_de_calzado', Retails::class)->name('Retails');
+
+/*Ladies*/
+route::get('/venta_calzado_damas', Ladies::class)->name('Damas');
+/* Men */
+route::get('/venta_calzado_hombres', Men::class)->name('Hombres');
+/* Kids */
+route::get('/venta_calzado_ninos', Kids::class)->name('Ninos');
+/* Girls */
+route::get('/venta_calzado_ninas', Girls::class)->name('Ninas');
 
 
 /*Busqueda */

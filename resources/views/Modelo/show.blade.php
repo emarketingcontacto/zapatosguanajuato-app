@@ -6,47 +6,55 @@
 
     @section('main-content')
 
-    <div class="container mb-5 text-center">
+    <div class="container text-center">
         <div class="row d-flex flex-column justify-center align-content-center">
-                <img src="{{asset('storage/'.$modelo->modelImage)}}" height="100%" width="100%">
-                <p class="fw-strong fs-2 hero-text m-n15">{{$modelo->modelName}}</p>
-        </div>
-
-            <div class="row">
-                <div class="col text-end text-secondary model-field">Distribuido por:</div>
-                <div class="col text-start model-value">
-                    <a href="{{route('Biz.show', ['biz'=>$biz->bizId])}}">
-                        {{$biz->bizName}}
-                    </a>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col text-end text-secondary model-field">Precio</div>
-                <div class="col text-start model-value">{{$modelo->modelPrice}}</div>
-            </div>
-
-            <div class="row">
-                <div class="col text-end text-secondary model-field">Material</div>
-                <div class="col text-start model-value">{{$material->materialName}}</div>
-            </div>
-
-            <div class="row">
-                <div class="col text-end text-secondary model-field">Temporada</div>
-                <div class="col text-start model-value">{{$seasson->seassonName}}</div>
-            </div>
-
-            <div class="row">
-                <div class="col text-end text-secondary model-field">Disponible desde:</div>
-                <div class="col text-start model-value">{{$seasson->seassonStart}}</div>
-
-            </div>
-
-            <div class="row">
-                <div class="col text-end text-secondary model-field">Hasta</div>
-                <div class="col text-start model-value">{{$seasson->seassonEnd}} </div>
-            </div>
+                {{-- <img src="{{asset('storage/'.$modelo->modelImage)}}" height="100%" width="100%"> --}}
+                <img src="{{asset('/'.$modelo->modelImage)}}" height="100%" width="100%">
+                <h1 class="hero-text">{{$modelo->modelName}}</h1>
         </div>
     </div>
+        <div class="modelo-info-main">
+
+            <div class="modelo-info">
+
+                <div class="row">
+                    <div class="col text-end model-field">Distribuidor:</div>
+                    <div class="col text-start model-value">
+                        <a href="{{route('Biz.show', ['biz'=>$biz->bizId])}}">
+                            {{$biz->bizName}}
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col text-end model-field">Precio:</div>
+                    <div class="col text-start model-value" style="currency, currency:'MXN'">${{number_format($modelo->modelPrice,2,'.',',')}}</div>
+                </div>
+
+                <div class="row">
+                    <div class="col text-end model-field">Material:</div>
+                    <div class="col text-start model-value">{{$material->materialName}}</div>
+                </div>
+
+                <div class="row">
+                    <div class="col text-end model-field">Temporada:</div>
+                    <div class="col text-start model-value">{{$seasson->seassonName}}</div>
+                </div>
+
+                <div class="row">
+                    <div class="col text-end model-field">Disponible desde:</div>
+                    <div class="col text-start model-value">{{$seasson->seassonStart}}</div>
+                </div>
+
+                <div class="row">
+                    <div class="col text-end model-field">Hasta:</div>
+                    <div class="col model-value">{{$seasson->seassonEnd}} </div>
+                </div>
+                <div class="row">
+                    <div class="col text-end model-field">Modelo Category</div>
+                    <div class="col model-value"></div>
+                </div>
+            </div>
+        </div>
     @endsection
 </x-layout>

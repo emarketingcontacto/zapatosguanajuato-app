@@ -46,6 +46,6 @@ class Factories extends Controller
 
         $bizcat = Bizcategory::where('bizcatName', $biztyperequest)->first();
         $modelcategories = ModelCategory::all();
-        return view('Factories', ['business'=>$business, 'bizcat' => $bizcat , 'modelcategories'=>$modelcategories]);
+        return view('Factories', ['business'=>$business, 'bizcat' => $bizcat]);
     }
 }

@@ -39,7 +39,8 @@
             {{-- modelImage --}}
             <div class="mb-3">
                 <label for="modelImage">Model Image</label>
-                <img src="{{asset('storage/'.$modelo->modelImage)}}" alt="{{$modelo->modelImage}}" width="500vw">
+                {{-- <img src="{{asset('storage/'.$modelo->modelImage)}}" alt="{{$modelo->modelImage}}" width="500vw"> --}}
+                <img src="{{asset('/'.$modelo->modelImage)}}" alt="{{$modelo->modelImage}}" width="500vw">
                 <input type="file" name="modelImage" class="form-control w-25" value="{{$modelo->modelImage}}">
             </div>
             <div class="mb-3">
@@ -86,6 +87,7 @@
                     <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
             </div>
+
             {{--modelSubcategories--}}
             <div class="mb-3">
                 <label for="modelsubcategory" class="form-control bg-light">Modelo Sub Category</label>
@@ -97,6 +99,20 @@
                 </select>
             </div>
             {{--modelSubcategories--}}
+
+            {{--modelcategories--}}
+            <div class="mb-3">
+                <label for="modelcategory" class="form-control bg-light">Modelo Category</label>
+                <select name="modelcatId" class="form-control drop-down w-100">
+                    <option value="">--Please choose an option--</option>
+                    @foreach ($modelcategories as $modelcategory)
+                        <option value="{{$modelcategory->modelcatId}}" @php echo ($modelcategory->modelcatId === $modelo->modelcatId) ? 'selected' : '';@endphp>{{$modelcategory->modelcatName}}</option>
+                    @endforeach
+                </select>
+            </div>
+            {{--modelcategories--}}
+
+
             {{-- Biz --}}
             <div class="mb-3">
                 <label for="bizId" class="form-control bg-light">Biz</label>

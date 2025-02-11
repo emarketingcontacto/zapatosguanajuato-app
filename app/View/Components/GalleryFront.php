@@ -3,8 +3,10 @@
 namespace App\View\Components;
 
 use Closure;
-use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Contracts\View\View;
+
 
 class GalleryFront extends Component
 {
@@ -21,6 +23,14 @@ class GalleryFront extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.gallery-front');
+        $galleries= DB::table('model')
+        ->join('biz', 'model.bizId', '=', 'biz.bizId')
+        ->select('model.modelId', 'model.modelImage','model.modelName','biz.bizId', 'biz.bizName')
+        ->orderBy('model.modelId', 'desc')
+        ->limit(20)
+        ->distinct()
+        ->get();
+
+        return view('components.gallery-front',['galleries'=>$galleries]);
     }
 }
