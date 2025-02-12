@@ -1,19 +1,19 @@
 @php
-    $description = "Directorio de Fabricantes de Zapatos Guanajuato. Encuentra un amplio catálogo de fabricantes y mayoristas de calzado en Guanajuato. ¡Emprende tu negocio hoy!";
+    $description = "Venta de Calzado para Dama - Zapatos Guanajuato. Directorio  de fabricantes, mayoristas y menudistas para la venta de calzado para Dama en Guanajuato. ¡Emprende tu negocio hoy!";
 @endphp
-<x-layout pageTitle="Directorio de Fabricantes Zapatos Guanajuato" pageDescription={{$description}}>
+<x-layout pageTitle="Venta de Calzado para Dama - Zapatos Guanajuato" pageDescription={{$description}}>
 
     @section('main-content')
 
     <div class="header-Category" style="background-image: url('{{asset('storage/'.$modelcat->modelcatImage)}}')" alt="DirectorioDamas">
-        <h1>Directorio de Calzado para Mujeres</h1>
+        <h1>Venta de Calzado para Dama</h1>
     </div>
 
     {{-- Factories --}}
     <div class="factories-modelsubcat">
         <div class="front-title">
             <div class="front-title-gallery">
-                <h5>Fabricantes</h5>
+                <h5>Fabricantes de calzado para Dama</h5>
             </div>
         </div>
         @foreach ($factories as $factory)
@@ -49,7 +49,7 @@
     <div class="factories-modelsubcat">
         <div class="front-title">
             <div class="front-title-gallery">
-                <h5>Mayoristas</h5>
+                <h5>Mayoristas de calzado para Dama</h5>
             </div>
         </div>
         @foreach ($wholesalers as $wholesaler)
@@ -84,7 +84,7 @@
      <div class="factories-modelsubcat">
         <div class="front-title">
             <div class="front-title-gallery">
-                <h5>Minoristas</h5>
+                <h5>Minoristas de calzado para Dama</h5>
             </div>
         </div>
         @foreach ($retails as $retail)

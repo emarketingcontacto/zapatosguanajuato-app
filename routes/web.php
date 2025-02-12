@@ -156,7 +156,7 @@ route::get('/Mayoristas_de_calzado', Wholesalers::class)->name('Wholesalers');
 route::get('/Minoristas_de_calzado', Retails::class)->name('Retails');
 
 /*Ladies*/
-route::get('/venta_calzado_damas', Ladies::class)->name('Damas');
+route::get('/venta_calzado_dama', Ladies::class)->name('Damas');
 /* Men */
 route::get('/venta_calzado_hombres', Men::class)->name('Hombres');
 /* Kids */
