@@ -12,7 +12,7 @@
             $strlower = strtolower($subcategory);
         @endphp
         <img src="{{asset('storage/'.$strlower.'.png')}}">
-        <h1>Directorio de Zapatos {{$subcategory}}</h1>
+        <h1 class="text-center">Directorio de Zapatos {{$subcategory}}</h1>
     </div>
 
     <div class="d-flex mt-5 mb-5 pb-5 gap-3 flex-wrap justify-content-center">
