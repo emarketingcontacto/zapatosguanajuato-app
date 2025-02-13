@@ -7,7 +7,7 @@
 
     {{-- seo --}}
         <meta name="description" content="{{$pageDescription}}"/>
-        <meta name="keywords" content="Catalogo,Fabricantes,Zapatos,Mayoristas,Calzado,Negocio,Leon,Guanajuato"/>
+        <meta name="keywords" content="Directorio, Fabricantes,Mayoristas, Minoristas, Zapatos, Calzado, Guanajuato, Proveedores de Zapatos hecho en el Estado de Guanajuato"/>
         <title> {{$pageTitle}} | ZapatosGuanajuato.com</title>
         {{-- canonical --}}
             <script>
