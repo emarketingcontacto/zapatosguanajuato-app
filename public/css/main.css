@@ -1245,7 +1245,7 @@ svg{
     gap: 2vw;
     width: 100%;
     height: auto;
-    background-color:var(--secondary);
+    background-color:var(--primary);
     justify-content: space-evenly;
     align-items: center;
     margin-top: 3vh;
@@ -1266,8 +1266,8 @@ svg{
     border-radius: 0 10px 10px 0;
     padding-left: 5vw;
     padding-top: 2vh;
-    background-color: var(--ternary);
-    color: var(--bg-grey);
+    background-color: var(--font-light);
+    color: var(--primary);
 }
 
 .gender-item{
@@ -1286,6 +1286,6 @@ svg{
 }
 
 .gender-item a:hover{
-    color: var(--secondary);
+    color: var(--primary);
 
 }
