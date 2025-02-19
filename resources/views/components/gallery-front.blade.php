@@ -25,7 +25,9 @@
                 </div>
 
                 <div class="gallery-biz-name">
-                    <a class="gallery-button" href="{{route('Biz.show', ['biz'=>$gallery->bizId])}}">{{$gallery->bizName}}</a>
+                    <a class="gallery-button" href="{{route('Biz.show', ['biz'=>$gallery->bizId])}}">
+                        <h3>{{$gallery->bizName}}</h3>
+                    </a>
                 </div>
 
             </div>

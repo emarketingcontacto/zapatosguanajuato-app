@@ -1105,6 +1105,10 @@ svg{
     width: 90%;
 }
 
+.gallery-button h3{
+    font-size: .85rem;
+}
+
 /* End Front-gallery */
 
 .subcatTitle{
