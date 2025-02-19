@@ -7,25 +7,25 @@
     <div class="gender-item">
         <a href="{{route('Damas')}}">
            <i class="bi bi-gender-female"></i>
-           <p>Damas</p>
+           <h4>Damas</h4>
         </a>
     </div>
     <div class="gender-item">
         <a href="{{route('Hombres')}}">
             <i class="bi bi-gender-male"></i>
-            <p>Hombres</p>
+            <h4>Hombres</h4>
         </a>
     </div>
     <div class="gender-item">
         <a href="{{route('Ninas')}}">
             <i class="bi bi-balloon-heart-fill"></i>
-            <p>Niñas</p>
+            <h4>Niñas</h4>
         </a>
     </div>
     <div class="gender-item">
         <a href="{{route('Ninos')}}">
             <i class="bi bi-rocket-takeoff"></i>
-            <p>Niños</p>
+            <h4>Niños</h4>
         </a>
     </div>
 </div>
