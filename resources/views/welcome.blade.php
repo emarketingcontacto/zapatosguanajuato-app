@@ -1,6 +1,6 @@
 @php
     // $description = str_replace(" ", "_", "Encuentra el catálogo más completo de zapatos en Guanajuato Compra al mayoreo de los mejores fabricantes y surte tu negocio. ¡Aprovecha nuestras ofertas!");
-    $description ="Encuentra el directorio más completo de proveedores de calzado en Guanajuato - Compra directamente del proveedor y surte tu negocio. ¡Aprovecha nuestras ofertas!";
+    $description ="Directorio de fabricantes, mayoristas y menudistas de calzado hecho en el estado de Guanajuato - Lista de contactos directos de cada proveedor";
 @endphp
 
 {{-- <x-layout pageTitle="Directorio de Zapatos Guanajuato" pageDescription={{$description}}> --}}
