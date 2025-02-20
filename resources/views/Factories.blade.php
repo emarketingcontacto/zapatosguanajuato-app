@@ -26,6 +26,16 @@
                     <img src="{{asset('/'.$biz->bizImage)}}" class="card-img-top" style="height: 380px">
                     <h2 class="card-title">{{$biz->bizName}}</h2>
                     <div class="card-body card-text">
+                        {{--BizCatName--}}
+                        <div class="row biz-row-catname">
+                            <div class="col col-3">
+                                <span class="bi bi-building-fill-gear"></span>
+                            </div>
+                            <div class="col">
+                                <h4>{{$biz->bizcatName}}</h4>
+                            </div>
+                        </div>
+                        {{--end BizCatName--}}
                         {{-- likes --}}
                             <div class="row d-flex justify-content-end">
                                 <div class="col d-flex align-items-center gap-1">
@@ -39,6 +49,7 @@
                         {{-- modelCategoriesList--}}
                             <x-ModelCategoriesList :bizID="$biz->bizId"></x-ModelCategoriesList>
                         {{-- end modelCategoriesList--}}
+
                         <div class="row">
                             <div class="col col-3">
                                 <span class="material-symbols-outlined">trolley</span>

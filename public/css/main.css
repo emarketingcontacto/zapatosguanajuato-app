@@ -537,6 +537,21 @@ body{
     color: var(--font-strong);
 }
 
+.biz-row-catname{
+    font-size: .95rem;
+    background-color: var(--secondary);
+    padding: 2vh;
+}
+
+.biz-row-catname span{
+    font-size: 1.2rem;
+}
+
+.biz-row-catname h4{
+    font-size: 1rem;
+}
+
+
 /*end biz */
 
 .show-banner{
@@ -1068,9 +1083,6 @@ svg{
     opacity: .50;
 }
 
-
-
-
 .gallery-model-name{
     text-align: center;
     background-color: rgb(117, 115, 115);
@@ -1220,11 +1232,6 @@ svg{
     display: flex;
     flex-direction: column;
 }
-/* .titlegallery{
-    display: flex;
-    justify-content: center;
-    background-color: red;
-} */
 
 .field{
     background-color: var(--primary);
