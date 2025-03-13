@@ -35,9 +35,9 @@
     {{-- style --}}
 
     {{-- sripts local --}}
-        <script src="{{URL::asset('/scripts/script.js')}}"></script>
-        <script src="{{URL::asset('/scripts/likes.js')}}"></script>
-        <script src="{{URL::asset('/scripts/modelcatbiz.js')}}"></script>
+        <script src="{{URL::asset('/scripts/script.js')}}" defer></script>
+        <script src="{{URL::asset('/scripts/likes.js')}}" defer></script>
+        <script src="{{URL::asset('/scripts/modelcatbiz.js')}}" defer></script>
         <link rel="icon" href="{{asset('/favicon.ico')}}" type="image/x-icon">
     {{-- endsripts local--}}
     {{-- scripts online --}}
