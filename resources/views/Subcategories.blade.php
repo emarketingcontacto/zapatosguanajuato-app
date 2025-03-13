@@ -7,10 +7,12 @@
     @section('main-content')
 
     <div class="subcatTitle">
+        {{-- local --}}
         {{-- <img src="../images/{{$subcategory}}.png"> --}}
         @php
             $strlower = strtolower($subcategory);
         @endphp
+        {{-- online --}}
         <img src="{{asset('storage/'.$strlower.'.png')}}">
         <h1 class="text-center">Directorio de Zapatos {{$subcategory}}</h1>
     </div>
@@ -20,14 +22,13 @@
         @foreach ($models as $model )
 
             <div class="card" style="width: 18rem;">
-
+                {{-- local --}}
                 {{-- <img src="{{asset('storage/'.$model->modelImage)}}" class="card-img-top" height="350px" alt="{{$model->bizName}}"> --}}
+                {{-- online --}}
                 <img src="{{asset('/'.$model->modelImage)}}" class="card-img-top" height="350px" alt="{{$model->bizName}}">
 
                 <div class="card-body">
-
-                        <h5 class="card-title">{{$model->modelName}}</h5>
-
+                    <h5 class="card-title">{{$model->modelName}}</h5>
                 </div>
 
                 <ul class="list-group list-group-flush text-center">

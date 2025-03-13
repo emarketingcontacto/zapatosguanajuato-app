@@ -5,10 +5,10 @@
 
 @section('main-content')
 
-<div class="container d-flex flex-column">
+<div class="container container-privacy">
 
 <h1 class="text-center"> Política de Privacidad</h1>
-
+<br>
 <h2>La protección de tu privacidad es nuestra máxima prioridad </h2>
 
     <span>

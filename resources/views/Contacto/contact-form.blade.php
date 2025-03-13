@@ -4,7 +4,7 @@
 <x-layout pageTitle="Catalogo de Calzado" pageDescription={{$description}}>
 
 @section('main-content')
-        <div class="d-flex mt-5 justify-content-center">
+        <div class="contact-container-header">
             <h1>Contacto</h1>
         </div>
 
@@ -14,7 +14,7 @@
         </div>
         @endif
 
-        <div class="col-md-6 offset-3 mb-5">
+        <div class="contact-container">
             <form action="{{route('Mensaje')}}" method="post">
                 @csrf
                 @method('POST')
@@ -43,7 +43,7 @@
                 </div>
 
                 <div class="d-flex justify-content-end">
-                    <input type="submit" class="btn btn-sm btn-primario" value="Submit">
+                    <input type="submit" class="btn btn-sm btn-contact" value="Enviar">
                 </div>
 
 

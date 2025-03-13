@@ -6,17 +6,19 @@
     </div>
     @foreach ($mostRetailers as $mostRetailer)
 
-    <div class="gallery-item">
+    <div class="gallery-front-item">
         {{-- image --}}
-        <div class="gallery-image">
+        <div class="gallery-front-image">
             <a href="{{route('Biz.show', ['biz'=>$mostRetailer->bizId])}}">
-                {{-- <img src="{{asset('storage/'.$mostRetailer->bizImage)}}" alt="{{$mostRetailer->bizImage}}" width="155vh" height="155vh" > --}}
-                <img src="{{asset('/'.$mostRetailer->bizImage)}}" alt="{{$mostRetailer->bizImage}}" width="155vh" height="155vh" >
+                {{-- local --}}
+                {{-- <img src="{{asset('storage/'.$mostRetailer->bizImage)}}" alt="{{$mostRetailer->bizImage}}" width="255vh" height="255vh" > --}}
+                {{-- online --}}
+                <img src="{{asset('/'.$mostRetailer->bizImage)}}" alt="{{$mostRetailer->bizImage}}" width="255vh" height="255vh" >
             </a>
         </div>
 
-        <div class="gallery-biz-name">
-            <a class="gallery-button" href="{{route('Biz.show', ['biz'=>$mostRetailer->bizId])}}">
+        <div class="gallery-front-biz-name">
+            <a class="gallery-front-button" href="{{route('Biz.show', ['biz'=>$mostRetailer->bizId])}}">
                 <h3>{{$mostRetailer->bizName}}</h3>
             </a>
         </div>

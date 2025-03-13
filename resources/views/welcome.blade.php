@@ -7,7 +7,7 @@
 <x-layout pageTitle="Directorio de Zapatos Guanajuato" :pageDescription=$description>
     @section('main-content')
         @include('/partials/_hero')
-        <div class="main-content">
+        <div class="main-conteiner">
             {{-- ATTENTION --}}
             <div class="attention">
                 <h2>
@@ -15,35 +15,27 @@
                 </h2>
             </div>
             {{-- END ATTENTION --}}
-
-           {{--Categories-front--}}
-           <x-categories-front></x-categories-front>
-           {{--End Categories-front--}}
-
+            {{-- Galery Last Models --}}
+            <x-GalleryFront></x-GalleryFront>
+            {{-- End Galery Last Models--}}
+            {{--Categories-front--}}
+            <x-categories-front></x-categories-front>
+            {{--End Categories-front--}}
             {{-- Subcategories-Front --}}
-            <x-front-subcategories></x-fronSubcategories>
+            <x-front-subcategories></x-front-subcategories>
             {{-- Subcategories-Front --}}
-
             {{--Genders--}}
              <x-genders></x-genders>
             {{--Genders--}}
-
-             {{-- Galery Last Models --}}
-             <x-GalleryFront></x-GalleryFront>
-             {{-- End Galery Last Models--}}
-
             {{-- Most Factories --}}
                 <x-most-factories></x-most-factories>
             {{-- End Most Factories --}}
-
             {{-- Most Wholesalers --}}
             <x-most-wholesalers></x-most-wholesalers>
             {{-- End Most Wholesalers --}}
-
             {{-- Most Retailers --}}
             <x-most-retailers></x-most-retailers>
             {{-- End Most Retailers --}}
-
         </div>
     @endsection
 </x-layout>

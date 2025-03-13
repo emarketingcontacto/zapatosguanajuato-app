@@ -13,9 +13,9 @@
 
  {{-- Factories --}}
  <div class="factories-modelsubcat">
-    <div class="front-title">
-        <div class="front-title-gallery">
-            <h5>Fabricantes</h5>
+    <div class="genders-category-container">
+        <div class="genders-category-title">
+            <h3>Fabricantes de calzado para Niños</h3>
         </div>
     </div>
     @foreach ($factories as $factory)
@@ -25,7 +25,9 @@
             </div>
             <div class="gallery-image">
                 <a href="{{route('Modelo.show', ['modelo'=>$factory->modelId])}}">
+                    {{-- local --}}
                     {{-- <img src="{{asset('storage/'.$factory->modelImage)}}" alt="Minorista Uno" width="255vw" height="255vh"> --}}
+                    {{-- online --}}
                     <img src="{{asset('/'.$factory->modelImage)}}" alt="Minorista Uno" width="255vw" height="255vh">
                 </a>
             </div>
@@ -49,9 +51,9 @@
 
 {{-- Wholesalers --}}
 <div class="factories-modelsubcat">
-    <div class="front-title">
-        <div class="front-title-gallery">
-            <h5>Mayoristas</h5>
+    <div class="genders-category-container">
+        <div class="genders-category-title">
+            <h3>Mayoristas de calzado para Niños</h3>
         </div>
     </div>
     @foreach ($wholesalers as $wholesaler)
@@ -61,7 +63,9 @@
             </div>
             <div class="gallery-image">
                 <a href="{{route('Modelo.show', ['modelo'=>$wholesaler->modelId])}}">
+                    {{-- local --}}
                     {{-- <img src="{{asset('storage/'.$wholesaler->modelImage)}}" alt="Minorista Uno" width="255vw" height="255vh"> --}}
+                    {{-- online --}}
                     <img src="{{asset('/'.$wholesaler->modelImage)}}" alt="Minorista Uno" width="255vw" height="255vh">
                 </a>
             </div>
@@ -84,9 +88,9 @@
 
  {{-- Retails --}}
  <div class="factories-modelsubcat">
-    <div class="front-title">
-        <div class="front-title-gallery">
-            <h5>Minoristas</h5>
+    <div class="genders-category-container">
+        <div class="genders-category-title">
+            <h3>Minoristas de calzado para Niños</h3>
         </div>
     </div>
     @foreach ($retails as $retail)
@@ -96,7 +100,9 @@
             </div>
             <div class="gallery-image">
                 <a href="{{route('Modelo.show', ['modelo'=>$retail->modelId])}}">
+                    {{-- local --}}
                     {{-- <img src="{{asset('storage/'.$retail->modelImage)}}" alt="Minorista Uno" width="255vw" height="255vh"> --}}
+                    {{-- online --}}
                     <img src="{{asset('/'.$retail->modelImage)}}" alt="Minorista Uno" width="255vw" height="255vh">
                 </a>
             </div>

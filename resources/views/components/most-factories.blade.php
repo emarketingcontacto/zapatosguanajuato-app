@@ -6,15 +6,18 @@
             </div>
         </div>
         @foreach ($mostFactories as $mostfactory)
-            <div class="gallery-item">
+            <div class="gallery-front-item">
                 {{-- image --}}
-                <div class="gallery-image">
+                <div class="gallery-front-image">
                     <a href="{{route('Biz.show', ['biz'=>$mostfactory->bizId])}}">
-                        <img src="{{asset('/'.$mostfactory->bizImage)}}" alt="{{$mostfactory->bizImage}}" width="155vh" height="155vh" >
+                        {{-- online --}}
+                        <img src="{{asset('/'.$mostfactory->bizImage)}}" alt="{{$mostfactory->bizImage}}" width="255vh" height="255vh" >
+                        {{-- local --}}
+                        {{-- <img src="{{asset('storage/'.$mostfactory->bizImage)}}" alt="{{$mostfactory->bizImage}}" width="255vh" height="255vh" > --}}
                     </a>
                 </div>
-                <div class="gallery-biz-name">
-                    <a class="gallery-button" href="{{route('Biz.show', ['biz'=>$mostfactory->bizId])}}">
+                <div class="gallery-front-biz-name">
+                    <a class="gallery-front-button" href="{{route('Biz.show', ['biz'=>$mostfactory->bizId])}}">
                        <h3>{{$mostfactory->bizName}}</h3>
                     </a>
                 </div>

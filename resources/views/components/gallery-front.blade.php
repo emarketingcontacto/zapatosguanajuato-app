@@ -1,4 +1,4 @@
-<div class="galleryDiv">
+<div class="gallery-front">
     @php
         $bizID = 0;
     @endphp
@@ -11,21 +11,23 @@
 
     @foreach ($galleries as $gallery)
         @if ($bizID != $gallery->bizId )
-            <div class="gallery-item">
+            <div class="gallery-front-item">
 
-                <div class="gallery-model-name">
+                <div class="gallery-front-model-name">
                     {{$gallery->modelName}}
                 </div>
 
-                <div class="gallery-image">
+                <div class="gallery-front-image">
                      <a href="{{route('Modelo.show', ['modelo'=>$gallery->modelId])}}">
+                        {{-- local --}}
                         {{-- <img src="{{asset('storage/'.$gallery->modelImage)}}" alt="{{$gallery->bizName}}" width="255vw" height="255vh"> --}}
+                        {{-- online --}}
                         <img src="{{asset('/'.$gallery->modelImage)}}" alt="{{$gallery->bizName}}" width="255vw" height="255vh">
                     </a>
                 </div>
 
-                <div class="gallery-biz-name">
-                    <a class="gallery-button" href="{{route('Biz.show', ['biz'=>$gallery->bizId])}}">
+                <div class="gallery-front-biz-name">
+                    <a class="gallery-front-button" href="{{route('Biz.show', ['biz'=>$gallery->bizId])}}">
                         <h3>{{$gallery->bizName}}</h3>
                     </a>
                 </div>

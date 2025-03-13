@@ -7,8 +7,10 @@
     @section('main-content')
 
     <div class="container text-center">
-        <div class="row d-flex flex-column justify-center align-content-center">
-                {{-- <img src="{{asset('storage/'.$modelo->modelImage)}}" height="100%" width="100%"> --}}
+        <div class="row model-container">
+                {{-- local --}}
+                <img src="{{asset('storage/'.$modelo->modelImage)}}" height="100%" width="100%">
+                {{-- online --}}
                 <img src="{{asset('/'.$modelo->modelImage)}}" height="100%" width="100%">
                 <h1 class="hero-text">{{$modelo->modelName}}</h1>
         </div>
