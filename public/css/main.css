@@ -1,21 +1,26 @@
 /* @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"); */
-@import url('https://fonts.googleapis.com/css2?family=BIZ+UDMincho&family=Manjari&family=Poiret+One&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=BIZ+UDMincho&family=Manjari&family=Poiret+One&display=swap'); */
 
 
 /* Font Family */
 @font-face {
     font-family:'Manjari', sans-serif ;
-    src: url('https://fonts.googleapis.com/css2?family=Manjari&display=swap');
+    /* src: url('https://fonts.googleapis.com/css2?family=Manjari&display=swap'); */
+    src: url('../css/fonts.css?family=Manjari&display=swap');
 }
 
 @font-face {
     font-family: 'Poiret One', cursive ;
-    src: url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+    /* src: url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap'); */
+    src: url('../css/fonts.css?family=Poiret+One&display=swap');
+
 }
 
 @font-face {
     font-family: 'BIZ UDMincho', serif ;
-    src: url('https://fonts.googleapis.com/css2?family=BIZ+UDMincho&display=swap');
+    /* src: url('https://fonts.googleapis.com/css2?family=BIZ+UDMincho&display=swap'); */
+    src: url('../css/fonts.css?family=BIZUDMincho&display=swap');
+
 }
 
 /* Media */
@@ -341,7 +346,11 @@ footer a:hover{
 }
 .busqueda-hero-div{
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
 }
 .text-hero-busqueda{
     width: 30vw;
