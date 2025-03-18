@@ -826,6 +826,8 @@ color: var(--font-light);
 }
 .btn-show a{
     padding-top: 15px;
+    background-color: var(--stg-ternary);
+    color: var(--font-light);
 }
 .btn-show a:hover{
     color:var(--cinqterly) !important;
@@ -1013,17 +1015,29 @@ color: var(--font-light);
     width:100%;
     height:75vh;
 }
-.show-banner h1{
-    background-color: var(--bg-noir);
-    padding: 5vh;
+
+.show-banner-title{
+    display: flex;
+    flex-direction: column;
+    height: 25vh;
     width: 100%;
+    background-color: var(--bg-noir);
+}
+.show-banner h1{
+    padding-top: 5vh;
     text-align: center;
     color: var(--primary);
     font-size: 3vw;
     letter-spacing: 2.2vh;
     font-family: 'Poiret One';
-    margin-bottom: 25px;
 }
+.show-banner h2{
+font-family: 'Poiret One';
+color: var(--stg-ternary);
+text-align: center;
+padding-bottom: 5vh;
+}
+
 .row-btn-model
 {
     display: flex;
