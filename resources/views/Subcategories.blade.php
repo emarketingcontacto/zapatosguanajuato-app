@@ -1,6 +1,5 @@
 @php
     // $description = str_replace(" ", "_", "Conecta con mayoristas de zapato {$subcategory} en Guanajuato! Catálogo completo con precios y contactos Haz negocio ahora.");
-    $description1 = "Conecta con mayoristas de zapato {$subcategory} en Guanajuato! Directorio completo";
     $description = "Descubre el mayor directorio de fabricantes, mayoristas y menudistas de zapato {$subcategory}. Explora imágenes de modelos exclusivos y encuentra fácilmente los contactos directos para tus compras al por mayor o detalle";
 @endphp
 <x-layout pageTitle="Directorio de zapato {{$subcategory}}"  pageDescription={{$description}}>
