@@ -1,6 +1,6 @@
 @php
-    // $description = str_replace(" ", "_", "Encuentra el catálogo más completo de zapatos en Guanajuato Compra al mayoreo de los mejores fabricantes y surte tu negocio. ¡Aprovecha nuestras ofertas!");
-    $description ="Directorio de fabricantes, mayoristas y menudistas de calzado hecho en el estado de Guanajuato - Lista de contactos directos de cada proveedor";
+    // $description1 ="Conecta con fabricantes y mayoristas de calzado de Guanajuato. Ve modelos únicos, accede a contactos verificados y ahorra tiempo evitando estafas. ¡Descubre todo aquí!";
+    $description = "Accede a contactos verificados de los principales fabricantes y productores de calzado de Guanajuato. !Descubre modelos únicos, ahorra tiempo y evita fraudes!";
 @endphp
 
 {{-- <x-layout pageTitle="Directorio de Zapatos Guanajuato" pageDescription={{$description}}> --}}
