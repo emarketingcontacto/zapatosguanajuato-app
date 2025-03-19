@@ -824,6 +824,7 @@ color: var(--font-light);
     background-color: var(--stg-ternary);
     color: var(--font-light);
 }
+
 .btn-show a{
     padding-top: 15px;
     background-color: var(--stg-ternary);
