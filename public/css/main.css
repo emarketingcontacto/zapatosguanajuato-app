@@ -1388,3 +1388,30 @@ padding-bottom: 5vh;
     background-color: var(--primary);
     color: var(--stg-ternary);
 }
+.container-busquedas{
+    display: flex;
+    height: auto;
+    width: 100vw;
+    gap: 1vw;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: start;
+    padding-bottom: 5vh;
+    margin-bottom: 10vh;
+}
+.container-busqueda-ref{
+    display: flex;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vh;
+}
+.container-busqueda-ref a{
+    background-color: var(--stg-ternary);
+    color: var(--font-light);
+    padding: 1vh;
+}
+.container-busqueda-ref a:hover{
+    background-color: var(--secondary);
+    color: var(--bg-noir);
+}
