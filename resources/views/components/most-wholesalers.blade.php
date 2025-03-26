@@ -1,7 +1,7 @@
 <div class="front-factories bg-light">
     <div class="front-title">
         <div class="front-title-most">
-            <h5>Mayoristas Destacados</h5>
+            <h3>Mayoristas Destacados</h3>
         </div>
     </div>
     @foreach ($mostWholesalers as $mostWholesale)
@@ -18,7 +18,7 @@
         </div>
         <div class="gallery-front-biz-name">
             <a class="gallery-front-button" href="{{route('Biz.show', ['biz'=>$mostWholesale->bizId])}}">
-               <h3> {{$mostWholesale->bizName}} </h3>
+               <h4> {{$mostWholesale->bizName}} </h4>
             </a>
         </div>
     </div>

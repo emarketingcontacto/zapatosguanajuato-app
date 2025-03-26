@@ -1,7 +1,7 @@
 <div class="categories-front">
     <div class="front-title">
         <div class="front-title-providers">
-            <h5>Ver por tipo de Proveedor</h5>
+            <h3>Ver por tipo de Proveedor</h3>
         </div>
     </div>
     <div class="categories-front-item">

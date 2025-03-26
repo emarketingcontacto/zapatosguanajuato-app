@@ -2,7 +2,7 @@
     <div class="front-factories">
         <div class="front-title">
             <div class="front-title-most">
-                <h5>Fabricantes Destacados</h5>
+                <h3>Fabricantes Destacados</h3>
             </div>
         </div>
         @foreach ($mostFactories as $mostfactory)
@@ -18,7 +18,7 @@
                 </div>
                 <div class="gallery-front-biz-name">
                     <a class="gallery-front-button" href="{{route('Biz.show', ['biz'=>$mostfactory->bizId])}}">
-                       <h3>{{$mostfactory->bizName}}</h3>
+                       <h4>{{$mostfactory->bizName}}</h4>
                     </a>
                 </div>
 

@@ -16,7 +16,7 @@
         {{-- End Search Model Categories --}}
 
         {{-- Biz Items --}}
-        <div class="container biz-item-container">
+        <div class="biz-item-container">
             @foreach ($business as $biz)
 
                 <div class="card" style="width: 18rem; background-color:#F5F5F5">

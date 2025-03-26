@@ -560,7 +560,7 @@ footer a:hover{
     font-size: .75rem;
     width: 90%;
 }
-.gallery-front-button h3{
+.gallery-front-button h4{
     font-size: .85rem;
     margin-top: .5rem;
 }
@@ -609,11 +609,12 @@ footer a:hover{
     justify-content: start;
    }
 .front-title-providers{
-    width: 25vw;
+    width:fit-content;
     background-color: var(--stg-ternary);
     border-radius: 0 10px 10px 0;
     padding-left: 5vw;
     padding-top: 2vh;
+    padding-right: 3vw;
     color: var(--font-light);
 }
 .front-title-shoes{
@@ -626,11 +627,12 @@ footer a:hover{
 }
 
 .front-title-most{
-    width: 25vw;
+    width:fit-content;
     background-color:  var(--secondary);
     border-radius: 0 10px 10px 0;
     padding-left: 5vw;
     padding-top: 2vh;
+    padding-right: 3vw;
     color: var(--bg-grey);
 }
 

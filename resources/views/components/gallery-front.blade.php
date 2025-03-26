@@ -5,7 +5,7 @@
 
 <div class="front-title">
     <div class="front-title-gallery">
-        <h5>Ultímos Modelos</h5>
+        <h3>Ultímos Modelos</h3>
     </div>
 </div>
 
@@ -28,7 +28,7 @@
 
                 <div class="gallery-front-biz-name">
                     <a class="gallery-front-button" href="{{route('Biz.show', ['biz'=>$gallery->bizId])}}">
-                        <h3>{{$gallery->bizName}}</h3>
+                        <h4>{{$gallery->bizName}}</h4>
                     </a>
                 </div>
 

@@ -1,7 +1,7 @@
 <div class="genders-div">
     <div class="genders-title">
         <div class="genders-title-text">
-           <h5>Ver por Genero</h5>
+           <h3>Ver por Genero</h3>
         </div>
     </div>
     <div class="gender-item">
