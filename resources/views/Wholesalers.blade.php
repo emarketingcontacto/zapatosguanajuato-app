@@ -9,7 +9,19 @@
 <div class="header-Category" style="background-image: url('{{asset('storage/'.$bizcat->bizcatImage)}}');">
     <h1>Directorio de Mayoristas de Calzado</h1>
 </div>
-
+{{-- intro text --}}
+<div class="intro">
+    <h2>
+       <strong>Distribuidores de calzado al mayoreo </strong> ideal para emprendedores y negocios que buscan maximizar su inversión
+       con productos que destacan por su diseño y durabilidad.
+    </h2>
+</div>
+<div class="intro-text">
+    <h3>
+        Ya sea que busques botas, zapatillas, sandalias o calzado casual, contamos con lo que necesitas para satisfacer las necesidades de tus clientes.
+    </h3>
+</div>
+{{-- end intro text --}}
 {{-- Search Model Categories --}}
 <x-search-model-category bizcategory="Wholesalers"></x-search-model-category>
 {{-- End Search Model Categories --}}
@@ -23,7 +35,7 @@
             {{-- <img src="{{asset('storage/'.$biz->bizImage)}}" class="card-img-top" style="height: 380px"> --}}
             {{-- online --}}
             <img src="{{asset('/'.$biz->bizImage)}}" class="card-img-top" style="height: 380px">
-            <h2 class="card-title">{{$biz->bizName}}</h2>
+            <h4 class="card-title">{{$biz->bizName}}</h4>
             <div class="card-body card-text">
                 {{--BizCatName--}}
                 <div class="row biz-row-catname">
@@ -36,7 +48,7 @@
 
                     </div>
                     <div class="col">
-                        <h4>{{$biz->bizcatName}}</h4>
+                        <p>{{$biz->bizcatName}}</p>
                     </div>
                 </div>
                 {{--end BizCatName--}}

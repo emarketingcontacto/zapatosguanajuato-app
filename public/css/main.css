@@ -110,8 +110,9 @@ body{
 }
 
 .main-container{
-    padding-bottom: 3rem;
+    padding-bottom: 7vh;
     padding-top: 3rem;
+    margin-bottom: 7vh;
 }
 
 /* Nav */
@@ -238,7 +239,7 @@ footer a:hover{
     padding-top: 9px;
     padding-bottom: 9px;
     background-color: var(--bg-noir);
-    color: var(--stg-ternary);
+    color: var(--primary);
     font-size: 1.25rem;
 }
 .card-link{
@@ -898,6 +899,10 @@ color: var(--font-light);
     text-decoration: none;
     color: var(--font-light);
 }
+.gallery-biz-name a:hover {
+    background-color: var(--secondary);
+    color: var(--font-strong);
+}
 .gallery-button {
     text-align: center;
     background-color: var(--stg-ternary);
@@ -910,7 +915,7 @@ color: var(--font-light);
 }
 .gallery-model-name {
     text-align: center;
-    background-color: rgb(117, 115, 115);
+    background-color: var(--bg-noir);
     color: var(--primary);
     margin: 0;
 }
@@ -940,15 +945,16 @@ color: var(--font-light);
 .genders-category-title{
     display: flex;
     width:fit-content;
-    background-color: var(--secondary);
     border-radius: 0 10px 10px 0;
     padding-left: 5vw;
     padding-top: 2vh;
-    color: var(--bg-grey);
     padding-right: 1rem;
+    background-color: var(--bg-noir);
+    color: var(--primary);
+    font-family: var(--transactionals);
 }
-.genders-category-title h3{
-    font-size: 1.2rem;
+.genders-category-title h4{
+    font-size: 1rem;
 }
 
 /******** END SUBCATEGORIES PAGES *******/
@@ -1454,36 +1460,21 @@ padding-bottom: 5vh;
     width: 100vw;
     justify-content: center;
     align-items: center;
-    /* background-color: var(--background); */
-    /* background-color: var(--backgroundsolid); */
-    /* background-color: var(--bg-grey); */
-    /* background-color: var(--bg-noir); */
-    /* background-color: var(--bg-primary); */
-    /* background-color: var(--bg-secondary); */
+    text-align: center;
+    color: var(--secondary);
+    font-family: var(--headers);
+    padding: 3vh;
 }
 
 .intro-text{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 75vw;
-    padding: 2vh 0;
-    font-family: var(--headers);
-    color: var(--secondary);
+    flex-direction: column;
+    width: 100vw;
+    padding: 2vh 5vh;
     text-align: center;
+    font-family: var(--transactionals);
+    color: var(--primary);
+    background-color: var(--bg-noir);
 }
-
-.intro-text h2{
-    font-family: var(--headers);
-    color: var(--secondary);
-}
-.intro-text h3{
-    /* color:var(--primary); */
-    /* color:var(--secondary); */
-    /* color:var(--ternary); */
-    /* color:var(--stg-ternary); */
-    /* color:var(--quarterly); */
-    color:var(--cinqterly)
-}
-

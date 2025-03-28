@@ -8,12 +8,23 @@
     <div class="header-Category" style="background-image: url('{{asset('storage/'.$modelcat->modelcatImage)}}')" alt="DirectorioDamas">
         <h1>Directorio de Calzado para Hombres</h1>
     </div>
-
+ {{-- intro text --}}
+ <div class="intro">
+    <h2>
+        <strong>Proveedores de calzado para Hombres </strong> calidad y precios de fábrica para distribuidores
+    </h2>
+</div>
+<div class="intro-text">
+    <h3>
+        Encuentra los mejores proveedores de calzado para Hombres a los mejores precios.
+    </h3>
+</div>
+{{-- end intro text --}}
 {{-- Factories --}}
 <div class="factories-modelsubcat">
     <div class="genders-category-container">
         <div class="genders-category-title">
-            <h3>Fabricantes de calzado para hombres</h3>
+            <h4>Fabricantes de calzado para hombres</h4>
         </div>
     </div>
     @foreach ($factories as $factory)
@@ -51,7 +62,7 @@
 <div class="factories-modelsubcat">
     <div class="genders-category-container">
         <div class="genders-category-title">
-            <h3>Mayoristas de calzado para hombres</h3>
+            <h4>Mayoristas de calzado para hombres</h4>
         </div>
     </div>
     @foreach ($wholesalers as $wholesaler)
@@ -88,7 +99,7 @@
  <div class="factories-modelsubcat">
     <div class="genders-category-container">
         <div class="genders-category-title">
-            <h3>Minoristas de calzado para hombres</h3>
+            <h4>Minoristas de calzado para hombres</h4>
         </div>
     </div>
     @foreach ($retails as $retail)

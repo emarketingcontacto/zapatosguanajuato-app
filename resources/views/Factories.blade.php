@@ -10,20 +10,22 @@
         <div class="header-Category" style="background-image: url('{{asset('storage/'.$bizcat->bizcatImage)}}');" alt="DirectorioFabricantes">
             <h1>Directorio de Fabricantes de Calzado </h1>
         </div>
+        {{-- intro text --}}
         <div class="intro">
-            <div class="intro-text">
-                <h2>
-                    <strong>Fabricantes de calzado confiables</strong> calidad y precios de fábrica sólo para distribuidores
-                </h2>
-                <h3>
-                    No pierdas la oportunidad de trabajar con los mejores <strong>productores de zapato</strong> y accede a precios de fábrica para tu negocio.
-
-                </h3>
-                <h3>
-                    ¡Contáctalos hoy y lleva tu negocio al siguiente nivel!
-                </h3>
-            </div>
+            <h2>
+                <strong>Fabricantes de calzado confiables</strong> calidad y precios de fábrica sólo para distribuidores
+            </h2>
         </div>
+        <div class="intro-text">
+            <h3>
+                No pierdas la oportunidad de trabajar con los mejores <strong>productores de zapato</strong> y accede a precios de fábrica para tu negocio.
+            </h3>
+            <h3>
+                ¡Contáctalos hoy y lleva tu negocio al siguiente nivel!
+            </h3>
+        </div>
+        {{-- end intro text --}}
+
         {{-- Search Model Categories --}}
         <x-search-model-category bizcategory="Fabricantes"></x-search-model-category>
         {{-- End Search Model Categories --}}
@@ -37,7 +39,7 @@
                     {{-- <img src="{{asset('storage/'.$biz->bizImage)}}" class="card-img-top" style="height: 380px"> --}}
                     {{-- online --}}
                     <img src="{{asset('/'.$biz->bizImage)}}" class="card-img-top" style="height: 380px">
-                    <h3 class="card-title">{{$biz->bizName}}</h3>
+                    <h4 class="card-title">{{$biz->bizName}}</h4>
                     <div class="card-body card-text">
                         {{--BizCatName--}}
                         <div class="row biz-row-catname">

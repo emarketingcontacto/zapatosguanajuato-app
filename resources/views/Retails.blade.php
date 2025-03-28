@@ -10,7 +10,18 @@
 <div class="header-Category" style="background-image: url('{{asset('storage/'.$bizcat->bizcatImage)}}');">
     <h1>Directorio de Minoristas de Calzado </h1>
 </div>
-
+ {{-- intro text --}}
+ <div class="intro">
+    <h2>
+        Los mejores <strong> distribuidores de calzado</strong>, ofreciendo una amplia gama de estilos y modelos que se adaptan a las tendencias actuales del mercado.
+    </h2>
+</div>
+<div class="intro-text">
+    <h3>
+        Haz tu pedido en linea
+    </h3>
+</div>
+{{-- end intro text --}}
 {{-- Search Model Categories --}}
 <x-search-model-category bizcategory="Retails"></x-search-model-category>
 {{-- End Search Model Categories --}}
@@ -24,7 +35,7 @@
                 {{-- <img src="{{asset('storage/'.$biz->bizImage)}}" class="card-img-top" style="height: 380px"> --}}
                 {{-- online --}}
                 <img src="{{asset('/'.$biz->bizImage)}}" class="card-img-top" style="height: 380px">
-                <h2 class="card-title">{{$biz->bizName}}</h2>
+                <h4 class="card-title">{{$biz->bizName}}</h4>
                 <div class="card-body card-text">
                     {{--BizCatName--}}
                     <div class="row biz-row-catname">
@@ -34,7 +45,7 @@
                             </svg>
                         </div>
                         <div class="col">
-                           <h4>{{$biz->bizcatName}}</h4>
+                           <p>{{$biz->bizcatName}}</p>
                         </div>
                     </div>
                     {{--end BizCatName--}}
