@@ -5,7 +5,7 @@
 
 <div class="front-title">
     <div class="front-title-gallery">
-        <h3>Ultímos Modelos</h3>
+        <h3>Últimos Modelos</h3>
     </div>
 </div>
 

@@ -10,7 +10,20 @@
         <div class="header-Category" style="background-image: url('{{asset('storage/'.$bizcat->bizcatImage)}}');" alt="DirectorioFabricantes">
             <h1>Directorio de Fabricantes de Calzado </h1>
         </div>
+        <div class="intro">
+            <div class="intro-text">
+                <h2>
+                    <strong>Fabricantes de calzado confiables</strong> calidad y precios de fábrica sólo para distribuidores
+                </h2>
+                <h3>
+                    No pierdas la oportunidad de trabajar con los mejores <strong>productores de zapato</strong> y accede a precios de fábrica para tu negocio.
 
+                </h3>
+                <h3>
+                    ¡Contáctalos hoy y lleva tu negocio al siguiente nivel!
+                </h3>
+            </div>
+        </div>
         {{-- Search Model Categories --}}
         <x-search-model-category bizcategory="Fabricantes"></x-search-model-category>
         {{-- End Search Model Categories --}}
@@ -24,7 +37,7 @@
                     {{-- <img src="{{asset('storage/'.$biz->bizImage)}}" class="card-img-top" style="height: 380px"> --}}
                     {{-- online --}}
                     <img src="{{asset('/'.$biz->bizImage)}}" class="card-img-top" style="height: 380px">
-                    <h2 class="card-title">{{$biz->bizName}}</h2>
+                    <h3 class="card-title">{{$biz->bizName}}</h3>
                     <div class="card-body card-text">
                         {{--BizCatName--}}
                         <div class="row biz-row-catname">
@@ -34,7 +47,7 @@
                                 </svg>
                             </div>
                             <div class="col">
-                                <h4>{{$biz->bizcatName}}</h4>
+                                <p>{{$biz->bizcatName}}</p>
                             </div>
                         </div>
                         {{--end BizCatName--}}
