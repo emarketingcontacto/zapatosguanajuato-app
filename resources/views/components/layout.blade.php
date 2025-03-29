@@ -25,25 +25,25 @@
         {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> --}}
         {{-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> --}}
         {{-- local --}}
-        <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.css')}}">
-        <link rel="stylesheet" href="{{ URL::asset('css/main.css') }}" />
-        <link rel="stylesheet" href="{{ URL::asset('css/fonts.css')}}">
-        {{-- online --}}
-        {{-- <link rel="stylesheet" href="{{ URL::asset('css/main-min.css')}}"> --}}
-        {{-- <link rel="stylesheet" href="{{ URL::asset('css/bootstrap-min.css')}}"> --}}
+        {{-- <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.css')}}"> --}}
+        {{-- <link rel="stylesheet" href="{{ URL::asset('css/main.css') }}" /> --}}
         {{-- <link rel="stylesheet" href="{{ URL::asset('css/fonts.css')}}"> --}}
+        {{-- online --}}
+        <link rel="stylesheet" href="{{ URL::asset('css/bootstrap-min.css')}}">
+        <link rel="stylesheet" href="{{ URL::asset('css/main-min.css')}}">
+        <link rel="stylesheet" href="{{ URL::asset('css/fonts.css')}}">
     {{-- style --}}
     {{-- sripts local --}}
-        <script src="{{URL::asset('/scripts/script.js')}}" defer></script>
-        <script src="{{URL::asset('/scripts/likes.js')}}" defer></script>
-        <script src="{{URL::asset('/scripts/modelcatbiz.js')}}" defer></script>
-        <link rel="icon" href="{{asset('/favicon.ico')}}" type="image/x-icon">
+        {{-- <script src="{{URL::asset('/scripts/script.js')}}" defer></script> --}}
+        {{-- <script src="{{URL::asset('/scripts/likes.js')}}" defer></script> --}}
+        {{-- <script src="{{URL::asset('/scripts/modelcatbiz.js')}}" defer></script> --}}
+        {{-- <link rel="icon" href="{{asset('/favicon.ico')}}" type="image/x-icon"> --}}
     {{-- endsripts local--}}
     {{-- scripts online --}}
-        {{-- <script src="{{URL::asset('/scripts/script-min.js')}}"></script> --}}
-        {{-- <script src="{{URL::asset('/scripts/likes-min.js')}}"></script> --}}
-        {{-- <script src="{{URL::asset('/scripts/modelcatbiz-min.js')}}"></script> --}}
-        {{-- <link rel="icon" href="{{asset('/favicon.ico')}}" type="image/x-icon"> --}}
+        <script src="{{URL::asset('/scripts/script-min.js')}}"></script>
+        <script src="{{URL::asset('/scripts/likes-min.js')}}"></script>
+        <script src="{{URL::asset('/scripts/modelcatbiz-min.js')}}"></script>
+        <link rel="icon" href="{{asset('/favicon.ico')}}" type="image/x-icon">
     {{-- end scripts online --}}
     <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-LEV2309FWD"></script>
