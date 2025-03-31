@@ -71,6 +71,10 @@
     .genders-title-text{
     width: 50vw !important;
     }
+    .footer-main{
+        flex-direction: column !important;
+        text-align: center !important;
+    }
  }
 /* end Media */
 
@@ -180,6 +184,7 @@ footer a:hover{
 
 .footer-socials{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
 }
@@ -509,6 +514,7 @@ footer a:hover{
     text-align: center;
     padding: 5vh;
     border-radius: 10%;
+    width: max-content;
 }
 .gender-item a:hover{
     color: var(--bg-noir);
@@ -825,7 +831,7 @@ color: var(--font-light);
 }
 .biz-row-catname{
     font-size: .95rem;
-    background-color: var(--secondary);
+    background-color: var(--primary);
     padding-top: 1vh;
 }
 .biz-row-catname svg{
