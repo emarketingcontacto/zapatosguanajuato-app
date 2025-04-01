@@ -25,36 +25,31 @@
 
 /* Media */
 @media (max-width: 900px) {
-
     .interest-left {
      width: 100vw !important;
-
    }
    .interest-right {
      width: 100vw !important;
-
    }
-
    .interest-text h3{
      text-align: center !important;
      }
-
      .hero{
         background-image: url('../images/img_index_small.avif') !important;
         margin-top: 15vh !important;
      }
-
      .hero-text h1{
         font-size: calc(1.375rem + 2.5vw) !important;
         text-align: center !important;
      }
-
      .front-title-providers {
          width: 50vw !important;
      }
-
      .generos-title-text {
          width: 50vw !important;
+     }
+     .gender-item a{
+        width: 35vw !important;
      }
      .front-title-shoes{
          width: 50vw !important;
@@ -217,6 +212,7 @@ footer a:hover{
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
+    width: 100vw;
 }
 
 .footer-socials svg{
@@ -551,7 +547,7 @@ footer a:hover{
     text-align: center;
     padding: 5vh;
     border-radius: 10%;
-    width: max-content;
+    width:15vw;
 }
 .gender-item a:hover{
     color: var(--bg-noir);
