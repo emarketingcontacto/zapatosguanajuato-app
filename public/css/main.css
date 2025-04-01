@@ -80,6 +80,9 @@
     .searchmodelcategories{
         width: 100vw !important;
     }
+    .header-Category{
+        margin-top: 16vh !important;
+    }
     .header-Category h1{
         height:25vh !important;
     }
@@ -96,6 +99,10 @@
     }
     .subcatTitle h1{
         font-size: 8vw !important;
+    }
+    .show-banner{
+        height: 45vh !important;
+        margin-top: 15vh !important;
     }
  }
 /* end Media */
@@ -139,6 +146,7 @@ body{
     padding-bottom: 7vh;
     padding-top: 3rem;
     margin-bottom: 7vh;
+    display: grid;
 }
 
 /* Nav */
@@ -1087,15 +1095,16 @@ color: var(--font-light);
     align-items: center;
     justify-content: center;
     background-position: center;
-    background-size: cover;
-    width:100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
     height:75vh;
+    margin-top: 4vh;
 }
 
 .show-banner-title{
     display: flex;
     flex-direction: column;
-    height: 25vh;
+    height: 20vh;
     width: 100%;
     background-color: var(--bg-noir);
 }

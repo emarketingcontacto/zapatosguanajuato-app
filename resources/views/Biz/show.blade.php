@@ -3,19 +3,16 @@
         <div class="container mb-5 pb-5">
             {{-- row image --}}
                 {{-- local --}}
-                {{-- <div class="show-banner" style="background-image: url('{{asset('storage/'.$biz->bizImage)}}')"> --}}
+                <div class="show-banner" style="background-image: url('{{asset('storage/'.$biz->bizImage)}}')">
                 {{-- online --}}
-                <div class="row show-banner" style="background-image: url('{{asset('/'.$biz->bizImage)}}')">
+                {{-- <div class="row show-banner" style="background-image: url('{{asset('/'.$biz->bizImage)}}')"> --}}
                     <div class="show-banner-title">
                         <h1>{{$biz->bizName}}</h1>
                         <h2>{{$bizcat->bizcatName}} de calzado</h2>
                     </div>
-
-            </div>
+                </div>
             {{-- row image --}}
-
             <hr class="biz-hr">
-
             {{-- row verification and likes --}}
             <div class="row d-flex">
                 {{-- Verification --}}
