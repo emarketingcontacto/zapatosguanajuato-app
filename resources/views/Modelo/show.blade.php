@@ -12,7 +12,7 @@
                 <img src="{{asset('storage/'.$modelo->modelImage)}}" height="100%" width="100%">
                 {{-- online --}}
                 <img src="{{asset('/'.$modelo->modelImage)}}" height="100%" width="100%">
-                <h1 class="hero-text">{{$modelo->modelName}}</h1>
+                <h1 class="hero-text-modelo">{{$modelo->modelName}}</h1>
         </div>
     </div>
         <div class="modelo-info-main">

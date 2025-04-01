@@ -39,7 +39,7 @@
                 </ul>
                 <div class="btn-show">
                     <a class="btn btn-sm btn-show form-control" href="{{route('Modelo.show', ['modelo'=>$model->modelId])}}">
-                        Ver proveedor...
+                        Detalles del modelo...
                     </a>
                 </div>
             </div>
