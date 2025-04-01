@@ -7,7 +7,7 @@
 <x-layout pageTitle="Directorio de Zapatos Guanajuato" :pageDescription=$description>
     @section('main-content')
         @include('/partials/_hero')
-        <div class="main-conteiner">
+        <div class="main-container">
             {{-- ATTENTION --}}
             <div class="attention">
                 <h2>

@@ -41,10 +41,12 @@
 
      .hero{
         background-image: url('../images/img_index_small.avif') !important;
+        margin-top: 15vh !important;
      }
 
      .hero-text h1{
-         font-size: 2.3rem !important;
+        font-size: calc(1.375rem + 2.5vw) !important;
+        text-align: center !important;
      }
 
      .front-title-providers {
@@ -75,6 +77,9 @@
         flex-direction: column !important;
         text-align: center !important;
     }
+.searchmodelcategories{
+    width: 100vw !important;
+}
  }
 /* end Media */
 
@@ -317,10 +322,9 @@ footer a:hover{
 
 /* Hero */
 .hero{
-    background-color: #000;
     height: 50vh;
+    width: 100vw;
     display:flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-image: url('../images/img_index.avif');
@@ -329,22 +333,18 @@ footer a:hover{
 
 }
 .hero-text {
+    height: 35vh;
+    width: 100vw;
     display:flex;
-    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: auto;
-    width: 98%;
-
     background: var(--bg-grey);
     color: var(--primary);
     font-family:'Poiret One', cursive;
-    padding-bottom: 5vh;
-    padding-top: 5vh;
 }
 .hero-text h1{
-    font-size: 2.7rem;
+    font-size: 4rem;
 }
 /* end Hero */
 
@@ -761,6 +761,7 @@ footer a:hover{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 5vh;
 }
 .header-Category h1{
     background-color: var(--bg-noir);
@@ -780,8 +781,7 @@ width: 100%;
 justify-content: center;
 }
 .searchmodelcategories{
-    background-color: var(--font-light);
-    border-radius: 10px;
+    background-color: var(--stg-ternary);
     font-size: .75rem;
     display: flex;
     width: auto;
