@@ -868,10 +868,11 @@ color: var(--font-light);
     font-size: .95rem;
     background-color: var(--primary);
     padding-top: 1vh;
+    margin: 0;
 }
 .biz-row-catname svg{
     width: 1.5rem;
-    height: 1.5rem;
+    height: 2.5rem;
 }
 .biz-row-catname p{
     font-size: 1rem;
@@ -1505,7 +1506,7 @@ padding-bottom: 5vh;
     text-align: center;
     color: var(--secondary);
     font-family: var(--headers);
-    padding: 3vh;
+    padding-top: 3vh;
 }
 
 .intro-text{
@@ -1514,9 +1515,10 @@ padding-bottom: 5vh;
     align-items: center;
     flex-direction: column;
     width: 100vw;
-    padding: 2vh 5vh;
+    padding-bottom:3vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
     text-align: center;
-    font-family: var(--transactionals);
-    color: var(--primary);
-    background-color: var(--bg-noir);
+    font-family: var(--headers);
+    color: var(--secondary);
 }

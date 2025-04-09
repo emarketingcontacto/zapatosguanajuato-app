@@ -145,7 +145,7 @@ Route::delete('/Biz/{biz}/destroy', [BizController::class,'destroy'])->name('Biz
 
 /*Factories */
 //route::get('/Fabricantes', Factories::class)->middleware('auth')->name('Factories');
-route::get('/Fabricantes_de_calzado', Factories::class)->name('Fabricantes');
+route::get('/Fabricantes-calzado-guanajuato', Factories::class)->name('Fabricantes');
 
 /*Wholesalers */
 //route::get('/Mayoristas', Wholesalers::class)->middleware('auth')->name('Wholesalers');

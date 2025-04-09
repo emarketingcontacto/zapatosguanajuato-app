@@ -1,5 +1,5 @@
 @php
-    $description = "Fabricantes de Calzado en Guanajuato. Encuentra un amplio catálogo de fabricantes de calzado del estado de Guanajuato. ¡Emprende tu negocio hoy!";
+    $description ="Encuentra el listado completo de fábricantes de calzado en Guanajuato. Datos de contacto, fotografías de modelos, ubicación y promociones exclusivas. ¡Suscríbete ahora!";
     $keywords = "Fabricantes de calzado en Guanajuato, Productores de calzado de Guanajuato, Venta de zapatos a precio de mayoreo";
 @endphp
 <x-layout pageTitle="Directorio de Fabricantes Calzado Guanajuato" pageDescription={{$description}} keywords={{$keywords}}>
@@ -7,17 +7,17 @@
     @section('main-content')
 
         <div class="header-Category" style="background-image: url('{{asset('storage/'.$bizcat->bizcatImage)}}');" alt="DirectorioFabricantes">
-            <h1>Directorio de Fabricantes de Calzado </h1>
+            <h1>Directorio de Fabricantes de Calzado en Guanajuato </h1>
         </div>
         {{-- intro text --}}
         <div class="intro">
             <h2>
-                <strong>Fabricantes de calzado confiables</strong> calidad y precios de fábrica sólo para distribuidores
+                Fabricantes de calzado de confiables calidad y precios de fábrica sólo para distribuidores
             </h2>
         </div>
         <div class="intro-text">
             <h3>
-                No pierdas la oportunidad de trabajar con los mejores <strong>productores de zapato</strong> y accede a precios de fábrica para tu negocio.
+                No pierdas la oportunidad de trabajar con los mejores <strong> productores de zapato de Guanajuato y accede a precios de fábrica</strong> para tu negocio.
             </h3>
             <h3>
                 ¡Contáctalos hoy y lleva tu negocio al siguiente nivel!
