@@ -1,9 +1,8 @@
 @php
-    //$description = str_replace(" ", "_", "Fabricantes de zapatos en Guanajuato para hacer negocio? Encuentra un amplio catálogo de proveedores en León Guanajuato ¡Emprende tu negocio hoy!");
-    $description = "Directorio de Fabricantes de Calzado Guanajuato. Encuentra un amplio catálogo de fabricantes de calzado del estado de Guanajuato. ¡Emprende tu negocio hoy!";
-
+    $description = "Fabricantes de Calzado en Guanajuato. Encuentra un amplio catálogo de fabricantes de calzado del estado de Guanajuato. ¡Emprende tu negocio hoy!";
+    $keywords = "Fabricantes de calzado en Guanajuato, Productores de calzado de Guanajuato, Venta de zapatos a precio de mayoreo";
 @endphp
-<x-layout pageTitle="Directorio de Fabricantes Calzado Guanajuato" pageDescription={{$description}}>
+<x-layout pageTitle="Directorio de Fabricantes Calzado Guanajuato" pageDescription={{$description}} keywords={{$keywords}}>
 
     @section('main-content')
 

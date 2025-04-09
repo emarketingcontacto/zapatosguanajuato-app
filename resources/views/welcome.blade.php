@@ -1,10 +1,11 @@
 @php
     // $description1 ="Conecta con fabricantes y mayoristas de calzado de Guanajuato. Ve modelos únicos, accede a contactos verificados y ahorra tiempo evitando estafas. ¡Descubre todo aquí!";
-    $description = "Accede a contactos verificados de los principales fabricantes y productores de calzado de Guanajuato. !Descubre modelos únicos, ahorra tiempo y evita fraudes!";
+    $description ="Accede a contactos verificados de los principales fabricantes y productores de calzado de Guanajuato. !Descubre modelos únicos, ahorra tiempo y evita fraudes!";
+    $keywords = "Directorio de Zapatos en Guanajuato, Fabricantes de calzado en Guanajuato, Fabricas de calzado de Guanajuato, Proveedores de Zapatos hechos en Guanajuato";
 @endphp
 
 {{-- <x-layout pageTitle="Directorio de Zapatos Guanajuato" pageDescription={{$description}}> --}}
-<x-layout pageTitle="Directorio de Zapatos Guanajuato" :pageDescription=$description>
+<x-layout pageTitle="Directorio de Zapatos Guanajuato" :pageDescription=$description :keywords=$keywords>
     @section('main-content')
         @include('/partials/_hero')
         <div class="main-container">
