@@ -149,11 +149,11 @@ route::get('/Fabricantes-calzado-guanajuato', Factories::class)->name('Fabricant
 
 /*Wholesalers */
 //route::get('/Mayoristas', Wholesalers::class)->middleware('auth')->name('Wholesalers');
-route::get('/Mayoristas_de_calzado', Wholesalers::class)->name('Wholesalers');
+route::get('/Mayoristas-calzado-guanajuato', Wholesalers::class)->name('Wholesalers');
 
 /*Retails */
 //route::get('/Minoristas', Retails::class)->middleware('auth')->name('Retails');
-route::get('/Minoristas_de_calzado', Retails::class)->name('Retails');
+route::get('/Minoristas-calzado-guanajuato', Retails::class)->name('Retails');
 
 /*Ladies*/
 route::get('/venta_calzado_dama', Ladies::class)->name('Damas');

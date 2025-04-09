@@ -1,24 +1,24 @@
 @php
     // $description = str_replace(" ", "_", "Catalogo de Mayoristas de Zapatos en Guanajuato Encuentra los mejores mayoristas y haz crecer tu negocio. ¡Catálogo completo con precios y contactos!");
     $description = "Directorio de Mayoristas de Zapatos en Guanajuato Encuentra los mejores mayoristas y haz crecer tu negocio. ¡Catálogo completo con precios y contactos";
+    $keywords ="Mayoristas de calzado en Guanajuato, Productores de zapatos en Guanajuato"
 @endphp
-<x-layout pageTitle="Catalogo Mayoristas"  pageDescription={{$description}}>
+<x-layout pageTitle="Catalogo Mayoristas"  pageDescription={{$description}} keywords={{$keywords}}>
 
 @section('main-content')
 {{--Header--}}
 <div class="header-Category" style="background-image: url('{{asset('storage/'.$bizcat->bizcatImage)}}');">
-    <h1>Directorio de Mayoristas de Calzado</h1>
+    <h1>Directorio de Mayoristas de Calzado de Guanajuato</h1>
 </div>
 {{-- intro text --}}
 <div class="intro">
     <h2>
-       <strong>Distribuidores de calzado al mayoreo </strong> ideal para emprendedores y negocios que buscan maximizar su inversión
-       con productos que destacan por su diseño y durabilidad.
+       <strong>Distribuidores de calzado al mayoreo de Guanajuato</strong> ideal para emprendedores y negocios que buscan maximizar su inversión
     </h2>
 </div>
 <div class="intro-text">
     <h3>
-        Ya sea que busques botas, zapatillas, sandalias o calzado casual, contamos con lo que necesitas para satisfacer las necesidades de tus clientes.
+        Haz crecer tu negocio con los mejores Mayoristas de calzado en Guanajuato a precios especiales por mayoreo.
     </h3>
 </div>
 {{-- end intro text --}}

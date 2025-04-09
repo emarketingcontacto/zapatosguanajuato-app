@@ -1,25 +1,22 @@
 @php
     // $description = str_replace(" ", "_", "¿Buscas dónde comprar zapatos en Guanajuato? Explora nuestro catálogo de tiendas minoristas. ¡Encuentra variedad y las mejores marcas!");
     $description = "Directorio de Minoristas de Zapatos en Guanajuato Encuentra los mejores mayoristas y haz crecer tu negocio. ¡Catálogo completo con precios y contactos";
-
+    $keywords="Minoristas de zapatos de Guanajuato, minoristas de calzado en Guanajuato";
 @endphp
-<x-layout pageTitle="Tiendas de Zapatos"  pageDescription={{$description}}>
+<x-layout pageTitle="Tiendas de Zapatos"  pageDescription={{$description}} keywords={{$keywords}}>
 
 @section('main-content')
 
 <div class="header-Category" style="background-image: url('{{asset('storage/'.$bizcat->bizcatImage)}}');">
-    <h1>Directorio de Minoristas de Calzado </h1>
+    <h1>Directorio de Minoristas de Calzado en Guanajuato </h1>
 </div>
  {{-- intro text --}}
  <div class="intro">
     <h2>
-        Los mejores <strong> distribuidores de calzado</strong>, ofreciendo una amplia gama de estilos y modelos que se adaptan a las tendencias actuales del mercado.
+        Los mejores <strong> distribuidores de calzado del estado de Guanajuato</strong>, ofreciendo una amplia gama de estilos y modelos que se adaptan a las tendencias actuales del mercado.
     </h2>
 </div>
 <div class="intro-text">
-    <h3>
-        Haz tu pedido en linea
-    </h3>
 </div>
 {{-- end intro text --}}
 {{-- Search Model Categories --}}
