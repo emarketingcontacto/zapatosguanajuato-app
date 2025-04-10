@@ -802,12 +802,12 @@ footer a:hover{
     height: auto;
     background-color: var(--bg-noir);
     padding: 5vh;
-
     text-align: center;
     color: var(--primary);
     font-size: 5vw;
     letter-spacing: 2.2vh;
     font-family: 'Poiret One' ;
+    justify-content: center;
 }
 
 .container-search-model-categories{
@@ -998,6 +998,43 @@ color: var(--font-light);
 .genders-category-title h4{
     font-size: 1rem;
 }
+
+.submenu-subcategories-div{
+    display: flex;
+    width: 100vw;
+    height: auto;
+    background-color: var(--background);
+    justify-content: center;
+    align-items: center;
+}
+.submenu-subcategories{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    background-color: var(--stg-ternary);
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2vw;
+}
+
+.submenu-subcat{
+    display: flex;
+    text-align: center;
+    padding-top: 2vh;
+}
+
+.submenu-subcat a{
+    color: var(--font-light);
+}
+.submenu-subcat a:hover{
+    color: var(--primary);
+}
+
+.submenu-subcat svg{
+    height: 4vh;
+    width: 4vw;
+}
+
 
 /******** END SUBCATEGORIES PAGES *******/
 

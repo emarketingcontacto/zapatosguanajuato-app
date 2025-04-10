@@ -156,9 +156,9 @@ route::get('/Mayoristas-calzado-guanajuato', Wholesalers::class)->name('Wholesal
 route::get('/Minoristas-calzado-guanajuato', Retails::class)->name('Retails');
 
 /*Ladies*/
-route::get('/venta_calzado_dama', Ladies::class)->name('Damas');
+route::get('/calzado_damas_guanajuato', Ladies::class)->name('Damas');
 /* Men */
-route::get('/venta_calzado_hombres', Men::class)->name('Hombres');
+route::get('/calzado_hombres_guanajuato', Men::class)->name('Hombres');
 /* Kids */
 route::get('/venta_calzado_ninos', Kids::class)->name('Ninos');
 /* Girls */
