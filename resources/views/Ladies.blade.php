@@ -7,7 +7,7 @@
     @section('main-content')
 
     <div class="header-Category" style="background-image: url('{{asset('storage/'.$modelcat->modelcatImage)}}')" alt="DirectorioDamas">
-        <h1>Calzado para Damas de Guanajuato</h1>
+        <h1>Directorio de Calzado de Guanajuato para Damas </h1>
     </div>
     {{-- intro text --}}
     <div class="intro">
@@ -22,6 +22,7 @@
     </div>
     {{-- end intro text --}}
 
+    {{-- submenu-categories --}}
     <div class="submenu-subcategories-div">
         <div class="submenu-subcategories">
             <div class="submenu-subcat">
@@ -52,6 +53,7 @@
             </div>
         </div>
     </div>
+    {{-- end submenu-categories --}}
 
     {{-- Factories --}}
     <div class="factories-modelsubcat">

@@ -160,9 +160,9 @@ route::get('/calzado_damas_guanajuato', Ladies::class)->name('Damas');
 /* Men */
 route::get('/calzado_hombres_guanajuato', Men::class)->name('Hombres');
 /* Kids */
-route::get('/venta_calzado_ninos', Kids::class)->name('Ninos');
+route::get('/calzado_ninos_guanajuato', Kids::class)->name('Ninos');
 /* Girls */
-route::get('/venta_calzado_ninas', Girls::class)->name('Ninas');
+route::get('/calzado_ninas_guanajuato', Girls::class)->name('Ninas');
 
 
 /*Busqueda */
