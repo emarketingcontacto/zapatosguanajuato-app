@@ -1035,6 +1035,55 @@ color: var(--font-light);
     width: 4vw;
 }
 
+.subcategories-menu-div{
+    display: flex;
+    width: 100vw;
+    background-color: var(--background);
+    align-items: center;
+    justify-content: center;
+    margin-top: 1vh;
+}
+
+.subcategories-menu{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50vw;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--stg-ternary);
+    padding-top: 1vh;
+}
+
+.subcategories-menu a{
+    text-decoration: none;
+    color: var(--font-silent);
+}
+.subcategories-menu a:hover{
+    color: var(--primary);
+}
+
+.subcategories-menu svg{
+    width: 5vw;
+    height: 5vh;
+}
+
+.models-subcategories-div{
+    display: flex;
+    width: 100vw;
+    background-color: var(--background);
+    align-items: center;
+    justify-content: start;
+}
+.models-subcategorie-subtitle{
+    display: flex;
+    width: 25vw;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 10px 10px 0;
+    color: var(--primary);
+    background-color: var(--bg-noir);
+    font-family: var(--transactionals);
+}
 
 /******** END SUBCATEGORIES PAGES *******/
 

@@ -1,7 +1,8 @@
 @php
-   $description = "Modelo {$modelo->modelName} para {$modelcategory->modelcatName} de {$biz->bizName} solicita una cotización hoy mismo."
+   $description = "Modelo {$modelo->modelName} para {$modelcategory->modelcatName} de {$biz->bizName} solicita una cotización hoy mismo.";
+   $keywords = "Directorio de calzado{$biz->bizName}, Modelos de {$biz->bizName}";
 @endphp
-<x-layout pageTitle="Modelo {{$modelo->modelName}} de {{$biz->bizName}}" pageDescription={{$description}}>
+<x-layout pageTitle="Modelo {{$modelo->modelName}} de {{$biz->bizName}}" pageDescription={{$description}} keywords={{$keywords}}>
 
 
     @section('main-content')

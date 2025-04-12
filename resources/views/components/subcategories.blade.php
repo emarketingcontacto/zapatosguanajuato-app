@@ -4,7 +4,7 @@
         </a>
     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
     @foreach ($modelsubcategories as $modelsubcategory )
-        <li><a class="dropdown-item" href="{{route('Subcategories')}}?subcategory={{$modelsubcategory->modelsubcatName}}">{{$modelsubcategory->modelsubcatName}}</a></li>
+        <li><a class="dropdown-item" href="{{route('Subcategories')}}?subcategoria={{$modelsubcategory->modelsubcatName}}">{{$modelsubcategory->modelsubcatName}}</a></li>
     @endforeach
 </ul>
 </li>

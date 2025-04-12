@@ -171,7 +171,7 @@ route::get('Busqueda', Busqueda::class)->name('Busqueda');
 
 /*Subcategories*/
 //route::get('/Subcategories', SubcategoriesController::class)->middleware('auth')->name('Subcategories');
-Route::get('/Subcategories', SubcategoriesController::class)->name('Subcategories');
+Route::get('/Subcategorias', SubcategoriesController::class)->name('Subcategories');
 
 
 /*Register */

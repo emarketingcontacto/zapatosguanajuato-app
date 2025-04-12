@@ -14,17 +14,51 @@ class SubcategoriesController extends Controller
     {
         //dd($request->subcategory);
 
-        $models = DB::table('model')
+        //Factories
+        $modelsfactories = DB::table('model')
         ->select('model.modelId', 'model.modelName', 'model.modelPrice',
                 'model.modelImage', 'model.bizId', 'modelsubcategory.modelsubcatId',
-                'modelsubcategory.modelsubcatName', 'biz.bizName','biz.saletypeId','saletype.saletypeConditions')
+                'modelsubcategory.modelsubcatName', 'biz.bizName','biz.saletypeId','saletype.saletypeConditions',
+                'bizcategories.bizcatName')
         ->join('modelsubcategory', 'model.modelsubcatId', '=','modelsubcategory.modelsubcatId')
         ->join('biz', 'model.bizId', '=','biz.bizId' )
         ->join('saletype', 'biz.saletypeId', '=', 'saletype.saletypeId')
+        ->join('bizcategories', 'biz.bizcatId', '=', 'bizcategories.bizcatId')
 
-        ->where('modelsubcatName', '=', $request->subcategory)
+        ->where('modelsubcatName', '=', $request->subcategoria)
+        ->where('bizcategories.bizcatName', '=', 'Fabricante')
         ->get();
 
-        return view('Subcategories',['models'=>$models, 'subcategory'=>$request->subcategory]);
+        //Wholesalers
+        $modelsWholesalers = DB::table('model')
+        ->select('model.modelId', 'model.modelName', 'model.modelPrice',
+                'model.modelImage', 'model.bizId', 'modelsubcategory.modelsubcatId',
+                'modelsubcategory.modelsubcatName', 'biz.bizName','biz.saletypeId','saletype.saletypeConditions',
+                'bizcategories.bizcatName')
+        ->join('modelsubcategory', 'model.modelsubcatId', '=','modelsubcategory.modelsubcatId')
+        ->join('biz', 'model.bizId', '=','biz.bizId' )
+        ->join('saletype', 'biz.saletypeId', '=', 'saletype.saletypeId')
+        ->join('bizcategories', 'biz.bizcatId', '=', 'bizcategories.bizcatId')
+
+        ->where('modelsubcatName', '=', $request->subcategoria)
+        ->where('bizcategories.bizcatName', '=', 'Mayorista')
+        ->get();
+
+        //Retails
+        $modelsRetails = DB::table('model')
+        ->select('model.modelId', 'model.modelName', 'model.modelPrice',
+                'model.modelImage', 'model.bizId', 'modelsubcategory.modelsubcatId',
+                'modelsubcategory.modelsubcatName', 'biz.bizName','biz.saletypeId','saletype.saletypeConditions',
+                'bizcategories.bizcatName')
+        ->join('modelsubcategory', 'model.modelsubcatId', '=','modelsubcategory.modelsubcatId')
+        ->join('biz', 'model.bizId', '=','biz.bizId' )
+        ->join('saletype', 'biz.saletypeId', '=', 'saletype.saletypeId')
+        ->join('bizcategories', 'biz.bizcatId', '=', 'bizcategories.bizcatId')
+
+        ->where('modelsubcatName', '=', $request->subcategoria)
+        ->where('bizcategories.bizcatName', '=', 'Minorista')
+        ->get();
+
+        return view('Subcategories',['modelsfactories'=>$modelsfactories,'modelsWholesalers'=>$modelsWholesalers,'modelsRetails'=>$modelsRetails,'subcategoria'=>$request->subcategoria ]);
     }
 }
