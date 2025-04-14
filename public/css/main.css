@@ -1608,3 +1608,34 @@ padding-bottom: 5vh;
     font-family: var(--headers);
     color: var(--secondary);
 }
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--font-strong);
+    color: var(--primary);
+    font-family: var(--transactionals);
+}
+.div-expertise{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 2vh;
+    align-items: center;
+    justify-content:space-around;
+}
+
+.item-expertise{
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    gap: 2vw;
+    background-color: var(--background);
+    padding-bottom: 2vh;
+    padding-top: 2vh;
+}
+
+.item-expertise h4{
+    text-align: center;
+}
