@@ -1,9 +1,9 @@
 @php
     //$description = str_replace(" ", "_", "El catálogo más completo de zapatos en Guanajuato Compra al mayoreo de los mejores fabricantes y surte tu negocio. ¡Aprovecha nuestras ofertas!");
     $description = "Como puedes usar el Directorio de Calzado de Guanajuato para emprender tu negocio con la venta de calzado al mayoreo o al menudeo";
-
+    $keywords = "Directorio de calzado en Guanajuato, Directorio de zapatos de Guanajuato, Venta de calzado a precio de fabrica";
 @endphp
-<x-layout pageTitle="Catalogo de Calzado" pageDescription={{$description}}>
+<x-layout pageTitle="Catalogo de Calzado" pageDescription={{$description}} keywords={{$keywords}}>
 
     @section('main-content')
     {{-- AIDA --}}
