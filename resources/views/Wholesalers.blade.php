@@ -3,7 +3,7 @@
     $description = "Directorio de Mayoristas de Zapatos en Guanajuato Encuentra los mejores mayoristas y haz crecer tu negocio. ¡Catálogo completo con precios y contactos";
     $keywords ="Mayoristas de calzado en Guanajuato, Productores de zapatos en Guanajuato"
 @endphp
-<x-layout pageTitle="Catalogo Mayoristas"  pageDescription={{$description}} keywords={{$keywords}}>
+<x-layout pageTitle="Mayoristas de calzado en Guanajuato"  pageDescription={{$description}} keywords={{$keywords}}>
 
 @section('main-content')
 {{--Header--}}
