@@ -1190,9 +1190,10 @@ color: var(--font-light);
     height: 20vh;
     width: 100%;
     background-color: var(--bg-noir);
+    align-items: center;
+    justify-content: center;
 }
 .show-banner h1{
-    padding-top: 5vh;
     text-align: center;
     color: var(--primary);
     font-size: 3vw;
@@ -1203,7 +1204,6 @@ color: var(--font-light);
 font-family: 'Poiret One';
 color: var(--stg-ternary);
 text-align: center;
-padding-bottom: 5vh;
 }
 
 .row-btn-model

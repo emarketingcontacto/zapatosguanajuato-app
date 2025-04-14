@@ -1,5 +1,14 @@
-<x-layout pageTitle="{{$bizcat->bizcatName}} de calzado -{{$biz->bizName}}" pageDescription="Informacion de {{$bizcat->bizcatName}} - {{$biz->bizName}}, encuentra sus mejores modelos y sus datos de contacto para comenzar a hacer negocios">
-    @section('main-content')
+@php
+    $pageTitle = "{$bizcat->bizcatName} de calzado - {$biz->bizName}";
+    $pageDescription= "Informacion de {$bizcat->bizcatName} - {$biz->bizName}, encuentra sus mejores modelos y sus datos de contacto para comenzar a hacer negocios";
+    $keywords = "Contacto directo {$bizcat->bizcatName} - {$biz->bizName}, Directorio de {$bizcat->bizcatName} de zapatos en Guanajuato";
+@endphp
+
+<x-layout pageTitle={{$pageTitle}} pageDescription={{$pageDescription}} keywords={{$keywords}}>
+
+
+
+ @section('main-content')
         <div class="container mb-5 pb-5">
             {{-- row image --}}
                 {{-- local --}}
