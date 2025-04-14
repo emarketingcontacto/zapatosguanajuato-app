@@ -1,13 +1,15 @@
 @php
-    $description = str_replace(" ", "_", "El catálogo más completo de zapatos en Guanajuato Compra al mayoreo de los mejores fabricantes y surte tu negocio. ¡Aprovecha nuestras ofertas!");
+    $description = "El catálogo más completo de zapatos en Guanajuato Compra al mayoreo de los mejores fabricantes y surte tu negocio. ¡Aprovecha nuestras ofertas!";
+    $keywords = "Directorio de calzado en Guanajuato, Directorio de zapatos de Guanajuato, Venta de calzado a precio de fabrica";
 @endphp
-<x-layout pageTitle="Catalogo de Calzado" pageDescription={{$description}}>
+<x-layout pageTitle="Catalogo de Calzado" pageDescription={{$description}}, keywords={{$keywords}}>
 
 @section('main-content')
 
 <div class="container container-privacy">
-
-<h1 class="text-center"> Política de Privacidad</h1>
+<div class="title">
+    <h1 class="text-center"> Política de Privacidad</h1>
+</div>
 <br>
 <h2>La protección de tu privacidad es nuestra máxima prioridad </h2>
 
@@ -20,7 +22,9 @@
     </span>
 <br>
 
-    <h3>¿Qué información recopilamos? </h3>
+    <div class="title">
+        <h3>¿Qué información recopilamos? </h3>
+    </div>
     <span>
         Podemos recopilar los siguientes tipos de información personal tuya:
     </span>
@@ -34,8 +38,9 @@
     </span>
 
 <br>
-
-<h3>¿Cómo usamos tu información?</h3>
+<div class="title">
+    <h3>¿Cómo usamos tu información?</h3>
+</div>
 <span>
     Podemos usar tu información personal para los siguientes fines:
 </span>
@@ -53,40 +58,25 @@
     Nunca venderemos ni compartiremos tu información personal con terceros para sus propios fines de marketing sin tu consentimiento.
 </span>
 <br>
-<h3>Seguridad de los datos:</h3>
+
+<div class="title">
+    <h3>Seguridad de los datos:</h3>
+</div>
 
 <span>
     Hemos implementado medidas técnicas y organizativas adecuadas para proteger tu información personal del acceso, divulgación, alteración o destrucción no autorizados. Sin embargo, ningún método de transmisión a través de Internet o método de almacenamiento electrónico es 100% seguro. Por lo tanto, no podemos garantizar la seguridad absoluta de tu información personal.
 </span>
 <br>
-<h3>Tus opciones:</h3>
-
-<span>
-    <ul>
-        <li>Tienes derecho a acceder, actualizar o eliminar tu información personal.</li>
-        <li>También puedes optar por no recibir comunicaciones de marketing en cualquier momento.</li>
-    </ul>
-</span>
-<span>
-    Puedes ejercer estos derechos poniéndote en contacto con nosotros en <a href="mailto:contacto@solucion-e.com.mx" class="text-muted">contacto@solucion-e.com.mx</a>
-</span>
-
-<br>
-<h3>Cambios a esta Política de privacidad:</h3>
+<div class="title">
+    <h3>Cambios a esta Política de privacidad:</h3>
+</div>
 <span>Podemos actualizar esta Política de privacidad de vez en cuando. </span>
 <span>Te notificaremos los cambios publicando la nueva Política de privacidad en el Sitio web. </span>
 <span>Se te recomienda revisar esta Política de privacidad periódicamente para ver si hay cambios.</span>
-
 <br>
-<h3>Contacto:</h3>
-
-<span>
-    Si tienes alguna pregunta sobre esta Política de privacidad, comunícate con nosotros en <a href="mailto:contacto@solucion-e.com.mx" class="text-muted">contacto@solucion-e.com.mx</a>
-</span>
-
-<br>
-<h3>Transparencia y confianza:</h3>
-
+<div class="title">
+    <h3>Transparencia y confianza:</h3>
+</div>
 <span>
     Entendemos que tu privacidad es importante para ti. Nos comprometemos a ser transparentes sobre cómo recopilamos, usamos y compartimos tu información personal.
 </span>
