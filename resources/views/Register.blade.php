@@ -1,6 +1,5 @@
 {{-- @extends('layout') --}}
-<x-layout pageTitle='Register' pageDescription="RegistrationPage" >
-
+<x-layout pageTitle='Register' pageDescription="Pagina de Registro" keywords="Registro">
 
 @section('main-content')
 <div class="payments mb-5 pb-5">

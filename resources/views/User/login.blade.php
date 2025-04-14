@@ -1,4 +1,4 @@
-<x-layout pageTitle="Management" pageDescription="Login">
+<x-layout pageTitle="Management" pageDescription="Login" keywords="Login">
 
     @section('main-content')
     <div class="d-flex justify-content-center mt-5">
