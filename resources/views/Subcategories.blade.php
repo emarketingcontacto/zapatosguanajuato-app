@@ -3,19 +3,19 @@
     $description = "Descubre el mayor directorio de fabricantes, mayoristas y menudistas de zapato {$subcategoria}. Explora imágenes de modelos exclusivos y encuentra fácilmente los contactos directos para tus compras al por mayor o detalle";
     $keywords = "Directorio de zapato {$subcategoria}, zapato {$subcategoria} a precio de fabrica";
 @endphp
-<x-layout pageTitle="Directorio de zapato {{$subcategoria}}"  pageDescription={{$description}} keywords={{$keywords}}>
+<x-layout pageTitle="Directorio de zapatos {{$subcategoria}}"  pageDescription={{$description}} keywords={{$keywords}}>
 
     @section('main-content')
 
     <div class="subcatTitle">
         {{-- local --}}
-        {{-- <img src="../images/{{$subcategory}}.png"> --}}
+        <img src="../images/{{$subcategoria}}.png">
         @php
             $strlower = strtolower($subcategoria);
         @endphp
         {{-- online --}}
-        <img src="{{asset('storage/'.$strlower.'.png')}}">
-        <h1 class="text-center">Directorio de Zapatos {{$subcategoria}}</h1>
+        {{-- <img src="{{asset('storage/'.$strlower.'.png')}}"> --}}
+        <h1>Directorio de Zapatos {{$subcategoria}}</h1>
     </div>
 
     {{-- menu categories --}}
