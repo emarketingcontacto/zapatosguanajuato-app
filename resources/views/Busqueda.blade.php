@@ -1,10 +1,10 @@
 @php
     // $description = str_replace("", "_","Buscar en Directorio de Zapatos" );
     $description = "Encuentra a los mejores proveedores de calzado y haz negocio de manera segura, práctica y fácil";
-
+    $keywords ="";
 @endphp
 
-<x-layout pageTitle="Busqueda" pageDescription={{$description}}>
+<x-layout pageTitle="Busqueda" pageDescription={{$description}} keywords={{$keywords}}>
 
     @section('main-content')
     {{-- <div class="header-Category" style="background-image: url('{{asset('storage/'.$bizcat->bizcatImage)}}');" alt="Catalogo Fabricantes"> --}}

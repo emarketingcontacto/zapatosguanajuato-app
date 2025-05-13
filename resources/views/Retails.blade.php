@@ -16,8 +16,12 @@
         Los mejores <strong> distribuidores de calzado del estado de Guanajuato</strong>, ofreciendo una amplia gama de estilos y modelos que se adaptan a las tendencias actuales del mercado.
     </h2>
 </div>
+
+<hr>
+{{--
 <div class="intro-text">
 </div>
+--}}
 {{-- end intro text --}}
 {{-- Search Model Categories --}}
 <x-search-model-category bizcategory="Retails"></x-search-model-category>
@@ -26,7 +30,6 @@
    {{-- Biz Items --}}
     <div class="biz-item-container">
         @foreach ($business as $biz)
-
             <div class="card" style="width: 18rem; background-color:#F5F5F5">
                 {{-- local --}}
                 {{-- <img src="{{asset('storage/'.$biz->bizImage)}}" class="card-img-top" style="height: 380px"> --}}
@@ -47,6 +50,7 @@
                     </div>
                     {{--end BizCatName--}}
                     {{-- likes --}}
+                    {{--
                         <div class="row likes">
                             <div class="col verified">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-shield-fill-check" viewBox="0 0 16 16">
@@ -57,11 +61,13 @@
                             </div>
                             <x-likes :bizID="$biz->bizId"></x-likes>
                         </div>
-                    {{-- end likes --}}
+                    --}}
+                        {{-- end likes --}}
 
                     {{-- modelCategoriesList--}}
                         <x-ModelCategoriesList :bizID="$biz->bizId"></x-ModelCategoriesList>
                     {{-- end modelCategoriesList--}}
+                    {{--
                     <div class="row">
                         <div class="col col-3 provider-items">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16">
@@ -108,7 +114,8 @@
                             </span>
                         </div>
                     </div>
-                    <hr>
+                    --}}
+                    <hr style="margin:0">
                     <div class="btn-show">
                         <a href="{{route('Biz.show', ['biz'=>$biz->bizId])}}" class="btn btn-sm  btn-show form-control">
                             Ver Detalles...

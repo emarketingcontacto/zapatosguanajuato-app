@@ -45,6 +45,7 @@
     </div>
     {{-- end menu categories --}}
 
+    <hr>
 
     {{-- factories --}}
     <div class="models-subcategories-div">

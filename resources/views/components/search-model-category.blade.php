@@ -1,5 +1,8 @@
   {{-- Search Model Categories --}}
   <div class="container-search-model-categories">
+    <div class="search-model-title">
+        Filtrar por genero
+    </div>
     <div class="searchmodelcategories">
 
         @foreach ($searchmodelcategories as $modelcategory)
@@ -64,8 +67,6 @@
             @endswitch
         @endforeach
     </div>
-    <div class="search-model-title">
-        Filtrar por genero
-    </div>
+
 </div>
 {{-- End Search Model Categories --}}
