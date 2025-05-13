@@ -41,7 +41,7 @@ Route::get('/Acerca-de-nosotros', function (){ return view('About-us'); })->name
 //PrivacyPolicy
 Route::get('/Politica-de-privacidad', function (){ return view('Privacy-policy'); })->name('politica_privacidad');
 //Como funciona
-Route::get('/Como_funciona', function (){ return view('Como_funciona'); })->name('como_funciona');
+// Route::get('/Como_funciona', function (){ return view('Como_funciona'); })->name('como_funciona');
 //BizCategories
 Route::get('/BizCategory', [BizCategoryController::class,'index'])->name('BizCategory.index');
 // Create
