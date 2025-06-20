@@ -120,11 +120,11 @@
 
 /* Color Palette 2 */
 :root {
---primary:  #AAD4A3;
-    --quarterly:#AED4BE;
-    --cinqterly:#CBD498;
+    --primary:  #AAD4A3;
     --secondary:#D4948E;
     --ternary:  #C9B8D4;
+    --quarterly:#AED4BE;
+    --cinqterly:#CBD498;
 
     --font-strong: #6b6b6b;
     --font-normal: #bdbdbd;
@@ -135,7 +135,6 @@
     --bg-grey:      rgba(0 , 0 , 0, .5);
     --background:   rgba(201, 184, 212, 0.3);
     --backgroundsolid:   rgba(201, 184, 212);
-
     --bg-primary:   rgba(170, 212, 163, 0.3);
     --bg-secondary: rgba(212, 148, 142, 0.3);
     --ternary-bg:   #f5e7ff;
@@ -1345,6 +1344,7 @@ text-align: center;
     align-items: center;
     width:-webkit-fill-available;
     color: var(--bg-grey);
+    border-bottom: 1px var(--bg-grey) solid;
 }
 
 .biz-col-field-link:hover{
@@ -1367,9 +1367,6 @@ text-align: center;
     color: var(--stg-ternary);
 }
 
-
-
-
 .biz-socialmedia-svg{
    text-align: center;
 }
@@ -1387,7 +1384,6 @@ text-align: center;
 .biz-socialmedia-svg a:hover{
     color: var(--stg-ternary);
 }
-
 
 .row-btn-model
 {
