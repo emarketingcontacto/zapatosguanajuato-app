@@ -1559,7 +1559,6 @@ text-align: center;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    font-size: 2vw;
 }
 
 .interest-right-img{
@@ -1612,7 +1611,6 @@ text-align: center;
     align-items: center;
     border-bottom: 1px solid var(--font-silent);
     color:var(--font-light);
-    font-size: 1.55rem;
 }
 /* end Interest buttons */
 

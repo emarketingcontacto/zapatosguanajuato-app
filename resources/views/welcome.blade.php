@@ -31,10 +31,10 @@
                             </svg>
                     </div>
                     <div class="interest-text">
-                        <h3>
+                        <p>
                             Te brindamos acceso directo sin intermediarios y sin comisiones a los mejores fabricantes,
                             mayoristas y minoristas del mercado de zapatos del Estado de Guanajuato
-                        </h3>
+                        </p>
                     </div>
                 </div>
 
@@ -47,7 +47,7 @@
                             </svg>
                     </div>
                     <div class="interest-text">
-                        <h3>Nuestras estrategias físicas y digítales de seguridad garantizan que los negocios dentro del Directorio de Zapatos de Guanajuato sean negocios activos y listos para recibir pedidos </h3>
+                        <p>Nuestras estrategias físicas y digítales de seguridad garantizan que los negocios dentro del Directorio de Zapatos de Guanajuato sean negocios activos y listos para recibir pedidos </p>
                     </div>
                 </div>
             </div>
