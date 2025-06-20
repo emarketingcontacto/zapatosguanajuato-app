@@ -7,9 +7,9 @@
     @section('main-content')
     {{-- banner --}}
     {{-- local --}}
-    <div class="show-banner" style="background-image: url('{{asset('storage/'.$biz->bizImage)}}')">
+    {{-- <div class="show-banner" style="background-image: url('{{asset('storage/'.$biz->bizImage)}}')"> --}}
     {{-- online --}}
-    {{-- <div class="row show-banner" style="background-image: url('{{asset('/'.$biz->bizImage)}}')"> --}}
+    <div class="row show-banner" style="background-image: url('{{asset('/'.$biz->bizImage)}}')">
     </div>
     {{-- end banner --}}
     <div class="show-banner-title">
