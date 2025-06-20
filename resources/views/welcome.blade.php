@@ -97,24 +97,31 @@
             </div>
             {{-- END INTEREST A --}}
 
-            {{--Categories-front--}}
-            <x-categories-front></x-categories-front>
-            {{--End Categories-front--}}
-            {{-- Subcategories-Front --}}
-            <x-front-subcategories></x-front-subcategories>
-            {{-- Subcategories-Front --}}
-            {{--Genders--}}
-            <x-genders></x-genders>
-            {{--Genders--}}
             {{-- Most Factories --}}
                 <x-most-factories></x-most-factories>
             {{-- End Most Factories --}}
+
             {{-- Most Wholesalers --}}
             <x-most-wholesalers></x-most-wholesalers>
             {{-- End Most Wholesalers --}}
+
             {{-- Most Retailers --}}
             <x-most-retailers></x-most-retailers>
             {{-- End Most Retailers --}}
+
+            {{--Categories-front--}}
+            <x-categories-front></x-categories-front>
+            {{--End Categories-front--}}
+
+            {{-- Subcategories-Front --}}
+            <x-front-subcategories></x-front-subcategories>
+            {{-- Subcategories-Front --}}
+
+            {{--Genders--}}
+            <x-genders></x-genders>
+            {{--Genders--}}
+
+
 
         </div>
 
@@ -122,16 +129,12 @@
             <div class="attention">
                 <h3>Visita a estos excelentes negocios, ahorra dinero y evita robos, cada semana añadimos nuevos espacios!</h3>
                 <h4>¿Quieres que tu negocio aparezca en nuestro sitio?</h4>
-                    <a class="btn-link" href="#">Añade tu negocio</a>
+                    <a class="btn-link" href="{{route('Contacto')}}">Añade tu negocio</a>
             </div>
         {{-- END ATTENTION --}}
 
-
-
-
-
         {{-- DESIRE --}}
-        <div class="desire d-flex flex-column" style="padding-bottom: 3rem">
+        {{-- <div class="desire d-flex flex-column" style="padding-bottom: 3rem">
             <span class="text-center">
                     <span class="fw-bolder ft-italic">"</span>
                     Imagina tener acceso al mejor <strong>Directorio de Zapatos del Estado de Guanajuato</strong> con los mejores fabricantes, mayoristas y menudistas de
@@ -139,7 +142,7 @@
                     <br/>
             </span>
             <p class="mt-5 text-center secondary-text"> Con nuestro Directorio de Zapatos de Guanajuato, puedes hacer realidad ese sueño ! .</p>
-        </div>
+        </div> --}}
         {{-- END DESIRES --}}
 
     @endsection

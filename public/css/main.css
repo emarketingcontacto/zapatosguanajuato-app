@@ -683,20 +683,11 @@ footer a:hover{
     align-items: center;
     height: auto;
     width: 100%;
-    margin-top: -7vh;
-    padding: 2rem 0 2rem 0;
+    padding: 2rem 0;
     font-family: 'Poiret One', cursive ;
-    /* background-color: var(--background); */
-    /* background-color: var(--backgroundsolid); */
-    /* background-color: var(--bg-grey); */
-    /* background-color: var(--bg-primary); */
-    /* background-color: var(--bg-secondary); */
     background-color: var(--font-light);
-    /* background-color: var(--font-normal); */
-    /* background-color: var(--font-silent); */
-    /* background-color: var(--font-strong); */
-
     color: var(--secondary);
+    margin-top: -14vh;
   }
   .attention h3 {
     font-size: 2rem;
