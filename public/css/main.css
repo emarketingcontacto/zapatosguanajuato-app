@@ -130,6 +130,7 @@
     --font-normal: #bdbdbd;
     --font-silent: #e0e0e0;
     --font-light:  #f0f0f0;
+    --font-violet: #1e0236;
 
     --bg-noir:      rgba(0,0,0,0.7);
     --bg-grey:      rgba(0 , 0 , 0, .5);
@@ -166,6 +167,7 @@ body{
 
 .nav-link{
     font-size: 1rem;
+    color: var(--font-violet) !important;
 }
 
 .navbar-brand{
@@ -430,7 +432,7 @@ footer a:hover{
 
 .btn-hero-busqueda{
     background-color:var(--stg-ternary);
-    color: var(--font-light);
+    color: var(--font-violet);
     margin-top: 2vh;
 }
 .btn-hero-busqueda:hover{
@@ -638,7 +640,7 @@ footer a:hover{
 }
 .gallery-front-biz-name a{
     text-decoration: none;
-    color: var(--font-light);
+    color: var(--font-violet);
 }
 .gallery-front-biz-name a:hover{
     background-color: var(--secondary);
@@ -949,7 +951,7 @@ color: var(--font-light);
 
 .btn-link{
     background-color: var(--stg-ternary);
-    color: var(--font-light);
+    color: var(--font-violet);
     padding: 5px;
     border-radius: 5%;
 }
