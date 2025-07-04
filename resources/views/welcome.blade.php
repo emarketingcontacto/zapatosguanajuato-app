@@ -129,7 +129,7 @@
             <div class="attention">
                 <h3>Visita a estos excelentes negocios, ahorra dinero y evita robos, cada semana añadimos nuevos espacios!</h3>
                 <h4>¿Quieres que tu negocio aparezca en nuestro sitio?</h4>
-                    <a class="btn-link" href="{{route('Contacto')}}">Añade tu negocio</a>
+                    <a class="btn-link" href="https://forms.gle/ALmH97FcqfiAft3r8">Añade tu negocio</a>
             </div>
         {{-- END ATTENTION --}}
 
