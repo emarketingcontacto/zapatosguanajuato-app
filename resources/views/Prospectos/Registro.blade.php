@@ -6,8 +6,7 @@
 <x-layout pageTitle="Registro Directorio de Zapatos Guanajuato" :pageDescription=$description :keywords=$keywords>
     @section('main-content')
         <div class="prospectos-registro-container">
-            <h1>Registro de Nuevos Negocios</h1>
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSftJJQKLph6Vp6GZzY47KNyzEV688UfN2Ypj62LQJZbi9Z_iQ/viewform?embedded=true" width="800" height="2495" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSftJJQKLph6Vp6GZzY47KNyzEV688UfN2Ypj62LQJZbi9Z_iQ/viewform?embedded=true" width="640" height="2495" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
         </div>
     @endsection
 </x-layout>
