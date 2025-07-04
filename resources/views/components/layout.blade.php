@@ -126,7 +126,7 @@
             <x-Subcategories></x-Subcategories>
 
             <li class="nav-item">
-                <a href="{{route('prospectos.registro')}}" class="nav-link">Anuncia tu Negocio</a>
+                <a href="https://forms.gle/ALmH97FcqfiAft3r8" class="nav-link">Anuncia tu Negocio</a>
             </li>
 
               @auth
