@@ -2,6 +2,7 @@
 <x-layout pageTitle='Register' pageDescription="Pagina de Registro" keywords="Registro">
 
 @section('main-content')
+
 <div class="payments mb-5 pb-5">
 
   {{-- PAYPAL TEXT --}}
@@ -63,6 +64,10 @@ paypal.Buttons({
     }
 }).render('#paypal-button-container-P-70396561M81280630MX4NJZY'); // Renders the PayPal button
 </script>
+
+<div class="google-forms flex align-items-center justify-content-center" style="width: 100vw; background-color:red">
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSftJJQKLph6Vp6GZzY47KNyzEV688UfN2Ypj62LQJZbi9Z_iQ/viewform?embedded=true" width="800" height="2495" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+</div>
 
 @endsection
 

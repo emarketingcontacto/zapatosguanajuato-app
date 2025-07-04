@@ -12,6 +12,11 @@
                     Contacto
                 </a>
             </div>
+            <div class="row">
+                <a href="{{route('prospectos.registro')}}">
+                    Anuncia tu Negocio
+                </a>
+            </div>
         </div>
         <div class="col text-center">
           <a href="{{route('politica_privacidad')}}">

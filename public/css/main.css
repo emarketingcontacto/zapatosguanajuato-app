@@ -1812,3 +1812,10 @@ text-align: center;
 .item-expertise h4{
     text-align: center;
 }
+
+.prospectos-registro-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5vh;
+    align-items: center;
+}

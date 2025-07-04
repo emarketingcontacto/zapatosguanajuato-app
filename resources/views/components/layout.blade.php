@@ -125,6 +125,10 @@
 
             <x-Subcategories></x-Subcategories>
 
+            <li class="nav-item">
+                <a href="{{route('prospectos.registro')}}" class="nav-link">Anuncia tu Negocio</a>
+            </li>
+
               @auth
               {{-- admin --}}
                 @if (auth()->user()->name === 'Marketo')

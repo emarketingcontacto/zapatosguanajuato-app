@@ -23,6 +23,7 @@ use App\Http\Controllers\BizCategoryController;
 use App\Http\Controllers\ModelCategoryController;
 use App\Http\Controllers\SubcategoriesController;
 use App\Http\Controllers\ModelSubcategoryController;
+use App\Http\Controllers\ProspectosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -173,6 +174,9 @@ route::get('Busqueda', Busqueda::class)->name('Busqueda');
 //route::get('/Subcategories', SubcategoriesController::class)->middleware('auth')->name('Subcategories');
 Route::get('/Subcategorias', SubcategoriesController::class)->name('Subcategories');
 
+/* Registro Prospectos */
+//Route::get('/Acerca-de-nosotros', function (){ return view('About-us'); })->name('acerca_de_nosotros');
+Route::get('/Prospectos/Registro', ProspectosController::class)->name('prospectos.registro');
 
 /*Register */
 Route::get('/Register', RegisterController::class)->name('Register');
