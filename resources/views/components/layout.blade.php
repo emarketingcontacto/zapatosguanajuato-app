@@ -25,14 +25,16 @@
     {{-- style --}}
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-        {{-- local --}}
+    {{-- local --}}
         {{-- <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.css')}}">
         <link rel="stylesheet" href="{{ URL::asset('css/main.css') }}" />
         <link rel="stylesheet" href="{{ URL::asset('css/fonts.css')}}"> --}}
-        {{-- online --}}
+    {{-- end local --}}
+    {{-- online --}}
         <link rel="stylesheet" href="{{ URL::asset('css/bootstrap-min.css')}}">
         <link rel="stylesheet" href="{{ URL::asset('css/main-min.css')}}">
         <link rel="stylesheet" href="{{ URL::asset('css/fonts.css')}}">
+    {{-- end online --}}
     {{-- style --}}
     {{-- sripts local --}}
         {{-- <script src="{{URL::asset('/scripts/script.js')}}" defer></script> --}}
@@ -46,7 +48,7 @@
         <script src="{{URL::asset('/scripts/modelcatbiz-min.js')}}"></script>
         <link rel="icon" href="{{asset('/favicon.ico')}}" type="image/x-icon">
     {{-- end scripts online --}}
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Analytics tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-LEV2309FWD"></script>
         <script>
         window.dataLayer = window.dataLayer || [];
@@ -54,7 +56,16 @@
         gtag('js', new Date());
         gtag('config', 'G-LEV2309FWD');
         </script>
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Analytics tag (gtag.js) -->
+
+    <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-KZP9TGP6');</script>
+    <!-- End Google Tag Manager -->
+
     {{-- Pinterest Tag --}}
         <meta name="p:domain_verify" content="59864595446c9bd25ed7b86d881293d4"/>
     {{-- End Pinterest Tag --}}
@@ -93,6 +104,10 @@
     {{-- end schema --}}
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZP9TGP6"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light position-fixed w-100">
         <div class="container-fluid">
           <a class="navbar-brand" href="/">Directorio Zapatos Guanajuato</a>

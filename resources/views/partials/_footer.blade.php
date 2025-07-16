@@ -13,7 +13,7 @@
                 </a>
             </div>
             <div class="row">
-                <a href="{{route('prospectos.registro')}}">
+                <a href="https://forms.gle/ALmH97FcqfiAft3r8">
                     Anuncia tu Negocio
                 </a>
             </div>
