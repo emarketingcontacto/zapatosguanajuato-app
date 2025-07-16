@@ -5,7 +5,7 @@
         </div>
     </div>
         @foreach ($frontSubcategories as $frontSubcat)
-            <a href="{{route('Subcategories')}}?subcategory={{$frontSubcat->modelsubcatName}}">
+            <a href="{{route('Subcategories')}}?subcategoria={{$frontSubcat->modelsubcatName}}">
                 <div class="{{$frontSubcat->modelsubcatName}}">
                     <h4>{{$frontSubcat->modelsubcatName}}</h4>
                 </div>
