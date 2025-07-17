@@ -10,7 +10,7 @@
     <div class="container text-center">
         <div class="row model-container">
                 {{-- local --}}
-                <img src="{{asset('storage/'.$modelo->modelImage)}}" height="100%" width="100%">
+                {{-- <img src="{{asset('storage/'.$modelo->modelImage)}}" height="100%" width="100%"> --}}
                 {{-- online --}}
                 <img src="{{asset('/'.$modelo->modelImage)}}" height="100%" width="100%">
                 <h1 class="hero-text-modelo">{{$modelo->modelName}}</h1>
