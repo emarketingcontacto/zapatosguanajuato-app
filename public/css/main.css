@@ -1819,3 +1819,15 @@ text-align: center;
     margin-top: 5vh;
     align-items: center;
 }
+
+#divContacto{
+    visibility: hidden;
+}
+
+#divSocials{
+    visibility: collapse;
+}
+.button-contacto{
+    background-color: var(--stg-ternary);
+    color: var(--font-light);
+}

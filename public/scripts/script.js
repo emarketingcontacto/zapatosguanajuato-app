@@ -23,3 +23,23 @@ function closeModelos() {
     document.getElementById('iopen').style.display = 'block';
     document.getElementById('textmodelos').innerText = 'Ver Modelos';
 }
+
+function openContacto() {
+    _divContacto = document.getElementById('divContacto');
+    _divSocials = document.getElementById('divSocials');
+
+    if (_divContacto.style.visibility === "" || _divSocials.style.visibility === "" || _divContacto.style.visibility === "hidden" || _divSocials.style.visibility === "hidden") {
+        console.log(_divContacto + '-' + _divSocials);
+        _divContacto.style.visibility = "visible";
+        _divSocials.style.visibility = "visible";
+
+    } else {
+        console.log(_divContacto + '-' + _divSocials);
+        _divContacto.style.visibility = "hidden";
+        _divSocials.style.visibility = "hidden";
+    }
+
+
+
+
+}
