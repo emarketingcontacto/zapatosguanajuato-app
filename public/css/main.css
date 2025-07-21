@@ -1824,9 +1824,6 @@ text-align: center;
     visibility: hidden;
 } */
 
-#divSocials{
-    visibility: collapse;
-}
 .button-contacto{
     background-color: var(--stg-ternary);
     color: var(--font-light);
