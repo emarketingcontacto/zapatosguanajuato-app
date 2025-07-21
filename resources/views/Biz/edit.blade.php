@@ -1,8 +1,8 @@
-<x-layout pageTitle="Management" pageDescription="Biz">
+<x-layout pageTitle="Management" pageDescription="Biz" keywords="Biz Edit">
 
     @section('main-content')
 
-    <h1>Create Biz</h1>
+    <h1>Edit Biz</h1>
 
     <div class="container p-4 mb-5">
         <form action="{{route('Biz.update',[$biz])}}" method="post" enctype="multipart/form-data">
@@ -14,6 +14,7 @@
                 <input type="text" name="bizId" class="form-control" disabled value="{{$biz->bizId}}" >
             </div>
 
+            {{-- Name --}}
             <div class="row">
                 <label for="bizName" class="form-control bg-light">Name</label>
                 <input type="text" name="bizName" class="form-control" value="{{$biz->bizName}}">
@@ -23,6 +24,7 @@
                 @enderror
             </div>
 
+            {{-- Street --}}
             <div class="row">
                 <label for="bizStreetNum" class="form-control bg-light">Street #</label>
                 <input type="text" name="bizStreetNum" class="form-control" value="{{$biz->bizStreetNum}}">
@@ -32,6 +34,7 @@
                 @enderror
             </div>
 
+            {{-- Neigborhood --}}
             <div class="row">
                 <label for="bizNeigborhood" class="form-control bg-light">Neighborhood</label>
                 <input type="text" name="bizNeigborhood" class="form-control" value="{{$biz->bizNeigborhood}}" >
@@ -41,6 +44,7 @@
                 @enderror
             </div>
 
+            {{-- State --}}
             <div class="row">
                 <label for="bizState" class="form-control bg-light">State</label>
                 <input type="text" name="bizState" class="form-control" value="{{$biz->bizState}}" >
@@ -50,16 +54,37 @@
                 @enderror
             </div>
 
+            {{-- City --}}
             <div class="row">
                 <label for="bizCity" class="form-control bg-light">City</label>
                 <input type="text" name="bizCity" class="form-control" value="{{$biz->bizCity}}">
-
                 {{-- Error --}}
                 @error('bizCity')
                     <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
             </div>
 
+             {{-- latitud longitud --}}
+            <div class="row">
+                <div class="col">
+                    <label for="bizLat" class="form-control bg-light">Latitude</label>
+                    <input type="text" name="bizLat" class="form-control" value="{{$biz->bizLat}}">
+                    {{-- Error --}}
+                    @error('bizLat')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
+                </div>
+                <div class="col">
+                    <label for="bizLon" class="form-control bg-light">Longitud</label>
+                    <input type="text" name="bizLon" class="form-control" value="{{$biz->bizLon}}">
+                    {{-- Error --}}
+                    @error('bizLon')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
+                </div>
+            </div>
+
+            {{-- Tel --}}
             <div class="row">
                 <label for="bizTel" class="form-control bg-light">Tel</label>
                 <input type="tel" name="bizTel" class="form-control" value="{{$biz->bizTel}}">

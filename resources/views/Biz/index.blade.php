@@ -1,4 +1,4 @@
-<x-layout pageTitle="Management" pageDescription="Biz">
+<x-layout pageTitle="Management" pageDescription="Biz" keywords="Biz Index">
 
     @section('main-content')
     <h1>Biz</h1>

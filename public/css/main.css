@@ -1820,9 +1820,9 @@ text-align: center;
     align-items: center;
 }
 
-#divContacto{
+/* #divContacto{
     visibility: hidden;
-}
+} */
 
 #divSocials{
     visibility: collapse;
@@ -1830,4 +1830,17 @@ text-align: center;
 .button-contacto{
     background-color: var(--stg-ternary);
     color: var(--font-light);
+}
+.map{
+    height: 40vh;
+    width: 100%;
+}
+.biz-col-infomap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: -webkit-fill-available;
+    color: var(--bg-grey);
+    border-bottom: 1px var(--bg-grey) solid;
 }

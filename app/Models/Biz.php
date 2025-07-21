@@ -19,6 +19,8 @@ class Biz extends Model
         'bizNeigborhood',
         'bizState',
         'bizCity',
+        'bizLat',
+        'bizLon',
         'bizTel',
         'bizContact',
         'bizWhatsApp',
@@ -29,6 +31,7 @@ class Biz extends Model
         'bizcatId',
         'saletypeId',
         'bizLastvisit'
+
     ];
 
       public function bizcategory(){

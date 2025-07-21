@@ -1,4 +1,4 @@
-<x-layout pageTitle="Management" pageDescription="Biz">
+<x-layout pageTitle="Management" pageDescription="Biz" keywords="BizCreate">
 
     @section('main-content')
     <h1>Create Biz</h1>
@@ -31,6 +31,7 @@
                 @enderror
             </div>
 
+            {{-- Neigborhood --}}
             <div class="row">
                 <label for="bizNeigborhood" class="form-control bg-light">Neighborhood</label>
                 <input type="text" name="bizNeigborhood" class="form-control" value="{{old('bizNeigborhood')}}">
@@ -40,6 +41,7 @@
                 @enderror
             </div>
 
+            {{-- State --}}
             <div class="row">
                 <label for="bizState" class="form-control bg-light">State</label>
                 <input type="text" name="bizState" class="form-control" value="{{old('bizSate')}}">
@@ -51,17 +53,37 @@
 
             </div>
 
+            {{-- City --}}
             <div class="row">
                 <label for="bizCity" class="form-control bg-light">City</label>
                 <input type="text" name="bizCity" class="form-control" value="{{old('bizCity')}}">
-
                 {{-- Error --}}
                 @error('bizCity')
                     <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
-
             </div>
 
+            {{-- latitud longitud --}}
+            <div class="row">
+                <div class="col">
+                    <label for="bizLat" class="form-control bg-light">Latitude</label>
+                    <input type="text" name="bizLat" class="form-control" value="{{old('bizLat')}}">
+                    {{-- Error --}}
+                    @error('bizLat')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
+                </div>
+                <div class="col">
+                    <label for="bizLon" class="form-control bg-light">Longitud</label>
+                    <input type="text" name="bizLon" class="form-control" value="{{old('bizLon')}}">
+                    {{-- Error --}}
+                    @error('bizLon')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
+                </div>
+            </div>
+
+            {{-- Tel --}}
             <div class="row">
                 <label for="bizTel" class="form-control bg-light">Tel</label>
                 <input type="tel" name="bizTel" class="form-control" value="{{old('bizTel')}}">
@@ -72,6 +94,7 @@
                 @enderror
             </div>
 
+            {{-- Contact --}}
             <div class="row">
                 <label for="bizContact" class="form-control bg-light">Contact</label>
                 <input type="text" name="bizContact" class="form-control" value="{{old('bizContact')}}">
@@ -182,6 +205,8 @@
                 <label for="bizLastvisit" class="form-control">Last Visit</label>
                 <input type="date" name="bizLastvisit" class="form-control" value="{{old('bizLastvisit')}}">
             </div>
+
+
 
             {{-- control --}}
             <div class="d-flex flex-row p-3 justify-content-end gap-3" >

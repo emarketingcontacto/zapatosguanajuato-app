@@ -26,9 +26,9 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     {{-- local --}}
-        {{-- <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.css')}}"> --}}
-        {{-- <link rel="stylesheet" href="{{ URL::asset('css/main.css') }}" /> --}}
-        {{-- <link rel="stylesheet" href="{{ URL::asset('css/fonts.css')}}"> --}}
+        {{-- <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.css')}}">
+        <link rel="stylesheet" href="{{ URL::asset('css/main.css') }}" />
+        <link rel="stylesheet" href="{{ URL::asset('css/fonts.css')}}"> --}}
     {{-- end local --}}
     {{-- online --}}
         <link rel="stylesheet" href="{{ URL::asset('css/bootstrap-min.css')}}">
@@ -37,10 +37,10 @@
     {{-- end online --}}
     {{-- style --}}
     {{-- sripts local --}}
-        {{-- <script src="{{URL::asset('/scripts/script.js')}}" defer></script> --}}
-        {{-- <script src="{{URL::asset('/scripts/likes.js')}}" defer></script> --}}
-        {{-- <script src="{{URL::asset('/scripts/modelcatbiz.js')}}" defer></script> --}}
-        {{-- <link rel="icon" href="{{asset('/favicon.ico')}}" type="image/x-icon"> --}}
+        {{-- <script src="{{URL::asset('/scripts/script.js')}}" defer></script>
+        <script src="{{URL::asset('/scripts/likes.js')}}" defer></script>
+        <script src="{{URL::asset('/scripts/modelcatbiz.js')}}" defer></script>
+        <link rel="icon" href="{{asset('/favicon.ico')}}" type="image/x-icon"> --}}
     {{-- endsripts local--}}
     {{-- scripts online --}}
         <script src="{{URL::asset('/scripts/script-min.js')}}"></script>
@@ -201,14 +201,14 @@
                 </a>
             </li>
 
-            {{-- <li class="nav-item">
+            <li class="nav-item">
                 <a class="nav-link nav-link-register" href="{{route('User.login')}}">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-door-open-fill" viewBox="0 0 16 16">
                         <path d="M1.5 15a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H13V2.5A1.5 1.5 0 0 0 11.5 1H11V.5a.5.5 0 0 0-.57-.495l-7 1A.5.5 0 0 0 3 1.5V15zM11 2h.5a.5.5 0 0 1 .5.5V15h-1zm-2.5 8c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1"/>
                     </svg>
                     <p>Iniciar Sesion</p>
                     </a>
-            </li> --}}
+            </li>
 
         @endauth
         </ul>
