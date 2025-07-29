@@ -23,6 +23,12 @@
 </div>
 {{-- end intro text --}}
 <hr>
+
+
+{{-- Banner --}}
+<x-banner catName="{{$bizcat->bizcatName}}"></x-banner>
+{{-- end Banner --}}
+
 {{-- Search Model Categories --}}
 <x-search-model-category bizcategory="Wholesalers"></x-search-model-category>
 {{-- End Search Model Categories --}}

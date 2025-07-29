@@ -1,0 +1,35 @@
+.payments-container{
+    display: flex;
+    height: auto;
+}
+
+.card-payments{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    margin: 2vh 0;
+}
+
+
+/* paypal */
+.paypal{
+    width: 100%;
+    height: auto;
+    background-color: var(--stg-ternary);
+    color:var(--font-light);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5vh;
+}
+.paypal span{
+    width: 75%;
+    font-size: 2.5vw;
+    text-align: justify;
+    padding: 2vh 0;
+}
+
+/* end paypal */

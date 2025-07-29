@@ -1,4 +1,4 @@
-<x-layout pageTitle="Management" pageDescription="Modelo">
+<x-layout pageTitle="Management" pageDescription="Modelo" keywords="Modelo-Create">
 
     @section('main-content')
 

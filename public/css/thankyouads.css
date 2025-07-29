@@ -1,0 +1,21 @@
+.thanku-title{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: auto;
+    background-color: var(--primary);
+    align-items: center;
+    justify-content: center;
+    padding: 14vh 0;
+}
+
+
+.thanku-followup{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    padding: 10vh 4vw;
+}

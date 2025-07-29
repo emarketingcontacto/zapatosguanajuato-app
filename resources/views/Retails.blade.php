@@ -16,8 +16,11 @@
         Los mejores <strong> distribuidores de calzado del estado de Guanajuato</strong>, ofreciendo una amplia gama de estilos y modelos que se adaptan a las tendencias actuales del mercado.
     </h2>
 </div>
-
 <hr>
+{{-- Banner --}}
+ <x-banner catName="{{$bizcat->bizcatName}}"></x-banner>
+{{-- end Banner --}}
+
 {{--
 <div class="intro-text">
 </div>

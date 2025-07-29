@@ -25,8 +25,14 @@
         </div>
         {{-- end intro text --}}
         <hr>
+
+        {{-- Banner --}}
+        <x-banner catName="{{$bizcat->bizcatName}}"></x-banner>
+        {{-- end Banner --}}
+
+
         {{-- Search Model Categories --}}
-        <x-search-model-category bizcategory="Fabricantes"></x-search-model-category>
+        <x-search-model-category bizcategory="{{$bizcat->bizcatName}}s"></x-search-model-category>
         {{-- End Search Model Categories --}}
 
         {{-- Biz Items --}}
@@ -118,6 +124,7 @@
                                 </span>
                             </div>
                         </div> --}}
+
                         <hr style="margin: 0">
                         <div class="btn-show">
                             <a href="{{route('Biz.show', ['biz'=>$biz->bizId])}}" class="btn btn-sm  btn-show form-control">

@@ -852,6 +852,7 @@ footer a:hover{
 display: grid;
 width: 100%;
 justify-content: center;
+margin-top: 2vh;
 }
 .searchmodelcategories{
     background-color: var(--stg-ternary);
@@ -1634,22 +1635,12 @@ text-align: center;
     font-size: 2rem;
 }
 /* end desire */
-
-
 /******** END HOW IT WORKS PAGES ******* */
-
-
-
-
-
 /* logout */
 .btn-logout{
     border:none;
 }
 /* end logout */
-
-
-
 
 /* privacy policy */
 
@@ -1664,51 +1655,6 @@ text-align: center;
 .dropdown-item{
     font-size: 1rem;
 }
-/* paypal */
-.paypal{
-    width: 100%;
-    height: auto;
-    background-color: var(--stg-ternary);
-    color:var(--font-light);
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-}
-.paypal span{
-    width: 75%;
-    font-size: 2.5vw;
-    text-align: justify;
-}
-
-.paypalButtons{
-    width: 100%;
-    height: auto;
-    background-color: var(--stg-ternary);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 5px;
-}
-
-.paypalbuttons{
-    display: flex;
-    width: 100vw;
-    justify-content: center;
-    align-items: center;
-    padding-top: 5vh;
-}
-
-#paypal-button-container-P-70396561M81280630MX4NJZY{
-    width: 50vw;
-    height: 25vh;
-    padding-top: 5vh;
-    padding-bottom: 15vh;
-    margin-bottom: 15vh;
-}
-/* end paypal */
 
 .galleryTitle{
     display: flex;
@@ -1819,10 +1765,6 @@ text-align: center;
     margin-top: 5vh;
     align-items: center;
 }
-
-/* #divContacto{
-    visibility: hidden;
-} */
 
 .button-contacto{
     background-color: var(--stg-ternary);

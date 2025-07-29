@@ -1,4 +1,4 @@
-<x-layout pageTitle="Management" pageDescription="BizCategory">
+<x-layout pageTitle="Management" pageDescription="BizCategory" keywords="BizCategory-Edit">
 
     @section('main-content')
 

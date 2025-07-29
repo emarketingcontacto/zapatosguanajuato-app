@@ -1,4 +1,4 @@
-<x-layout pageTitle="Management" pageDescription="BizCategory">
+<x-layout pageTitle="Management" pageDescription="BizCategory" keywords="BizCategory">
     @section('main-content')
     <h1>Create BizCategory </h1>
     <div class="container">

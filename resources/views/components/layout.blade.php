@@ -26,14 +26,14 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     {{-- local --}}
-        <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.css')}}">
+        {{-- <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.css')}}">
         <link rel="stylesheet" href="{{ URL::asset('css/main.css') }}" />
-        <link rel="stylesheet" href="{{ URL::asset('css/fonts.css')}}">
+        <link rel="stylesheet" href="{{ URL::asset('css/fonts.css')}}"> --}}
     {{-- end local --}}
     {{-- online --}}
-        {{-- <link rel="stylesheet" href="{{ URL::asset('css/bootstrap-min.css')}}">
+        <link rel="stylesheet" href="{{ URL::asset('css/bootstrap-min.css')}}">
         <link rel="stylesheet" href="{{ URL::asset('css/main-min.css')}}">
-        <link rel="stylesheet" href="{{ URL::asset('css/fonts.css')}}"> --}}
+        <link rel="stylesheet" href="{{ URL::asset('css/fonts.css')}}">
     {{-- end online --}}
     {{-- style --}}
     {{-- sripts local --}}
@@ -102,6 +102,11 @@
         }
         </script>
     {{-- end schema --}}
+
+    {{-- MailChimp --}}
+    <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/948eabd2b6e2e810127ea36f7/59389f14958d051f3adbcb788.js");</script>
+    {{--end MailChimp --}}
+
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -141,7 +146,7 @@
             <x-Subcategories></x-Subcategories>
 
             <li class="nav-item">
-                <a href="https://forms.gle/ALmH97FcqfiAft3r8" class="nav-link">Anuncia tu Negocio</a>
+                <a href="{{route('Anunciantes')}}" class="nav-link">Anuncia tu Negocio</a>
             </li>
 
               @auth
@@ -161,6 +166,8 @@
                         <li><a class="dropdown-item" href="{{route('Biz.index')}}">Business</a></li>
                         <li><a class="dropdown-item" href="{{route('Modelo.index')}}">Modelos</a></li>
                         <li><a class="dropdown-item" href="{{route('User.index')}}">Users</a></li>
+                        <li><a class="dropdown-item" href="{{route('Premium.index')}}">Premium</a></li>
+
                         </ul>
                     </li>
                 @endif

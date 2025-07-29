@@ -1,7 +1,8 @@
 <?php
-
-use App\Http\Controllers\Men;
+use Illuminate\Support\Facades\Route;
 use App\Models\ModelCategory;
+use App\Http\Controllers\AdvertiserController;
+use App\Http\Controllers\Men;
 use App\Http\Controllers\Kids;
 use App\Http\Controllers\Girls;
 use App\Http\Controllers\Ladies;
@@ -9,7 +10,6 @@ use App\Http\Controllers\Retails;
 use App\Http\Controllers\Busqueda;
 use App\Http\Controllers\Factories;
 use App\Http\Controllers\Wholesalers;
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BizController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ModeloController;
@@ -23,7 +23,9 @@ use App\Http\Controllers\BizCategoryController;
 use App\Http\Controllers\ModelCategoryController;
 use App\Http\Controllers\SubcategoriesController;
 use App\Http\Controllers\ModelSubcategoryController;
+use App\Http\Controllers\PremiumController;
 use App\Http\Controllers\ProspectosController;
+use App\Http\Controllers\ThankyouAdvertiserContoller;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,6 +45,7 @@ Route::get('/Acerca-de-nosotros', function (){ return view('About-us'); })->name
 Route::get('/Politica-de-privacidad', function (){ return view('Privacy-policy'); })->name('politica_privacidad');
 //Como funciona
 // Route::get('/Como_funciona', function (){ return view('Como_funciona'); })->name('como_funciona');
+
 //BizCategories
 Route::get('/BizCategory', [BizCategoryController::class,'index'])->name('BizCategory.index');
 // Create
@@ -144,18 +147,32 @@ Route::put('/Biz/{biz}/update', [BizController::class,'update'])->name('Biz.upda
 //Delete
 Route::delete('/Biz/{biz}/destroy', [BizController::class,'destroy'])->name('Biz.destroy');
 
+/* Premiums */
+//Index
+Route::get('/Premium', [PremiumController::class, 'index'])->name('Premium.index');
+//Create
+Route::get('/Premium/create',[PremiumController::class,'create'])->name('Premium.create');
+//Store
+Route::post('/Premium', [PremiumController::class, 'store'])->name('Premium.store');
+//Show
+Route::get('/Premium/{premium}/show', [PremiumController::class,'show'])->name('Premium.show');
+//Edit
+Route::get('/Premium/{premium}/edit', [PremiumController::class,'edit'])->name('Premium.edit');
+//update
+Route::put('/Premium/{premium}/update', [PremiumController::class,'update'])->name('Premium.update');
+//Delete
+Route::delete('/Premium/{premium}/destroy', [PremiumController::class,'destroy'])->name('Premium.destroy');
+
+
 /*Factories */
 //route::get('/Fabricantes', Factories::class)->middleware('auth')->name('Factories');
 route::get('/Fabricantes-calzado-guanajuato', Factories::class)->name('Fabricantes');
-
 /*Wholesalers */
 //route::get('/Mayoristas', Wholesalers::class)->middleware('auth')->name('Wholesalers');
 route::get('/Mayoristas-calzado-guanajuato', Wholesalers::class)->name('Wholesalers');
-
 /*Retails */
 //route::get('/Minoristas', Retails::class)->middleware('auth')->name('Retails');
 route::get('/Minoristas-calzado-guanajuato', Retails::class)->name('Retails');
-
 /*Ladies*/
 route::get('/calzado_damas_guanajuato', Ladies::class)->name('Damas');
 /* Men */
@@ -164,22 +181,23 @@ route::get('/calzado_hombres_guanajuato', Men::class)->name('Hombres');
 route::get('/calzado_ninos_guanajuato', Kids::class)->name('Ninos');
 /* Girls */
 route::get('/calzado_ninas_guanajuato', Girls::class)->name('Ninas');
-
-
 /*Busqueda */
 route::get('Busqueda', Busqueda::class)->name('Busqueda');
+
+
+//Advertisers
+Route::get('/Anunciantes', AdvertiserController::class)->name('Anunciantes');
+Route::get('/gracias-anunciante', ThankyouAdvertiserContoller::class)->name('gracias-anunciante');
+/* Registro Prospectos */
+//Route::get('/Acerca-de-nosotros', function (){ return view('About-us'); })->name('acerca_de_nosotros');
+Route::get('/Prospectos/Registro', ProspectosController::class)->name('prospectos.registro');
+/*Register */
+Route::get('/Register', RegisterController::class)->name('Register');
 
 
 /*Subcategories*/
 //route::get('/Subcategories', SubcategoriesController::class)->middleware('auth')->name('Subcategories');
 Route::get('/Subcategorias', SubcategoriesController::class)->name('Subcategories');
-
-/* Registro Prospectos */
-//Route::get('/Acerca-de-nosotros', function (){ return view('About-us'); })->name('acerca_de_nosotros');
-Route::get('/Prospectos/Registro', ProspectosController::class)->name('prospectos.registro');
-
-/*Register */
-Route::get('/Register', RegisterController::class)->name('Register');
 
 /*Registration */
 //Logout
@@ -234,3 +252,5 @@ Route::delete('/Modelo/{modelo}/destroy', [ModeloController::class,'destroy'])->
 Route::get('Contacto', [ContactoController::class, 'show'])->name('Contacto');
 //Send Mail
 Route::post('Mensaje', [ContactoController::class, 'envio'])->name('Mensaje');
+
+

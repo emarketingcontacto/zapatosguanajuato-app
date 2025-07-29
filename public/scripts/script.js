@@ -23,3 +23,28 @@ function closeModelos() {
     document.getElementById('iopen').style.display = 'block';
     document.getElementById('textmodelos').innerText = 'Ver Modelos';
 }
+
+async function getBizCat() {
+    const currentUrl = window.location.origin;
+    let bizId = document.getElementById('selectBizId').value;
+    const url = currentUrl + '/api/v1/ApiBiz/' + `${bizId}`;
+
+    const request = new Request(url,
+        {
+            method: "GET",
+            mode: "cors",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        });
+    await fetch(request)
+        .then((response) => response.json())
+        .then((data) => {
+            // console.log(data);
+            document.getElementById('bizcatId').value = (data[0].bizcatId);
+            document.getElementById('bizcatName').value =(data[0].bizcatName);
+        }).catch((err) => {
+            console.log(err)
+        })
+}
+
