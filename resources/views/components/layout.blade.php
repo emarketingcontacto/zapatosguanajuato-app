@@ -37,10 +37,10 @@
     {{-- end online --}}
     {{-- style --}}
     {{-- sripts local --}}
-        <script src="{{URL::asset('/scripts/script.js')}}" defer></script>
+        {{-- <script src="{{URL::asset('/scripts/script.js')}}" defer></script>
         <script src="{{URL::asset('/scripts/likes.js')}}" defer></script>
         <script src="{{URL::asset('/scripts/modelcatbiz.js')}}" defer></script>
-        <link rel="icon" href="{{asset('/favicon.ico')}}" type="image/x-icon">
+        <link rel="icon" href="{{asset('/favicon.ico')}}" type="image/x-icon"> --}}
     {{-- endsripts local--}}
     {{-- scripts online --}}
         <script src="{{URL::asset('/scripts/script-min.js')}}"></script>
@@ -102,11 +102,9 @@
         }
         </script>
     {{-- end schema --}}
-
-    {{-- MailChimp --}}
-    <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/948eabd2b6e2e810127ea36f7/59389f14958d051f3adbcb788.js");</script>
-    {{--end MailChimp --}}
-
+    {{-- mailchimp --}}
+        <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/948eabd2b6e2e810127ea36f7/59389f14958d051f3adbcb788.js");</script>
+    {{-- end-mailchimp --}}
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
