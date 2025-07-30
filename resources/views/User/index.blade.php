@@ -1,4 +1,4 @@
-<x-layout pageTitle="Management" pageDescription="Users">
+<x-layout pageTitle="Management" pageDescription="Users" keywords="Users Index">
 
     @section('main-content')
     <h1>Users</h1>

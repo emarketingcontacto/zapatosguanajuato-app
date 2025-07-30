@@ -1,4 +1,4 @@
-<x-layout pageTitle="Management" pageDescription="Users">
+<x-layout pageTitle="Management" pageDescription="Users" keywords="User Create">
 
     @section('main-content')
     <h1 class="text-center"> Create user</h1>
