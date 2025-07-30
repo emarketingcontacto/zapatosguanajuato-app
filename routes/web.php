@@ -24,7 +24,6 @@ use App\Http\Controllers\ModelCategoryController;
 use App\Http\Controllers\SubcategoriesController;
 use App\Http\Controllers\ModelSubcategoryController;
 use App\Http\Controllers\PremiumController;
-use App\Http\Controllers\ProspectosController;
 use App\Http\Controllers\ThankyouAdvertiserContoller;
 
 /*
@@ -186,14 +185,7 @@ route::get('Busqueda', Busqueda::class)->name('Busqueda');
 
 
 //Advertisers
-Route::get('/Anunciantes', AdvertiserController::class)->name('Anunciantes');
 Route::get('/gracias-anunciante', ThankyouAdvertiserContoller::class)->name('gracias-anunciante');
-/* Registro Prospectos */
-//Route::get('/Acerca-de-nosotros', function (){ return view('About-us'); })->name('acerca_de_nosotros');
-Route::get('/Prospectos/Registro', ProspectosController::class)->name('prospectos.registro');
-/*Register */
-Route::get('/Register', RegisterController::class)->name('Register');
-
 
 /*Subcategories*/
 //route::get('/Subcategories', SubcategoriesController::class)->middleware('auth')->name('Subcategories');

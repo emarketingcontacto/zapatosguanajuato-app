@@ -1759,13 +1759,6 @@ text-align: center;
     text-align: center;
 }
 
-.prospectos-registro-container{
-    display: flex;
-    flex-direction: column;
-    margin-top: 5vh;
-    align-items: center;
-}
-
 .button-contacto{
     background-color: var(--stg-ternary);
     color: var(--font-light);

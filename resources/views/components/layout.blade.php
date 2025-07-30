@@ -29,7 +29,7 @@
         {{-- <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.css')}}">
         <link rel="stylesheet" href="{{ URL::asset('css/main.css') }}" />
         <link rel="stylesheet" href="{{ URL::asset('css/fonts.css')}}"> --}}
-    {{-- end local --}}
+    {{-- end local
     {{-- online --}}
         <link rel="stylesheet" href="{{ URL::asset('css/bootstrap-min.css')}}">
         <link rel="stylesheet" href="{{ URL::asset('css/main-min.css')}}">
@@ -143,10 +143,6 @@
               </li>
 
             <x-Subcategories></x-Subcategories>
-
-            <li class="nav-item">
-                <a href="{{route('Anunciantes')}}" class="nav-link">Anuncia tu Negocio</a>
-            </li>
 
               @auth
               {{-- admin --}}

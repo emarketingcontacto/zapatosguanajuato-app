@@ -19,9 +19,11 @@
             </div>
         </div>
         <div class="col text-center">
-          <a href="{{route('politica_privacidad')}}">
-            Política de Privacidad
-          </a>
+            <div class="row">
+                <a href="{{route('politica_privacidad')}}">
+                    Política de Privacidad
+            </a>
+            </div>
         </div>
         <div class="col footer-socials">
             <div>
