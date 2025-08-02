@@ -1,4 +1,4 @@
-+++<link rel="stylesheet" href="{{ URL::asset('css/thankyouads.css')}}">
+<link rel="stylesheet" href="{{ URL::asset('css/thankyouads.css')}}">
 <x-layout pageTitle="Gracias Anunciante" pageDescription="Gracias Anunciante" keywords="Anunciante">
     @section('main-content')
         <div class="main-container">
@@ -28,6 +28,5 @@
                 <h3>¡Gracias de nuevo por unirte a la familia de Zapatos Guanajuato!</h3>
             </div>
         </div>
-
     @endsection
 </x-layout>
