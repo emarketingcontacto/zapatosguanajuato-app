@@ -1,20 +1,20 @@
 function selectMonthly() {
     const advAnual = document.getElementById('adv-anual').style.display = 'none';
-    const advMonthly = document.getElementById('adv-mensual').style.display = 'block';
+    const advMonthly = document.getElementById('adv-mensual').style.display = 'inline-table';
 
     document.getElementById('checkAnual').checked = false;
 
-    document.getElementById('btnMensual').style.display = "block";
+    document.getElementById('btnMensual').style.display = "inline-table";
     document.getElementById('btnAnual').style.display = "none";
 }
 
 
 function selectAnual() {
-    document.getElementById('adv-anual').style.display = 'block';
+    document.getElementById('adv-anual').style.display = 'inline-table';
     document.getElementById('adv-mensual').style.display = 'none';
 
     document.getElementById('checkMensual').checked = false;
 
     document.getElementById('btnMensual').style.display = "none";
-    document.getElementById('btnAnual').style.display = "block";
+    document.getElementById('btnAnual').style.display = "inline-table";
 }

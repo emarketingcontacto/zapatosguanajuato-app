@@ -1,0 +1,136 @@
+.header-crud{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+}
+
+.header-crud h1{
+    display: flex;
+    width: 100%;
+    height: auto;
+    background-color: var(--bg-noir);
+    padding: 5vh;
+    text-align: center;
+    color: var(--primary);
+    font-size: 5vw;
+    letter-spacing: 2.2vh;
+    font-family: 'Poiret One' ;
+    justify-content: center;
+}
+
+.advertiser-title{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 25vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.ad-table-container{
+    display: flex;
+    width: 100vw;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--font-normal);
+}
+
+.ad-table-buttons{
+    display: flex;
+    width: 100vw;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.ad-head-features{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 33vw;
+    text-align: center;
+}
+
+.ad-head-basic{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 33vw;
+    text-align: center;
+    height: -webkit-fill-available;
+}
+
+.ad-head-basic a{
+    text-decoration: none;
+}
+
+.ad-head-basic a:hover, .ad-head-premium a:hover{
+    background-color: var(--secondary);
+    color: var(--font-violet);
+}
+
+.ad-head-premium{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 33vw;
+    text-align: center;
+    height: -webkit-fill-available;
+}
+
+.head-basic-name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    background-color: var(--ternary);
+}
+
+.head-basic-price{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15vh;
+}
+
+.head-basic-price p{
+    margin: 2vh 0;
+}
+
+.head-basic-price span{
+    font-size: 4rem;
+}
+
+.head-premium-name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    background-color: var(--font-violet);
+    color: var(--font-silent);
+}
+
+.head-premium-type{
+    display: flex;
+    justify-content:space-evenly;
+}
+
+.btn-price{
+    background-color: var(--ternary);
+    padding: 1vh 3vw;
+    margin: 2vh 0;
+    width: 20vw;
+    display: inline-table;
+    color: var(--font-violet);
+    border-radius: 5px;
+}
+
+.btn-price svg{
+    padding-left: 1vw;
+    width: 3rem;
+}
+
+.fields{
+    border-bottom: 1px solid var(--font-silent);
+}

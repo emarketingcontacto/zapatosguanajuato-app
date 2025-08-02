@@ -2,6 +2,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Models\ModelCategory;
 use App\Http\Controllers\AdvertiserController;
+use App\Http\Controllers\Advertisers;
+use App\Http\Controllers\Anunciantes;
 use App\Http\Controllers\Men;
 use App\Http\Controllers\Kids;
 use App\Http\Controllers\Girls;
@@ -17,14 +19,16 @@ use App\Http\Controllers\SeassonController;
 use App\Http\Controllers\ContactoController;
 use App\Http\Controllers\MaterialController;
 use App\Http\Controllers\PasswordController;
-use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SaleTypeController;
 use App\Http\Controllers\BizCategoryController;
 use App\Http\Controllers\ModelCategoryController;
 use App\Http\Controllers\SubcategoriesController;
 use App\Http\Controllers\ModelSubcategoryController;
+use App\Http\Controllers\Newsletter;
 use App\Http\Controllers\PremiumController;
+use App\Http\Controllers\ProspectosController;
 use App\Http\Controllers\ThankyouAdvertiserContoller;
+use App\Http\Controllers\ThankYouProspectsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -183,8 +187,12 @@ route::get('/calzado_ninas_guanajuato', Girls::class)->name('Ninas');
 /*Busqueda */
 route::get('Busqueda', Busqueda::class)->name('Busqueda');
 
-
+/*Register*/
+//Newsletter
+route::get('/Registro/Newsletter', Newsletter::class)->name('Newsletter');
 //Advertisers
+route::get('Anunciantes', Anunciantes::class)->name('Anunciantes');
+//Advertisers Thankyou
 Route::get('/gracias-anunciante', ThankyouAdvertiserContoller::class)->name('gracias-anunciante');
 
 /*Subcategories*/
@@ -239,6 +247,28 @@ Route::get('/Modelo/{modelo}/show', [ModeloController::class,'show'])->name('Mod
 Route::put('/Modelo/{modelo}/update', [ModeloController::class,'update'])->name('Modelo.update');
 //Delete
 Route::delete('/Modelo/{modelo}/destroy', [ModeloController::class,'destroy'])->name('Modelo.destroy');
+
+/* Prospectos */
+//index
+Route::get('/Prospectos', [ProspectosController::class,'index'])->name('Prospectos.index');
+// Create
+Route::get('/Prospectos/create', [ProspectosController::class,'create'])->name('Prospectos.create');
+//Store
+Route::post('/Prospectos', [ProspectosController::class,'store'])->name('Prospectos.store');
+// Show
+Route::get('/Prospectos/{prospecto}/show', [ProspectosController::class,'show'])->name('Prospectos.show');
+//Edit
+Route::get('/Prospectos/{prospecto}/edit', [ProspectosController::class,'edit'])->name('Prospectos.edit');
+//update
+Route::put('/Prospectos/{prospecto}/update', [ProspectosController::class,'update'])->name('Prospectos.update');
+//Delete
+Route::delete('/Prospectos/{prospecto}/destroy', [ProspectosController::class,'destroy'])->name('Prospectos.destroy');
+
+
+//Prospects Thankyou
+Route::get('/gracias-prospecto', ThankYouProspectsController::class)->name('gracias-prospecto');
+//Route::get('/gracias-anunciante', ThankyouAdvertiserContoller::class)->name('gracias-anunciante');
+
 
 /**Contact */
 Route::get('Contacto', [ContactoController::class, 'show'])->name('Contacto');

@@ -1,0 +1,54 @@
+.header-crud{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+}
+
+.header-crud h1{
+    display: flex;
+    width: 100%;
+    height: auto;
+    background-color: var(--bg-noir);
+    padding: 5vh;
+    text-align: center;
+    color: var(--primary);
+    font-size: 5vw;
+    letter-spacing: 2.2vh;
+    font-family: 'Poiret One' ;
+    justify-content: center;
+}
+
+.newsletter-container{
+    display: flex;
+    width: 100vw;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.newsletter-invitation{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--ternary);
+    padding: 2vh 2vw;
+}
+
+#text-attention{
+    color:var(--font-violet);
+}
+
+.newsletter-form{
+    display: flex;
+    width: 100vw;
+    height: auto;
+    background-color: var(--font-silent);
+    align-items: center;
+    justify-content: center;
+}

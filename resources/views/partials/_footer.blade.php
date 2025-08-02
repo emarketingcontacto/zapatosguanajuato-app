@@ -13,7 +13,7 @@
                 </a>
             </div>
             <div class="row">
-                <a href="https://forms.gle/ALmH97FcqfiAft3r8">
+                <a href="{{route('Anunciantes')}}">
                     Anuncia tu Negocio
                 </a>
             </div>
@@ -22,7 +22,12 @@
             <div class="row">
                 <a href="{{route('politica_privacidad')}}">
                     Política de Privacidad
-            </a>
+                </a>
+            </div>
+            <div class="row">
+                <a href="{{route('Newsletter')}}">
+                    Newsletter
+                </a>
             </div>
         </div>
         <div class="col footer-socials">

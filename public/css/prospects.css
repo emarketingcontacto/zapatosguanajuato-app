@@ -1,0 +1,121 @@
+.header-crud{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+}
+
+.header-crud h1{
+    display: flex;
+    width: 100%;
+    height: auto;
+    background-color: var(--bg-noir);
+    padding: 5vh;
+    text-align: center;
+    color: var(--primary);
+    font-size: 5vw;
+    letter-spacing: 2.2vh;
+    font-family: 'Poiret One' ;
+    justify-content: center;
+}
+
+.header-message-container{
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-message{
+    display: flex;
+    flex-direction: column;
+    width: 75vw;
+    align-items:start;
+
+}
+
+.list-items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30vw;
+}
+
+.table-container{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.table-container table{
+    width: 90vw;
+    padding: 0 2vw;
+}
+
+.prospectos-crear{
+    display: flex;
+    width: 100vw;
+
+}
+
+.prospectos-crear a{
+    margin: 2vh 4vw;
+    padding: 1vh 1vw;
+    background-color: var(--stg-ternary);
+    border-radius: 10px;
+    color:var(--font-violet);
+    text-decoration: none;
+}
+
+.form-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--font-silent);
+}
+
+.form-container form{
+    width: 50vw;
+    background-color:#fff;
+    padding: 0 3vw;
+    margin: 2vh 0;
+}
+
+.data-container{
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    background-color: var(--font-silent);
+}
+
+.form-container input{
+    width: 20vw;
+    margin-bottom: 2vh;
+}
+
+.row-form{
+    margin-top: 2vh !important;
+    border-bottom: 1px solid var(--font-silent);
+}
+
+.form-container select{
+    width: 20vw;
+    margin-bottom: 2vh;
+}
+
+.btn-danger{
+    width: 20vw !important;
+}
+
+.controls{
+    text-align: center;
+}
