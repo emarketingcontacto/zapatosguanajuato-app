@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="{{ URL::asset('css/thankyouads.css')}}">
++++<link rel="stylesheet" href="{{ URL::asset('css/thankyouads.css')}}">
 <x-layout pageTitle="Gracias Anunciante" pageDescription="Gracias Anunciante" keywords="Anunciante">
     @section('main-content')
         <div class="main-container">
@@ -18,7 +18,7 @@
 
                 <p>Para asegurar que tu anuncio se vea lo mejor posible y llegue a la audiencia correcta, necesitamos que nos proporciones algunos datos de tu negocio.
                     <p>Por favor, haz clic en el siguiente enlace para completar la información requerida:</p>
-                    <a href="https://forms.gle/ALmH97FcqfiAft3r8" class="btn btn-md btn-primary" id="comercial-data">
+                    <a href="{{route('Anunciantes')}}" class="btn btn-md btn-primary" id="comercial-data">
                         [Haz clic aquí para ingresar tus datos comerciales]
                     </a>
                 </p>
