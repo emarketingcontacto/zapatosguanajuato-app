@@ -8,25 +8,26 @@
                   </a>
             </div>
             <div class="row">
+                <a href="{{route('politica_privacidad')}}">
+                    Política de Privacidad
+                </a>
+            </div>
+
+        </div>
+        <div class="col text-center">
+            <div class="row">
                 <a  href="{{route('Contacto')}}">
                     Contacto
                 </a>
             </div>
             <div class="row">
-                <a href="{{route('Anunciantes')}}">
-                    Anuncia tu Negocio
-                </a>
-            </div>
-        </div>
-        <div class="col text-center">
-            <div class="row">
-                <a href="{{route('politica_privacidad')}}">
-                    Política de Privacidad
-                </a>
-            </div>
-            <div class="row">
                 <a href="{{route('Newsletter')}}">
                     Newsletter
+                </a>
+            </div>
+            <div class="row">
+                <a href="{{route('Anunciantes')}}">
+                    Anuncia tu Negocio
                 </a>
             </div>
         </div>

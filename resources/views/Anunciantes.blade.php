@@ -158,12 +158,13 @@
                 </div>
             </div>
             <div class="ad-table-buttons">
-                <div class="ad-head-basic">
+                <div class="col"></div>
+                <div class="col ad-head-basic">
                     {{-- <a href="{{route('Registro-Anunciantes')}}" class="btn btn-primary btn-price"> --}}
                         <a href="{{route('Prospectos.create')}}" class="btn-price">
                         Unirme</a>
                 </div>
-                <div class="ad-head-premium">
+                <div class="col ad-head-premium">
                     <a href="https://buy.stripe.com/cNieVf2SJ9BT1bzfS12VG02" id="btnMensual" class="btn-price">
                         Unirme
                         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-credit-card-fill" viewBox="0 0 16 16">
