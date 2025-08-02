@@ -201,7 +201,7 @@
                 <div class="col">
                     <input type="file" name="prospectoImagen" class="form-control" value="{{old('prospectoImagen')}}">
                     {{-- Error --}}
-                    @error('prospectoImage')
+                    @error('prospectoImagen')
                         <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
                 </div>

@@ -46,6 +46,7 @@ class ProspectosController extends Controller
                 'prospectoTipoNegocio'=>'required',
                 'prospectoTipoCalzado'=>'required',
                 'prospectoCondiciones'=>'required',
+                'prospectoImagen' => 'required'
             ]
         );
 
