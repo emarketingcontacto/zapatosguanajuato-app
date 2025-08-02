@@ -35,7 +35,14 @@
     flex-direction: column;
     width: 75vw;
     align-items:start;
+}
 
+.header-message-thankyou{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-items:center;
+    justify-content: center;
 }
 
 .list-items{

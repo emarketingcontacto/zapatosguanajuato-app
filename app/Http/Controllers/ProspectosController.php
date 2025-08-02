@@ -54,7 +54,7 @@ class ProspectosController extends Controller
             $validData['prospectoImagen'] = $request->file('prospectoImagen')->store('prospectos', 'public');
         }
             Prospectos::create($validData);
-            return view('thankyou-prospects');
+            return redirect('gracias-prospecto')->with('Success', 'Nuevo Negocio Registrado Exitósamente');
     }
 
     /**

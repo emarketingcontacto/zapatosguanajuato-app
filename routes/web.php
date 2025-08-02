@@ -194,6 +194,9 @@ route::get('/Registro/Newsletter', Newsletter::class)->name('Newsletter');
 route::get('Anunciantes', Anunciantes::class)->name('Anunciantes');
 //Advertisers Thankyou
 Route::get('/gracias-anunciante', ThankyouAdvertiserContoller::class)->name('gracias-anunciante');
+//Prospects Thankyou
+Route::get('/gracias-prospecto', ThankYouProspectsController::class)->name('gracias-prospecto');
+
 
 /*Subcategories*/
 //route::get('/Subcategories', SubcategoriesController::class)->middleware('auth')->name('Subcategories');
@@ -263,12 +266,6 @@ Route::get('/Prospectos/{prospecto}/edit', [ProspectosController::class,'edit'])
 Route::put('/Prospectos/{prospecto}/update', [ProspectosController::class,'update'])->name('Prospectos.update');
 //Delete
 Route::delete('/Prospectos/{prospecto}/destroy', [ProspectosController::class,'destroy'])->name('Prospectos.destroy');
-
-
-//Prospects Thankyou
-Route::get('/gracias-prospecto', ThankYouProspectsController::class)->name('gracias-prospecto');
-//Route::get('/gracias-anunciante', ThankyouAdvertiserContoller::class)->name('gracias-anunciante');
-
 
 /**Contact */
 Route::get('Contacto', [ContactoController::class, 'show'])->name('Contacto');
