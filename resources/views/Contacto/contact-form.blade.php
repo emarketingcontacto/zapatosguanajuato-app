@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="{{ URL::asset('css/contact.css') }}" />
 @php
     $description ="El directorio  más completo de zapatos en Guanajuato Compra al mayoreo de los mejores fabricantes y surte tu negocio. ¡Aprovecha nuestras ofertas!";
     $keywords = "Directorio de zapatos en Guanajuato, Directorio de calzado de Guanajuato, Venta de calzado a precio de fabrica";
@@ -5,7 +6,7 @@
 <x-layout pageTitle="Catalogo de Calzado" pageDescription={{$description}} keywords={{$keywords}}>
 
 @section('main-content')
-        <div class="contact-container-header">
+        <div class="header-crud">
             <h1>Contacto</h1>
         </div>
 

@@ -1493,27 +1493,7 @@ text-align: center;
 }
 /******** END ABOUT US PAGES ******* */
 
-/******** CONTACT US PAGES ******* */
 
-.contact-container-header{
-    display: flex;
-    justify-content: center;
-    margin-top: 5rem;
-}
-.contact-container{
-    width: 50%;
-    margin-left: 25%;
-    margin-bottom: 6rem;
-}
-.btn-contact{
-    background-color: var(--stg-ternary);
-    color: var(--font-light);
-}
-.btn-contact:hover{
-    background-color: var(--secondary);
-    color: var(--primary);
-}
-/******** END CONTACT US PAGES ******* */
 
 /******** HOW IT WORKS PAGES ******* */
 .container-como-funciona{
