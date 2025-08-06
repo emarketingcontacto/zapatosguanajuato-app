@@ -14,6 +14,7 @@ class ProducerMap extends Component
     public function __construct(
         public string $latitude,
         public string $longitud,
+        public string $bixName
     ){}
 
     /**

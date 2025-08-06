@@ -119,7 +119,7 @@
                         <p>Dirección</p>
                     </div>
                     <div class="col biz-col-infomap">
-                         <x-producer-map latitude="{{$biz->bizLat}}" longitud="{{$biz->bizLon}}"></x-producer-map>
+                         <x-producer-map latitude="{{$biz->bizLat}}" longitud="{{$biz->bizLon}}" bixName="{{$biz->bizName}}"></x-producer-map>
                          <a id="shareLink" href='https://www.google.com/maps/search/?api=1&query={{$biz->bizLat}},{{$biz->bizLon}}' target="_blank">{{$biz->bizStreetNum}}, {{$biz->bizNeigborhood}}, {{$biz->bizCity}}</a>
                     </div>
                 </div>
