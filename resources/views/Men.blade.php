@@ -7,7 +7,7 @@
     @section('main-content')
 
     <div class="header-Category" style="background-image: url('{{asset('storage/'.$modelcat->modelcatImage)}}')" alt="DirectorioDamas">
-        <h1>Directorio de Calzado de Guanajuato para Hombres</h1>
+        <h1>Directorio de Calzado Guanajuato para Hombres</h1>
     </div>
  {{-- intro text --}}
  <div class="intro">
@@ -71,7 +71,7 @@
                     {{-- local --}}
                     {{-- <img src="{{asset('storage/'.$factory->modelImage)}}" alt="Minorista Uno" width="255vw" height="255vh"> --}}
                     {{-- online --}}
-                    <img src="{{asset('/'.$factory->modelImage)}}" alt="Minorista Uno" width="255vw" height="255vh">
+                    <img src="{{asset('/'.$factory->modelImage)}}" alt="{{$factory->modelName}}" width="255vw" height="255vh">
                 </a>
             </div>
             <div class="card-text gallery-biz-name">
@@ -84,7 +84,7 @@
                 </div>
             </div>
             <div class="gallery-biz-name">
-                <a class="gallery-button" href="{{route('Biz.show', ['biz'=>$factory->bizId])}}">{{$factory->bizName}}</a>
+                <a class="gallery-button" href="{{route('Biz.show', ['biz'=>$factory->bizSlug])}}">{{$factory->bizName}}</a>
                 </a>
             </div>
         </div>
@@ -109,7 +109,7 @@
                     {{-- local --}}
                     {{-- <img src="{{asset('storage/'.$wholesaler->modelImage)}}" alt="Minorista Uno" width="255vw" height="255vh"> --}}
                     {{-- online --}}
-                    <img src="{{asset('/'.$wholesaler->modelImage)}}" alt="Minorista Uno" width="255vw" height="255vh">
+                    <img src="{{asset('/'.$wholesaler->modelImage)}}" alt="{{$wholesaler->modelName}}" width="255vw" height="255vh">
                 </a>
             </div>
             <div class="card-text gallery-biz-name">
@@ -121,7 +121,7 @@
                 </div>
             </div>
             <div class="gallery-biz-name">
-                <a class="gallery-button" href="{{route('Biz.show', ['biz'=>$wholesaler->bizId])}}">{{$wholesaler->bizName}}</a>
+                <a class="gallery-button" href="{{route('Biz.show', ['biz'=>$wholesaler->bizSlug])}}">{{$wholesaler->bizName}}</a>
                 </a>
             </div>
         </div>
@@ -146,7 +146,7 @@
                     {{-- local --}}
                     {{-- <img src="{{asset('storage/'.$retail->modelImage)}}" alt="Minorista Uno" width="255vw" height="255vh"> --}}
                     {{-- online --}}
-                    <img src="{{asset('/'.$retail->modelImage)}}" alt="Minorista Uno" width="255vw" height="255vh">
+                    <img src="{{asset('/'.$retail->modelImage)}}" alt="{{$retail->modelName}}" width="255vw" height="255vh">
                 </a>
             </div>
             <div class="card-text gallery-biz-name">
@@ -158,7 +158,7 @@
                 </div>
             </div>
             <div class="gallery-biz-name">
-                <a class="gallery-button" href="{{route('Biz.show', ['biz'=>$retail->bizId])}}">{{$retail->bizName}}</a>
+                <a class="gallery-button" href="{{route('Biz.show', ['biz'=>$retail->bizSlug])}}">{{$retail->bizName}}</a>
                 </a>
             </div>
         </div>

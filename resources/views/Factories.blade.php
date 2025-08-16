@@ -127,7 +127,7 @@
 
                         <hr style="margin: 0">
                         <div class="btn-show">
-                            <a href="{{route('Biz.show', ['biz'=>$biz->bizId])}}" class="btn btn-sm  btn-show form-control">
+                            <a href="{{route('Biz.show', ['biz'=>$biz->bizSlug])}}" class="btn btn-sm  btn-show form-control">
                                 Ver Detalles...
                             </a>
                         </div>

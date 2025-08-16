@@ -30,11 +30,17 @@ class Biz extends Model
         'bizImage',
         'bizcatId',
         'saletypeId',
-        'bizLastvisit'
+        'bizLastvisit',
+        'bizSlug'
 
     ];
 
       public function bizcategory(){
         return $this->hasMany(Bizcategory::class, 'bizcatId');
+      }
+
+      public function getRouteKeyName()
+      {
+        return 'bizSlug';
       }
 }

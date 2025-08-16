@@ -27,7 +27,7 @@
                 </div>
 
                 <div class="gallery-front-biz-name">
-                    <a class="gallery-front-button" href="{{route('Biz.show', ['biz'=>$gallery->bizId])}}">
+                    <a class="gallery-front-button" href="{{route('Biz.show', ['biz'=>$gallery->bizSlug])}}">
                         <h4>{{$gallery->bizName}}</h4>
                     </a>
                 </div>

@@ -38,10 +38,10 @@
                     <td class="d-flex justify-content-around gap-1">
 
                     {{-- show --}}
-                    <a href="{{route('Biz.show', ['biz'=>$biz->bizId])}}" class="btn btn-sm btn-primary">Ver</a>
+                    <a href="{{route('Biz.show', ['biz'=>$biz->bizSlug])}}" class="btn btn-sm btn-primary">Ver</a>
 
                     {{-- edit --}}
-                    <a href="{{route('Biz.edit', ['biz'=>$biz->bizId])}}" class="btn btn-sm btn-primary">Edit</a>
+                    <a href="{{route('Biz.edit', ['biz'=>$biz->bizSlug])}}" class="btn btn-sm btn-primary">Edit</a>
 
                     {{-- delete --}}
                     <form action="{{route('Biz.destroy', ['biz'=>$biz->bizId])}}" method="post">

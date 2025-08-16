@@ -73,7 +73,7 @@
                     {{-- local --}}
                     {{-- <img src="{{asset('storage/'.$factory->modelImage)}}" alt="Minorista Uno" width="255vw" height="255vh"> --}}
                     {{-- online --}}
-                    <img src="{{asset('/'.$factory->modelImage)}}" alt="Minorista Uno" width="255vw" height="255vh">
+                    <img src="{{asset('/'.$factory->modelImage)}}" alt="{{$factory->bizName}}" width="255vw" height="255vh">
                 </a>
             </div>
             <div class="card-text gallery-biz-name">
@@ -86,7 +86,7 @@
                 </div>
             </div>
             <div class="gallery-biz-name">
-                <a class="gallery-button" href="{{route('Biz.show', ['biz'=>$factory->bizId])}}">{{$factory->bizName}}</a>
+                <a class="gallery-button" href="{{route('Biz.show', ['biz'=>$factory->bizSlug])}}">{{$factory->bizName}}</a>
                 </a>
             </div>
         </div>
@@ -111,7 +111,7 @@
                     {{-- local --}}
                     {{-- <img src="{{asset('storage/'.$wholesaler->modelImage)}}" alt="Minorista Uno" width="255vw" height="255vh"> --}}
                     {{-- online --}}
-                    <img src="{{asset('/'.$wholesaler->modelImage)}}" alt="Minorista Uno" width="255vw" height="255vh">
+                    <img src="{{asset('/'.$wholesaler->modelImage)}}" alt="{{$wholesaler->bizName}}" width="255vw" height="255vh">
                 </a>
             </div>
             <div class="card-text gallery-biz-name">
@@ -123,7 +123,7 @@
                 </div>
             </div>
             <div class="gallery-biz-name">
-                <a class="gallery-button" href="{{route('Biz.show', ['biz'=>$wholesaler->bizId])}}">{{$wholesaler->bizName}}</a>
+                <a class="gallery-button" href="{{route('Biz.show', ['biz'=>$wholesaler->bizSlug])}}">{{$wholesaler->bizName}}</a>
                 </a>
             </div>
         </div>
@@ -148,7 +148,7 @@
                     {{-- local --}}
                     {{-- <img src="{{asset('storage/'.$retail->modelImage)}}" alt="Minorista Uno" width="255vw" height="255vh"> --}}
                     {{-- online --}}
-                    <img src="{{asset('/'.$retail->modelImage)}}" alt="Minorista Uno" width="255vw" height="255vh">
+                    <img src="{{asset('/'.$retail->modelImage)}}" alt="{{$retail->bizName}}" width="255vw" height="255vh">
                 </a>
             </div>
             <div class="card-text gallery-biz-name">
@@ -160,7 +160,7 @@
                 </div>
             </div>
             <div class="gallery-biz-name">
-                <a class="gallery-button" href="{{route('Biz.show', ['biz'=>$retail->bizId])}}">{{$retail->bizName}}</a>
+                <a class="gallery-button" href="{{route('Biz.show', ['biz'=>$retail->bizSlug])}}">{{$retail->bizName}}</a>
                 </a>
             </div>
         </div>

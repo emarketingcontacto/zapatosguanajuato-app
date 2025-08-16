@@ -19,7 +19,15 @@
                 @error('bizName')
                     <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
+            </div>
 
+            <div class="row">
+                <label for="bizSlug" class="form-control bg-light">Slug</label>
+                <input type="text" name="bizSlug" class="form-control" value="{{old('bizSlug')}}">
+                {{-- Error --}}
+                @error('bizName')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </div>
 
             <div class="row">

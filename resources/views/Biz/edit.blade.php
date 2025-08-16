@@ -24,6 +24,16 @@
                 @enderror
             </div>
 
+            {{-- Slug --}}
+            <div class="row">
+                <label for="bizSlug" class="form-control bg-light">Slug</label>
+                <input type="text" name="bizSlug" class="form-control" value="{{$biz->bizSlug}}">
+                {{-- Error --}}
+                @error('bizSlug')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
+            </div>
+
             {{-- Street --}}
             <div class="row">
                 <label for="bizStreetNum" class="form-control bg-light">Street #</label>

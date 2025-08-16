@@ -17,7 +17,7 @@
                     </a>
                 </div>
                 <div class="gallery-front-biz-name">
-                    <a class="gallery-front-button" href="{{route('Biz.show', ['biz'=>$mostfactory->bizId])}}">
+                    <a class="gallery-front-button" href="{{route('Biz.show', ['biz'=>$mostfactory->bizSlug])}}">
                        <h4>{{$mostfactory->bizName}}</h4>
                     </a>
                 </div>

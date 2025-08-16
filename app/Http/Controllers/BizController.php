@@ -69,7 +69,8 @@ class BizController extends Controller
             'bizImage' => 'required',
             'bizcatId' => 'required',
             'saletypeId' => 'required',
-            'bizLastvisit' => 'nullable | date'
+            'bizLastvisit' => 'nullable | date',
+            'bizSlug'=>'required'
         ]);
 
         if($request->hasFile('bizImage')){
@@ -169,7 +170,8 @@ class BizController extends Controller
                 'bizcatId' => 'required',
                 'saletypeId' => 'required',
                 'bizLastvisit' => 'nullable | date',
-                'bizImage' => 'nullable'
+                'bizImage' => 'nullable',
+                'bizSlug'=>'required'
             ]);
 
             //Remove from public

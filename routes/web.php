@@ -49,7 +49,7 @@ Route::get('/Politica-de-privacidad', function (){ return view('Privacy-policy')
 //Como funciona
 // Route::get('/Como_funciona', function (){ return view('Como_funciona'); })->name('como_funciona');
 
-//BizCategories
+/* BizCategories */
 Route::get('/BizCategory', [BizCategoryController::class,'index'])->name('BizCategory.index');
 // Create
 Route::get('/BizCategory/create', [BizCategoryController::class,'create'])->name('BizCategory.create');
@@ -142,7 +142,7 @@ Route::get('/Biz/create', [BizController::class,'create'])->name('Biz.create');
 Route::post('/Biz', [BizController::class,'store'])->name('Biz.store');
 //Show
 // Route::get('/Biz/{biz}/show', [BizController::class,'show'])->middleware('auth')->name('Biz.show');
-Route::get('/Biz/{biz}/show', [BizController::class,'show'])->name('Biz.show');
+Route::get('/Biz/{biz}', [BizController::class,'show'])->name('Biz.show');
 //Edit
 Route::get('/Biz/{biz}/edit', [BizController::class,'edit'])->name('Biz.edit');
 //update

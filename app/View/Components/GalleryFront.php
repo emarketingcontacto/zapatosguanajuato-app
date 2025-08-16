@@ -25,7 +25,7 @@ class GalleryFront extends Component
     {
         $galleries= DB::table('model')
         ->join('biz', 'model.bizId', '=', 'biz.bizId')
-        ->select('model.modelId', 'model.modelImage','model.modelName','biz.bizId', 'biz.bizName')
+        ->select('model.modelId', 'model.modelImage','model.modelName','biz.bizId', 'biz.bizName', 'biz.bizSlug')
         ->orderBy('model.modelId', 'desc')
         ->limit(20)
         ->distinct()

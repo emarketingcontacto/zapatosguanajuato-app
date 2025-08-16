@@ -7,7 +7,7 @@
     @section('main-content')
 
     <div class="header-Category" style="background-image: url('{{asset('storage/'.$modelcat->modelcatImage)}}')" alt="DirectorioDamas">
-        <h1>Directorio de Calzado de Guanajuato para Damas </h1>
+        <h1>Directorio de Calzado Guanajuato para Damas </h1>
     </div>
     {{-- intro text --}}
     <div class="intro">
@@ -85,7 +85,7 @@
                     </div>
                 </div>
                 <div class="gallery-biz-name">
-                    <a class="gallery-button" href="{{route('Biz.show', ['biz'=>$factory->bizId])}}">{{$factory->bizName}}</a>
+                    <a class="gallery-button" href="{{route('Biz.show', ['biz'=>$factory->bizSlug])}}">{{$factory->bizName}}</a>
                     </a>
                 </div>
             </div>
@@ -122,7 +122,7 @@
                     </div>
                 </div>
                 <div class="gallery-biz-name">
-                    <a class="gallery-button" href="{{route('Biz.show', ['biz'=>$wholesaler->bizId])}}">{{$wholesaler->bizName}}</a>
+                    <a class="gallery-button" href="{{route('Biz.show', ['biz'=>$wholesaler->bizSlug])}}">{{$wholesaler->bizName}}</a>
                     </a>
                 </div>
             </div>
@@ -159,7 +159,7 @@
                     </div>
                 </div>
                 <div class="gallery-biz-name">
-                    <a class="gallery-button" href="{{route('Biz.show', ['biz'=>$retail->bizId])}}">{{$retail->bizName}}</a>
+                    <a class="gallery-button" href="{{route('Biz.show', ['biz'=>$retail->bizSlug])}}">{{$retail->bizName}}</a>
                     </a>
                 </div>
             </div>
