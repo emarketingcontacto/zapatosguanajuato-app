@@ -12,6 +12,7 @@
         {{-- canonical --}}
             <script>
                 const canonicalUrl = window.location.href;
+                console.log(canonicalUrl);
                 const link = document.createElement('link');
                 link.rel = 'canonical';
                 link.href = canonicalUrl;
