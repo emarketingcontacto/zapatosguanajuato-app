@@ -6,8 +6,8 @@ RewriteRule ^/?$ "https\:\/\/zapatosguanajuato\.mx\/public" [R=301,L]
 RewriteCond %{HTTP_HOST} ^zapatosguanajuato\.mx$ [OR]
 RewriteCond %{HTTP_HOST} ^www\.zapatosguanajuato\.mx$
 
-  ## EXPIRES CACHING ##
-  <IfModule mod\_expires.c>|||||
+  # EXPIRES CACHING #
+  <IfModule mod\_expires.c>
   ExpiresActive On
   ExpiresByType image/jpg "access 1 year"
   ExpiresByType image/jpeg "access 1 year"
@@ -19,4 +19,6 @@ RewriteCond %{HTTP_HOST} ^www\.zapatosguanajuato\.mx$
   ExpiresByType image/x-icon "access 1 year"
   ExpiresDefault "access 2 days"
   </IfModule>
-  ## EXPIRES CACHING ##
+  # EXPIRES CACHING #
+
+
