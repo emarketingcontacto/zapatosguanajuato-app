@@ -1,48 +1,158 @@
-<x-layout pageTitle="Management" pageDescription="ModelSubcategory">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    {{-- seo --}}
+    <title>Modelo Subcategoria Crear | ZapatosGuanajuato.com</title>
+    <meta name="description" content="Modelo Subcategoria Crear"/>
+    <meta name="keywords" content="Modelo Subcategoria Crear"/>
+    {{-- end seo --}}
 
-    @section('main-content')
+    {{-- canonical --}}
+        <script>
+            const canonicalUrl = window.location.href;
+            const link = document.createElement('link');
+            link.rel = 'canonical';
+            link.href = canonicalUrl;
+            document.head.appendChild(link);
+        </script>
+    {{-- end canonical --}}
 
-    <h1>This is create</h1>
-    <div class="container">
+    {{-- images --}}
+        <link rel="icon" href="{{asset('/favicon.ico')}}" type="image/x-icon">
+    {{-- end images --}}
 
-        <form action="{{route('ModelSubcategory.store')}}" method="post">
-            @csrf
-            @method('POST')
+    {{-- style --}}
+        {{-- local --}}
+            {{-- <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.css')}}"> --}}
+            {{-- <link rel="stylesheet" href="{{ URL::asset('css/fonts.css')}}"> --}}
+            {{-- <link rel="stylesheet" href="{{ URL::asset('css/main.css') }}" /> --}}
+            {{-- <link rel="stylesheet" href="{{ URL::asset('css/admin.css')}}"> --}}
+        {{-- end local
+        {{-- online --}}
+            <link rel="stylesheet" href="{{ URL::asset('css/online/bootstrap-min.css')}}">
+            <link rel="stylesheet" href="{{ URL::asset('css/online/fonts-min.css')}}">
+            <link rel="stylesheet" href="{{ URL::asset('css/online/main-min.css')}}">
+            <link rel="stylesheet" href="{{ URL::asset('css/online/admin-min.css')}}">
+        {{-- end online --}}
+    {{-- end style --}}
 
-            <div class="mb-2">
-                <label for="submodelcatId" class="form-label">ID</label>
-                <input type="number" name="submodelcatId" id="submodelcatId" class="form-control w-25" disabled>
+    {{-- scripts --}}
+    {{-- end scripts --}}
+
+    <!-- Google Analytics tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-LEV2309FWD"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-LEV2309FWD');
+        </script>
+    <!-- end Google Analytics tag (gtag.js) -->
+
+    <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-KZP9TGP6');</script>
+    <!-- End Google Tag Manager -->
+
+    {{-- Pinterest Tag --}}
+        <meta name="p:domain_verify" content="59864595446c9bd25ed7b86d881293d4"/>
+    {{-- End Pinterest Tag --}}
+
+    {{-- schema --}}
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "OnlineStore",
+            "name": "Zapatos Guanajuato",
+            "description": "Catalogo,Fabricantes,Zapatos,Mayoristas,Calzado,Negocio,Leon,Guanajuato",
+            "image": "	https://zapatosguanajuato.com/public/images/img_index.jpg",
+            "logo": "",
+            "parentOrganization": {
+            "@type": "OnlineBusiness",
+            "name": "Zapatos Guanajuato",
+            "url": "https://zapatosguanajuato.com"
+            },
+            "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "Mexico",
+            "addressLocality": "Guanajuato"
+            },
+            "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingCount": 20,
+            "ratingValue": 4.7
+            },
+            "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "userInteractionCount": 75,
+            "interactionType": "https://schema.org/TradeAction"
+            },
+            "foundingDate": "2019-10-24"
+        }
+        </script>
+    {{-- end schema --}}
+
+    {{-- mailchimp --}}
+        <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}
+        (document,"script","https://chimpstatic.com/mcjs-connected/js/users/948eabd2b6e2e810127ea36f7/1e99737d0b995b846ad75f09d.js");</script>
+    {{-- end-mailchimp --}}
+
+</head>
+
+    <x-layout pageTitle="Management" pageDescription="ModelSubcategory">
+
+        @section('main-content')
+
+            <div class="admin-hero">
+                <h1>Modelo Subcategoria</h1>
             </div>
 
-            <div class="mb-2">
-                <label for="modelcatId" class="form-label">Category</label>
-                <select name="modelcatId" id="modelcatId" class="form-control dropdown w-25">
-                    <option value="">--Please choose an option--</option>
-                    @foreach ($modelcategories as $modelcategory)
+            <div class="admin-container-control">
 
-                        <option value="{{$modelcategory->modelcatId}}">{{$modelcategory->modelcatName}}</option>
+                <form action="{{route('ModelSubcategory.store')}}" method="post">
+                    @csrf
+                    @method('POST')
 
-                    @endforeach
-                </select>
+                    <div class="mb-2">
+                        <label for="submodelcatId" class="form-label">ID</label>
+                        <input type="number" name="submodelcatId" id="submodelcatId" class="form-control" disabled>
+                    </div>
+
+                    <div class="mb-2">
+                        <label for="modelcatId" class="form-label">Category</label>
+                        <select name="modelcatId" id="modelcatId" class="form-control dropdown">
+                            <option value="">--Please choose an option--</option>
+                            @foreach ($modelcategories as $modelcategory)
+
+                                <option value="{{$modelcategory->modelcatId}}">{{$modelcategory->modelcatName}}</option>
+
+                            @endforeach
+                        </select>
+                    </div>
+
+                    <div class="mb-2">
+                        <label for="submodelcatName" class="form-label">Name</label>
+                        <input type="text" name="modelsubcatName" id="modelsubcatName" class="form-control">
+
+                        {{-- Error --}}
+                        @error('submodelcatName')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
+                    </div>
+
+                    <div class="admin-control-buttons">
+                        <input type="submit" value="Save" class="btn btn-sm btn-primary mx-2">
+                        <a href="/ModelSubcategory" class="btn btn-sm btn-danger">Cancel</a>
+                    </div>
+                </form>
+
             </div>
+        @endsection
 
-            <div class="mb-2">
-                <label for="submodelcatName" class="form-label">Name</label>
-                <input type="text" name="modelsubcatName" id="modelsubcatName" class="form-control w-25">
-
-                {{-- Error --}}
-                @error('submodelcatName')
-                    <div class="alert alert-danger">{{ $message }}</div>
-                @enderror
-            </div>
-
-            <div class="d-flex justify-content-end w-25 ">
-                <input type="submit" value="Save" class="btn btn-sm btn-primary mx-2">
-                <a href="/ModelSubcategory" class="btn btn-sm btn-danger">Cancel</a>
-            </div>
-        </form>
-
-    </div>
-    @endsection
-
-</x-layout>
+    </x-layout>
+</html>

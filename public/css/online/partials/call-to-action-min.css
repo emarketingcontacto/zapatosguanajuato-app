@@ -1,0 +1,1 @@
+.calltoaction-container{display:flex;justify-content:center;align-items:center;width:100vw;height:auto}.calltoaction-container a{background-color:var(--stg-ternarystrong);padding:15px 10px;border-radius:5px;color:var(--font-light);text-decoration:none}.calltoaction-container a:hover{background-color:var(--bg-btn-provider)}.calltoaction-container svg{width:1.5rem;height:1.5rem}

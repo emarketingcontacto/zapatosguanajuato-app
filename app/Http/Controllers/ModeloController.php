@@ -28,6 +28,7 @@ class ModeloController extends Controller
             'model.*',
             'material.materialName',
             'biz.bizName',
+            'biz.bizSlug',
             'seasson.seassonName',
             'modelsubcategory.modelsubcatName',
             'modelcategory.modelcatName'
@@ -89,9 +90,17 @@ class ModeloController extends Controller
         $material = DB::table('material')->where('materialId', '=', $modelo->materialId)->first();
         $seasson = DB::table('seasson')->where('seassonId', '=', $modelo->seassonId)->first();
         $biz = DB::table('biz')->where('bizId', '=', $modelo->bizId)->first();
-        $modelcategory = DB::table('modelcategory')->where('modelcatId', '=', $modelo->modelcatId)->first();
 
-       return view('Modelo.show', ['modelo'=>$modelo, 'material'=>$material, 'seasson'=>$seasson, 'biz'=>$biz, 'modelcategory'=>$modelcategory]);
+        $bizcategory =DB::table('bizcategories')->where('bizcatId','=', $biz->bizcatId)->first();
+
+        $modelcategory = DB::table('modelcategory')->where('modelcatId', '=', $modelo->modelcatId)->first();
+        $modelsubcategory = DB::table('modelsubcategory')->where('modelsubcatId', '=', $modelo->modelsubcatId)->first();
+        // $genero ="damas";
+        // $tipo="formal";
+
+    //    return view('Modelo.show', ['modelo'=>$modelo, 'material'=>$material, 'seasson'=>$seasson, 'biz'=>$biz, 'modelcategory'=>$modelcategory, 'bizcategory'=>$bizcategory, 'genero'=>$genero, 'tipo'=>$tipo]);
+       return view('Modelo.show', ['modelo'=>$modelo, 'material'=>$material, 'seasson'=>$seasson, 'biz'=>$biz, 'modelcategory'=>$modelcategory, 'bizcategory'=>$bizcategory, 'modelsubcategory'=>$modelsubcategory]);
+
     }
 
     /**
@@ -117,23 +126,28 @@ class ModeloController extends Controller
      */
     public function update(Request $request, Modelo $modelo)
     {
-        $validData=$request->validate(
+        //dd($modelo);
+        //dd($request);
+        $validData= $request->validate(
             [
                 'modelName'=>'required',
                 'modelImage'=>'nullable',
                 'modelPrice'=>'required|decimal:2',
-                'seassonId'=> 'required',
-                'bizId'=> 'required',
+                'seassonId'=>'required',
+                'bizId'=>'required',
                 'materialId'=>'required',
-                'modelsubcatId' => 'required',
-                'modelcatId'=>'required'
+                'modelsubcatId'=>'required',
+                'modelcatId'=>'required',
             ]);
+
         if($request->hasFile('modelImage')){
             Storage::disk('public')->delete('/public/storage/modelos', $modelo->modelImage);
             $validData['modelImage']= $request->file('modelImage')->store('modelos', 'public');
         }
+
         $modelo->update($validData);
-        return redirect('Modelo')->with('success', 'Modelo Updated Succesfully');
+
+        return redirect(route('Modelo.index'))->with('success', 'Modelo Updated Succesfully');
     }
 
     /**

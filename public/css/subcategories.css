@@ -1,0 +1,136 @@
+/* media */
+@media (max-width: 900px) {
+    .subcategories-menu{
+        width: 100vw !important;
+    }
+    .subcat-hero {
+        flex-direction: column !important;
+    }
+}
+/* end media */
+
+
+/* subcategories page */
+
+.subcat-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    background-color: var(--bg-noir);
+    padding: 5vh 5vw;
+    }
+
+    .subcat-hero-image{
+        flex-basis: 10vw;
+        flex-grow: 1;
+    }
+    .subcat-hero-header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 2;
+    }
+
+    .subcat-hero img{
+        height: 20vh;
+    }
+
+    .subcat-hero-header h1{
+        flex-grow: 20;
+        font-size: 4rem;
+        color:var(--font-light);
+        font-family: var(--headers);
+        text-align: center;
+    }
+
+    .subcategories-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2vw;
+        margin: 2vh 2vw;
+        padding: 2vh 2vw;
+    }
+
+    .subcategories-intro-container{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+        padding: 1vh 0;
+    }
+
+  .subcategories-intro{
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    align-items: center;
+    justify-content: center;
+  }
+
+.subcategories-intro h2{
+    font-family: var(--headers);
+    text-align: center;
+    color:var(--secondary);
+    font-weight: 600;
+    padding: 2vw 0;
+}
+
+.subcategories-intro p{
+    font-size: 1.3rem;
+    text-align:justify ;
+}
+
+.subcategories-submenu-container{
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background);
+}
+
+.btn-subcategorie-show{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-subcategorie-show a{
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: var(--stg-ternary);
+    color: var(--font-light);
+    border-radius: 10px;
+    padding: .5rem 2rem;
+    margin: 1vh 0;
+}
+
+.btn-subcategorie-show a:hover{
+    color: var(--bg-noir);
+}
+
+.subcat-price{
+    color: var(--secondary) !important;
+    font-family: var(--transactionals);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.subcat-bizcatName{
+    background-color: var(--secondary) !important;
+    color: var(--font-strong) !important;
+    font-size: 1rem;
+}
+
+/* texto seo */
+.seo-text-container{
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+}

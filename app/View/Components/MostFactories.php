@@ -30,7 +30,7 @@ class MostFactories extends Component
         ->select(
             'biz.*',
             'bizcategories.bizcatName')
-        ->limit(2)
+        ->limit(10)
         ->where('bizcategories.bizcatName', '=', $bizType)->get();
 
         return view('components.most-factories', ['mostFactories'=>$mostFactories]);

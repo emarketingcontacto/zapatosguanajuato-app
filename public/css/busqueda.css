@@ -1,0 +1,65 @@
+.busqueda-hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-noir);
+    width: 100vw;
+}
+
+.busqueda-hero H1{
+    text-align: center;
+    color:var(--font-light);
+    padding: 15vh;
+    font-size: 4rem;
+    font-family: var(--headers);
+}
+
+
+.busquedas-container{
+    display: flex;
+    height: auto;
+    width: 100vw;
+    gap: 1vw;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: start;
+    padding-bottom: 5vh;
+    margin: 7vh 0;
+}
+.busqueda-container-control{
+    display: flex;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+    padding: 1vh 0;
+}
+.busqueda-container-control a{
+    background-color: var(--stg-ternarystrong);
+    color: var(--font-light);
+    padding: 1vh;
+    border-radius: 10px;
+
+}
+.busqueda-container-control a:hover{
+    color: var(--font-violet);
+    background-color: var(--stg-ternary);
+}
+
+.busqueda-provider-name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+    padding: 5px 0;
+}
+
+.busqueda-provider-name svg{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.busqueda-provider-name p{
+    margin: 0;
+    padding: 0;
+}

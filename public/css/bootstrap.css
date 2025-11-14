@@ -5,6 +5,21 @@
   content: "";
 }
 
+.alert{
+    position: relative;
+    padding: 2px;
+}
+
+.alert-danger{
+    color:var(--bs-red);
+    background-color:#f8d7da;
+}
+
+.alert-success{
+    color:var(--bs-success);
+    background-color: var(---bs-green);
+}
+
 .link-primary {
   color: #0d6efd;
 }

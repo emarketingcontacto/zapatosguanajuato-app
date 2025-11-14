@@ -35,19 +35,13 @@ use App\Http\Controllers\ThankYouProspectsController;
 | Web Routes
 |--------------------------------------------------------------------------
 |
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
+| Here is where you can register web Routes for your application. These
+| Routes are loaded by the RouteServiceProvider and all of them will
 | be assigned to the "web" middleware group. Make something great!
 |
 */
 //Home
 Route::get('/', function () { return view('welcome');})->name('welcome');
-//AboutUs
-Route::get('/Acerca-de-nosotros', function (){ return view('About-us'); })->name('acerca_de_nosotros');
-//PrivacyPolicy
-Route::get('/Politica-de-privacidad', function (){ return view('Privacy-policy'); })->name('politica_privacidad');
-//Como funciona
-// Route::get('/Como_funciona', function (){ return view('Como_funciona'); })->name('como_funciona');
 
 /* BizCategories */
 Route::get('/BizCategory', [BizCategoryController::class,'index'])->name('BizCategory.index');
@@ -140,9 +134,6 @@ Route::get('/Biz', [BizController::class,'index'])->name('Biz.index');
 Route::get('/Biz/create', [BizController::class,'create'])->name('Biz.create');
 //Store
 Route::post('/Biz', [BizController::class,'store'])->name('Biz.store');
-//Show
-// Route::get('/Biz/{biz}/show', [BizController::class,'show'])->middleware('auth')->name('Biz.show');
-Route::get('/Biz/{biz}', [BizController::class,'show'])->name('Biz.show');
 //Edit
 Route::get('/Biz/{biz}/edit', [BizController::class,'edit'])->name('Biz.edit');
 //update
@@ -168,39 +159,54 @@ Route::delete('/Premium/{premium}/destroy', [PremiumController::class,'destroy']
 
 
 /*Factories */
-//route::get('/Fabricantes', Factories::class)->middleware('auth')->name('Factories');
-route::get('/Fabricantes-calzado-guanajuato', Factories::class)->name('Fabricantes');
+// Route::get('/Fabricantes', Factories::class)->middleware('auth')->name('Factories');
+//Ruta Base
+Route::get('/fabricantes-calzado-guanajuato', Factories::class)->name('Fabricantes.index');
+//Ruta para el perfil
+Route::get('/fabricantes-calzado-guanajuato/{biz}', [Factories::class,'showFabricante'])->name('Fabricantes.showFabricante');
+//Ruta para el Genero
+Route::get('/fabricantes-calzado-guanajuato/genero/{genero}', [Factories::class,'showGenero'])->name('Fabricantes.showGenero');
+//Ruta para el Tipo
+Route::get('/fabricantes-calzado-guanajuato/genero/{genero}/tipo/{tipo}', [Factories::class,'showTipo'])->name('Fabricantes.showTipo');
+
 /*Wholesalers */
-//route::get('/Mayoristas', Wholesalers::class)->middleware('auth')->name('Wholesalers');
-route::get('/Mayoristas-calzado-guanajuato', Wholesalers::class)->name('Wholesalers');
+//Route::get('/Mayoristas', Wholesalers::class)->middleware('auth')->name('Wholesalers');
+//Ruta Base
+Route::get('/mayoristas-calzado-guanajuato', Wholesalers::class)->name('Wholesalers.index');
+//Ruta para el perfil
+Route::get('/mayoristas-calzado-guanajuato/{biz}', [Wholesalers::class,'showWholesaler'])->name('Wholesalers.showWholesaler');
+//Ruta para el Genero
+Route::get('/mayoristas-calzado-guanajuato/genero/{genero}', [Wholesalers::class,'showGenero'])->name('Wholesalers.showGenero');
+//Ruta para el Tipo
+Route::get('/mayoristas-calzado-guanajuato/genero/{genero}/tipo/{tipo}', [Wholesalers::class,'showTipo'])->name('Wholesalers.showTipo');
+
 /*Retails */
-//route::get('/Minoristas', Retails::class)->middleware('auth')->name('Retails');
-route::get('/Minoristas-calzado-guanajuato', Retails::class)->name('Retails');
-/*Ladies*/
-route::get('/calzado_damas_guanajuato', Ladies::class)->name('Damas');
-/* Men */
-route::get('/calzado_hombres_guanajuato', Men::class)->name('Hombres');
-/* Kids */
-route::get('/calzado_ninos_guanajuato', Kids::class)->name('Ninos');
-/* Girls */
-route::get('/calzado_ninas_guanajuato', Girls::class)->name('Ninas');
+//Route::get('/Minoristas', Retails::class)->middleware('auth')->name('Retails');
+//Ruta Base
+Route::get('/minoristas-calzado-guanajuato', Retails::class)->name('Retails.index');
+//Ruta para el perfil
+Route::get('/minoristas-calzado-guanajuato/{biz}', [Retails::class,'showRetailer'])->name('Retails.showRetailer');
+//Ruta para el Genero
+Route::get('/minoristas-calzado-guanajuato/genero/{genero}', [Retails::class,'showGenero'])->name('Retails.showGenero');
+//Ruta par Tipo
+Route::get('/minoristas-calzado-guanajuato/genero/{genero}/tipo/{tipo}', [Retails::class,'showTipo'])->name('Retails.showTipo');
+
 /*Busqueda */
-route::get('Busqueda', Busqueda::class)->name('Busqueda');
+Route::get('Busqueda', Busqueda::class)->name('Busqueda');
+//AboutUs
+Route::get('/acerca-de-nosotros', function (){ return view('About-us'); })->name('acerca_de_nosotros');
+//PrivacyPolicy
+Route::get('/politica-de-privacidad', function (){ return view('Privacy-policy'); })->name('politica_privacidad');
 
 /*Register*/
 //Newsletter
-route::get('/Registro/Newsletter', Newsletter::class)->name('Newsletter');
+// Route::get('/registro/newsletter', Newsletter::class)->name('Newsletter');
 //Advertisers
-route::get('Anunciantes', Anunciantes::class)->name('Anunciantes');
+Route::get('/precios', Anunciantes::class)->name('precios');
 //Advertisers Thankyou
 Route::get('/gracias-anunciante', ThankyouAdvertiserContoller::class)->name('gracias-anunciante');
 //Prospects Thankyou
 Route::get('/gracias-prospecto', ThankYouProspectsController::class)->name('gracias-prospecto');
-
-
-/*Subcategories*/
-//route::get('/Subcategories', SubcategoriesController::class)->middleware('auth')->name('Subcategories');
-Route::get('/Subcategorias', SubcategoriesController::class)->name('Subcategories');
 
 /*Registration */
 //Logout
@@ -211,13 +217,13 @@ Route::get('/User/login', [UserController::class,'login'])->name('User.login');
 Route::post('/User/authenticate', [UserController::class,'authenticate'])->name('User.authenticate');
 
 /**Forgot Password  */
-//password forgot
-Route::get('password-forgot', [PasswordController::class, 'password_forgot'])->name('recuperar-contrasena');
-//password request
-Route::post('password-request', [PasswordController::class, 'password_request'])->name('requerir-contraseña');
-//password reset
-Route::get('/reset-password/{token}', [PasswordController::class, 'password_reset'])->middleware('guest')->name('resetear-contraseña');
-//password update
+//1.password forgot
+Route::get('/password-forgot', [PasswordController::class, 'password_forgot'])->name('recuperar-contrasena');
+//2.password request
+Route::post('/password-request', [PasswordController::class, 'password_request'])->name('requerir-contraseña');
+//3.password reset
+Route::get('/reset-password/{token}', [PasswordController::class, 'password_reset'])->middleware('guest')->name('password.reset');//No cambiar
+//4.password update
 Route::post('password-upate', [PasswordController::class, 'password_update'])->middleware('guest')->name('password-update');
 
 
@@ -225,7 +231,7 @@ Route::post('password-upate', [PasswordController::class, 'password_update'])->m
 //index
 Route::get('/User', [UserController::class,'index'])->name('User.index');
 // Create
-Route::get('/User/create', [UserController::class,'create'])->name('User.create');
+Route::get('/usuario/crear', [UserController::class,'create'])->name('User.create');
 //Store
 Route::post('/User', [UserController::class,'store'])->name('User.store');
 //Edit
@@ -253,22 +259,22 @@ Route::delete('/Modelo/{modelo}/destroy', [ModeloController::class,'destroy'])->
 
 /* Prospectos */
 //index
-Route::get('/Prospectos', [ProspectosController::class,'index'])->name('Prospectos.index');
+Route::get('/prospectos', [ProspectosController::class,'index'])->name('Prospectos.index');
 // Create
-Route::get('/Prospectos/create', [ProspectosController::class,'create'])->name('Prospectos.create');
+Route::get('/prospectos/create', [ProspectosController::class,'create'])->name('Prospectos.create');
 //Store
-Route::post('/Prospectos', [ProspectosController::class,'store'])->name('Prospectos.store');
+Route::post('/prospectos', [ProspectosController::class,'store'])->name('Prospectos.store');
 // Show
-Route::get('/Prospectos/{prospecto}/show', [ProspectosController::class,'show'])->name('Prospectos.show');
+Route::get('/prospectos/{prospecto}/show', [ProspectosController::class,'show'])->name('Prospectos.show');
 //Edit
-Route::get('/Prospectos/{prospecto}/edit', [ProspectosController::class,'edit'])->name('Prospectos.edit');
+Route::get('/prospectos/{prospecto}/edit', [ProspectosController::class,'edit'])->name('Prospectos.edit');
 //update
-Route::put('/Prospectos/{prospecto}/update', [ProspectosController::class,'update'])->name('Prospectos.update');
+Route::put('/prospectos/{prospecto}/update', [ProspectosController::class,'update'])->name('Prospectos.update');
 //Delete
-Route::delete('/Prospectos/{prospecto}/destroy', [ProspectosController::class,'destroy'])->name('Prospectos.destroy');
+Route::delete('/prospectos/{prospecto}/destroy', [ProspectosController::class,'destroy'])->name('Prospectos.destroy');
 
 /**Contact */
-Route::get('Contacto', [ContactoController::class, 'show'])->name('Contacto');
+Route::get('contacto', [ContactoController::class, 'show'])->name('contacto');
 //Send Mail
 Route::post('Mensaje', [ContactoController::class, 'envio'])->name('Mensaje');
 

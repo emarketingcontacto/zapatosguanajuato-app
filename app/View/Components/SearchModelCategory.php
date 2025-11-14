@@ -12,7 +12,7 @@ class SearchModelCategory extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct(public string $bizcategory)
+    public function __construct(public string $bizcategory, public string $genero )
     {
         //
     }

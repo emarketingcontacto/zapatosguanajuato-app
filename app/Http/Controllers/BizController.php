@@ -96,8 +96,6 @@ class BizController extends Controller
         $bizcat = Bizcategory::where('bizcatId', $biz->bizcatId)->first();
         $saletype = SaleType::where('saletypeId', $biz->saletypeId)->first();
 
-
-
         $modelcategories = DB::table('modelcategory')
         ->join('modelcategory_biz', 'modelcategory.modelcatId', '=', 'modelcategory_biz.modelcatId' )
         ->select('modelcategory_biz.*', 'modelcategory.modelcatName')

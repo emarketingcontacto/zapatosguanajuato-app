@@ -34,7 +34,7 @@ class PasswordController extends Controller
 
     //Password - reset
     public function password_reset(string $token){
-        return view('Password.passwordreset', ['token'=>$token]);
+        return view('Password.reset-password', ['token'=>$token]);
     }
 
     //Password - update
@@ -47,7 +47,8 @@ class PasswordController extends Controller
                 'password'=> 'required|min:6|confirmed'
             ]);
         //Reset Password
-        $status = Password::reset($request->only('email', 'password', 'password_confirmation', 'token'), function(User $user, string $password){
+        $status = Password::reset(
+            $request->only('email', 'password', 'password_confirmation', 'token'), function(User $user, string $password){
             $user->forceFill(
                 [
                     'password'=>Hash::make($password)
@@ -56,9 +57,8 @@ class PasswordController extends Controller
                 $user->save();
                 event(new PasswordReset($user));
         });
-
-        //Return
-        return $status === Password::PASSWORD_RESET ? redirect()->route('login')->with('status', __($status)) :
+        // Return
+        return $status === Password::PASSWORD_RESET ? redirect()->route('User.login')->with('status', __($status)) :
         back()->withErrors(['email'=>[__($status)]]);
     }
 }

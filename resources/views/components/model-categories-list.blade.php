@@ -1,3 +1,10 @@
+{{-- css --}}
+    {{-- local --}}
+    {{-- <link rel="stylesheet" href="{{URL::asset('css/components/model-categories-list.css') }}" /> --}}
+    {{-- online --}}
+    <link rel="stylesheet" href="{{URL::asset('css/online/components/model-categories-list-min.css') }}" />
+{{-- end css --}}
+
 {{--select model categories --}}
 @php
     $modelcategoriesbiz = DB::table('modelcategory')

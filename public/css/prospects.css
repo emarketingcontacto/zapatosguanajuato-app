@@ -1,23 +1,18 @@
-.header-crud{
+.prospectos-hero{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100vw;
+    background-color: var(--bg-noir);
 }
 
-.header-crud h1{
-    display: flex;
-    width: 100%;
-    height: auto;
-    background-color: var(--bg-noir);
-    padding: 5vh;
+.prospectos-hero h1{
+    padding: 15vh;
     text-align: center;
-    color: var(--primary);
-    font-size: 5vw;
-    letter-spacing: 2.2vh;
-    font-family: 'Poiret One' ;
-    justify-content: center;
+    color: var(--font-light);
+    font-size: 4rem;
+    font-family:var(--headers);
 }
 
 .header-message-container{
@@ -26,15 +21,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: var( --ternary);
-    padding: 3vh 0;
+    padding: 3vh 3vw;
+    font-family: var(--transactionals);
+    text-align: center;
 }
 
-.header-message{
-    display: flex;
-    flex-direction: column;
-    width: 75vw;
-    align-items:start;
+.header-message-container p{
+    font-size: 1.3rem;
 }
 
 .header-message-thankyou{
@@ -50,7 +43,23 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100vw;
+    background-color: var(--background);
+    padding: 2vh 0;
+}
+
+.list-items ul{
     width: 30vw;
+    text-align:justify;
+}
+
+.prospectos-after-acreditation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    padding: 2vh 10vw;
 }
 
 .table-container{
@@ -82,16 +91,17 @@
     text-decoration: none;
 }
 
-.form-container{
+.prospectos-form-container{
     display: flex;
     flex-wrap: wrap;
     width: 100vw;
     justify-content: center;
     align-items: center;
     background-color: var(--font-silent);
+    padding: 5vh 0;
 }
 
-.form-container form{
+.prospectos-form-container form{
     width: 50vw;
     background-color:#fff;
     padding: 0 3vw;
@@ -106,7 +116,7 @@
     background-color: var(--font-silent);
 }
 
-.form-container input{
+.prospectos-form-container input{
     width: 20vw;
     margin-bottom: 2vh;
 }
@@ -116,15 +126,42 @@
     border-bottom: 1px solid var(--font-silent);
 }
 
-.form-container select{
+.prospectos-form-container select{
     width: 20vw;
     margin-bottom: 2vh;
 }
 
-.btn-danger{
-    width: 20vw !important;
+.prospectos-btn{
+    width: 20vw;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    display: block;
+}
+
+.prospectos-btn-guardar{
+    background-color: var(--stg-ternarystrong);
+    color:var(--font-light);
+}
+
+.prospectos-btn-guardar:hover{
+    background-color: var(--stg-ternary);
+    color: var(--font-violet);
+}
+
+.prospectos-btn-cancelar{
+    background-color: var(--secondary);
+    color:var(--bg-noir);
 }
 
 .controls{
     text-align: center;
+}
+
+.prospectos-controls a{
+    text-decoration: none;
+}
+
+.prospectos-controls a:hover{
+    color: var(--font-light);
 }

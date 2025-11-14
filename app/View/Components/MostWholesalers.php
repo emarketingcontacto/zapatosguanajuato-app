@@ -30,7 +30,7 @@ class MostWholesalers extends Component
          ->select(
              'biz.*',
              'bizcategories.bizcatName')
-         ->limit(2)
+         ->limit(10)
          ->where('bizcategories.bizcatName', '=', $bizType)->get();
 
         return view('components.most-wholesalers', ['mostWholesalers'=>$mostWholesalers]);

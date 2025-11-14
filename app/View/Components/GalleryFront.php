@@ -23,13 +23,19 @@ class GalleryFront extends Component
      */
     public function render(): View|Closure|string
     {
-        $galleries= DB::table('model')
+         $galleries= DB::table('model')
         ->join('biz', 'model.bizId', '=', 'biz.bizId')
-        ->select('model.modelId', 'model.modelImage','model.modelName','biz.bizId', 'biz.bizName', 'biz.bizSlug')
+        ->join('bizcategories', 'biz.bizcatId', '=', 'bizcategories.bizcatId')
+        ->select('model.modelId', 'model.modelImage','model.modelName','biz.bizId', 'biz.bizName', 'biz.bizSlug', 'bizcategories.bizcatName')
         ->orderBy('model.modelId', 'desc')
         ->limit(20)
         ->distinct()
         ->get();
+
+        // $galleries = DB::table('model')
+        // ->select('model.*')
+        // ->orderBy('modelId', 'desc')
+        // ->get();
 
         return view('components.gallery-front',['galleries'=>$galleries]);
     }

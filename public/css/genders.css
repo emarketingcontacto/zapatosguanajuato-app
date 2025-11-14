@@ -1,0 +1,118 @@
+@media (max-width: 900px) {
+    .genders-hero{
+        height: auto !important;
+    }
+}
+
+.genders-hero{
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5vh;
+}
+.genders-hero h1{
+    display: flex;
+    width: 100vw;
+    height: auto;
+    background-color: var(--bg-noir);
+    padding: 5vh;
+    text-align: center;
+    color: var(--font-light);
+    font-size: 4rem;
+    font-family: 'Poiret One' ;
+    justify-content: center;
+}
+
+.genders-intro-container{
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.genders-intro{
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 3vh 2vw;
+}
+
+.genders-intro h2{
+    font-size: 2.5rem;
+    margin: 1vh 1vw;
+    color: var(--secondary);
+}
+
+.genders-intro p{
+    font-size: 1.3rem;
+    margin: 1vh 1vw;
+    text-align: justify;
+}
+
+.genders-submenu-container{
+    display:flex;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--stg-ternarystrong);
+    padding: .5vh;
+}
+
+.genders-category-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:2vw;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+}
+
+.gender-row-catname{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+    font-size: .95rem;
+    padding: 1vh 1vw;
+    background-color: var(--ternary);
+    color:var(--font-violet);
+}
+
+.gender-row-catname svg{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.genders-btn-show a{
+    padding-top: 15px;
+    background-color: var(--stg-ternarystrong);
+    color: var(--font-light);
+    border-radius: 2rem;
+}
+
+.genders-btn-show a:hover{
+    color: var(--font-violet);
+    background-color: var(--ternary);
+}
+
+.gender-row-catname p{
+    margin: 0;
+    padding: 0;
+}
+
+.genders-card-title{
+    text-align: center;
+    padding: 9px;
+    font-size: 1.25rem;
+    margin: 0;
+}

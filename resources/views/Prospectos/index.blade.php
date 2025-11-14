@@ -1,58 +1,176 @@
-<link rel="stylesheet" href="{{URL::asset('css/prospects.css')}}"/>
-<x-layout pageTitle="Prospectos" pageDescription="Prospectos" keywords="Prospectos-index">
-    @section('main-content')
-    <div class="main-container">
-        <div class="header-crud">
-           <h1>Prospectos</h1>
-        </div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    {{-- seo --}}
+        <title>Prospectos Index | ZapatosGuanajuato.com</title>
+        <meta name="description" content="Prospectos Index"/>
+        <meta name="keywords" content="Prospectos Index"/>
+    {{-- end seo --}}
 
-        <div class="prospectos-crear">
-            <a href="{{route('Prospectos.create')}}" class="button">Crear</a>
-        </div>
+    {{-- canonical --}}
+        <script>
+            const canonicalUrl = window.location.href;
+            const link = document.createElement('link');
+            link.rel = 'canonical';
+            link.href = canonicalUrl;
+            document.head.appendChild(link);
+        </script>
+    {{-- end canonical --}}
+
+    {{-- images --}}
+        <link rel="icon" href="{{asset('/favicon.ico')}}" type="image/x-icon">
+    {{-- end images --}}
+
+    {{-- style --}}
+        {{-- local --}}
+            {{-- <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.css')}}">
+            <link rel="stylesheet" href="{{ URL::asset('css/fonts.css')}}">
+            <link rel="stylesheet" href="{{ URL::asset('css/main.css') }}" />
+            <link rel="stylesheet" href="{{ URL::asset('css/admin.css')}}">
+            <link rel="stylesheet" href="{{URL::asset('css/prospects.css')}}"/> --}}
+        {{-- end local
+        {{-- online --}}
+            <link rel="stylesheet" href="{{ URL::asset('css/online/bootstrap-min.css')}}">
+            <link rel="stylesheet" href="{{ URL::asset('css/online/fonts-min.css')}}">
+            <link rel="stylesheet" href="{{ URL::asset('css/online/main-min.css')}}">
+            <link rel="stylesheet" href="{{ URL::asset('css/online/admin-min.css')}}">
+            <link rel="stylesheet" href="{{ URL::asset('css/online/prospects-min.css')}}">
+
+        {{-- end online --}}
+    {{-- end style --}}
+
+    {{-- scripts --}}
+        {{-- sripts local --}}
+            <script src="{{URL::asset('/scripts/script.js')}}" defer></script>
+        {{-- end sripts local--}}
+        {{-- scripts online --}}
+            {{-- <script src="{{URL::asset('/scripts/script-min.js')}}"></script> --}}
+        {{-- end scripts online --}}
+    {{-- end scripts --}}
+
+    <!-- Google Analytics tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-LEV2309FWD"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-LEV2309FWD');
+        </script>
+    <!-- end Google Analytics tag (gtag.js) -->
+
+    <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-KZP9TGP6');</script>
+    <!-- End Google Tag Manager -->
+
+    {{-- Pinterest Tag --}}
+        <meta name="p:domain_verify" content="59864595446c9bd25ed7b86d881293d4"/>
+    {{-- End Pinterest Tag --}}
+
+    {{-- schema --}}
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "OnlineStore",
+            "name": "Zapatos Guanajuato",
+            "description": "Catalogo,Fabricantes,Zapatos,Mayoristas,Calzado,Negocio,Leon,Guanajuato",
+            "image": "	https://zapatosguanajuato.com/public/images/img_index.jpg",
+            "logo": "",
+            "parentOrganization": {
+            "@type": "OnlineBusiness",
+            "name": "Zapatos Guanajuato",
+            "url": "https://zapatosguanajuato.com"
+            },
+            "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "Mexico",
+            "addressLocality": "Guanajuato"
+            },
+            "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingCount": 20,
+            "ratingValue": 4.7
+            },
+            "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "userInteractionCount": 75,
+            "interactionType": "https://schema.org/TradeAction"
+            },
+            "foundingDate": "2019-10-24"
+        }
+        </script>
+    {{-- end schema --}}
+
+    {{-- mailchimp --}}
+        <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}
+        (document,"script","https://chimpstatic.com/mcjs-connected/js/users/948eabd2b6e2e810127ea36f7/1e99737d0b995b846ad75f09d.js");</script>
+    {{-- end-mailchimp --}}
+
+</head>
+
+    <x-layout>
+        @section('main-content')
+
+            <div class="admin-hero">
+            <h1>Prospectos</h1>
+            </div>
 
 
-        <div class="table-container">
-            @if (session()->has('success'))
-                <div id="success" class="alert alert-success">
-                    {{session('success')}}
-                </div>
-            @endif
+            <div class="admin-control-create">
+                <a href="{{route('Prospectos.create')}}" class="btn btn-primary">Crear</a>
+            </div>
 
-            <table class="table-striped">
-                <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>Contacto</th>
-                        <th>Email</th>
-                        <th>Negocio</th>
-                        <th>Direccion</th>
-                        <th>Telefono</th>
-                        <th>Tipo</th>
-                        <th>Tipo Calzado</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        @foreach ($prospects as $prospect)
-                            <td>{{$prospect->prospectoId}}</td>
-                            <td>{{$prospect->prospectoContacto}}</td>
-                            <td>{{$prospect->prospectoEmail}}</td>
-                            <td>{{$prospect->prospectoNegocio}}</td>
-                            <td>{{$prospect->prospectoDireccion}}</td>
-                            <td>{{$prospect->prospectoTelefono}}</td>
-                            <td>{{$prospect->prospectoTipoNegocio}}</td>
-                            <td>{{$prospect->prospectoTipoCalzado}}</td>
-                            <td>
-                                <a href="{{route('Prospectos.show', ['prospecto'=>$prospect->prospectoId])}}" class="btn btn-sm btn-primary">Ver</a>
-                            </td>
-                    </tr>
-                    @endforeach
-                </tbody>
-            </table>
-        </div>
-        <div class="links">
-            {{$prospects->links()}}
-        </div>
-    </div>
-    @endsection
-</x-layout>
+            <div class="admin-success">
+                @if (session()->has('success'))
+                    <div id="success" class="alert alert-success">
+                        {{session('success')}}
+                    </div>
+                @endif
+            </div>
+
+            <div class="admin-container">
+
+                <table class="table-striped">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Contacto</th>
+                            <th>Email</th>
+                            <th>Negocio</th>
+                            <th>Direccion</th>
+                            <th>Telefono</th>
+                            <th>Tipo</th>
+                            <th>Tipo Calzado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            @foreach ($prospects as $prospect)
+                                <td>{{$prospect->prospectoId}}</td>
+                                <td>{{$prospect->prospectoContacto}}</td>
+                                <td>{{$prospect->prospectoEmail}}</td>
+                                <td>{{$prospect->prospectoNegocio}}</td>
+                                <td>{{$prospect->prospectoDireccion}}</td>
+                                <td>{{$prospect->prospectoTelefono}}</td>
+                                <td>{{$prospect->prospectoTipoNegocio}}</td>
+                                <td>{{$prospect->prospectoTipoCalzado}}</td>
+                                <td>
+                                    <a href="{{route('Prospectos.show', ['prospecto'=>$prospect->prospectoId])}}" class="btn btn-sm btn-primary">Ver</a>
+                                </td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+            <div class="links">
+                {{$prospects->links()}}
+            </div>
+
+        @endsection
+    </x-layout>
+</html>

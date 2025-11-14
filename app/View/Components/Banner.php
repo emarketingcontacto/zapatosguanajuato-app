@@ -19,6 +19,15 @@ class Banner extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.banner');
+        $banners = DB::table('premium')
+    ->join('biz','biz.bizId', '=', 'premium.bizId')
+    ->join ('bizcategories', 'bizcategories.bizcatId', '=', 'biz.bizcatId')
+    ->join('saletype', 'saletype.saletypeId', '=', 'biz.saletypeId')
+    ->select(
+        'biz.*', 'premium.*', 'bizcategories.*', 'saletype.*'
+    )
+    ->where('bizcategories.bizcatName', '=', $this->catName)
+    ->get();
+        return view('components.banner', ['banners'=>$banners]);
     }
 }

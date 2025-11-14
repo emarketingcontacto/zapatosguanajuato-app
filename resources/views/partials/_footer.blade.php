@@ -1,7 +1,24 @@
 
 <footer>
     <div class="footer-main">
-        <div class="col">
+        <div class="footer-col">
+             <div class="row footer-header">
+                <h5>SOLUCIONES</h5>
+            </div>
+            <div class="row">
+                <a href="{{route('Fabricantes.index')}}">Fabricantes</a>
+            </div>
+            <div class="row">
+                <a href="{{route('Wholesalers.index')}}">Mayoristas</a>
+            </div>
+            <div class="row">
+                <a href="{{route('Retails.index')}}">Minoristas</a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <div class="row footer-header">
+                <h5>COMPAÑIA</h5>
+            </div>
             <div class="row">
                 <a href="{{route('acerca_de_nosotros')}}">
                     Quiénes somos?
@@ -12,26 +29,32 @@
                     Política de Privacidad
                 </a>
             </div>
-
-        </div>
-        <div class="col text-center">
             <div class="row">
-                <a  href="{{route('Contacto')}}">
-                    Contacto
+                <a href="{{route('precios')}}">
+                Precios
+                </a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <div class="row footer-header">
+                <h5>CONTACTO</h5>
+            </div>
+            <div class="row">
+                <a  href="{{route('contacto')}}">
+                    Mensajes
                 </a>
             </div>
             <div class="row">
-                <a href="{{route('Newsletter')}}">
+                <a href="{{route('User.create')}}">
                     Newsletter
                 </a>
             </div>
-            <div class="row">
-                <a href="{{route('Anunciantes')}}">
-                    Anuncia tu Negocio
-                </a>
-            </div>
+
         </div>
-        <div class="col footer-socials">
+        <div class="footer-socials">
+            <div class="row footer-header footer-headers-socials">
+                REDES SOCIALES
+            </div>
             <div>
                 <a href="https://solucion-e.com.mx/" aria-label="solucion-e.com.mx">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-browser-chrome" viewBox="0 0 16 16">
@@ -63,7 +86,7 @@
             </div>
             <div>
 
-              <a href="{{route('Contacto')}}" aria-label="mail">
+              <a href="{{route('contacto')}}" aria-label="mail">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-square" viewBox="0 0 16 16">
                     <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
                     <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1v-1c0-1-1-4-6-4s-6 3-6 4v1a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"/>
@@ -72,5 +95,7 @@
             </div>
         </div>
     </div>
-        <div class="copy-right">Directorio Zapatos Guanajuato @2024</div>
+        <div class="copy-right">
+            <span>Directorio Zapatos Guanajuato @2025</span>
+        </div>
   </footer>

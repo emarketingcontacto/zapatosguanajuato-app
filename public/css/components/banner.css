@@ -1,0 +1,54 @@
+@media (max-width: 900px) {
+    .banner{
+        width: 100vw !important;
+    }
+}
+.banner-container{
+    display: flex;
+    width: 100vw;
+    height: 25vh;
+    align-items: center;
+    justify-content: center;
+    margin: 3px;
+}
+
+.banner{
+    display: none;
+    width: 50vw;
+    height: 25vh;
+    border: 1px solid var(--bg-noir);
+    margin: 2vh 2vw;
+}
+
+.banner a{
+    display: contents;
+}
+
+.banner-text{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color:var(--quarterly);
+    color: var(--font-violet);
+}
+
+.banner-text:hover{
+    background-color:var(--font-violet);
+    color: var(--stg-ternary);
+}
+
+.banner-text h3{
+    width: 100%;
+    text-align: center;
+}
+
+.banner-text-head{
+    font-size: 1.5rem;
+}
+
+.banner-text p{
+    width: 100%;
+    text-align: center;
+}

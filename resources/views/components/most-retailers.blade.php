@@ -1,15 +1,13 @@
 <div class="front-factories">
-    <div class="front-title">
-        <div class="front-title-most">
-            <h3>Minoristas Destacados</h3>
-        </div>
+    <div class="front-title-container">
+        <h3>Minoristas Destacados</h3>
     </div>
     @foreach ($mostRetailers as $mostRetailer)
 
     <div class="gallery-front-item">
         {{-- image --}}
         <div class="gallery-front-image">
-            <a href="{{route('Biz.show', ['biz'=>$mostRetailer->bizId])}}">
+            <a href="{{route('Fabricantes.showFabricante', ['biz'=>$mostRetailer->bizSlug])}}">
                 {{-- local --}}
                 {{-- <img src="{{asset('storage/'.$mostRetailer->bizImage)}}" alt="{{$mostRetailer->bizImage}}" width="255vh" height="255vh" > --}}
                 {{-- online --}}
@@ -18,8 +16,8 @@
         </div>
 
         <div class="gallery-front-biz-name">
-            <a class="gallery-front-button" href="{{route('Biz.show', ['biz'=>$mostRetailer->bizSlug])}}">
-                <h4>{{$mostRetailer->bizName}}</h4>
+            <a class="gallery-front-button" href="{{route('Retails.showRetailer', ['biz'=>$mostRetailer->bizSlug])}}">
+                {{$mostRetailer->bizName}}
             </a>
         </div>
 
