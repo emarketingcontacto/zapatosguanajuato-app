@@ -6,6 +6,14 @@
     #mc_embed_signup{
         width: 80vw !important;
     }
+
+    .newsletter-container ul{
+        width: auto !important;
+    }
+
+    .newsletter-container-control form {
+        width: 90vw !important;
+    }
 }
 
 .newsletter-hero{
