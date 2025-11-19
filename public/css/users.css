@@ -1,6 +1,9 @@
 @media (max-width: 900px) {
     .users-hero{
-        margin-top: 10vh;
+        margin-top: 10vh !important;
+    }
+    .users-form-container form{
+        width: 90vw !important;
     }
 }
 
