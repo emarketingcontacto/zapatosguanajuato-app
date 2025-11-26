@@ -20,13 +20,13 @@
                 {{-- <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.css')}}"> --}}
                 {{-- <link rel="stylesheet" href="{{ URL::asset('css/fonts.css')}}"> --}}
                 {{-- <link rel="stylesheet" href="{{ URL::asset('css/main.css') }}" /> --}}
-                <link rel="stylesheet" href="{{ URL::asset('css/subcategories.css')}}">
+                {{-- <link rel="stylesheet" href="{{ URL::asset('css/subcategories.css')}}"> --}}
             {{-- end local
             {{-- online --}}
                 <link rel="stylesheet" href="{{ URL::asset('css/online/bootstrap-min.css')}}">
                 <link rel="stylesheet" href="{{ URL::asset('css/online/fonts-min.css')}}">
                 <link rel="stylesheet" href="{{ URL::asset('css/online/main-min.css')}}">
-                {{-- <link rel="stylesheet" href="{{ URL::asset('css/online/subcategories-min.css') }}"/> --}}
+                <link rel="stylesheet" href="{{ URL::asset('css/online/subcategories-min.css') }}"/>
             {{-- end online --}}
         {{-- end style --}}
 
