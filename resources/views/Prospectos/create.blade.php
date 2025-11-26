@@ -17,10 +17,10 @@
 
     {{-- style --}}
         {{-- local --}}
-            {{-- <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.css')}}">
-            <link rel="stylesheet" href="{{ URL::asset('css/fonts.css')}}">
-            <link rel="stylesheet" href="{{ URL::asset('css/main.css') }}" />
-            <link rel="stylesheet" href="{{URL::asset('css/prospects.css')}}"/> --}}
+            {{-- <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.css')}}"> --}}
+            {{-- <link rel="stylesheet" href="{{ URL::asset('css/fonts.css')}}"> --}}
+            {{-- <link rel="stylesheet" href="{{ URL::asset('css/main.css') }}" /> --}}
+            {{-- <link rel="stylesheet" href="{{URL::asset('css/prospects.css')}}"/> --}}
         {{-- end local
         {{-- online --}}
             <link rel="stylesheet" href="{{ URL::asset('css/online/bootstrap-min.css')}}">
@@ -317,10 +317,10 @@
 
                 {{-- controls --}}
                 <div class="row row-form">
-                    <div class="col">
+                    <div class="col prospectos-controls">
                         <input type="submit" value="Guardar" class="prospectos-btn prospectos-btn-guardar">
                     </div>
-                    <div class="col text-center prospectos-controls">
+                    <div class="col prospectos-controls">
                         <a href="{{route('welcome')}}" class="prospectos-btn prospectos-btn-cancelar">Cancelar</a>
                     </div>
                 </div>

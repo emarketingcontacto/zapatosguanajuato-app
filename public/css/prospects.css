@@ -1,3 +1,27 @@
+@media (max-width: 900px) {
+    .list-items ul{
+        width: 80vw !important;
+    }
+    .prospectos-form-container form {
+        width: 90vw !important;
+    }
+    .prospectos-form-container input{
+        width: 60vw !important;
+    }
+    .prospectos-form-container select{
+        width: 60vw !important;
+    }
+    .prospectos-controls{
+        flex-direction: column !important;
+        gap: 1vw !important;
+    }
+    .prospectos-btn-cancelar {
+        width: 60vw !important;
+        text-align: center !important;
+        margin-top: 1vh !important;
+    }
+}
+
 .prospectos-hero{
     display: flex;
     flex-direction: column;
@@ -142,6 +166,7 @@
 .prospectos-btn-guardar{
     background-color: var(--stg-ternarystrong);
     color:var(--font-light);
+    margin: 0 !important;
 }
 
 .prospectos-btn-guardar:hover{
@@ -152,10 +177,17 @@
 .prospectos-btn-cancelar{
     background-color: var(--secondary);
     color:var(--bg-noir);
+    text-align: center;
 }
 
 .controls{
     text-align: center;
+}
+
+.prospectos-controls{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .prospectos-controls a{
