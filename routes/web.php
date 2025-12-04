@@ -202,11 +202,11 @@ Route::get('/politica-de-privacidad', function (){ return view('Privacy-policy')
 //Newsletter
 // Route::get('/registro/newsletter', Newsletter::class)->name('Newsletter');
 //Advertisers
-Route::get('/precios', Anunciantes::class)->name('precios');
+Route::get('/anunciantes', Anunciantes::class)->name('precios');
 //Advertisers Thankyou
 Route::get('/gracias-anunciante', ThankyouAdvertiserContoller::class)->name('gracias-anunciante');
 //Prospects Thankyou
-Route::get('/gracias-prospecto', ThankYouProspectsController::class)->name('gracias-prospecto');
+Route::get('/gracias-usuario', ThankYouProspectsController::class)->name('gracias-prospecto');
 
 /*Registration */
 //Logout
@@ -261,7 +261,7 @@ Route::delete('/Modelo/{modelo}/destroy', [ModeloController::class,'destroy'])->
 //index
 Route::get('/prospectos', [ProspectosController::class,'index'])->name('Prospectos.index');
 // Create
-Route::get('/prospectos/create', [ProspectosController::class,'create'])->name('Prospectos.create');
+Route::get('/proveedor/registro', [ProspectosController::class,'create'])->name('Prospectos.create');
 //Store
 Route::post('/prospectos', [ProspectosController::class,'store'])->name('Prospectos.store');
 // Show

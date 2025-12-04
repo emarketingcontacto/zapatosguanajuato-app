@@ -15,14 +15,9 @@
     }
 
     .ad-head-features h3, .head-basic-name h3{
-    font-size: 2rem !important;
+    font-size: 1rem !important;
     margin: 0 5px !important;
     }
-
-    /* .head-basic-name h3{
-        font-size: 2rem !important;
-        margin: 0 5px !important;
-    } */
 
     .head-basic-price span{
         font-size: 2rem !important;
@@ -34,6 +29,12 @@
     }
 }
 
+.italic{
+    font-style: italic;
+    background-color: var(--ternary);
+    padding: 1vw 1vh;
+    text-align: center;
+}
 .anunciantes-hero{
     display: flex;
     flex-direction: column;
@@ -72,7 +73,7 @@
     font-family: var(--transactionals);
 }
 
-.anunciantes-title p{
+.anunciantes-title{
     font-size: 2rem;
     font-family: var(--paragraphs);
 }
@@ -85,6 +86,38 @@
     color: var(--secondary);
 }
 
+.anunciantes-why{
+    width: 100vw;
+    padding: 2vh 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.anunciantes-why h2{
+    text-align: center;
+}
+
+.anunciantes-why-container{
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+}
+
+.anunciantes-why-container h3{
+    text-align: center;
+    color: var(--secondary);
+}
+
+.anunaciantes-image-gsc{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
 
 .ad-table-container{
     display: flex;
@@ -145,6 +178,7 @@
 
 .head-basic-name{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 10vh;
