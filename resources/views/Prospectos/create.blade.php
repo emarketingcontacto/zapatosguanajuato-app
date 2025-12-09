@@ -151,6 +151,10 @@
                     </div>
                 </div> --}}
 
+                <div class="row row-form row-form-title">
+                    <h3>Registro Gratis</h3>
+                </div>
+
                 <div class="row row-form">
                     <div class="col">
                         <label for="prospectoNegocio" class="form-label">Nombre del Negocio:</label>
@@ -290,9 +294,9 @@
                         <select name="prospectoCondiciones" class="form-control">
                             <option value="">-- Seleccionar --</option>
                             <option value="Corridas Extrictas">Corridas mismo estilo y color</option>
+                             <option value="Corridas Flexibles">Corridas diferente estilo y color</option>
                             <option value="Medias Corridas Extrictas">Medias Corridas mismo estilo y color</option>
-                            <option value="Corridas Flexibles">Corridas diferente estilo y color</option>
-                            <option value="Medias Corridas Flexibles">Corridas diferente estilo y color</option>
+                            <option value="Medias Corridas Flexibles">Medias Corridas diferente estilo y color</option>
                             <option value="Menudeo">Menudeo</option>
                         </select>
                         {{-- Error --}}
@@ -304,7 +308,7 @@
 
                 <div class="row row-form">
                     <div class="col">
-                        <label for="prospectoImagen" class="form-label">Logo / Acceso / Iterna</label>
+                        <label for="prospectoImagen" class="form-label">Logo</label>
                     </div>
                     <div class="col">
                         <input type="file" name="prospectoImagen" class="form-control" value="{{old('prospectoImagen')}}">

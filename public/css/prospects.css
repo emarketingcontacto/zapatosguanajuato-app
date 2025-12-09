@@ -150,6 +150,11 @@
     border-bottom: 1px solid var(--font-silent);
 }
 
+.row-form-title{
+
+    text-align: center;
+}
+
 .prospectos-form-container select{
     width: 20vw;
     margin-bottom: 2vh;
