@@ -160,9 +160,9 @@
                             @enderror
                     </div>
                     <div class="newsletter-control-buttons">
-                        <button type="submit" class="newsletter-button-success">Save</button>
+                        <button type="submit" class="newsletter-button-success">Registrar</button>
                         {{-- <a href="/User/login" class="btn btn-sm btn-success">Login</a> --}}
-                        <a href="{{route('welcome')}}" class="newsletter-button-cancel">Cancel</a>
+                        <a href="{{route('welcome')}}" class="newsletter-button-cancel">Cancelar</a>
                     </div>
                     <br>
                     <div class="mb-3 text-center">
