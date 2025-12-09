@@ -140,7 +140,7 @@
                     </div>
                     <div class="users-buttons">
                         <button type="submit" class="users-button-success">Acceso</button>
-                        <a href="/User" class="users-button-cancel">Cancelar</a>
+                        <a href="{{asset('/')}}" class="users-button-cancel">Cancelar</a>
                     </div>
                     <div class="user-password">
                         <a href="{{route('recuperar-contrasena')}}">Recuperar Contraseña</a>

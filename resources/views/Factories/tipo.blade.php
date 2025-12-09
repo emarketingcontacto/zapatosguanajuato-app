@@ -153,9 +153,9 @@
                         @foreach ($modelsfactories as $modelfactory )
                             <div class="card" style="width: 18rem;">
                                 {{-- local --}}
-                                <img src="{{asset('storage/'.$modelfactory->modelImage)}}" class="card-img-top" height="350px" alt="{{$modelfactory->bizName}}">
+                                {{-- <img src="{{asset('storage/'.$modelfactory->modelImage)}}" class="card-img-top" height="350px" alt="{{$modelfactory->bizName}}"> --}}
                                 {{-- online --}}
-                                {{-- <img src="{{asset('/'.$modelfactory->modelImage)}}" class="card-img-top" height="350px" alt="{{$modelfactory->bizName}}"> --}}
+                                <img src="{{asset('/'.$modelfactory->modelImage)}}" class="card-img-top" height="350px" alt="{{$modelfactory->bizName}}">
                                 <div class="card-body">
                                     <h5 class="card-title">{{$modelfactory->modelName}}</h5>
                                 </div>
