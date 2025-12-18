@@ -26,7 +26,6 @@
                 <link rel="stylesheet" href="{{ URL::asset('css/online/main-min.css')}}">
                 <link rel="stylesheet" href="{{ URL::asset('css/online/fonts-min.css')}}">
                 <link rel="stylesheet" href="{{ URL::asset('css/online/thankyouads-min.css')}}">
-
             {{-- end online --}}
         {{-- end style --}}
 
@@ -78,15 +77,17 @@
                 <h1>¡Gracias!</h1>
             </div>
             <div class="thanku-container">
-                <h2>Casi listo, por favor, completa tus datos comerciales:</h2>
-                <p>Para asegurar que tu anuncio se vea lo mejor posible y llegue a la audiencia correcta, necesitamos que nos proporciones algunos datos de tu negocio.</p>
-                <div class="thanku-control">
-                    {{-- <a href="{{route('Anunciantes')}}" class="thanku-button" id="comercial-data"> --}}
-                    <a href="{{route('Prospectos.create')}}" class="thanku-button" id="comercial-data">
-                        Ingresar
-                    </a>
-                </div>
+                <h2>Ya registramos tus datos comerciales!</h2>
+                <p>En un lapso no mayor de 24 horas un representante de nuestro sitio se comunicará contigo para verificar los datos proporcionados. </p>
+                <p>Nuestro representante te solicitará:</p>
+                    <ul class="thanku-ul">
+                        <li>Número de <strong>WhatsApp</strong> del Negocio</li>
+                        <li><strong>Imagenes</strong> de 5 a 10 modelos de tus productos como ejemplo en el sitio para que los solicitantes tengan un muestreo representativo de los productos que manejas.</li>
+                        <li><strong>Nombre o clave del producto</strong>  y <strong>precio</strong> aproximado.</li>
+                        <li><strong>Redes Sociales</strong> de tu Negocio</li>
+                    </ul>
             </div>
+
         @endsection
     </x-layout>
 </html>

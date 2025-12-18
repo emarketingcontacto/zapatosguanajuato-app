@@ -22,7 +22,13 @@ class Prospectos extends Model
         'prospectoTelefono',
         'prospectoTipoNegocio',
         'prospectoTipoCalzado',
+        'prospectoTipoModelo',
         'prospectoCondiciones',
         'prospectoImagen',
+    ];
+
+    protected $casts = [
+        'prospectoTipoModelo' => 'json',
+        'prospectoTipoCalzado'=> 'json'
     ];
 }

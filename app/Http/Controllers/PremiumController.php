@@ -8,7 +8,8 @@ use App\Models\Biz;
 use App\Models\Bizcategory;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
-
+use Illuminate\Http\Client\RequestException;
+use PhpParser\Node\Stmt\TryCatch;
 
 class PremiumController extends Controller
 {
@@ -43,15 +44,36 @@ class PremiumController extends Controller
      */
     public function store(Request $request)
     {
-        //dd($request);
-        $validData = $request->validate([
-            'bizId'=>'required',
-            'premiumStart'=>'required',
-            'premiumEnd'=>'required'
-        ]);
+        dd($request);
 
-        Premium::create($validData);
-        return redirect(route('Premium.index'));
+        //variables
+        $routeRedirect = "";
+        $premiumPeriod = $request->premiumPeriod;
+
+        try {
+            $validData = $request->validate([
+                'bizId'=>'required',
+                'premiumStart'=>'required',
+                'premiumEnd'=>'required'
+            ]);
+
+            Premium::create($validData);
+
+        } catch (\Illuminate\Http\Client\RequestException $e) {
+            //throw exception;
+            $routeRedirect = route('Premium.create');
+            return redirect('Premium.create')->withErrors($e);
+        }
+
+        if($premiumPeriod == "1mes"){
+            $routeRedirect = "https://buy.stripe.com/9B65kFctjcO5aM9gW52VG03";
+        }elseif ($request->premiumPeriod == "1año") {
+            $routeRedirect = "https://buy.stripe.com/6oU4gB8d3cO5dYldJT2VG05";
+        } else {
+            $routeRedirect(route('welcome'));
+        }
+
+        return redirect($routeRedirect);
     }
 
     /**

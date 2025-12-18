@@ -140,200 +140,200 @@
                 <form action="{{route('Prospectos.store')}}" method="post" enctype="multipart/form-data">
                     @csrf
                     @method('POST')
+                    <div class="row row-form row-form-title">
+                        <h3>Registro Proveedores</h3>
+                    </div>
 
-                    {{-- Id --}}
-                {{-- <div class="row row-form">
-                    <div class="col">
-                        <label for="prospectoId" class="form-label" style="visibility: hidden">ID:</label>
+                    <div class="row row-form">
+                        <div class="col">
+                            <label for="prospectoNegocio" class="form-label">Nombre del Negocio:</label>
+                        </div>
+                        <div class="col">
+                            <input type="text" name="prospectoNegocio" class="form-control" value="{{old('prospectoNegocio')}}">
+                            {{-- Error --}}
+                            @error('prospectoNegocio')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
                     </div>
-                    <div class="col">
-                        <input type="number" name="prospectoId" class="form-control" style="visibility: hidden">
-                    </div>
-                </div> --}}
 
-                <div class="row row-form row-form-title">
-                    <h3>Registro Gratis</h3>
-                </div>
+                    <div class="row row-form">
+                        <div class="col">
+                            <label for="prospectoContacto" class="form-label">Nombre del Contacto:</label>
+                        </div>
+                        <div class="col">
+                            <input type="text" name="prospectoContacto" class="form-control" value="{{old('prospectoContacto')}}">
+                            {{-- Error --}}
+                            @error('prospectoContacto')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    </div>
 
-                <div class="row row-form">
-                    <div class="col">
-                        <label for="prospectoNegocio" class="form-label">Nombre del Negocio:</label>
+                    <div class="row row-form">
+                        <div class="col">
+                            <label for="prospectoTelefono" class="form-label">Teléfono:</label>
+                        </div>
+                        <div class="col">
+                            <input type="tel" name="prospectoTelefono" class="form-control" value="{{old('prospectoTelefono')}}">
+                            {{-- Error --}}
+                            @error('prospectoTelefono')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
                     </div>
-                    <div class="col">
-                        <input type="text" name="prospectoNegocio" class="form-control" value="{{old('prospectoNegocio')}}">
-                        {{-- Error --}}
-                        @error('prospectoNegocio')
-                            <div class="alert alert-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
-                </div>
 
-                <div class="row row-form">
-                    <div class="col">
-                        <label for="prospectoContacto" class="form-label">Nombre del Contacto:</label>
+                    <div class="row row-form">
+                        <div class="col">
+                            <label for="prospectoEmail" class="form-label">Correo:</label>
+                        </div>
+                        <div class="col">
+                            <input type="text" name="prospectoEmail" class="form-control" value="{{old('prospectoEmail')}}">
+                            {{-- Error --}}
+                            @error('prospectoEmail')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
                     </div>
-                    <div class="col">
-                        <input type="text" name="prospectoContacto" class="form-control" value="{{old('prospectoContacto')}}">
-                        {{-- Error --}}
-                        @error('prospectoContacto')
-                            <div class="alert alert-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
-                </div>
 
-                <div class="row row-form">
-                    <div class="col">
-                        <label for="prospectoTelefono" class="form-label">Teléfono:</label>
+                    <div class="row row-form">
+                        <div class="col">
+                            <label for="prospectoDireccion" class="form-label">Calle y Número:</label>
+                        </div>
+                        <div class="col">
+                            <input type="text" name="prospectoDireccion" class="form-control" value="{{old('prospectoDireccion')}}">
+                            {{-- Error --}}
+                            @error('prospectoDireccion')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
                     </div>
-                    <div class="col">
-                        <input type="tel" name="prospectoTelefono" class="form-control" value="{{old('prospectoTelefono')}}">
-                        {{-- Error --}}
-                        @error('prospectoTelefono')
-                            <div class="alert alert-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
-                </div>
 
-                <div class="row row-form">
-                    <div class="col">
-                        <label for="prospectoEmail" class="form-label">Correo:</label>
+                    <div class="row row-form">
+                        <div class="col">
+                            <label for="prospectoColonia" class="form-label">Colonia:</label>
+                        </div>
+                        <div class="col">
+                            <input type="text" name="prospectoColonia" class="form-control" value="{{old('prospectoColonia')}}">
+                            {{-- Error --}}
+                            @error('prospectoColonia')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
                     </div>
-                    <div class="col">
-                        <input type="text" name="prospectoEmail" class="form-control" value="{{old('prospectoEmail')}}">
-                        {{-- Error --}}
-                        @error('prospectoEmail')
-                            <div class="alert alert-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
-                </div>
 
-                <div class="row row-form">
-                    <div class="col">
-                        <label for="prospectoDireccion" class="form-label">Calle y Número:</label>
+                    <div class="row row-form">
+                        <div class="col">
+                            <label for="prospectoCiudad" class="form-label">Ciudad:</label>
+                        </div>
+                        <div class="col">
+                            <input type="text" name="prospectoCiudad" class="form-control" value="{{old('prospectoCiudad')}}">
+                            {{-- Error --}}
+                            @error('prospectoCiudad')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
                     </div>
-                    <div class="col">
-                        <input type="text" name="prospectoDireccion" class="form-control" value="{{old('prospectoDireccion')}}">
-                        {{-- Error --}}
-                        @error('prospectoDireccion')
-                            <div class="alert alert-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
-                </div>
 
-                <div class="row row-form">
-                    <div class="col">
-                        <label for="prospectoColonia" class="form-label">Colonia:</label>
+                    <div class="row row-form">
+                        <div class="col">
+                            <label for="prospectoTipoNegocio" class="form-label">Tipo de Negocio:</label>
+                        </div>
+                        <div class="col">
+                            <Select class="form-control" name="prospectoTipoNegocio">
+                                <option value="">--Seleccionar--</option>
+                                <option value="Fabricante">Fabricante</option>
+                                <option value="Mayorista">Mayorista</option>
+                                <option value="Minorista">Minorista</option>
+                            </Select>
+                            {{-- Error --}}
+                            @error('prospectoTipoNegocio')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
                     </div>
-                    <div class="col">
-                        <input type="text" name="prospectoColonia" class="form-control" value="{{old('prospectoColonia')}}">
-                        {{-- Error --}}
-                        @error('prospectoColonia')
-                            <div class="alert alert-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
-                </div>
 
-                <div class="row row-form">
-                    <div class="col">
-                        <label for="prospectoCiudad" class="form-label">Ciudad:</label>
+                    <div class="row row-form">
+                        <div class="col">
+                            Tipos de Calzado:
+                        </div>
+                        <div class="col">
+                            <fieldset class="prospecto-checkboxes">
+                                @foreach ($modelsubcategories as $modelsubcategory)
+                                    <label for="prospectoTipoCalzado">{{$modelsubcategory->modelsubcatName}}</label>
+                                    <input type="checkbox" name="prospectoTipoCalzado[]" id="prospectoTipoCalzado" class="prospecto-checkbox" value="{{$modelsubcategory->modelsubcatName}}">
+                                @endforeach
+                            </fieldset>
+                            {{-- Error --}}
+                            @error('prospectoTipoCalzado')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
                     </div>
-                    <div class="col">
-                        <input type="text" name="prospectoCiudad" class="form-control" value="{{old('prospectoCiudad')}}">
-                        {{-- Error --}}
-                        @error('prospectoCiudad')
-                            <div class="alert alert-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
-                </div>
 
-                <div class="row row-form">
-                    <div class="col">
-                        <label for="prospectoTipoNegocio" class="form-label">Tipo de Negocio:</label>
+                    <div class="row row-form">
+                        <div class="col">
+                            Modelos de Calzado:
+                        </div>
+                        <div class="col">
+                            <fieldset class="prospecto-checkboxes">
+                                @foreach ($modelcategories as $modelcategory)
+                                    <label for="prospectoTipoModelo">{{$modelcategory->modelcatName}}</label>
+                                    @if ($modelcategory->modelcatName == 'Niños')
+                                        <input type="checkbox" name="prospectoTipoModelo[]" id="prospectoTipoModelo" class="prospecto-checkbox" value="Ninos">
+                                    @elseif ($modelcategory->modelcatName == 'Niñas')
+                                        <input type="checkbox" name="prospectoTipoModelo[]" id="prospectoTipoModelo" class="prospecto-checkbox" value="Ninas">
+                                        @else
+                                        <input type="checkbox" name="prospectoTipoModelo[]" id="prospectoTipoModelo" class="prospecto-checkbox" value="{{$modelcategory->modelcatName}}">
+                                    @endif
+                                @endforeach
+                            </fieldset>
+                        </div>
                     </div>
-                    <div class="col">
-                        <Select class="form-control" name="prospectoTipoNegocio">
-                            <option value="">--Seleccionar--</option>
-                            <option value="Fabricante">Fabricante</option>
-                            <option value="Mayorista">Mayorista</option>
-                            <option value="Minorista">Minorista</option>
-                        </Select>
-                        {{-- Error --}}
-                        @error('prospectoTipoNegocio')
-                            <div class="alert alert-danger">{{ $message }}</div>
-                        @enderror
+                    <div class="row row-form">
+                        <div class="col">
+                            <label for="prospectoCondiciones" class="form-label">Condiciones de Negocio:</label>
+                        </div>
+                        <div class="col">
+                            <select name="prospectoCondiciones" class="form-control">
+                                <option value="">-- Seleccionar --</option>
+                                <option value="Corridas Extrictas">Corridas mismo estilo y color</option>
+                                <option value="Corridas Flexibles">Corridas diferente estilo y color</option>
+                                <option value="Medias Corridas Extrictas">Medias Corridas mismo estilo y color</option>
+                                <option value="Medias Corridas Flexibles">Medias Corridas diferente estilo y color</option>
+                                <option value="Menudeo">Menudeo</option>
+                            </select>
+                            {{-- Error --}}
+                            @error('prospectoCondiciones')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
                     </div>
-                </div>
 
-                <div class="row row-form">
-                    <div class="col">
-                        <label for="prospectoTipoCalzado" class="form-label">Tipo de Calzado:</label>
+                    <div class="row row-form">
+                        <div class="col">
+                            <label for="prospectoImagen" class="form-label">Logo</label>
+                        </div>
+                        <div class="col">
+                            <input type="file" name="prospectoImagen" class="form-control" value="{{old('prospectoImagen')}}">
+                            {{-- Error --}}
+                            @error('prospectoImagen')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
                     </div>
-                    <div class="col">
-                        <select name="prospectoTipoCalzado" class="form-control">
-                            <option value="">-- Seleccionar --</option>
-                            <option value="Formal">Formal</option>
-                            <option value="Casual">Casual</option>
-                            <option value="Tenis">Tenis</option>
-                            <option value="Tacones">Tacones</option>
-                            <option value="Botas">Botas</option>
-                            <option value="Trabajo">Trabajo</option>
-                            <option value="Ortopédico">Ortopédico</option>
-                        </select>
-                        {{-- Error --}}
-                        @error('prospectoTipoCalzado')
-                            <div class="alert alert-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
-                </div>
 
-                <div class="row row-form">
-                    <div class="col">
-                        <label for="prospectoCondiciones" class="form-label">Condiciones de Negocio:</label>
+                    {{-- controls --}}
+                    <div class="row row-form">
+                        <div class="col prospectos-controls">
+                            <input type="submit" value="Guardar" class="prospectos-btn prospectos-btn-guardar">
+                        </div>
+                        <div class="col prospectos-controls">
+                            <a href="{{route('welcome')}}" class="prospectos-btn prospectos-btn-cancelar">Cancelar</a>
+                        </div>
                     </div>
-                    <div class="col">
-                        <select name="prospectoCondiciones" class="form-control">
-                            <option value="">-- Seleccionar --</option>
-                            <option value="Corridas Extrictas">Corridas mismo estilo y color</option>
-                             <option value="Corridas Flexibles">Corridas diferente estilo y color</option>
-                            <option value="Medias Corridas Extrictas">Medias Corridas mismo estilo y color</option>
-                            <option value="Medias Corridas Flexibles">Medias Corridas diferente estilo y color</option>
-                            <option value="Menudeo">Menudeo</option>
-                        </select>
-                        {{-- Error --}}
-                        @error('prospectoCondiciones')
-                            <div class="alert alert-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
-                </div>
-
-                <div class="row row-form">
-                    <div class="col">
-                        <label for="prospectoImagen" class="form-label">Logo</label>
-                    </div>
-                    <div class="col">
-                        <input type="file" name="prospectoImagen" class="form-control" value="{{old('prospectoImagen')}}">
-                        {{-- Error --}}
-                        @error('prospectoImagen')
-                            <div class="alert alert-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
-                </div>
-
-                {{-- controls --}}
-                <div class="row row-form">
-                    <div class="col prospectos-controls">
-                        <input type="submit" value="Guardar" class="prospectos-btn prospectos-btn-guardar">
-                    </div>
-                    <div class="col prospectos-controls">
-                        <a href="{{route('welcome')}}" class="prospectos-btn prospectos-btn-cancelar">Cancelar</a>
-                    </div>
-                </div>
-
                 </form>
-
             </div>
-
-
         @endsection
     </x-layout>
 

@@ -20,6 +20,9 @@
         text-align: center !important;
         margin-top: 1vh !important;
     }
+    .prospects-data-container {
+    width: 90vw !important;
+    }
 }
 
 .prospectos-hero{
@@ -117,6 +120,7 @@
 
 .prospectos-form-container{
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     width: 100vw;
     justify-content: center;
@@ -160,6 +164,18 @@
     margin-bottom: 2vh;
 }
 
+.prospectos-modelcategories{
+    display: flex;
+}
+
+.prospecto-checkboxes{
+    display:flow-root;
+    align-items: center;
+}
+.prospecto-checkbox{
+    width: 2vw !important;
+}
+
 .prospectos-btn{
     width: 20vw;
     padding: 10px 20px;
@@ -168,15 +184,10 @@
     display: block;
 }
 
-.prospectos-btn-guardar{
-    background-color: var(--stg-ternarystrong);
-    color:var(--font-light);
-    margin: 0 !important;
-}
 
-.prospectos-btn-guardar:hover{
-    background-color: var(--stg-ternary);
-    color: var(--font-violet);
+
+.prospectos-premium-container a:hover{
+    color: var(--font-light);
 }
 
 .prospectos-btn-cancelar{
@@ -193,6 +204,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 2vw;
 }
 
 .prospectos-controls a{
@@ -201,4 +213,17 @@
 
 .prospectos-controls a:hover{
     color: var(--font-light);
+}
+
+.prospects-data-container{
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    justify-content: center;
+}
+
+.prospectos-btn-guardar{
+    background-color: var(--stg-ternarystrong);
+    color: var(--font-light);
+    margin: 0 !important;
 }

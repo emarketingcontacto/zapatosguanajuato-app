@@ -3,6 +3,16 @@
         margin-top: 8vh;
     }
 
+   .anunciantes-left {
+    flex-basis: 100vw !important;
+    padding: 2vh 5vw !important;
+   }
+
+   .aununciante-right {
+    flex-basis: 100vw !important;
+   }
+
+
     .ad-head-features {
     flex-basis: 350px !important;
     }
@@ -32,7 +42,6 @@
 .italic{
     font-style: italic;
     background-color: var(--ternary);
-    padding: 1vw 1vh;
     text-align: center;
 }
 .anunciantes-hero{
@@ -86,38 +95,6 @@
     color: var(--secondary);
 }
 
-.anunciantes-why{
-    width: 100vw;
-    padding: 2vh 2vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.anunciantes-why h2{
-    text-align: center;
-}
-
-.anunciantes-why-container{
-    width: 60vw;
-    display: flex;
-    flex-direction: column;
-    text-align: justify;
-}
-
-.anunciantes-why-container h3{
-    text-align: center;
-    color: var(--secondary);
-}
-
-.anunaciantes-image-gsc{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-}
 
 .ad-table-container{
     display: flex;

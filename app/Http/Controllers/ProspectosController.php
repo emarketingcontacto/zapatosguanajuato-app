@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use App\Models\Prospectos;
 use Illuminate\Http\Request;
+use App\Models\ModelCategory;
+use App\Models\ModelSubcategory;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
@@ -25,7 +27,9 @@ class ProspectosController extends Controller
      */
     public function create()
     {
-        return view('Prospectos.create');
+        $modelcategories = ModelCategory::all();
+        $modelsubcategories = ModelSubcategory::all();
+        return view('Prospectos.create' , ['modelcategories'=>$modelcategories , 'modelsubcategories'=>$modelsubcategories]);
     }
 
     /**
@@ -33,7 +37,7 @@ class ProspectosController extends Controller
      */
     public function store(Request $request)
     {
-        //dd($request);
+
         $validData = $request->validate(
             [
                 'prospectoEmail'=>'required',
@@ -45,16 +49,19 @@ class ProspectosController extends Controller
                 'prospectoTelefono'=>'required',
                 'prospectoTipoNegocio'=>'required',
                 'prospectoTipoCalzado'=>'required',
+                'prospectoTipoModelo' => 'required',
                 'prospectoCondiciones'=>'required',
                 'prospectoImagen' => 'required'
             ]
         );
 
+        //dd($validData['prospectoTipoModelo']);
+
         if($request->hasFile('prospectoImagen')){
             $validData['prospectoImagen'] = $request->file('prospectoImagen')->store('prospectos', 'public');
         }
             Prospectos::create($validData);
-            return redirect('gracias-prospecto')->with('Success', 'Nuevo Negocio Registrado Exitósamente');
+            return redirect('gracias-anunciante')->with('Success', 'Nuevo Negocio Registrado Exitósamente');
     }
 
     /**
@@ -117,6 +124,7 @@ class ProspectosController extends Controller
      */
     public function destroy(Prospectos $prospecto)
     {
+         Storage::disk('public')->delete('/public/storage/prospectos', $prospecto->prospectoImagen);
         $prospecto->delete();
         return redirect('Prospecto')->with('success', 'Deleted Succesfully!');
     }

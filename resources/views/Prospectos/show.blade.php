@@ -29,12 +29,15 @@
             <link rel="stylesheet" href="{{ URL::asset('css/fonts.css')}}">
             <link rel="stylesheet" href="{{ URL::asset('css/main.css') }}" />
             <link rel="stylesheet" href="{{ URL::asset('css/admin.css')}}"> --}}
+            {{-- <link rel="stylesheet" href="{{ URL::asset('css/prospects.css')}}"> --}}
+
         {{-- end local
         {{-- online --}}
             <link rel="stylesheet" href="{{ URL::asset('css/online/bootstrap-min.css')}}">
             <link rel="stylesheet" href="{{ URL::asset('css/online/fonts-min.css')}}">
             <link rel="stylesheet" href="{{ URL::asset('css/online/main-min.css')}}">
             <link rel="stylesheet" href="{{ URL::asset('css/online/admin-min.css')}}">
+            <link rel="stylesheet" href="{{ URL::asset('css/online/prospects-min.css')}}">
         {{-- end online --}}
     {{-- end style --}}
 
@@ -117,7 +120,7 @@
             </div>
 
             <div class="admin-container">
-                <div class="data-container">
+                <div class="prospects-data-container">
                     <div class="row">
                         <div class="col">
                             <label for="prospectoId" class="form-label">ID:</label>
@@ -218,11 +221,11 @@
 
                     <div class="row">
                         <div class="col">
-                            <label for="prospectoImagen" class="form-label">Logo / Acceso / Iterna</label>
+                            <label for="prospectoImagen" class="form-label">Logo</label>
                         </div>
                         <div class="col">
                             {{-- local --}}
-                            <img src="{{asset('storage/'.$prospect->prospectoImagen)}}" height="200px" width="200px">
+                            <img src="{{asset('storage/'.$prospect->prospectoImagen)}}" height="400px" width="400px">
                             {{-- online --}}
                             {{-- <img src="{{asset('/'.$prospect->prospectoImagen)}}" height="500px" width="500px"> --}}
                         </div>

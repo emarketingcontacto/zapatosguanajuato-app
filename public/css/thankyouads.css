@@ -64,3 +64,8 @@
 .thanku-control a:hover{
     color:var(--font-light);
 }
+
+.thanku-ul{
+    width: 25vw;
+    text-align: justify;
+}

@@ -28,6 +28,7 @@ use App\Http\Controllers\Newsletter;
 use App\Http\Controllers\PremiumController;
 use App\Http\Controllers\ProspectosController;
 use App\Http\Controllers\ThankyouAdvertiserContoller;
+use App\Http\Controllers\ThankyouPremiumController;
 use App\Http\Controllers\ThankYouProspectsController;
 
 /*
@@ -141,21 +142,6 @@ Route::put('/Biz/{biz}/update', [BizController::class,'update'])->name('Biz.upda
 //Delete
 Route::delete('/Biz/{biz}/destroy', [BizController::class,'destroy'])->name('Biz.destroy');
 
-/* Premiums */
-//Index
-Route::get('/Premium', [PremiumController::class, 'index'])->name('Premium.index');
-//Create
-Route::get('/Premium/create',[PremiumController::class,'create'])->name('Premium.create');
-//Store
-Route::post('/Premium', [PremiumController::class, 'store'])->name('Premium.store');
-//Show
-Route::get('/Premium/{premium}/show', [PremiumController::class,'show'])->name('Premium.show');
-//Edit
-Route::get('/Premium/{premium}/edit', [PremiumController::class,'edit'])->name('Premium.edit');
-//update
-Route::put('/Premium/{premium}/update', [PremiumController::class,'update'])->name('Premium.update');
-//Delete
-Route::delete('/Premium/{premium}/destroy', [PremiumController::class,'destroy'])->name('Premium.destroy');
 
 
 /*Factories */
@@ -202,11 +188,13 @@ Route::get('/politica-de-privacidad', function (){ return view('Privacy-policy')
 //Newsletter
 // Route::get('/registro/newsletter', Newsletter::class)->name('Newsletter');
 //Advertisers
-Route::get('/anunciantes', Anunciantes::class)->name('precios');
+Route::get('/proveedores', Anunciantes::class)->name('precios');
 //Advertisers Thankyou
 Route::get('/gracias-anunciante', ThankyouAdvertiserContoller::class)->name('gracias-anunciante');
 //Prospects Thankyou
-Route::get('/gracias-usuario', ThankYouProspectsController::class)->name('gracias-prospecto');
+Route::get('/gracias-usuario', ThankYouProspectsController::class)->name('gracias-usuario');
+//Premium Thankyou
+Route::get('/gracias-premium', ThankyouPremiumController::class)->name('gracias-premium');
 
 /*Registration */
 //Logout
@@ -272,6 +260,23 @@ Route::get('/prospectos/{prospecto}/edit', [ProspectosController::class,'edit'])
 Route::put('/prospectos/{prospecto}/update', [ProspectosController::class,'update'])->name('Prospectos.update');
 //Delete
 Route::delete('/prospectos/{prospecto}/destroy', [ProspectosController::class,'destroy'])->name('Prospectos.destroy');
+
+/* Premiums */
+//Index
+Route::get('/Premium', [PremiumController::class, 'index'])->name('Premium.index');
+//Create
+Route::get('/Premium/create',[PremiumController::class,'create'])->name('Premium.create');
+//Store
+Route::post('/Premium', [PremiumController::class, 'store'])->name('Premium.store');
+//Show
+Route::get('/Premium/{premium}/show', [PremiumController::class,'show'])->name('Premium.show');
+//Edit
+Route::get('/Premium/{premium}/edit', [PremiumController::class,'edit'])->name('Premium.edit');
+//update
+Route::put('/Premium/{premium}/update', [PremiumController::class,'update'])->name('Premium.update');
+//Delete
+Route::delete('/Premium/{premium}/destroy', [PremiumController::class,'destroy'])->name('Premium.destroy');
+
 
 /**Contact */
 Route::get('contacto', [ContactoController::class, 'show'])->name('contacto');
